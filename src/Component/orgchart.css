@@ -1,0 +1,98 @@
+/* OrgChart global styles (import this file in main.jsx / index.jsx) */
+
+.org-wrap {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Box style */
+.org-box {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #94a3b8;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.15rem; /* slightly smaller than before for better fit */
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Vertical connector between stacked boxes */
+.org-connector-vertical {
+  width: 6px;
+  height: 36px;
+  background: #6b7280;
+  margin: 8px auto;
+  border-radius: 6px;
+}
+
+/* Horizontal thick line */
+.org-line-horizontal {
+  height: 6px;
+  width: 100%;
+  background: #6b7280;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Arrow on the right side of the horizontal line (decorative) */
+.org-arrow {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 900;
+  color: #6b7280;
+  line-height: 1;
+}
+
+/* downward connectors from horizontal line to each column */
+.org-branch-connector {
+  width: 6px;
+  height: 40px;
+  background: #6b7280;
+  border-radius: 6px;
+}
+
+/* spacing helpers for column items */
+.org-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* small spacer above columns so connectors align nicely on desktop */
+.org-horizontal-wrap {
+  max-width: 900px;
+  margin: 3rem auto;
+  position: relative;
+}
+
+/* place the three branch connectors - these positions align with 3 columns */
+.org-connector-pos.left   { left: 16.6666%; transform: translateX(-50%); }
+.org-connector-pos.center { left: 50%;     transform: translateX(-50%); }
+.org-connector-pos.right  { left: 83.3333%; transform: translateX(-50%); }
+
+.org-connector-pos {
+  position: absolute;
+  top: calc(100% - 6px); /* start just below the horizontal line */
+}
+
+/* On small screens stack connectors visually inside columns */
+@media (max-width: 767px) {
+  .org-horizontal-wrap { margin: 2rem 1rem; }
+  .org-connector-pos { display: none; } /* we use vertical connectors inside columns on mobile */
+  .org-line-horizontal { display: none; } /* hide horizontal line on mobile for simpler layout */
+  .org-arrow { display: none; }
+}
+
+/* accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

@@ -71,7 +71,7 @@ function Slider() {
   return (
     <>
       <section
-        className="relative h-[86vh]  mt-30 min-h-[600px] overflow-hidden"
+        className="relative h-[86vh]  mt-[80px] lg:mt-[2px] min-h-[600px] overflow-hidden"
         aria-roledescription="carousel"
         aria-label="Hero slider"
       >
@@ -128,7 +128,7 @@ function Slider() {
                     {/* CTA Buttons */}
                     <div className="flex flex-wrap gap-4">
                       <a
-                        href="/products"
+                        href="/contact"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-500 text-white rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300"
                         aria-label={slide.cta}
                       >
@@ -151,8 +151,8 @@ function Slider() {
           </div>
         ))}
 
-        {/* Dots */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
+        {/* Dots - Hidden on mobile */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4 z-20">
           {heroSlides.map((_, idx) => (
             <button
               key={idx}
@@ -168,12 +168,12 @@ function Slider() {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
+        {/* Navigation Buttons - Hidden on mobile */}
         <button
           type="button"
           onClick={prevSlide}
           aria-label="Previous slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20 hidden md:block"
         >
           <ChevronLeft size={24} />
         </button>
@@ -181,17 +181,17 @@ function Slider() {
           type="button"
           onClick={nextSlide}
           aria-label="Next slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20 hidden md:block"
         >
           <ChevronRight size={24} />
         </button>
 
-        {/* Play/Pause */}
+        {/* Play/Pause - Hidden on mobile */}
         <button
           type="button"
           onClick={() => setPlaying((p) => !p)}
           aria-label={playing ? "Pause autoplay" : "Play autoplay"}
-          className="absolute top-4 right-4 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20"
+          className="absolute top-4 right-4 p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 z-20 hidden md:block"
         >
           {playing ? <Pause size={20} /> : <Play size={20} />}
         </button>

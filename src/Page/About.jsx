@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+
+import TimelineSection from "../Component/AboutTimelineSection";
+
+import AboutHero from "../Component/AboutHero";
+import OrgChart from "../Component/OrgChart";
+import GetDemoSection from "../Component/GetDemoSection";
+import VisionMission from "../Component/AboutMisson";
 
 function About() {
   return (
-    <div>About</div>
-  )
+    <>
+      <AboutHero />
+      <VisionMission />
+
+      <TimelineSection />
+      <GetDemoSection />
+      <OrgChart />
+    </>
+  );
 }
 
-export default About
+export default About;

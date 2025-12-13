@@ -1,0 +1,27 @@
+/* add this to global CSS (keeps small animations but respects prefers-reduced-motion) */
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-animate { animation: none !important; transition: none !important; }
+}
+
+/* optional: subtle entrance animation for the whole card */
+@media (prefers-reduced-motion: no-preference) {
+  .about-entrance {
+    transform: translateY(6px);
+    opacity: 0;
+    animation: aboutIn 550ms cubic-bezier(.2,.9,.3,1) forwards;
+  }
+  @keyframes aboutIn {
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+/* Hide scrollbar for all browsers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE + Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
