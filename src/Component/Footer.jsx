@@ -224,15 +224,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <p className="text-white text-sm font-medium text-center">
             © {new Date().getFullYear()} Al Suwaidi Technical Centre. All rights reserved.{" "}
-            <span className="opacity-80">Designed & Developed by</span>{" "}
-            <a
-              href="https://www.digicoders.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-300 font-semibold hover:text-orange-200 transition-colors"
-            >
-              #TeamDigiCoders
-            </a>
+           
           </p>
         </div>
       </div>
