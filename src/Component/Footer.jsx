@@ -218,19 +218,23 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full border-t border-green-900/40 pt-6 flex justify-center">
-        <p className="text-white text-sm font-medium text-center">
-          © {new Date().getFullYear()} WorkNest Connect. All rights reserved.{" "}
-          <span className="opacity-80">Designed & Developed by</span>{" "}
-          <a
-            href="https://www.digicoders.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-400 font-semibold hover:text-orange-300"
-          >
-            #TeamDigiCoders
-          </a>
-        </p>
+      
+      {/* Copyright Section */}
+      <div className="border-t border-orange-400/30 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <p className="text-white text-sm font-medium text-center">
+            © {new Date().getFullYear()} Al Suwaidi Technical Centre. All rights reserved.{" "}
+            <span className="opacity-80">Designed & Developed by</span>{" "}
+            <a
+              href="https://www.digicoders.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-300 font-semibold hover:text-orange-200 transition-colors"
+            >
+              #TeamDigiCoders
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

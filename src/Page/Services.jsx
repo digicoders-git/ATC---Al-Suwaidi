@@ -101,7 +101,7 @@ export default function Services() {
   return (
     <>
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+      <section className="relative overflow-hidden mt-20 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
         {/* background effects */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-400/30 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-red-500/30 rounded-full blur-3xl" />
@@ -190,9 +190,12 @@ export default function Services() {
                   <p className="mt-3 text-sm text-slate-600">{s.short}</p>
 
                   <div className="mt-6 flex items-center justify-between">
-                    <button className="flex items-center gap-2 text-sm font-semibold text-orange-600">
+                    <Link 
+                      to={`/services/${s.id}`}
+                      className="flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition"
+                    >
                       Learn more <FaChevronRight />
-                    </button>
+                    </Link>
                     <span className="text-xs px-3 py-1 rounded-full border text-slate-400">
                       {s.category}
                     </span>

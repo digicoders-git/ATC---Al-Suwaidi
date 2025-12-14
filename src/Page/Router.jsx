@@ -21,6 +21,7 @@ import BearingsRemovalFittingPage from "./BAringServices";
 import VehicleWheelsRepairPage from "./VecalRepining";
 import CabinetsManufacturingPage from "./CabinateManiFcreing";
 import GetQuotePage from "./GetQouto";
+import ServiceDetail from "./ServiceDetail";
 import ScrollToTop from "../Component/ScrollToTop";
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
         <Route path="/project" element={<Projects />} />
         <Route path="/get-quote" element={<GetQuotePage />} />
         <Route path="/services/steel-fabrication" element={<ServicesPage />} />

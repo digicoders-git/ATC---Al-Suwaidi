@@ -6,6 +6,7 @@ import AboutHero from "../Component/AboutHero";
 import OrgChart from "../Component/OrgChart";
 import GetDemoSection from "../Component/GetDemoSection";
 import VisionMission from "../Component/AboutMisson";
+import CertificateSlider from "../Component/CertificateSlider";
 
 function About() {
   return (
@@ -16,6 +17,7 @@ function About() {
       <TimelineSection />
       <GetDemoSection />
       <OrgChart />
+      <CertificateSlider/>
     </>
   );
 }

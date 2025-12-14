@@ -1,49 +1,89 @@
 // components/ContactMapSimple.jsx
 import React from "react";
-import { FaMapMarkerAlt, FaPhone, FaFax, FaEnvelope, FaMobile } from "react-icons/fa";
-
-
+import { FaMapMarkedAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ContactMapSimple() {
   const company = {
     name: "Al Suwaidi Technical Centre",
-    address:
-      "Street No. 18, Gate No. 35, P.O. Box – 40600, Industrial Area, Doha, Qatar",
-    emails: ["pankajsuwaidigroup@gmail.com", "suwaidigroup@yahoo.com"],
-    tel: "+974 44601087",
-    fax: "+974 44601334",
-    cell: "+974-51711104",
-    service: "Industrial Engineering and Technical Works",
+    address: "Street No. 18, Gate No. 35, Industrial Area, Doha, Qatar",
   };
 
-  // Simple search-based embed. Replace with your exact embed URL if you have one.
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
+  // ✅ MOBILE-SAFE EMBED (address based)
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     company.address
-  )}&z=15&output=embed`;
+  )}&output=embed`;
+
+  // ✅ ALWAYS WORKS (opens Google Maps app)
+  const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    company.address
+  )}`;
 
   return (
-    <section className="pt-12 bg-white">
-      <div className="max-w-8xl mx-auto px-4">
-      
-          {/* Map */}
-          <div className="flex-1 rounded-lg h-120 overflow-hidden border border-gray-100 shadow">
-            <div className="w-full" style={{ minHeight: 220 }}>
-              {/* responsive 16:9 */}
-              <div className="relative w-full h-0" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  title={`${company.name} - Map`}
-                  src={mapSrc}
-                  className="absolute inset-0 w-full h-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            Our Location
+          </h2>
+          <p className="text-gray-600 mt-2">{company.address}</p>
+        </div>
+
+        {/* Map Card */}
+        <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-xl bg-white">
+          {/* MAP */}
+          <div
+            className="
+              relative w-full
+              h-[240px]
+              sm:h-[300px]
+              md:h-[380px]
+              lg:h-[460px]
+            "
+          >
+            <iframe
+              title={`${company.name} Location`}
+              src={mapEmbedSrc}
+              className="absolute inset-0 w-full h-full border-0"
+              loading="lazy"
+            />
+
+            {/* FULL CLICK OVERLAY (Mobile fix) */}
+            <a
+              href={openMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 z-10"
+              aria-label="Open location in Google Maps"
+            />
           </div>
 
+          {/* Bottom Info Bar */}
+          <div className="bg-white border-t border-gray-200 px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white shadow">
+                <FaMapMarkedAlt />
+              </div>
+              <div>
+                <div className="font-bold text-gray-900">{company.name}</div>
+                <div className="text-sm text-gray-600">
+                  Industrial Area, Doha
+                </div>
+              </div>
+            </div>
 
+            <a
+              href={openMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-600 to-red-500 text-white font-semibold shadow hover:opacity-90 transition"
+            >
+              Open in Google Maps
+              <FaExternalLinkAlt size={14} />
+            </a>
+          </div>
         </div>
-     
+      </div>
     </section>
   );
 }

@@ -268,7 +268,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen mt-[80px] lg:mt-[2px] bg-white">
       {/* Hero Section */}
-      <section className="relative lg:mt-0 min-h-screen  flex items-center overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+      <section className="relative lg:mt-0 min-h-screen  flex items-center overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600 pb-10">
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 mt-10 lg:mt-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Text Content */}

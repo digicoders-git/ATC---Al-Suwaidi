@@ -94,6 +94,8 @@ const GetQuotePage = () => {
       subtext: "Tel: +974 44601087 | Cell: +974 51711104",
       action: "Call Now",
       actionIcon: Phone,
+      actionLink: "tel:+97444601087",
+      type: "phone",
     },
     {
       id: "whatsapp",
@@ -101,10 +103,12 @@ const GetQuotePage = () => {
       description: "Quick chat with engineering team",
       icon: MessageSquare,
       color: "from-green-500 to-emerald-600",
-      details: "+974 51711104",
+      details: "97451711104",
       subtext: "Send drawings & get instant quote",
       action: "Start Chat",
       actionIcon: MessageCircle,
+      actionLink: "https://wa.me/97451711104",
+      type: "whatsapp",
     },
     {
       id: "email",
@@ -116,6 +120,8 @@ const GetQuotePage = () => {
       subtext: "Also: suwaidigroup@yahoo.com",
       action: "Send Email",
       actionIcon: Mail,
+      actionLink: "mailto:pankajsuwaidigroup@gmail.com",
+      type: "email",
     },
     {
       id: "visit",
@@ -127,6 +133,8 @@ const GetQuotePage = () => {
       subtext: "P.O. Box 40600, Industrial Area, Doha",
       action: "Get Directions",
       actionIcon: MapPin,
+      actionLink: "https://www.google.com/maps/search/Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar",
+      type: "location",
     },
   ];
 
