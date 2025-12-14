@@ -83,15 +83,7 @@ export default function Footer() {
               >
                 <FaInstagram size={20} />
               </a>
-              <a
-                href="https://www.linkedin.com/company/alsuwaiditechnicalcenter"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={20} />
-              </a>
+
               <a
                 href="https://wa.me/97451711104"
                 target="_blank"
@@ -218,13 +210,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Copyright Section */}
       <div className="border-t border-orange-400/30 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <p className="text-white text-sm font-medium text-center">
-            © {new Date().getFullYear()} Al Suwaidi Technical Centre. All rights reserved.{" "}
-           
+            © {new Date().getFullYear()} Al Suwaidi Technical Centre. All rights
+            reserved.{" "}
           </p>
         </div>
       </div>
