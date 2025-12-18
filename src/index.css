@@ -1,13 +1,32 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* Tailwind */
 @import "tailwindcss";
 
-/* Global font */
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;      /* ❗ SIDE SCROLL FIX */
   font-family: "Manrope", sans-serif;
   top: 0 !important;
+
+  /* Scrollbar hide but scroll works */
+  -ms-overflow-style: none;   /* IE & Edge */
+  scrollbar-width: none;      /* Firefox */
 }
+
+body::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}
+
+/* ================= ANIMATIONS ================= */
 
 /* Slide from left */
 @keyframes slideFromLeft {
@@ -36,7 +55,7 @@ body {
   animation: fade-in-up 0.8s ease-out forwards;
 }
 
-/* FLOAT animation (only one correct version) */
+/* Float animation */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
@@ -55,7 +74,7 @@ body {
   animation: floatDots 3s ease-in-out infinite;
 }
 
-/* Gradient text */
+/* Gradient animation */
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
@@ -66,7 +85,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Fade + Scale animations */
+/* Fade + Scale */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -89,19 +108,11 @@ body {
 .animate-cardFade { animation: cardFade .6s ease-out forwards; }
 .animate-tagPop { animation: tagPop .4s ease-out forwards; }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb {
-  background:  rgb(238, 64, 64);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(223, 40, 34)
-}
+/* ================= SCROLLBAR (OPTIONAL DESIGN) ================= */
+/* (Scrollbar hidden already, keep if you ever enable it) */
 
 
-
+/* ================= DIALOG ================= */
 @keyframes popupScale {
   0% { transform: scale(0.85); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -121,7 +132,7 @@ body {
   scale: 1.2;
 }
 
-/* GOOGLE TRANSLATE FIX */
+/* ================= GOOGLE TRANSLATE FIX ================= */
 .goog-te-banner-frame.skiptranslate {
   display: none !important;
 }
@@ -136,15 +147,12 @@ body {
 .goog-te-gadget-icon {
   display: inline-block !important;
 }
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
+/* ================= MARQUEE ================= */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .animate-marquee {
   animation: marquee 22s linear infinite;
 }

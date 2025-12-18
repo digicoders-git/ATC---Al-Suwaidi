@@ -498,93 +498,111 @@ export default function Projects() {
               id={`project-modal-${selected.id}`}
               role="dialog"
               aria-modal="true"
-              className="fixed inset-0 z-50 flex items-center justify-center p-6"
+              className="
+    fixed inset-0 z-[9999]
+    flex items-start justify-center
+    px-3 py-4
+    pt-20 sm:pt-6   /* 👈 MOBILE NAVBAR HEIGHT FIX */
+  "
             >
+              {/* BACKDROP */}
               <div
                 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
                 onClick={() => setSelected(null)}
               />
-              <div className="relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div className="flex items-center justify-between p-4 border-b border-slate-100">
+
+              {/* MODAL */}
+              <div
+                className="
+      relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-2xl
+      max-h-[calc(100vh-6rem)]
+      flex flex-col overflow-hidden
+    "
+              >
+                {/* HEADER */}
+                <div className="flex items-start justify-between gap-3 p-4 border-b border-slate-100">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900">
                       {selected.title}
                     </h3>
-                    <p className="text-sm text-slate-500">
+                    <p className="text-xs sm:text-sm text-slate-500">
                       {selected.subtitle}
                     </p>
                   </div>
+
                   <button
                     onClick={() => setSelected(null)}
                     aria-label="Close details"
-                    className="p-2 rounded-lg hover:bg-slate-100 transition"
+                    className="p-2 rounded-lg hover:bg-slate-100 transition shrink-0"
                   >
                     <FaTimes />
                   </button>
                 </div>
 
-                <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <div className="w-full h-44 bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                      <img
-                        src={selected.thumb}
-                        alt={selected.title}
-                        onError={(e) =>
-                          (e.currentTarget.src =
-                            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%239ca3af'%3EProject Image%3C/text%3E%3C/svg%3E")
-                        }
-                        className="w-full h-full object-cover"
-                      />
+                {/* CONTENT */}
+                <div className="flex-1 overflow-y-auto p-4 sm:p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {/* LEFT */}
+                    <div>
+                      <div className="w-full h-40 sm:h-44 bg-slate-100 rounded-lg overflow-hidden">
+                        <img
+                          src={selected.thumb}
+                          alt={selected.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
+                      <p className="mt-4 text-sm text-slate-600">
+                        {selected.short}
+                      </p>
+
+                      <Link
+                        to="/contact"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:underline"
+                      >
+                        Request Similar Project <FaExternalLinkAlt />
+                      </Link>
                     </div>
 
-                    <p className="mt-4 text-sm text-slate-600">
-                      {selected.short}
-                    </p>
+                    {/* RIGHT */}
+                    <div>
+                      <h4 className="font-semibold text-slate-800 mb-3">
+                        Technical Specifications
+                      </h4>
 
-                    <Link
-                      to="/contact"
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:underline"
-                    >
-                      Request Similar Project <FaExternalLinkAlt />
-                    </Link>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-slate-800 mb-3">
-                      Technical Specifications
-                    </h4>
-
-                    <div className="space-y-2 max-h-[320px] overflow-auto pr-2">
-                      {selected.specs.map(([k, v], idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-start justify-between gap-3 bg-slate-50 rounded-lg p-3 border border-slate-100"
-                        >
-                          <div className="text-sm text-slate-700">{k}</div>
-                          <div className="text-sm font-medium text-slate-900">
-                            {v}
+                      <div className="space-y-2 max-h-64 overflow-y-auto pr-1">
+                        {selected.specs.map(([k, v], idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-start justify-between gap-3 bg-slate-50 rounded-lg p-3 border border-slate-100"
+                          >
+                            <div className="text-sm text-slate-700">{k}</div>
+                            <div className="text-sm font-medium text-slate-900 text-right">
+                              {v}
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
 
-                    <div className="mt-4 text-xs text-slate-500">
-                      Specifications are extracted from company technical
-                      sheets.
+                      <div className="mt-3 text-xs text-slate-500">
+                        Specifications are extracted from company technical
+                        sheets.
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 border-t border-slate-100 flex items-center justify-end gap-3">
-                  <Link to="/contact">
-                    <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-red-500 text-white font-semibold">
+                {/* FOOTER */}
+                <div className="p-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-end">
+                  <Link to="/contact" className="w-full sm:w-auto">
+                    <button className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-red-500 text-white font-semibold">
                       Enquire About This
                     </button>
                   </Link>
 
                   <button
                     onClick={() => setSelected(null)}
-                    className="px-4 py-2 rounded-lg bg-white border text-slate-700"
+                    className="w-full sm:w-auto px-4 py-2 rounded-lg border bg-white"
                   >
                     Close
                   </button>
