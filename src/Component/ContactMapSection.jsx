@@ -4,8 +4,8 @@ import { FaMapMarkedAlt, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ContactMapSimple() {
   const company = {
-    name: "Al Suwaidi Technical Centre",
-    address: "Street No. 18, Gate No. 35, Industrial Area, Doha, Qatar",
+    name: "AL SUWAIDI TECHNICAL CENTER",
+    address: "P.O. Box No: 40600, East Industrial Area, Zone: 57, Street No: 18, Gate No: 35, Doha, Qatar",
   };
 
   // ✅ MOBILE-SAFE EMBED (address based)
@@ -67,7 +67,7 @@ export default function ContactMapSimple() {
               <div>
                 <div className="font-bold text-gray-900">{company.name}</div>
                 <div className="text-sm text-gray-600">
-                  Industrial Area, Doha
+                  East Industrial Area, Zone: 57, Doha
                 </div>
               </div>
             </div>

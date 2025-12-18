@@ -33,7 +33,7 @@ const engineServices = [
   {
     title: "Crank Grinding & Reconditioning",
     desc: "Precision crank grinding and reconditioning services to restore engine crankshafts to factory specifications. We handle all types of crankshafts for diesel and petrol engines.",
-    image: "/Crank Grinding & Reconditioning.jpg",
+    image: "/Gemini_Generated_Image_hohkuhohkuhohkuh.png",
     features: [
       "Precision grinding",
       "Polishing",
@@ -50,7 +50,7 @@ const engineServices = [
   {
     title: "Block Boring & Honing",
     desc: "Professional cylinder block boring and honing services to ensure perfect cylinder geometry and surface finish for optimal compression and oil control.",
-    image: "/Block Boring & Honing.jpg",
+    image: "/Gemini_Generated_Image_409vl8409vl8409v.png",
     features: [
       "Cylinder boring",
       "Surface honing",
@@ -67,7 +67,7 @@ const engineServices = [
   {
     title: "Liner Fitting & Replacement",
     desc: "Expert cylinder liner fitting and replacement services including wet and dry liners for all types of heavy-duty and automotive engines.",
-    image: "/Liner Fitting & Replacement.jpg",
+    image: "/Gemini_Generated_Image_2mf4np2mf4np2mf4 (1).png",
     features: [
       "Wet liner fitting",
       "Dry liner installation",
@@ -84,7 +84,7 @@ const engineServices = [
   {
     title: "Piston & Ring Fitting",
     desc: "Complete piston and ring assembly services including piston sizing, ring gap setting, and installation for optimal engine performance and longevity.",
-    image: "/Piston & Ring Fitting.jpg",
+    image: "/Gemini_Generated_Image_lqxlrjlqxlrjlqxl.png",
     features: [
       "Piston sizing",
       "Ring gap setting",
@@ -101,7 +101,7 @@ const engineServices = [
   {
     title: "Head Pressure Checking",
     desc: "Comprehensive cylinder head pressure testing to detect cracks, leaks, and structural weaknesses ensuring complete reliability under operational pressure.",
-    image: "/Head Pressure Checking.jpg",
+    image: "/Gemini_Generated_Image_su1wuqsu1wuqsu1w.png",
     features: [
       "Pressure testing",
       "Leak detection",
@@ -118,7 +118,7 @@ const engineServices = [
   {
     title: "Valve & Tappet Setting",
     desc: "Precision valve and tappet adjustment services including valve grinding, seat cutting, and clearance setting for optimal engine breathing and performance.",
-    image: "/travis-johansen-ivKOpPM3wrI-unsplash.jpg",
+    image: "/Gemini_Generated_Image_wynp58wynp58wynp.png",
     features: [
       "Valve grinding",
       "Seat cutting",
@@ -135,7 +135,7 @@ const engineServices = [
   {
     title: "Engine Overhauling",
     desc: "Complete engine overhaul services including disassembly, inspection, reconditioning, and reassembly for total engine restoration and performance improvement.",
-    image: "/sitraka-9eAUiN6Polk-unsplash.jpg",
+    image: "/Gemini_Generated_Image_1pnz8t1pnz8t1pnz.png",
     features: [
       "Complete disassembly",
       "Part inspection",
@@ -152,7 +152,7 @@ const engineServices = [
   {
     title: "Fuel Injection System",
     desc: "Professional fuel injection system services including pump calibration, nozzle testing, and injection timing adjustment for optimal fuel efficiency and power.",
-    image: "/maria-sime-wi1pIxeUWDk-unsplash.jpg",
+    image: "/Gemini_Generated_Image_gndi26gndi26gndi.png",
     features: [
       "Pump calibration",
       "Nozzle testing",
@@ -264,7 +264,7 @@ export default function VehicleEngineRepairPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/Vehicle Engine & Mechanical.jpg"
+                  src="/Gemini_Generated_Image_ngel0sngel0sngel.png"
                   alt="Engine Repair Workshop"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
@@ -499,150 +499,146 @@ export default function VehicleEngineRepairPage() {
       </main>
       <GetDemoSection />
 
-<div className="max-w-7xl mx-auto my-10">
-
+      <div className="max-w-7xl mx-auto my-10">
         {/* Why Choose Us Section */}
-      <section className="mb-16 bg-gradient-to-br from-orange-50 to-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-orange-100">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Why Choose Our Engine Services?
-            </h3>
+        <section className="mb-16 bg-gradient-to-br from-orange-50 to-white rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-orange-100">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Why Choose Our Engine Services?
+              </h3>
 
-            <div className="space-y-3 sm:space-y-4">
-              {[
-                {
-                  icon: Shield,
-                  title: "Certified Technicians",
-                  desc: "Factory-trained and certified professionals",
-                },
-                {
-                  icon: Settings,
-                  title: "Precision Equipment",
-                  desc: "State-of-the-art diagnostic and repair tools",
-                },
-                {
-                  icon: Award,
-                  title: "Quality Parts",
-                  desc: "Genuine and high-quality replacement parts",
-                },
-                {
-                  icon: Clock,
-                  title: "Fast Turnaround",
-                  desc: "Quick and efficient service completion",
-                },
-              ].map((item, idx) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-white transition"
-                >
-                  <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                    <item.icon className="text-orange-600" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-base sm:text-lg">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
-              <div className="mb-6">
-                <h4 className="text-xl sm:text-2xl font-bold mb-4">
-                  Service Benefits
-                </h4>
-                <p className="text-orange-100 text-sm sm:text-base">
-                  Our professional engine services deliver these key benefits to
-                  your business
-                </p>
-              </div>
-
-              <div className="space-y-3">
+              <div className="space-y-3 sm:space-y-4">
                 {[
-                  "Extended Engine Life",
-                  "Improved Fuel Efficiency",
-                  "Reduced Downtime",
-                  "Warranty Coverage",
-                  "Professional Diagnosis",
-                  "Cost-Effective Solutions",
+                  {
+                    icon: Shield,
+                    title: "Certified Technicians",
+                    desc: "Factory-trained and certified professionals",
+                  },
+                  {
+                    icon: Settings,
+                    title: "Precision Equipment",
+                    desc: "State-of-the-art diagnostic and repair tools",
+                  },
+                  {
+                    icon: Award,
+                    title: "Quality Parts",
+                    desc: "Genuine and high-quality replacement parts",
+                  },
+                  {
+                    icon: Clock,
+                    title: "Fast Turnaround",
+                    desc: "Quick and efficient service completion",
+                  },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <CheckCircle
-                      size={16}
-                      className="text-orange-200 flex-shrink-0"
-                    />
-                    <span className="text-sm sm:text-base">{item}</span>
-                  </div>
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-white transition"
+                  >
+                    <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
+                      <item.icon className="text-orange-600" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-base sm:text-lg">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
+            <div className="relative">
+              <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
+                <div className="mb-6">
+                  <h4 className="text-xl sm:text-2xl font-bold mb-4">
+                    Service Benefits
+                  </h4>
+                  <p className="text-orange-100 text-sm sm:text-base">
+                    Our professional engine services deliver these key benefits
+                    to your business
+                  </p>
+                </div>
 
- 
-
-      {/* Contact Info */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-              <Phone className="text-orange-600" size={20} />
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                Emergency Service
-              </div>
-              <div className="text-gray-600 text-sm sm:text-base">
-                +974 44601087
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-              <Mail className="text-orange-600" size={20} />
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                Email
-              </div>
-              <div className="text-gray-600 text-sm sm:text-base">
-                service@alsuwaidi.com
+                <div className="space-y-3">
+                  {[
+                    "Extended Engine Life",
+                    "Improved Fuel Efficiency",
+                    "Reduced Downtime",
+                    "Warranty Coverage",
+                    "Professional Diagnosis",
+                    "Cost-Effective Solutions",
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <CheckCircle
+                        size={16}
+                        className="text-orange-200 flex-shrink-0"
+                      />
+                      <span className="text-sm sm:text-base">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-              <Clock className="text-orange-600" size={20} />
-            </div>
-            <div>
-              <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                Working Hours
+        {/* Contact Info */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
+                <Phone className="text-orange-600" size={20} />
               </div>
-              <div className="text-gray-600 text-sm sm:text-base">
-                7:00 AM - 10:00 PM
+              <div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">
+                  Emergency Service
+                </div>
+                <div className="text-gray-600 text-sm sm:text-base">
+                  +974 44601087
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-</div>
+
+          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
+                <Mail className="text-orange-600" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">
+                  Email
+                </div>
+                <div className="text-gray-600 text-sm sm:text-base">
+                  service@alsuwaidi.com
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
+                <Clock className="text-orange-600" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm sm:text-base">
+                  Working Hours
+                </div>
+                <div className="text-gray-600 text-sm sm:text-base">
+                  7:00 AM - 10:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

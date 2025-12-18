@@ -48,7 +48,7 @@ export default function QualityProcess() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-orange-50">
+    <section className="pb-5 bg-gradient-to-b from-white to-orange-50">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center mb-14">
@@ -100,7 +100,10 @@ export default function QualityProcess() {
                     ))}
                   </ul>
 
-                  <Link to={'/contact'} className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold shadow hover:scale-[1.03] transition">
+                  <Link
+                    to={"/contact"}
+                    className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold shadow hover:scale-[1.03] transition"
+                  >
                     <FaCheckCircle />
                     View Details
                   </Link>
@@ -108,39 +111,6 @@ export default function QualityProcess() {
               </article>
             );
           })}
-        </div>
-
-        {/* Workflow */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 border border-orange-100 shadow-md">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">
-            Quality Control Workflow
-          </h3>
-
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="hidden md:block absolute left-10 right-10 top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-orange-400 via-red-400 to-amber-400" />
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-              {qualityStages.map((node, i) => {
-                const NodeIcon = node.icon;
-                return (
-                  <div key={i} className="text-center">
-                    <div
-                      className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-white border-8 border-white shadow-lg bg-gradient-to-br ${node.gradient}`}
-                    >
-                      <NodeIcon className="text-2xl" />
-                    </div>
-                    <h4 className="font-bold text-gray-900">
-                      {node.title.split(" ")[0]}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {node.title.split(" - ")[1]}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </section>

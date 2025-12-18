@@ -38,8 +38,7 @@ const gearServices = [
   {
     title: "Turning Operations",
     desc: "Precision turning operations for gear manufacturing including OD turning, ID turning, and taper turning on CNC lathes for accurate gear profiles.",
-    image:
-      "/Turning Operations.jpg",
+    image: "/Gemini_Generated_Image_3lgjig3lgjig3lgj.png",
     features: [
       "CNC Turning",
       "Precision Tolerances",
@@ -56,8 +55,7 @@ const gearServices = [
   {
     title: "Threading Services",
     desc: "High-precision threading services including internal and external threads for gear assemblies and mechanical components.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_ot7awot7awot7awo.png",
     features: [
       "Internal Threading",
       "External Threading",
@@ -74,8 +72,7 @@ const gearServices = [
   {
     title: "Boring Operations",
     desc: "Precision boring services for gear housings and bearing seats ensuring perfect alignment and concentricity.",
-    image:
-      "/Boring Operations.jpg",
+    image: "/Gemini_Generated_Image_v6wnbav6wnbav6wn (1).png",
     features: ["Line Boring", "Fine Boring", "Back Boring", "Deep Hole Boring"],
     specs: [
       "Bore Size: 10-1000mm",
@@ -87,8 +84,7 @@ const gearServices = [
   {
     title: "Drilling Operations",
     desc: "Precision drilling services including deep hole drilling, micro-drilling, and multi-spindle drilling for gear components.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_i4mew5i4mew5i4me.png",
     features: [
       "Deep Hole Drilling",
       "Micro Drilling",
@@ -101,8 +97,7 @@ const gearServices = [
   {
     title: "Facing Operations",
     desc: "Precision facing operations for gear blanks and components ensuring perfect flatness and surface finish.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_jlvpk8jlvpk8jlvp.png",
     features: [
       "CNC Facing",
       "Fly Cutting",
@@ -119,8 +114,7 @@ const gearServices = [
   {
     title: "Knurling Services",
     desc: "Professional knurling services for gear handles, adjusters, and mechanical components for better grip and aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_ryom9mryom9mryom.png",
     features: [
       "Diamond Knurl",
       "Straight Knurl",
@@ -137,8 +131,7 @@ const gearServices = [
   {
     title: "Gear Milling",
     desc: "Complete gear milling services including spur gears, helical gears, bevel gears, and worm gears using advanced CNC milling machines.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_ihqwizihqwizihqw.png",
     features: [
       "Spur Gear Milling",
       "Helical Gear Milling",
@@ -155,8 +148,7 @@ const gearServices = [
   {
     title: "Gear Hobbing",
     desc: "Precision gear hobbing services for high-volume production of spur and helical gears with excellent surface finish.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_wd51znwd51znwd51 (1).png",
     features: [
       "Spur Gear Hobbing",
       "Helical Gear Hobbing",
@@ -268,7 +260,7 @@ export default function GearsMakingMillingPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/Gears Making & Milling.jpg"
+                  src="/Gemini_Generated_Image_houhfuhouhfuhouh.png"
                   alt="Gear Manufacturing Workshop"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />

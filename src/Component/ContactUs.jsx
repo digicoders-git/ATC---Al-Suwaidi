@@ -226,10 +226,10 @@ const ContactUs = () => {
                   Visit Us
                 </h3>
                 <p className="text-orange-200 text-center text-sm">
-                  Street No. 18, Gate No. 35
+                  P.O. Box No: 40600
                 </p>
                 <p className="text-orange-300 text-center text-sm">
-                  Industrial Area, Doha
+                  Zone: 57, Street: 18, Gate: 35
                 </p>
               </motion.div>
 
@@ -261,7 +261,7 @@ const ContactUs = () => {
                   Email Us
                 </h3>
                 <p className="text-orange-200 text-center text-sm break-all">
-                  pankajsuwaidigroup@gmail.com
+                  Karthick@alsuwaidipaper.com
                 </p>
                 <p className="text-orange-300 text-center text-sm break-all">
                   suwaidigroup@yahoo.com
@@ -389,11 +389,15 @@ const ContactUs = () => {
                       Our Location
                     </h4>
                     <p className="text-gray-600 leading-relaxed">
-                      Street No. 18, Gate No. 35
+                      AL SUWAIDI TECHNICAL CENTER
                       <br />
-                      P.O. Box – 40600
+                      P.O. Box No: 40600
                       <br />
-                      Industrial Area, Doha, Qatar
+                      East Industrial Area, Zone: 57
+                      <br />
+                      Street No: 18, Gate No: 35
+                      <br />
+                      Doha – Qatar
                     </p>
                   </div>
                 </div>
@@ -423,7 +427,7 @@ const ContactUs = () => {
                       Email Address
                     </h4>
                     <p className="text-gray-600 leading-relaxed">
-                      pankajsuwaidigroup@gmail.com
+                      Karthick@alsuwaidipaper.com
                       <br />
                       suwaidigroup@yahoo.com
                     </p>

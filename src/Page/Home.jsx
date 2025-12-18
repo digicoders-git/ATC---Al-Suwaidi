@@ -5,6 +5,8 @@ import Services from "../Component/HomeServices";
 import GetDemoSection from "../Component/GetDemoSection";
 import QualityProcess from "../Component/HomeQualityProcess";
 import HomeProjectsSlider from "../Component/HomeProject";
+import CompanyScope from "../Component/CompanyScope";
+import Introduction from "../Component/Introduction";
 
 function Home() {
   return (
@@ -13,8 +15,11 @@ function Home() {
       <Services />
 
       <QualityProcess />
+      <Introduction />
       <HomeProjectsSlider />
+
       <GetDemoSection />
+      <CompanyScope />
       <TestimonialCarousel />
     </>
   );

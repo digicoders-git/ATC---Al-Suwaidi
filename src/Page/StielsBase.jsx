@@ -27,7 +27,7 @@ const servicesList = [
     title: "Manufacturing Industry",
     desc: "Large-scale fabrication & assembly — tanks, silos, trailers and more.",
     icon: Factory,
-    image: "/Manufacturing Industry.jpg",
+    image: "/Gemini_Generated_Image_l22lsll22lsll22l.png",
     features: ["Industrial Machinery", "Storage Tanks", "Silos", "Trailers"],
   },
   {
@@ -190,7 +190,7 @@ export default function ServicesPage() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/Industrial Steel.jpg"
+                  src="/Gemini_Generated_Image_5h1am65h1am65h1a.png"
                   alt="Steel Fabrication Workshop"
                   className="w-full h-96 object-cover"
                 />

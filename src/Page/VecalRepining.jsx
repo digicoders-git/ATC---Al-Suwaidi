@@ -35,8 +35,7 @@ const wheelServices = [
   {
     title: "Disc Facing & Resurfacing",
     desc: "Professional disc brake resurfacing services to restore smooth braking surface and eliminate vibrations, ensuring optimal brake performance.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Dics.png",
     features: [
       "Precision machining",
       "Vibration elimination",
@@ -53,8 +52,7 @@ const wheelServices = [
   {
     title: "Drum Facing & Resurfacing",
     desc: "Complete drum brake resurfacing services to restore braking efficiency and eliminate brake pull, using precision drum lathe machines.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_g9wno9g9wno9g9wn.png",
     features: [
       "Drum turning",
       "Surface finishing",
@@ -71,8 +69,7 @@ const wheelServices = [
   {
     title: "Flywheel Facing & Resurfacing",
     desc: "Precision flywheel resurfacing services to ensure proper clutch engagement and eliminate judder, extending clutch life.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_kbg70wkbg70wkbg7.png",
     features: [
       "Surface machining",
       "Step height check",
@@ -89,8 +86,7 @@ const wheelServices = [
   {
     title: "Wheel Straightening & Balancing",
     desc: "Professional wheel straightening services for alloy and steel wheels, including dynamic balancing for vibration-free driving.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_n7dcpwn7dcpwn7dc (2).png",
     features: [
       "Bend correction",
       "Crack repair",
@@ -107,8 +103,7 @@ const wheelServices = [
   {
     title: "Rim Welding & Machining",
     desc: "Expert rim welding and machining services including crack repair, bead seat repair, and custom rim modifications.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_1tjr981tjr981tjr.png",
     features: [
       "Crack welding",
       "Bead seat repair",
@@ -125,8 +120,7 @@ const wheelServices = [
   {
     title: "Wheel Alignment Services",
     desc: "Complete wheel alignment services including camber, caster, and toe adjustment for optimal tire wear and handling.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_xp5iy3xp5iy3xp5i.png",
     features: [
       "Computerized alignment",
       "Camber adjustment",
@@ -143,8 +137,7 @@ const wheelServices = [
   {
     title: "Tire Mounting & Demounting",
     desc: "Professional tire mounting and demounting services including TPMS sensor installation and tire pressure monitoring.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_9xe409xe409xe409 (1).png",
     features: [
       "Tire mounting",
       "TPMS service",
@@ -161,8 +154,7 @@ const wheelServices = [
   {
     title: "Custom Wheel Modifications",
     desc: "Custom wheel modification services including color changes, machining, and performance enhancements for special vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_slhut6slhut6slhu.png",
     features: [
       "Color powder coating",
       "Diamond cutting",
@@ -272,7 +264,7 @@ export default function VehicleWheelsRepairPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
+                  src="/MianHEader.png"
                   alt="Wheel Repair Workshop"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />

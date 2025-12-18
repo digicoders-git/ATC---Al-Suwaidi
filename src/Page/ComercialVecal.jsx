@@ -28,7 +28,7 @@ const vehicleServices = [
   {
     title: "Sewage Tanker Bodies",
     desc: "Heavy-duty sewage tankers with corrosion-resistant materials, high-capacity storage, and advanced pumping systems for efficient waste management.",
-    image: "/maxim-tolchinskiy-UQ7-BmNeq5A-unsplash.jpg",
+    image: "/Gemini_Generated_Image_ak697dak697dak69.png",
     features: [
       "Corrosion-resistant",
       "High-capacity",
@@ -45,7 +45,7 @@ const vehicleServices = [
   {
     title: "Dump Truck Bodies",
     desc: "Robust dump truck bodies for construction and mining industries, featuring reinforced structures and hydraulic systems for reliable material handling.",
-    image: "/Dump Truck Bodies.jpg",
+    image: "/Gemini_Generated_Image_kl92i5kl92i5kl92.png",
     features: [
       "Reinforced structure",
       "Hydraulic system",
@@ -62,7 +62,7 @@ const vehicleServices = [
   {
     title: "Tow Truck Bodies",
     desc: "Specialized tow truck bodies with integrated winch systems, recovery equipment, and adjustable boom arms for vehicle recovery operations.",
-    image: "/Tow Truck Bodies.webp",
+    image: "/Gemini_Generated_Image_v52s8sv52s8sv52s.png",
     features: [
       "Integrated winch",
       "Recovery equipment",
@@ -75,7 +75,7 @@ const vehicleServices = [
   {
     title: "Tipper Truck Bodies",
     desc: "Efficient tipper bodies for construction and agriculture with smooth dumping mechanisms, reinforced sides, and durable flooring.",
-    image: "/Tipper Truck Bodies.jpg",
+    image: "/Gemini_Generated_Image_6uvceu6uvceu6uvc (1).png",
     features: [
       "Smooth dumping",
       "Reinforced sides",
@@ -92,7 +92,7 @@ const vehicleServices = [
   {
     title: "Flatbed Truck Bodies",
     desc: "Versatile flatbed bodies for general cargo transport with tie-down points, removable sides, and durable construction for various loads.",
-    image: "/Flatbed Truck Bodies.jpg",
+    image: "/Gemini_Generated_Image_ss3bmjss3bmjss3b.png",
     features: [
       "Tie-down points",
       "Removable sides",
@@ -105,7 +105,7 @@ const vehicleServices = [
   {
     title: "Trailer Truck Bodies",
     desc: "Custom trailer bodies including semi-trailers, container carriers, and specialized transport solutions with advanced suspension systems.",
-    image: "/Trailer Truck Bodies.jpg",
+    image: "/Gemini_Generated_Image_g21shfg21shfg21s.png",
     features: [
       "Custom length",
       "Advanced suspension",
@@ -118,7 +118,7 @@ const vehicleServices = [
   {
     title: "Refrigerated Truck Bodies",
     desc: "Insulated refrigerated bodies with temperature control systems for perishable goods transport across various temperature ranges.",
-    image: "/Refrigerated Truck Bodies.jpg",
+    image: "/Gemini_Generated_Image_yqg9rnyqg9rnyqg9.png",
     features: [
       "Temperature control",
       "Insulated walls",
@@ -135,7 +135,7 @@ const vehicleServices = [
   {
     title: "Fuel Tanker Bodies",
     desc: "Safety-certified fuel tanker bodies with compartmentalized tanks, safety valves, and advanced metering systems for petroleum transport.",
-    image: "/Fuel Tanker Bodies.jpg",
+    image: "/Gemini_Generated_Image_ytdt22ytdt22ytdt.png",
     features: [
       "Compartmentalized",
       "Safety valves",
@@ -247,7 +247,7 @@ export default function CommercialVehicleBodiesPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/chandler-cruttenden-S_wWZf0dZqc-unsplash.jpg"
+                  src="/Gemini_Generated_Image_ey8x6cey8x6cey8x.png"
                   alt="Commercial Vehicle Fabrication"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />

@@ -29,115 +29,109 @@ import GetDemoSection from "../Component/GetDemoSection";
 const cabinetServices = [
   {
     title: "Water Service Cabinet 42mm",
-    desc: "Standard 42mm water service cabinets designed for single meter installations with durable construction and easy access for maintenance.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    desc: "KAHRAMAA-approved water service cabinet fabricated using 3.0mm aluminum sheets with powder coating finish in RAL 9016, ensuring durability and aesthetic appeal.",
+    image: "/1.png",
     features: [
-      "42mm pipe compatible",
-      "Single meter housing",
-      "Lockable door",
-      "Weather resistant",
+      "KAHRAMAA Approved",
+      "3.0mm Aluminum Sheet",
+      "RAL 9016 Powder Coating",
+      "Textured Finish",
     ],
     specs: [
-      "Material: Galvanized Steel",
-      "Size: Standard",
-      "Finish: Powder coated",
-      "ISO 9001:2008",
+      "Size: 830 x 300 x 230 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: Powder Coated RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Droplets,
   },
   {
     title: 'Water Service Cabinet 2"',
-    desc: 'Heavy-duty 2" water service cabinets for commercial applications with larger pipe capacity and enhanced durability.',
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    desc: 'KAHRAMAA-approved 2" water service cabinet with durable aluminum construction and high-quality powder coating for long-lasting performance.',
+    image: "/2.png",
     features: [
-      '2" pipe capacity',
-      "Commercial grade",
-      "Corrosion resistant",
-      "Easy installation",
+      "KAHRAMAA Approved",
+      "2 inch Capacity",
+      "Corrosion Resistant",
+      "Professional Finish",
     ],
     specs: [
-      "Material: Stainless Steel",
-      "Pipe size: 2 inch",
-      "Weatherproof",
-      "ISO 9001:2008",
+      "Size: 650 x 750 x 300 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Layers,
   },
   {
-    title: "Water Cabinet (2 Nos Meters)",
-    desc: "Dual meter water cabinets designed for multi-unit installations with separate compartments and individual access.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    title: "Multi-Meter Water Cabinet (2 Nos Meters)",
+    desc: "KAHRAMAA-approved dual meter water cabinet designed for multi-unit installations with separate compartments and professional finish.",
+    image: "/3.png",
     features: [
-      "Two meter capacity",
-      "Separate compartments",
-      "Individual locks",
-      "Clear labeling",
+      "KAHRAMAA Approved",
+      "2 Meter Capacity",
+      "Separate Compartments",
+      "Durable Construction",
     ],
     specs: [
-      "Meters: 2 Nos",
-      "Material: Powder coated steel",
-      "Size: Medium",
-      "ISO 9001:2008",
+      "Size: 662 x 850 x 230 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: Powder Coated RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Box,
   },
   {
-    title: "Water Cabinet (3 Nos Meters)",
-    desc: "Three meter water cabinets for apartment complexes and commercial buildings with organized layout and easy maintenance.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    title: "Multi-Meter Water Cabinet (3 Nos Meters)",
+    desc: "KAHRAMAA-approved three meter water cabinet for apartment complexes with organized layout and high-quality textured finish.",
+    image: "/4.png",
     features: [
-      "Three meter capacity",
-      "Organized layout",
-      "Drainage system",
-      "Service access",
+      "KAHRAMAA Approved",
+      "3 Meter Capacity",
+      "Organized Layout",
+      "Textured Finish",
     ],
     specs: [
-      "Meters: 3 Nos",
-      "Material: Stainless steel",
-      "Waterproof",
-      "ISO 9001:2008",
+      "Size: 884 x 850 x 230 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Package,
   },
   {
-    title: "Water Cabinet (4 Nos Meters)",
-    desc: "Large capacity water cabinets for multiple unit installations with robust construction and professional finish.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    title: "Multi-Meter Water Cabinet (4 Nos Meters)",
+    desc: "KAHRAMAA-approved large capacity water cabinet for multiple unit installations with robust aluminum construction and professional finish.",
+    image: "/5.png",
     features: [
-      "Four meter capacity",
-      "Heavy-duty construction",
-      "Locking system",
-      "Ventilation",
+      "KAHRAMAA Approved",
+      "4 Meter Capacity",
+      "Heavy-Duty Construction",
+      "Professional Finish",
     ],
     specs: [
-      "Meters: 4 Nos",
-      "Material: Industrial grade",
-      "Size: Large",
-      "ISO 9001:2008",
+      "Size: 1100 x 850 x 200 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: Powder Coated RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Package,
   },
   {
-    title: "Electric Service Cabinet",
-    desc: "Professional electrical service cabinets for meter installations, circuit breakers, and electrical distribution systems.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    title: "Electrical Service Cabinet - Wall Mounted",
+    desc: "KAHRAMAA-approved electrical service cabinet with fire-resistant aluminum construction and professional powder coating for electrical meter installations.",
+    image: "/6.png",
     features: [
-      "Electrical safety",
-      "Circuit protection",
-      "Meter housing",
-      "Cable management",
+      "KAHRAMAA Approved",
+      "Wall Mounted Design",
+      "Electrical Safety",
+      "Durable Finish",
     ],
     specs: [
-      "Material: Fire resistant",
-      "IP rating: IP65",
-      "Safety compliant",
-      "ISO 9001:2008",
+      "Size: 830 x 600 x 230 mm",
+      "Material: 3.0mm Aluminum",
+      "Finish: RAL 9016",
+      "KAHRAMAA Certified",
     ],
     icon: Zap,
   },
@@ -176,17 +170,18 @@ export default function CabinetsManufacturingPage() {
               </motion.div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Cabinets Manufacturing
+                KAHRAMAA Approved
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-white mt-2">
-                  Services
+                  Cabinets Manufacturing
                 </span>
               </h1>
 
               <p className="mt-6 max-w-xl text-white/90 text-lg leading-relaxed">
-                Professional manufacturing of water and electric service
-                cabinets with ISO 9001:2008 quality certification. We produce
-                durable, reliable cabinets for residential, commercial, and
-                industrial applications.
+                With over 30 years of expertise, Al Suwaidi Technical Center
+                specializes in the production and supply of KAHRAMAA-approved
+                Electrical and Water Service Cabinets. All cabinets are
+                fabricated using 3.0mm aluminum sheets with durable powder
+                coating in RAL 9016.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -243,7 +238,7 @@ export default function CabinetsManufacturingPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
+                  src="/3.png"
                   alt="Cabinets Manufacturing"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
@@ -301,10 +296,11 @@ export default function CabinetsManufacturingPage() {
           </motion.h2>
 
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            We manufacture high-quality water and electric service cabinets
-            following ISO 9001:2008 standards. Our cabinets are designed for
-            durability, safety, and easy maintenance for residential,
-            commercial, and industrial applications.
+            Al Suwaidi Technical Centre fabricates and supplies a wide variety
+            of KAHRAMAA-approved cabinets and custom enclosures tailored to meet
+            diverse client requirements. Our solutions ensure functionality,
+            durability, and compliance with specific project needs across
+            various applications.
           </p>
         </section>
 

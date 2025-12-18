@@ -9,6 +9,7 @@ import {
   Truck,
   ArrowRight,
 } from "lucide-react";
+import GoogleTranslateButton from "./GoogleTranslate";
 
 /**
  * Modern White Background Navbar for Truck Company
@@ -174,32 +175,20 @@ export default function ModernNavbar() {
 
                       {/* Services Dropdown */}
                       {servicesOpen && (
-                        <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-[650px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
+                        <div className="absolute left-1/2 p-2 -translate-x-1/2 mt-2 w-[300px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm">
+                          <div className="">
+                            <div className=" gap-4">
                               {services.map((service) => (
                                 <button
                                   key={service.to}
                                   onClick={() => handleServiceClick(service.to)}
                                   className="w-full text-left flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-orange-200"
                                 >
-                                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors">
-                                    <span className="text-xl">
-                                      {service.icon}
-                                    </span>
-                                  </div>
                                   <div className="flex-1">
                                     <div className="font-bold text-gray-800 group-hover:text-orange-600 text-base leading-tight">
                                       {service.label}
                                     </div>
-                                    <div className="text-sm text-gray-500 mt-1 font-medium">
-                                      Professional service
-                                    </div>
                                   </div>
-                                  <ArrowRight
-                                    size={16}
-                                    className="text-gray-400 group-hover:text-orange-500 transition-colors"
-                                  />
                                 </button>
                               ))}
                             </div>
@@ -240,6 +229,7 @@ export default function ModernNavbar() {
 
             {/* Right Action Buttons */}
             <div className="flex items-center gap-3">
+              <GoogleTranslateButton />
               {/* CTA Button */}
               <Link
                 to="/get-quote"

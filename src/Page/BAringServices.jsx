@@ -35,8 +35,7 @@ const bearingServices = [
   {
     title: "Axle Bearing Removal & Fitting",
     desc: "Professional axle bearing services including removal of worn bearings and precision fitting of new bearings for smooth vehicle operation.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_37ct9237ct9237ct.png",
     features: [
       "Safe removal",
       "Proper lubrication",
@@ -53,8 +52,7 @@ const bearingServices = [
   {
     title: "Hub Bearing Replacement",
     desc: "Complete hub bearing replacement services including diagnosis, removal of old bearings, and installation of high-quality replacements.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_ux13j0ux13j0ux13.png",
     features: [
       "Noise diagnosis",
       "Seal replacement",
@@ -71,8 +69,7 @@ const bearingServices = [
   {
     title: "Lower Arm Bush Replacement",
     desc: "Professional lower control arm bush replacement services to restore suspension performance and vehicle handling.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_fthmdafthmdafthm.png",
     features: ["Bush pressing", "Alignment check", "Bolt torque", "Test drive"],
     specs: [
       "Materials: Rubber/Polyurethane",
@@ -84,8 +81,7 @@ const bearingServices = [
   {
     title: "Upper Arm Bush Replacement",
     desc: "Upper control arm bush replacement services to eliminate suspension noise and improve steering response.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_lmt906lmt906lmt9.png",
     features: [
       "Bush inspection",
       "Precision fitting",
@@ -102,8 +98,7 @@ const bearingServices = [
   {
     title: "Steering Kit Fitting",
     desc: "Complete steering system overhaul including tie rods, ends, and rack fitting for precise steering control.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_dnas76dnas76dnas.png",
     features: [
       "Tie rod replacement",
       "Rack inspection",
@@ -120,8 +115,7 @@ const bearingServices = [
   {
     title: "King Pin Removal & Fitting",
     desc: "Professional king pin services including removal of worn pins and precision fitting of new pins for heavy vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_yv3rryyv3rryyv3r.png",
     features: [
       "Pin removal",
       "Bush replacement",
@@ -138,8 +132,7 @@ const bearingServices = [
   {
     title: "Door Hinges Making & Fitting",
     desc: "Custom door hinge manufacturing and fitting services for all types of commercial and industrial vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_7s4ovw7s4ovw7s4o.png",
     features: [
       "Custom fabrication",
       "Precision welding",
@@ -156,8 +149,7 @@ const bearingServices = [
   {
     title: "Gear Removal & Fitting",
     desc: "Professional gear removal and fitting services for transmissions and differentials with precision alignment.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/Gemini_Generated_Image_ecvmyiecvmyiecvm.png",
     features: [
       "Gear inspection",
       "Proper meshing",
@@ -268,7 +260,7 @@ export default function BearingsRemovalFittingPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
+                  src="/Gemini_Generated_Image_kd6s2hkd6s2hkd6s.png"
                   alt="Bearings and Mechanical Workshop"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
