@@ -18,78 +18,68 @@ import { Link } from "react-router-dom";
 
 const SERVICES = [
   {
-    id: "steel-fab",
-    title: "Steel Fabrication Works",
+    id: "steel-fabrication",
+    title: "Steel Fabrication Basics",
     icon: FaIndustry,
-    short:
-      "Heavy & medium structural steel works — sheds, warehouses & assemblies.",
-    details:
-      "Fabrication of heavy and medium structural steel works, warehouse sheds, structural assemblies and onsite installation.",
+    short: "Heavy & medium structural steel works, warehouse sheds, industrial structures.",
+    details: "Complete structural steel fabrication including heavy and medium steel works, warehouse sheds, industrial buildings, and custom steel structures with professional installation services.",
     category: "Fabrication",
   },
   {
-    id: "sandblast-paint",
-    title: "Sandblasting & Painting",
-    icon: FaPaintRoller,
-    short:
-      "Surface preparation, sandblasting, epoxy coating & protective finishes.",
-    details:
-      "Surface treatment including sandblasting, epoxy coating and finishing works to industry standards.",
-    category: "Finishing",
+    id: "vehicle-bodies",
+    title: "Commercial Vehicle Bodies",
+    icon: FaTruck,
+    short: "Road tankers, trailers, flatbeds, dump trucks, .",
+    details: "Design and fabrication of commercial vehicle bodies including fuel tankers, water tankers, flatbed trailers, dump trucks, refrigerated bodies, and custom transportation solutions.",
+    category: "Vehicle Bodies",
   },
   {
-    id: "machining",
-    title: "Machining Works",
+    id: "engine-repair",
+    title: "Vehicle Engine Repairing",
     icon: FaCogs,
-    short: "Lathe, milling, shearing, bending, rolling & precision machining.",
-    details:
-      "Complete machining services: lathe, milling, shearing, bending, rolling, punching and press operations.",
+    short: "Engine reconditioning, block boring, crankshaft grinding, and mechanical repairs.",
+    details: "Professional engine repair and reconditioning services including block boring, crankshaft grinding, cylinder liner fitting, piston ring fitting, and complete engine assembly.",
+    category: "Engine Repair",
+  },
+  {
+    id: "gears-milling",
+    title: "Gears Making & Milling",
+    icon: FaWrench,
+    short: "Precision gear manufacturing, milling operations, and machining services.",
+    details: "Advanced gear making and milling services including gear hobbing, turning operations, drilling, boring, and precision machining for industrial applications.",
     category: "Machining",
   },
   {
-    id: "vehicle-body",
-    title: "Vehicle Body Works",
-    icon: FaTruck,
-    short: "Road tankers, trailers, flatbeds & dry cargo transport bodies.",
-    details:
-      "Design & fabrication of road tankers, flatbed trailers and container carriers.",
-    category: "Transportation",
-  },
-  {
-    id: "welding",
-    title: "Welding & Brazing",
-    icon: FaWrench,
-    short: "Certified welding & brazing for structural and pressure equipment.",
-    details:
-      "Welding and brazing works with QA/QC procedures for critical fabrications.",
-    category: "Fabrication",
-  },
-  {
-    id: "cabinet-trays",
-    title: "Cabinet & Tray Manufacturing",
-    icon: FaBoxes,
-    short: "SS cable trays, meter cabinets & customized enclosures.",
-    details:
-      "Design & manufacture of cabinets, cable trays and utility housings.",
-    category: "Cabinets",
-  },
-  {
-    id: "structural-sheds",
-    title: "Structural Steel Sheds",
-    icon: FaHardHat,
-    short: "Industrial sheds & steel buildings with erection services.",
-    details:
-      "Structural steel shed fabrication, site erection and finishing works.",
-    category: "Construction",
-  },
-  {
-    id: "custom-fab",
-    title: "Custom Fabrication",
+    id: "bearings",
+    title: "Bearings Service",
     icon: FaTools,
-    short: "Tanks, piping, platforms & bespoke industrial solutions.",
-    details:
-      "Custom-built storage tanks, piping assemblies and special fabrications.",
-    category: "Custom",
+    short: "Bearing removal, fitting, hub bearings, and axle bearing services.",
+    details: "Comprehensive bearing services including axle bearing removal and fitting, hub bearing installation, king pin services, and bearing maintenance for all vehicle types.",
+    category: "Bearings",
+  },
+  {
+    id: "wheels-repair",
+    title: "Vehicle Wheels Repair",
+    icon: FaBoxes,
+    short: "Wheel alignment, balancing, disc facing, and rim repair services.",
+    details: "Complete wheel repair services including wheel alignment, straightening and balancing, disc and drum facing, flywheel resurfacing, and custom wheel modifications.",
+    category: "Wheel Services",
+  },
+  {
+    id: "cabinets",
+    title: "Cabinets Manufacturing",
+    icon: FaHardHat,
+    short: "KAHRAMAA-approved water and electric service cabinets.",
+    details: "Manufacturing of KAHRAMAA-approved utility cabinets including water service cabinets, electric service cabinets, and custom enclosures with ISO quality certification.",
+    category: "Manufacturing",
+  },
+  {
+    id: "mro",
+    title: "MRO Services",
+    icon: FaPaintRoller,
+    short: "Maintenance, repair, and overhaul services for industrial equipment.",
+    details: "Comprehensive MRO services including body panel repair, chassis alignment, structural reinforcement, surface treatment, and preventive maintenance programs.",
+    category: "MRO",
   },
 ];
 

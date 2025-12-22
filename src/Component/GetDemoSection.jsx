@@ -130,7 +130,8 @@ export default function GetDemoSection() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 24px;
+          padding-top: 8%;
+          padding-100px
         }
 
         .modal-inner {

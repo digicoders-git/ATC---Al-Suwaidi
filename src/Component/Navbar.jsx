@@ -89,6 +89,11 @@ export default function ModernNavbar() {
       icon: "🛞",
     },
     {
+      label: "Maintenance, Repair & Overhaul (MRO)",
+      to: "/services/maintenance",
+      icon: "🛠️",
+    },
+    {
       label: "Cabinets Manufacturing (ISO 9001:2008)",
       to: "/services/cabinets",
       icon: "📦",
@@ -100,6 +105,8 @@ export default function ModernNavbar() {
     { label: "About", to: "/about" },
     { label: "Services", to: "/services", hasDropdown: true },
     { label: "Projects", to: "/project" },
+    { label: "Gallery", to: "/gallery" },
+    { label: "Our Story", to: "/our-story" },
     { label: "Contact", to: "/contact" },
   ];
 

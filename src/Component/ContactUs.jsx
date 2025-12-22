@@ -79,123 +79,174 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600  pb-20 sm:mb-10 lg:mb-0 ">
+      <section className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `
-          linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-        `,
-              backgroundSize: "50px 50px",
-            }}
-          />
-        </div>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        
+        {/* Animated background blobs */}
+        <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-orange-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-red-400/20 rounded-full blur-3xl animate-pulse" />
 
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* LEFT CONTENT */}
-            <div className="space-y-10">
-              {/* Badge */}
-              <div
-                className="inline-flex items-center gap-3 
-          bg-gradient-to-r from-orange-400/20 to-red-400/20 
-          backdrop-blur-md px-6 py-3 rounded-full 
-          border border-orange-300/30 shadow-lg"
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div className="text-center">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
+            >
+              <FaPhone size={18} className="text-orange-200" />
+              GET IN TOUCH WITH OUR EXPERTS
+            </motion.div>
+
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
+            >
+              CONTACT AL SUWAIDI
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+                TECHNICAL CENTRE
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
+            >
+              Ready to Transform Your Industrial Vision into Reality?
+            </motion.h2>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
+            >
+              Connect with our expert engineering team for world-class industrial solutions. From heavy-duty fabrication to precision manufacturing, we deliver excellence tailored to your specific project requirements.
+            </motion.p>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            >
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("contact-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
               >
-                <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-                <span className="text-orange-100 font-semibold tracking-wider">
-                  GET IN TOUCH
-                </span>
-              </div>
+                <FaPaperPlane size={20} className="group-hover:animate-pulse" />
+                <span>Send Message</span>
+              </button>
 
-              {/* Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-                <span className="block bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">
-                  Contact Al Suwaidi
-                </span>
+              <a
+                href="tel:+97444601087"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
+              >
+                <span>Call Now: +974 44601087</span>
+                <FaPhone size={20} />
+              </a>
+            </motion.div>
 
-                <span className="block text-orange-100">Technical Centre</span>
-              </h1>
+            {/* Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            >
+              {[
+                { value: "32+", label: "Years Experience", icon: FaAward },
+                { value: "245+", label: "Expert Team", icon: FaUsers },
+                { value: "24/7", label: "Support Available", icon: FaClock },
+                { value: "100%", label: "Client Satisfaction", icon: FaShieldAlt },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + idx * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105"
+                >
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
+                      <stat.icon className="text-orange-200" size={24} />
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm sm:text-base text-white/80 font-medium text-center">
+                      {stat.label}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-              {/* Description */}
-              <p className="text-xl md:text-2xl text-orange-100 max-w-2xl leading-relaxed">
-                Ready to discuss your next industrial project? Our expert team
-                provides
-                <span className="text-orange-300 font-semibold">
-                  {" "}
-                  world-class engineering solutions
-                </span>{" "}
-                tailored to your specific needs.
-              </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 max-w-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-orange-50 mb-1">
-                    32+
-                  </div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Years Experience
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-orange-50 mb-1">
-                    245+
-                  </div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Professionals
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-orange-50 mb-1">
-                    24/7
-                  </div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Support
-                  </div>
-                </div>
-              </div>
+      {/* Quick Contact Cards Section */}
+      <section className="py-20 bg-gradient-to-br from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-10 text-center">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-100 to-red-100 px-5 py-2 rounded-full text-sm font-semibold mx-auto shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+              QUICK CONTACT
             </div>
+            <h2 className="mt-6 text-4xl md:text-5xl font-extrabold text-slate-900">
+              Get In Touch
+            </h2>
+            <p className="mt-3 text-slate-600 max-w-2xl mx-auto font-semibold">
+              Multiple ways to reach our expert team for immediate assistance
+            </p>
+          </div>
 
-            {/* RIGHT CONTACT CARDS */}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* CALL */}
-              <motion.div
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* CALL */}
+            <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-gradient-to-br from-white/10 to-orange-500/10 
-    backdrop-blur-md rounded-2xl p-8 
-    border border-orange-300/30 
-    hover:border-orange-400/60 
-    hover:bg-orange-500/20 
-    shadow-lg hover:shadow-2xl transition-all"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
               >
-                <div
-                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-orange-400 to-red-500 
-      flex items-center justify-center 
-      shadow-orange-500/40 shadow-lg 
-      group-hover:scale-110 transition"
-                >
-                  <FaPhone className="text-2xl text-white" />
-                </div>
+                <div className="p-7 flex flex-col min-h-[200px]">
+                  <div
+                    className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+        bg-gradient-to-br from-orange-400 to-red-500 
+        flex items-center justify-center 
+        shadow-orange-500/40 shadow-lg 
+        group-hover:scale-110 transition"
+                  >
+                    <FaPhone className="text-2xl text-white" />
+                  </div>
 
-                <h3 className="text-orange-100 font-bold mb-2 text-center">
-                  Call Us
-                </h3>
-                <p className="text-orange-200 text-center text-sm">
-                  Tel: +974 44601087
-                </p>
-                <p className="text-orange-300 text-center text-sm">
-                  Cell: +974 51711104
-                </p>
+                  <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                    Call Us
+                  </h3>
+                  <p className="text-slate-600 text-center text-sm">
+                    Tel: +974 44601087
+                  </p>
+                  <p className="text-orange-600 text-center text-sm font-semibold">
+                    Cell: +974 51711104
+                  </p>
+                </div>
               </motion.div>
 
               {/* ADDRESS */}
@@ -205,32 +256,29 @@ const ContactUs = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-gradient-to-br from-white/10 to-orange-500/10 
-    backdrop-blur-md rounded-2xl p-8 
-    border border-orange-300/30 
-    hover:border-orange-400/60 
-    hover:bg-orange-500/20 
-    shadow-lg hover:shadow-2xl transition-all"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
               >
-                <div
-                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-orange-500 to-red-500 
-      flex items-center justify-center 
-      shadow-orange-500/40 shadow-lg 
-      group-hover:scale-110 transition"
-                >
-                  <FaMapMarkerAlt className="text-2xl text-white" />
-                </div>
+                <div className="p-7 flex flex-col min-h-[200px]">
+                  <div
+                    className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+        bg-gradient-to-br from-orange-500 to-red-500 
+        flex items-center justify-center 
+        shadow-orange-500/40 shadow-lg 
+        group-hover:scale-110 transition"
+                  >
+                    <FaMapMarkerAlt className="text-2xl text-white" />
+                  </div>
 
-                <h3 className="text-orange-100 font-bold mb-2 text-center">
-                  Visit Us
-                </h3>
-                <p className="text-orange-200 text-center text-sm">
-                  P.O. Box No: 40600
-                </p>
-                <p className="text-orange-300 text-center text-sm">
-                  Zone: 57, Street: 18, Gate: 35
-                </p>
+                  <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                    Visit Us
+                  </h3>
+                  <p className="text-slate-600 text-center text-sm">
+                    P.O. Box No: 40600
+                  </p>
+                  <p className="text-orange-600 text-center text-sm font-semibold">
+                    Zone: 57, Street: 18, Gate: 35
+                  </p>
+                </div>
               </motion.div>
 
               {/* EMAIL */}
@@ -240,32 +288,29 @@ const ContactUs = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-gradient-to-br from-white/10 to-orange-500/10 
-    backdrop-blur-md rounded-2xl p-8 
-    border border-orange-300/30 
-    hover:border-orange-400/60 
-    hover:bg-orange-500/20 
-    shadow-lg hover:shadow-2xl transition-all"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
               >
-                <div
-                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-red-400 to-orange-500 
-      flex items-center justify-center 
-      shadow-red-500/40 shadow-lg 
-      group-hover:scale-110 transition"
-                >
-                  <FaEnvelope className="text-2xl text-white" />
-                </div>
+                <div className="p-7 flex flex-col min-h-[200px]">
+                  <div
+                    className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+        bg-gradient-to-br from-red-400 to-orange-500 
+        flex items-center justify-center 
+        shadow-red-500/40 shadow-lg 
+        group-hover:scale-110 transition"
+                  >
+                    <FaEnvelope className="text-2xl text-white" />
+                  </div>
 
-                <h3 className="text-orange-100 font-bold mb-2 text-center">
-                  Email Us
-                </h3>
-                <p className="text-orange-200 text-center text-sm break-all">
-                  Karthick@alsuwaidipaper.com
-                </p>
-                <p className="text-orange-300 text-center text-sm break-all">
-                  suwaidigroup@yahoo.com
-                </p>
+                  <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                    Email Us
+                  </h3>
+                  <p className="text-slate-600 text-center text-sm break-all">
+                    Karthick@alsuwaidipaper.com
+                  </p>
+                  <p className="text-orange-600 text-center text-sm break-all font-semibold">
+                    suwaidigroup@yahoo.com
+                  </p>
+                </div>
               </motion.div>
 
               {/* WORKING HOURS */}
@@ -275,34 +320,30 @@ const ContactUs = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-gradient-to-br from-white/10 to-orange-500/10 
-    backdrop-blur-md rounded-2xl p-8 
-    border border-orange-300/30 
-    hover:border-orange-400/60 
-    hover:bg-orange-500/20 
-    shadow-lg hover:shadow-2xl transition-all"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
               >
-                <div
-                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-orange-400 to-orange-600 
-      flex items-center justify-center 
-      shadow-orange-500/40 shadow-lg 
-      group-hover:scale-110 transition"
-                >
-                  <FaClock className="text-2xl text-white" />
-                </div>
+                <div className="p-7 flex flex-col min-h-[200px]">
+                  <div
+                    className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+        bg-gradient-to-br from-orange-400 to-orange-600 
+        flex items-center justify-center 
+        shadow-orange-500/40 shadow-lg 
+        group-hover:scale-110 transition"
+                  >
+                    <FaClock className="text-2xl text-white" />
+                  </div>
 
-                <h3 className="text-orange-100 font-bold mb-2 text-center">
-                  Working Hours
-                </h3>
-                <p className="text-orange-200 text-center text-sm">
-                  Sunday – Thursday
-                </p>
-                <p className="text-orange-300 text-center text-sm">
-                  7:00 AM – 10:00 PM
-                </p>
-              </motion.div>
-            </div>
+                  <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                    Working Hours
+                  </h3>
+                  <p className="text-slate-600 text-center text-sm">
+                    Sunday – Thursday
+                  </p>
+                  <p className="text-orange-600 text-center text-sm font-semibold">
+                    7:00 AM – 10:00 PM
+                  </p>
+                </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -358,7 +399,7 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section id="contact-form" className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Side - Contact Information */}

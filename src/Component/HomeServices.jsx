@@ -18,46 +18,55 @@ const Services = () => {
       icon: FaIndustry,
       title: "Steel Fabrication",
       desc: "Heavy & medium structural steel works, warehouse sheds",
+      link: "/services/steel-fabrication",
     },
     {
       icon: FaTruck,
       title: "Road Tankers",
       desc: "Fuel, petro-chemical, edible oils, sewage water, cement silos",
+      link: "/services/vehicle-bodies",
     },
     {
       icon: FaTrailer,
       title: "Trailers & Containers",
       desc: "Flatbed trailers, container transportation trailers, dry cargo boxes",
+      link: "/services/vehicle-bodies",
     },
     {
       icon: FaWrench,
       title: "Machining Works",
       desc: "Lathe, Milling, Shearing, Bending, Rolling, Punching",
+      link: "/services/gears-milling",
     },
     {
       icon: FaBoxes,
       title: "Storage Solutions",
       desc: "Bulk & utility multi-product storage tankers with piping",
+      link: "/services/vehicle-bodies",
     },
     {
       icon: FaToolbox,
       title: "Cabinet Manufacturing",
       desc: "S.S. cable trays, panel boards, cabinets, electrical boxes",
+      link: "/services/cabinets",
     },
     {
       icon: FaPaintRoller,
       title: "Surface Treatment",
       desc: "Sandblasting & painting, epoxy coating, finishing works",
+      link: "/services/mro",
     },
     {
       icon: FaCogs,
       title: "Engineering Works",
       desc: "Welding, die making, engine re-boring, brazing works",
+      link: "/services/engine-repair",
     },
     {
       icon: FaWarehouse,
       title: "Structural Works",
       desc: "Industrial sheds, structural steel fabrication, installation",
+      link: "/services/steel-fabrication",
     },
   ];
 
@@ -98,15 +107,15 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <article
+              <Link
                 key={service.title}
-                className="group relative bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl p-6 md:p-8 shadow-md hover:shadow-2xl transform transition-all duration-400 hover:-translate-y-2 focus-within:scale-[1.01] focus-within:shadow-2xl"
+                to={service.link}
+                className="group relative bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl p-6 md:p-8 shadow-md hover:shadow-2xl transform transition-all duration-400 hover:-translate-y-2 focus-within:scale-[1.01] focus-within:shadow-2xl block"
                 style={{
                   animation: `fadeUp 0.5s ease forwards`,
                   animationDelay: `${index * 0.06}s`,
                   opacity: 0,
                 }}
-                tabIndex={0}
                 aria-labelledby={`service-${index}`}
               >
                 <div className="flex items-start gap-4">
@@ -137,7 +146,7 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>

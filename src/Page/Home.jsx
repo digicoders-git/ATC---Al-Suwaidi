@@ -5,8 +5,9 @@ import Services from "../Component/HomeServices";
 import GetDemoSection from "../Component/GetDemoSection";
 import QualityProcess from "../Component/HomeQualityProcess";
 import HomeProjectsSlider from "../Component/HomeProject";
-import CompanyScope from "../Component/CompanyScope";
+
 import Introduction from "../Component/Introduction";
+import CooperativePartners from "../Component/OurClientPartnerships";
 
 function Home() {
   return (
@@ -19,7 +20,8 @@ function Home() {
       <HomeProjectsSlider />
 
       <GetDemoSection />
-      <CompanyScope />
+      
+      <CooperativePartners/>
       <TestimonialCarousel />
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -33,30 +33,10 @@ import {
 import GetDemoSection from "../Component/GetDemoSection";
 
 const GetQuotePage = () => {
-  const [activeMethod, setActiveMethod] = useState("phone");
+  
 
   // Handle contact method clicks
-  const handleContactClick = (method) => {
-    switch (method) {
-      case "phone":
-        window.open("tel:+97444601087", "_self");
-        break;
-      case "whatsapp":
-        window.open("https://wa.me/97451711104", "_blank");
-        break;
-      case "email":
-        window.open("mailto:pankajsuwaidigroup@gmail.com", "_self");
-        break;
-      case "visit":
-        window.open(
-          "https://maps.google.com/?q=Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar",
-          "_blank"
-        );
-        break;
-      default:
-        break;
-    }
-  };
+
 
   // Handle quick action clicks
   const handleQuickAction = (action) => {
@@ -79,7 +59,7 @@ const GetQuotePage = () => {
   };
 
   // Handle team member contact
-  const handleTeamContact = (member) => {
+  const handleTeamContact = () => {
     window.open("tel:+97444601087", "_self");
   };
 
@@ -173,154 +153,268 @@ const GetQuotePage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Animated Background Elements */}
 
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600   py-8 ">
-        {/* Decorative Orbs */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-orange-400/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 -right-32 w-96 h-96 bg-red-500/30 rounded-full blur-3xl"></div>
+      <section className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        
+        {/* Animated background blobs */}
+        <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-orange-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-red-400/20 rounded-full blur-3xl animate-pulse" />
 
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            {/* LEFT CONTENT */}
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div className="text-center">
+            {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
-              <div className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-white/10 backdrop-blur-lg border border-orange-300/30 shadow-xl">
-                <span className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></span>
-                <span className="text-orange-100 text-sm font-semibold tracking-widest">
-                  GET INSTANT QUOTE
-                </span>
-              </div>
+              <Sparkles size={18} className="text-orange-200" />
+              GET INSTANT QUOTE FROM EXPERTS
+            </motion.div>
 
-              <h1 className="font-black leading-tight text-5xl md:text-6xl lg:text-7xl">
-                <span className="block bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">
-                  Get Your
-                </span>
-                <span className="block bg-gradient-to-r from-orange-300 via-red-400 to-orange-500 bg-clip-text text-transparent">
-                  Custom Quote
-                </span>
-                <span className="block text-orange-100">Instantly</span>
-              </h1>
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
+            >
+              GET YOUR CUSTOM
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+                QUOTE INSTANTLY
+              </span>
+            </motion.h1>
 
-              <p className="text-lg md:text-xl text-orange-100 max-w-2xl">
-                Connect directly with our fabrication experts.
-                <span className="text-orange-300 font-semibold">
-                  {" "}
-                  No forms. No waiting.
-                </span>
-              </p>
+            {/* Subtitle */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
+            >
+              Connect Directly with Our Fabrication Experts
+            </motion.h2>
 
-              <div className="grid grid-cols-3 gap-8 max-w-xl">
-                {[
-                  { value: "32+", label: "Years Experience" },
-                  { value: "245+", label: "Professionals" },
-                  { value: "ISO 9001", label: "Certified" },
-                ].map((item, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-3xl font-black text-white">
-                      {item.value}
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
+            >
+              Skip the forms and waiting time. Get direct access to our engineering team for immediate project consultation, technical discussions, and competitive pricing for your industrial fabrication needs.
+            </motion.p>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            >
+              <a
+                href="tel:+97444601087"
+                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
+              >
+                <Phone size={20} className="group-hover:animate-pulse" />
+                <span>Call Now: +974 44601087</span>
+              </a>
+
+              <a
+                href="https://wa.me/97451711104"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
+              >
+                <span>WhatsApp Chat</span>
+                <MessageSquare size={20} />
+              </a>
+            </motion.div>
+
+            {/* Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            >
+              {[
+                { value: "32+", label: "Years Experience", icon: Award },
+                { value: "245+", label: "Expert Team", icon: Users },
+                { value: "ISO 9001", label: "Certified Quality", icon: ShieldCheck },
+                { value: "24/7", label: "Support Available", icon: Clock },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + idx * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105"
+                >
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
+                      <stat.icon className="text-orange-200" size={24} />
                     </div>
-                    <div className="text-orange-200 text-sm">{item.label}</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm sm:text-base text-white/80 font-medium text-center">
+                      {stat.label}
+                    </div>
                   </div>
-                ))}
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Cards Section */}
+      <section className="py-20 bg-gradient-to-br from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-10 text-center">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-100 to-red-100 px-5 py-2 rounded-full text-sm font-semibold mx-auto shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+              CONTACT METHODS
+            </div>
+            <h2 className="mt-6 text-4xl md:text-5xl font-extrabold text-slate-900">
+              Choose Your Contact Method
+            </h2>
+            <p className="mt-3 text-slate-600 max-w-2xl mx-auto font-semibold">
+              Multiple ways to connect instantly with our fabrication experts
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* CALL */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+            >
+              <div className="p-7 flex flex-col min-h-[200px]">
+                <div
+                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+      bg-gradient-to-br from-orange-400 to-red-500 
+      flex items-center justify-center 
+      shadow-orange-500/40 shadow-lg 
+      group-hover:scale-110 transition"
+                >
+                  <Phone className="text-2xl text-white" />
+                </div>
+
+                <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                  Call Us
+                </h3>
+                <p className="text-slate-600 text-center text-sm">
+                  Tel: +974 44601087
+                </p>
+                <p className="text-orange-600 text-center text-sm font-semibold">
+                  Cell: +974 51711104
+                </p>
               </div>
             </motion.div>
 
-            {/* RIGHT CONTACT CARDS */}
+            {/* WHATSAPP */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
             >
-              {[
-                {
-                  icon: <Phone className="text-2xl text-white" />,
-                  title: "Call Us",
-                  line1: "+974 44601087",
-                  line2: "+974 51711104",
-                  link: "tel:+97444601087",
-                },
-                {
-                  icon: <MessageSquare className="text-2xl text-white" />,
-                  title: "WhatsApp",
-                  line1: "+974 51711104",
-                  line2: "Chat on WhatsApp",
-                  link: "https://wa.me/97451711104",
-                },
-                {
-                  icon: <Mail className="text-2xl text-white" />,
-                  title: "Email Us",
-                  line1: "pankajsuwaidigroup@gmail.com",
-                  line2: "suwaidigroup@yahoo.com",
-                  link: "mailto:pankajsuwaidigroup@gmail.com",
-                },
-                {
-                  icon: <MapPin className="text-2xl text-white" />,
-                  title: "Visit Us",
-                  line1: "Street No. 18, Gate No. 35",
-                  line2: "Industrial Area, Doha, Qatar",
-                  link: "https://www.google.com/maps/search/Industrial+Area+Doha+Qatar",
-                },
-              ].map((card, idx) => (
-                <motion.a
-                  key={idx}
-                  href={card.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="group relative rounded-3xl p-7 bg-white/10 backdrop-blur-xl
-                       border border-orange-300/30 hover:border-orange-400/70
-                       transition-all duration-500 hover:shadow-2xl
-                       cursor-pointer w-full text-center"
+              <div className="p-7 flex flex-col min-h-[200px]">
+                <div
+                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+      bg-gradient-to-br from-green-500 to-emerald-600 
+      flex items-center justify-center 
+      shadow-green-500/40 shadow-lg 
+      group-hover:scale-110 transition"
                 >
-                  {/* ICON */}
-                  <div
-                    className="w-16 h-16 mx-auto mb-5 rounded-2xl
-                            bg-gradient-to-br from-orange-500 via-orange-600 to-red-600
-                            flex items-center justify-center
-                            shadow-xl shadow-orange-500/50
-                            group-hover:scale-110 transition-transform"
-                  >
-                    {card.icon}
-                  </div>
+                  <MessageSquare className="text-2xl text-white" />
+                </div>
 
-                  <h3 className="text-orange-100 font-bold mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-orange-200 text-lg break-words">
-                    {card.line1}
-                  </p>
-                  <p className="text-orange-300 text-lg break-words">
-                    {card.line2}
-                  </p>
+                <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                  WhatsApp
+                </h3>
+                <p className="text-slate-600 text-center text-sm">
+                  +974 51711104
+                </p>
+                <p className="text-green-600 text-center text-sm font-semibold">
+                  Chat on WhatsApp
+                </p>
+              </div>
+            </motion.div>
 
-                  <div
-                    className="absolute inset-0 rounded-3xl opacity-0
-                            group-hover:opacity-100 transition
-                            bg-gradient-to-br from-orange-400/15 to-red-500/15
-                            pointer-events-none"
-                  ></div>
-                </motion.a>
-              ))}
+            {/* EMAIL */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+            >
+              <div className="p-7 flex flex-col min-h-[200px]">
+                <div
+                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+      bg-gradient-to-br from-blue-500 to-cyan-500 
+      flex items-center justify-center 
+      shadow-blue-500/40 shadow-lg 
+      group-hover:scale-110 transition"
+                >
+                  <Mail className="text-2xl text-white" />
+                </div>
+
+                <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                  Email Us
+                </h3>
+                <p className="text-slate-600 text-center text-sm break-all">
+                  pankajsuwaidigroup@gmail.com
+                </p>
+                <p className="text-blue-600 text-center text-sm break-all font-semibold">
+                  suwaidigroup@yahoo.com
+                </p>
+              </div>
+            </motion.div>
+
+            {/* VISIT */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+            >
+              <div className="p-7 flex flex-col min-h-[200px]">
+                <div
+                  className="w-16 h-16 mx-auto mb-5 rounded-2xl 
+      bg-gradient-to-br from-purple-500 to-pink-500 
+      flex items-center justify-center 
+      shadow-purple-500/40 shadow-lg 
+      group-hover:scale-110 transition"
+                >
+                  <MapPin className="text-2xl text-white" />
+                </div>
+
+                <h3 className="text-slate-900 font-bold mb-2 text-center text-xl">
+                  Visit Us
+                </h3>
+                <p className="text-slate-600 text-center text-sm">
+                  Street No. 18, Gate No. 35
+                </p>
+                <p className="text-purple-600 text-center text-sm font-semibold">
+                  Industrial Area, Doha
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -336,10 +430,10 @@ const GetQuotePage = () => {
           {/* Heading */}
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-              Choose Your Contact Method
+              Detailed Contact Methods
             </h2>
             <p className="text-lg text-gray-600">
-              Connect instantly with our fabrication experts
+              Choose the best way to connect with our team
             </p>
           </div>
 
@@ -428,9 +522,6 @@ const GetQuotePage = () => {
           <div className="rounded-3xl bg-gradient-to-br from-orange-50 to-red-50 p-10 border border-orange-100">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  {contactMethods.find((m) => m.id === activeMethod)?.title}
-                </h3>
 
                 <p className="text-gray-700 mb-8">
                   Our experts are ready to assist with quotations, planning, and

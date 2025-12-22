@@ -1,237 +1,112 @@
 // src/components/AboutHero.jsx
 import React from "react";
 import {
-  FaPhone,
-  FaMapMarkerAlt,
-  FaCertificate,
-  FaWarehouse,
-} from "react-icons/fa";
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Award,
+  Factory,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import ServiceSooller from "./ServiceSooller";
 
-/**
- * AboutHero.jsx
- * - Text-first hero for About page (no slider)
- * - Uses company details extracted from PDF
- * - Subtle animated background (bubbles + radial glows)
- * - Tailwind-friendly (utility classes) + small scoped CSS
- *
- * Edit copy, contact links, or CTA handlers as needed.
- */
+const stats = [
+  { value: "32+", label: "Years Experience", icon: Clock },
+  { value: "1000+", label: "Projects Completed", icon: CheckCircle },
+  { value: "50+", label: "Expert Team", icon: Users },
+  { value: "ISO 9001:2015", label: "Quality Certified", icon: Award },
+];
 
 export default function AboutHero() {
-  const company = {
-    name: "Al Suwaidi Technical Centre",
-    tagline: "Industrial Engineering & Technical Works",
-    established: "1992",
-    years: "32+ Years Experience",
-    iso: "ISO 9001:2015",
-    facility: "10,000 SQM Facility",
-    address:
-      "Street No. 18, Gate No. 35, P.O. Box – 40600, Industrial Area, Doha, Qatar",
-    tel: "+974 44601087",
-    cell: "+974 51711104",
-    emails: ["pankajsuwaidigroup@gmail.com", "suwaidigroup@yahoo.com"],
-  };
-
   return (
-    <header
-      className="relative overflow-hidden min-h-screen flex items-center 
-bg-gradient-to-br from-orange-600 via-orange-700 to-red-600 text-white mt-[80px] lg:mt-0"
-    >
-      {/* Soft Animated Background */}
-      <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-orange-400/30 rounded-full blur-3xl animate-slowFloat" />
-        <div className="absolute top-24 -right-32 w-80 h-80 bg-red-500/30 rounded-full blur-3xl animate-slowFloat-delayed" />
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
+      {/* HERO SECTION */}
+      <header className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
 
-      {/* Subtle Grid Texture */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-24 lg:py-32 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT CONTENT */}
-          <div className="space-y-8">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div className="text-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20 shadow-lg">
-              <span className="w-2.5 h-2.5 bg-orange-400 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold tracking-wide text-white/90">
-                ESTABLISHED {company.established}
-              </span>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
+            >
+              <Sparkles size={18} className="text-orange-200" />
+              ESTABLISHED 1992 - LEADING INDUSTRIAL SOLUTIONS PROVIDER
+            </motion.div>
 
-            {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-amber-100 to-white">
-                {company.name}
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
+            >
+              ABOUT AL SUWAIDI
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+                TECHNICAL CENTRE
               </span>
-              <span className="block mt-3 text-xl sm:text-2xl font-semibold text-white/95">
-                {company.tagline}
-              </span>
-            </h1>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
+            >
+              Industrial Engineering & Technical Works Excellence Since 1992
+            </motion.h2>
 
             {/* Description */}
-            <p className="text-white/90 max-w-2xl text-base sm:text-lg leading-relaxed">
-              World-class steel fabrication, storage tankers, trailers,
-              precision machining and turnkey industrial solutions — delivered
-              with ISO-certified quality and a modern 10,000 sqm facility in
-              Doha.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
+            >
+              Al Suwaidi Technical Centre is Qatar's leading provider of industrial engineering and technical works solutions. With over 32 years of excellence, we deliver world-class steel fabrication, precision machining, commercial vehicle bodies, and comprehensive technical services with ISO-certified quality from our modern 10,000 sqm facility in Doha.
+            </motion.p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 pt-2">
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-5"
+            >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl 
-            bg-white text-orange-600 font-semibold shadow-lg 
-            hover:scale-[1.03] transition-transform"
+                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
               >
-                Contact Now
+                <Phone size={20} className="group-hover:animate-pulse" />
+                <span>Contact Us Today</span>
               </Link>
 
               <a
-                href={`mailto:${company.emails[0]}`}
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl 
-            border border-white/30 text-white font-semibold 
-            hover:bg-white/10 transition"
+                href="#about-content"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
-                Request Quote
+                <span>Learn More About Us</span>
+                <ArrowRight size={20} />
               </a>
-            </div>
+            </motion.div>
 
-            {/* Quick Facts */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 max-w-xl">
-              <div className="flex items-center gap-3 bg-white/5 rounded-2xl px-4 py-3">
-                <FaCertificate className="text-orange-300 w-5 h-5" />
-                <div>
-                  <div className="text-sm font-semibold">QUALITY</div>
-                  <div className="text-xs text-white/80">{company.iso}</div>
-                </div>
-              </div>
 
-              <div className="flex items-center gap-3 bg-white/5 rounded-2xl px-4 py-3">
-                <FaWarehouse className="text-amber-300 w-5 h-5" />
-                <div>
-                  <div className="text-sm font-semibold">FACILITY</div>
-                  <div className="text-xs text-white/80">
-                    {company.facility}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 bg-white/5 rounded-2xl px-4 py-3">
-                <FaPhone className="text-orange-300 w-5 h-5" />
-                <div>
-                  <div className="text-sm font-semibold">CONTACT</div>
-                  <div className="text-xs text-white/80">{company.tel}</div>
-                </div>
-              </div>
-            </div>
           </div>
-
-          {/* RIGHT CONTACT CARD */}
-          <aside className="bg-white/10 backdrop-blur-xl rounded-3xl p-4  border border-white/20 shadow-2xl max-w-md mx-auto lg:mx-0">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl shadow-lg">
-                <FaMapMarkerAlt />
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold">Visit Our Facility</h3>
-                <p className="text-sm text-white/90 mt-1">{company.address}</p>
-
-                <div className="mt-4 text-sm space-y-2 text-white/90">
-                  <div>
-                    <strong>Phone:</strong>{" "}
-                    <a href={`tel:${company.tel}`} className="underline">
-                      {company.tel}
-                    </a>
-                  </div>
-                  <div>
-                    <strong>Mobile:</strong>{" "}
-                    <a href={`tel:${company.cell}`} className="underline">
-                      {company.cell}
-                    </a>
-                  </div>
-                  <div>
-                    <strong>E-mail:</strong>
-                    <div className="flex flex-col">
-                      {company.emails.map((e) => (
-                        <a key={e} href={`mailto:${e}`} className="underline">
-                          {e}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid grid-cols-2 gap-3">
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                      company.address
-                    )}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-orange-600 bg-white px-4 py-2 rounded-xl font-semibold text-center shadow hover:scale-[1.03] transition"
-                  >
-                    Open Maps
-                  </a>
-                  <Link
-                    to="/contact"
-                    className="text-sm text-white border border-white/20 px-4 py-2 rounded-xl text-center hover:bg-white/10 transition"
-                  >
-                    Contact Page
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 text-xs text-white/60">
-              CR No. 14258 • Managing Director: Rashid Abdullah Al Suwaidi
-            </div>
-          </aside>
         </div>
-      </div>
-
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes slowFloat {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-18px);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-        @keyframes slowFloatDelayed {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-12px);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-        .animate-slowFloat {
-          animation: slowFloat 8s ease-in-out infinite;
-        }
-        .animate-slowFloat-delayed {
-          animation: slowFloatDelayed 9s ease-in-out infinite;
-        }
-      `}</style>
-    </header>
+        <ServiceSooller />
+      </header>
+    </div>
   );
 }

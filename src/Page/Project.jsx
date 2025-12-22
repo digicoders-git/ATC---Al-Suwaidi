@@ -19,7 +19,7 @@ const PROJECTS = [
     id: "sewage-tanker",
     title: "Sewage Tanker",
     subtitle: "Heavy-duty tanker for municipal & industrial use",
-    thumb: "/Sewage Tanker.jpg", // replace with real images
+    thumb: "/Cormercila/Sewage Tank.png",
     short:
       "Robust sewage tanker designed for heavy transport and discharge operations.",
     specs: [
@@ -43,7 +43,7 @@ const PROJECTS = [
     id: "low-bed",
     title: "Low Bed Trailer",
     subtitle: "Heavy haulage low bed trailer",
-    thumb: "/download.jpg",
+    thumb: "/Cormercila/low bed trailer (spec).png",
     short:
       "Low bed for transporting heavy machinery with high-strength chassis & bogie axles.",
     specs: [
@@ -65,7 +65,7 @@ const PROJECTS = [
     id: "flat-bed-trailer",
     title: "Flat Bed Trailer",
     subtitle: "Multi-purpose flatbed trailer",
-    thumb: "/Flat Bed Trailer.jpg",
+    thumb: "/Cormercila/Flatbed Trailer  product card.png",
     short:
       "Flatbed trailer for container & bulk cargo — durable chassis and checkered floor.",
     specs: [
@@ -84,7 +84,7 @@ const PROJECTS = [
     id: "water-service-cabinet-1",
     title: 'Water Service Cabinet (1" dia)',
     subtitle: "Service cabinet for residential connections",
-    thumb: "/download.jpgWater Service Cabinet.jpg",
+    thumb: "/CabnateMAnifecting/WATER (3) METER CABINET.jpg",
     short:
       "Aluminium water service cabinet with ventilation and lock provision for single meter.",
     specs: [
@@ -100,7 +100,7 @@ const PROJECTS = [
     id: "water-service-cabinet-2",
     title: 'Water Service Cabinet (2" dia)',
     subtitle: "Larger service cabinet for 54 mm pipe",
-    thumb: "/Water Service Cabinet.jpg",
+    thumb: "/CabnateMAnifecting/WATER (4) METER CABINET.jpg",
     short:
       "Aluminium cabinet with louvered ventilation and space for Meters & branding.",
     specs: [
@@ -116,7 +116,7 @@ const PROJECTS = [
     id: "electric-service-cabinet",
     title: "Electric Service Cabinet",
     subtitle: "Cabinet for electric service piping & meter",
-    thumb: "/Electric Service Cabinet.jpg",
+    thumb: "/CabnateMAnifecting/ELECTRIC SERVICECABINET.jpg",
     short:
       "Robust electric service cabinet with service door and ventilation for cable entries.",
     specs: [
@@ -133,7 +133,7 @@ const PROJECTS = [
     id: "fabrication-works",
     title: "Fabrication & Structural Works",
     subtitle: "Heavy & medium structural steel fabrication",
-    thumb: "/Fabrication & Structural Works.jpg",
+    thumb: "/StellFebictaion/Structural Steel Fabrication.png",
     short:
       "Custom fabrication including sheds, warehouses, cable trays, panels and structural assemblies.",
     specs: [
@@ -147,7 +147,7 @@ const PROJECTS = [
     id: "fuel-tanker",
     title: "Fuel Tanker Trailer",
     subtitle: "High-capacity fuel transport tanker",
-    thumb: "/Fuel Tanker Trailer.jpg",
+    thumb: "/Cormercila/Tank Trailer.png",
     short:
       "Specialized fuel tanker with safety features for petroleum product transportation.",
     specs: [
@@ -190,7 +190,7 @@ const PROJECTS = [
     id: "mobile-workshop",
     title: "Mobile Workshop Unit",
     subtitle: "Self-contained mobile maintenance facility",
-    thumb: "/Mobile Workshop Unit.jpg",
+    thumb: "/Cormercila/Mobile Workshop Truck.png",
     short:
       "Fully equipped mobile workshop with tools, compressor, and service equipment for field operations.",
     specs: [
@@ -233,7 +233,7 @@ const PROJECTS = [
     id: "crane-truck",
     title: "Mobile Crane Truck",
     subtitle: "Heavy lifting mobile crane solution",
-    thumb: "/Mobile Crane Truck.avif",
+    thumb: "/Cormercila/Boom Truck.png",
     short:
       "Truck-mounted crane with telescopic boom for construction and industrial lifting operations.",
     specs: [
@@ -268,155 +268,119 @@ export default function Projects() {
   return (
     <div className="min-h-screen mt-[80px] lg:mt-[2px] bg-white">
       {/* Hero Section */}
-      <section className="relative lg:mt-0 min-h-screen  flex items-center overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600 pb-10">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 mt-10 lg:mt-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Side - Text Content */}
-            <div className="text-white space-y-8 animate-slide-in-left">
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold tracking-wider">
-                    OUR PROJECTS
-                  </span>
-                </div>
+      <section className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
 
-                <h1 className="text-5xl lg:text-6xl   font-bold leading-none">
-                  <span className="block bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">
-                    Engineering Excellence
-                  </span>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div className="text-center">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
+            >
+              <FaRocket size={18} className="text-orange-200" />
+              PROJECT PORTFOLIO & ENGINEERING EXCELLENCE
+            </motion.div>
 
-                  <span className="block text-white ">Delivered</span>
-                </h1>
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
+            >
+              OUR COMPLETED
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+                PROJECTS
+              </span>
+            </motion.h1>
 
-                <p className="text-xl md:text-2xl font-light max-w-2xl text-orange-100 leading-relaxed">
-                  Discover our portfolio of
-                  <span className="text-orange-300 font-semibold">
-                    {" "}
-                    world-class industrial projects{" "}
-                  </span>
-                  - from heavy-duty trailers to precision fabrication works that
-                  define Qatar's infrastructure.
-                </p>
-              </div>
+            {/* Subtitle */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
+            >
+              Showcasing 32+ Years of Engineering Excellence & Quality Craftsmanship
+            </motion.h2>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-white mb-2">
-                    102+
-                  </div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Projects Completed
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-white mb-2">32+</div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Years Experience
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-white mb-2">
-                    100%
-                  </div>
-                  <div className="text-orange-200 text-sm font-medium">
-                    Client Satisfaction
-                  </div>
-                </div>
-              </div>
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
+            >
+              Explore our comprehensive portfolio of successfully completed industrial projects including heavy-duty trailers, precision fabrication works, KAHRAMAA-approved cabinets, and custom engineering solutions that define Qatar's infrastructure development.
+            </motion.p>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6">
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("projects-grid")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            >
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("projects-grid")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
+              >
+                <FaRocket size={20} className="group-hover:animate-pulse" />
+                <span>View Our Projects</span>
+              </button>
+
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
+              >
+                <span>Request Custom Project</span>
+                <FaChevronRight size={20} />
+              </Link>
+            </motion.div>
+
+            {/* Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            >
+              {[
+                { value: "1000+", label: "Projects Completed", icon: FaAward },
+                { value: "32+", label: "Years Experience", icon: FaCog },
+                { value: "50+", label: "Expert Team", icon: FaUsers },
+                { value: "100%", label: "Client Satisfaction", icon: FaAward },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + idx * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105"
                 >
-                  <span className="relative z-10 flex items-center gap-3">
-                    View Our Projects
-                    <FaRocket className="group-hover:animate-bounce" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-
-                <button className="group flex items-center gap-4 text-white hover:text-orange-300 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
-                    <FaPlay className="ml-1" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Project Showcase</div>
-                    <div className="text-sm text-orange-200">
-                      2 min overview
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
+                      <stat.icon className="text-orange-200" size={24} />
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm sm:text-base text-white/80 font-medium text-center">
+                      {stat.label}
                     </div>
                   </div>
-                </button>
-              </div>
-            </div>
-
-            {/* Right Side - Truck Loader Image */}
-            <div
-              className="relative animate-slide-in-right"
-              style={{ animationDelay: "0.3s" }}
-            >
-              {/* Main Image Container */}
-              <div className="relative group">
-                {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 via-red-600 to-orange-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 shadow-2xl border border-slate-700">
-                  <div className="aspect-w-16 aspect-h-12">
-                    <img
-                      src="/truck-loader.jpg"
-                      alt="Heavy Duty Truck Loader"
-                      className="w-full h-full object-cover rounded-2xl"
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23374151'/%3E%3Cg transform='translate(300,200)'%3E%3Cpath d='M-80,-60 L80,-60 L80,60 L-80,60 Z' fill='%23f97316' stroke='%23ffffff' stroke-width='2'/%3E%3Ccircle cx='-50' cy='40' r='15' fill='%23000000'/%3E%3Ccircle cx='50' cy='40' r='15' fill='%23000000'/%3E%3Crect x='-60' y='-40' width='120' height='60' fill='%23ef4444'/%3E%3Ctext x='0' y='5' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='14' font-weight='bold'%3ETruck Loader%3C/text%3E%3C/g%3E%3C/svg%3E";
-                      }}
-                    />
-                  </div>
-
-                  {/* Overlay Info */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm rounded-xl p-4">
-                    <h3 className="text-white font-bold text-lg mb-2">
-                      Heavy-Duty Equipment
-                    </h3>
-                    <p className="text-orange-200 text-sm">
-                      Industrial grade machinery for Qatar's infrastructure
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Feature Cards */}
-              <div
-                className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl border border-white/20 animate-float"
-                style={{ animationDelay: "0.5s" }}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-pulse"></div>
-                  <h4 className="font-bold text-slate-900">Quality Assured</h4>
-                </div>
-                <p className="text-slate-600 text-sm">
-                  ISO 9001:2015 Certified
-                </p>
-              </div>
-
-              <div
-                className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl border border-white/20 animate-float"
-                style={{ animationDelay: "0.7s" }}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"></div>
-                  <h4 className="font-bold text-slate-900">On-Time Delivery</h4>
-                </div>
-                <p className="text-slate-600 text-sm">100% Track Record</p>
-              </div>
-            </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>

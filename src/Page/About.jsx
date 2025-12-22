@@ -7,6 +7,7 @@ import GetDemoSection from "../Component/GetDemoSection";
 import VisionMission from "../Component/AboutMisson";
 import CertificateSlider from "../Component/CertificateSlider";
 import AboutContent from "../Component/AboutContent";
+import CompanyScope from "../Component/CompanyScope";
 
 
 function About() {
@@ -17,8 +18,10 @@ function About() {
       <AboutContent />
      
 
-      <TimelineSection />
+      {/* <TimelineSection /> */}
       <GetDemoSection />
+      {/* <CompanyScope /> */}
+      <CompanyScope/>
       <OrgChart />
       <CertificateSlider />
     </>

@@ -9,42 +9,50 @@ const HOME_PROJECTS = [
   {
     id: "sewage-tanker",
     title: "Sewage Tanker",
-    thumb: "/Sewage Tanker.jpg",
+    thumb: "/Cormercila/Sewage Tank.png",
     short: "Municipal & Industrial Solution",
     description:
       "Heavy-duty sewage tankers with reinforced shells, internal baffles and high-capacity discharge systems.",
   },
   {
-    id: "low-bed",
-    title: "Low Bed Trailer",
-    thumb: "/download.jpg",
-    short: "Heavy Machinery Transport",
+    id: "fuel-tanker",
+    title: "Fuel Tanker Trailer",
+    thumb: "/Cormercila/Tank Trailer.png",
+    short: "Petroleum Transport Solution",
     description:
-      "Designed for oversized equipment with superior load distribution and high-tensile structure.",
+      "Professional fuel tanker trailers with safety systems and high-capacity storage for petroleum products.",
   },
   {
     id: "flat-bed",
     title: "Flat Bed Trailer",
-    thumb: "/Flat Bed Trailer.jpg",
+    thumb: "/Cormercila/Flatbed Trailer  product card.png",
     short: "Flexible Logistics",
     description:
-      "Multi-purpose flatbed trailers suitable for containers and bulk cargo.",
+      "Multi-purpose flatbed trailers suitable for containers and bulk cargo transportation.",
   },
   {
-    id: "cabinet",
-    title: "Water Service Cabinet",
-    thumb: "/Fuel Tanker Trailer copy.jpg",
-    short: "Aluminium Cabinets",
+    id: "tipper-truck",
+    title: "Tipper Dump Truck",
+    thumb: "/Cormercila/Tripper Dump Truck.png",
+    short: "Construction Vehicle",
     description:
-      "Corrosion-resistant aluminium cabinets with secure housing & ventilation.",
+      "Heavy-duty tipper dump trucks for construction industry with reliable hydraulic systems.",
   },
   {
     id: "fabrication",
-    title: "Fabrication Works",
-    thumb: "/Fabrication & Structural Works.jpg",
+    title: "Steel Fabrication",
+    thumb: "/StellFebictaion/Structural Steel Fabrication.png",
     short: "Structural & Custom Works",
     description:
-      "Complete fabrication solutions including platforms, sheds & steel structures.",
+      "Complete steel fabrication solutions including platforms, sheds & industrial structures.",
+  },
+  {
+    id: "cabinets",
+    title: "KAHRAMAA Cabinets",
+    thumb: "/CabnateMAnifecting/ELECTRIC SERVICECABINET.jpg",
+    short: "Utility Cabinets",
+    description:
+      "KAHRAMAA-approved water and electric service cabinets with professional manufacturing standards.",
   },
 ];
 

@@ -24,74 +24,94 @@ import GetDemoSection from "../Component/GetDemoSection";
 
 const servicesList = [
   {
-    title: "Manufacturing Industry",
-    desc: "Large-scale fabrication & assembly — tanks, silos, trailers and more.",
+    title: "🏭 Manufacturing Industry",
+    desc: "We support manufacturing facilities with custom steel fabrication and engineered components that improve production efficiency and structural reliability. From machinery frames to industrial supports, our solutions are designed to withstand continuous operations and heavy-duty use.",
     icon: Factory,
-    image: "/Gemini_Generated_Image_l22lsll22lsll22l.png",
-    features: ["Industrial Machinery", "Storage Tanks", "Silos", "Trailers"],
+    image: "/StellFebictaion/Manufacturing Industry.png",
+    features: [
+      "Structural frames for machinery & equipment",
+      "Custom steel components and assemblies", 
+      "Fabrication support for production facilities",
+      "Durable steel solutions for factory environments"
+    ],
   },
   {
-    title: "Automobile Industry",
-    desc: "Vehicle bodies, flatbeds, trailers and specialized transport solutions.",
+    title: "🚗 Automobile Industry",
+    desc: "Our steel fabrication services assist the automobile sector with accurate, high-strength components used in vehicle manufacturing, body building, and mechanical applications. We deliver fabrication that meets performance, safety, and durability requirements.",
     icon: Truck,
-    image:
-      "/assembly-line-production-new-car-automated-welding-car-body-production-line-robotic-arm-car-production-line-is-working.jpg",
+    image: "/StellFebictaion/Automobile Industry.png",
     features: [
-      "Vehicle Bodies",
-      "Flatbeds",
-      "Custom Trailers",
-      "Transport Solutions",
+      "Fabrication for vehicle bodies and frames",
+      "Structural components for automotive systems",
+      "Precision-cut and formed steel parts",
+      "Support structures for workshops and service facilities"
     ],
   },
   {
-    title: "Construction Industry",
-    desc: "Structural steel, sheds, frames and site-ready fabrication works.",
+    title: "🏗️ Construction Industry",
+    desc: "We provide the construction industry with robust structural steel fabrication for commercial, industrial, and infrastructure developments. Our steel components are engineered for strength, stability, and long-term performance on-site.",
     icon: Hammer,
-    image: "/Construction Industry.png",
+    image: "/StellFebictaion/Construction Industry.png",
     features: [
-      "Structural Steel",
-      "Sheds & Frames",
-      "Site Fabrication",
-      "Steel Structures",
+      "Structural steel for buildings and sheds",
+      "Platforms, supports, and load-bearing elements",
+      "Custom-fabricated steel for project-specific needs",
+      "Fabrication aligned with construction timelines"
     ],
   },
   {
-    title: "Fabrication Processes, Plan & Design",
-    desc: "Design-for-manufacture, shop drawings and project planning support.",
+    title: "🧩 Fabrication Process Planning & Engineering Design",
+    desc: "We begin every project with detailed fabrication planning and engineering design to ensure accuracy, efficiency, and smooth execution before fabrication starts.",
     icon: Layers,
-    to: "/services/fabrication-design",
-    image: "/Fabrication Processes, Plan & Design.png",
+    image: "/StellFebictaion/Fabrication Process Planning & Engineering Design.png",
     features: [
-      "CAD Design",
-      "3D Modeling",
-      "Shop Drawings",
-      "Project Planning",
+      "Clear fabrication drawings & layouts",
+      "Optimized material planning",
+      "Reduced fabrication errors"
     ],
   },
   {
-    title: "Sheet & Pipe — Cutting, Bending & Rolling",
-    desc: "Precision cutting, plate bending and rolling for plates & pipes.",
+    title: "✂️ Sheet Metal Cutting",
+    desc: "Our sheet metal cutting process delivers precise dimensions and clean edges, forming the foundation for high-quality fabrication and assembly.",
     icon: Settings,
-    to: "/services/sheet-pipe",
-    image: "/two-paddles-axe-and-leatherwork-9wNcZprwco8-unsplash.jpg",
+    image: "/StellFebictaion/Sheet Metal Cutting.png",
     features: [
-      "CNC Cutting",
-      "Plate Bending",
-      "Pipe Rolling",
-      "Precision Work",
+      "Accurate and clean cuts",
+      "Consistent dimensional quality",
+      "Improved assembly fitment"
     ],
   },
   {
-    title: "Assembling, Welding & Finishing",
-    desc: "Welding, brazing, sandblasting and high-quality paint finishes.",
-    icon: Sparkles,
-    to: "/services/welding-finishing",
-    image: "/kemal-kozbaev-mun6ABiRJws-unsplash.jpg",
+    title: "🔄 Pipe Cutting, Bending & Rolling",
+    desc: "We perform pipe cutting, bending, and rolling to achieve required shapes and angles for structural and industrial applications.",
+    icon: Cog,
+    image: "/StellFebictaion/Pipe Cutting, Bending & Rolling.png",
     features: [
-      "Arc Welding",
-      "MIG/TIG Welding",
-      "Sandblasting",
-      "Paint Finishing",
+      "Uniform pipe shaping",
+      "Strong, precise bends & rolls",
+      "Reliable structural components"
+    ],
+  },
+  {
+    title: "🏗️ Structural Steel Fabrication",
+    desc: "We manufacture heavy and medium structural steel components designed for durability and long-term performance in demanding environments.",
+    icon: Hammer,
+    image: "/StellFebictaion/Structural Steel Fabrication.png",
+    features: [
+      "High-strength steel structures",
+      "Fabrication to project specifications",
+      "Reliable load-bearing components"
+    ],
+  },
+  {
+    title: "🔧 Assembly, Welding & Finishing",
+    desc: "Final assembly is completed with professional welding and finishing, ensuring alignment, strength, and installation readiness.",
+    icon: Sparkles,
+    image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+    features: [
+      "Strong, defect-free welds",
+      "Proper alignment and finish",
+      "Ready-to-install fabricated products"
     ],
   },
 ];
@@ -106,118 +126,110 @@ const stats = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
-      {/* ===== MODERNIZED HERO SECTION ===== */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-orange-700 to-red-600 pt-20 lg:pt-0">
-        {/* Main Hero Content */}
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text */}
+      {/* HERO SECTION */}
+      <header className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+          <div className="text-center">
+            {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-3 rounded-full bg-white/20 backdrop-blur-sm text-white px-4 py-2 text-sm font-semibold mb-6 border border-white/30"
-              >
-                <Sparkles size={16} /> Precision Engineering & Fabrication
-              </motion.div>
-
-              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight text-white">
-                Industrial Steel
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-white mt-2">
-                  Fabrication Masters
-                </span>
-              </h1>
-
-              <p className="mt-6 max-w-xl text-orange-100 text-lg leading-relaxed">
-                Delivering industrial-grade fabrication across manufacturing,
-                automobile, and construction sectors — from design & planning to
-                cutting, welding, and finishing. Trusted for quality since 1992.
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  to="/get-quote"
-                  className="group inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-white text-orange-700 font-bold shadow-xl hover:shadow-2xl transform transition-all hover:scale-105"
-                >
-                  <span>Get a Free Quote</span>
-                  <Phone size={18} className="group-hover:animate-pulse" />
-                </Link>
-
-                <a
-                  href="#services"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-white/50 text-white font-semibold hover:bg-white/10 hover:border-white transition"
-                >
-                  Explore Our Services
-                  <ArrowRight size={18} />
-                </a>
-              </div>
-
-              {/* Stats Bar - Modern Layout */}
-              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-                {stats.map((stat, idx) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="flex flex-col items-center justify-center text-white">
-                      <div className="text-3xl sm:text-4xl font-black">
-                        {stat.value}
-                      </div>
-                      <div className="text-xs sm:text-sm text-orange-200 mt-1 uppercase tracking-wide">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              <Sparkles size={18} className="text-orange-200" />
+              STEEL FABRICATION & ENGINEERING
             </motion.div>
 
-            {/* Right Column - Hero Image */}
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="/Gemini_Generated_Image_5h1am65h1am65h1a.png"
-                  alt="Steel Fabrication Workshop"
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+              INDUSTRIAL STEEL
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+                FABRICATION MASTERS
+              </span>
+            </motion.h1>
 
-                {/* Floating Card - Updated Style */}
+            {/* Subtitle */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
+            >
+              Exploring the Basics of Steel Fabrication
+            </motion.h2>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
+            >
+              Al Suwaidi Technical Centre delivers comprehensive steel fabrication and engineering solutions tailored for the manufacturing, automobile, and construction industries. Our approach combines engineering planning, precision fabrication, and quality-controlled finishing.
+            </motion.p>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
+            >
+              <Link
+                to="/get-quote"
+                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
+              >
+                <Phone size={20} className="group-hover:animate-pulse" />
+                <span>Request Steel Fabrication Quote</span>
+              </Link>
+
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
+              >
+                <span>View Steel Services</span>
+                <ArrowRight size={20} />
+              </a>
+            </motion.div>
+
+            {/* Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
+            >
+              {stats.map((stat, idx) => (
                 <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-xl p-4 shadow-2xl border border-white/30"
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + idx * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all hover:scale-105"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-orange-500 to-red-500">
-                      <Shield className="text-white" size={24} />
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="p-3 rounded-xl bg-white/20 backdrop-blur-sm">
+                      <stat.icon className="text-orange-200" size={24} />
                     </div>
-                    <div>
-                      <div className="font-black text-slate-900 text-lg">
-                        ISO 9001:2008 Certified
-                      </div>
-                      <div className="text-sm text-slate-600">
-                        Quality fabrication since 1992
-                      </div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm sm:text-base text-white/80 font-medium text-center">
+                      {stat.label}
                     </div>
                   </div>
                 </motion.div>
-              </div>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -226,126 +238,162 @@ export default function ServicesPage() {
 
       {/* ===== MAIN CONTENT ===== */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        {/* Section Header */}
-        <section id="services" className="mb-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 text-orange-600 font-bold mb-4"
-            >
-              <div className="h-px w-8 bg-orange-600"></div>
-              OUR CORE SERVICES
-              <div className="h-px w-8 bg-orange-600"></div>
-            </motion.div>
+        {/* Section Header - Modern Card Layout */}
 
-            <motion.h2
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl font-black text-slate-900 mb-6"
-            >
-              Comprehensive Steel Fabrication Solutions
-            </motion.h2>
-
-            <p className="text-lg text-slate-600">
-              From initial design and prototyping to full shop fabrication and
-              finishing — we deliver precision and quality across all
-              industries.
-            </p>
-          </div>
-        </section>
 
         {/* ===== MODERN SIDE-BY-SIDE SERVICE CARDS ===== */}
-        <section className="mb-16 space-y-20">
+        <section className="mb-16 space-y-16">
           {servicesList.map((service, index) => (
             <motion.article
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              // This creates the alternating side-by-side layout
-              className={`group flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
-              {/* Card Image Side (Takes half width) */}
-              <div className="flex-1 lg:w-1/2 w-full">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="relative rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow"
+              {/* Animated Background Elements */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+              
+              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}>
+                {/* Text Side */}
+                <motion.div 
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-64 sm:h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                  {/* Frosted Glass Icon Badge */}
-                  <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg">
-                    <div className="text-sm font-black text-slate-900">
-                      {service.title.split(" ")[0]}
-                    </div>
-                    <div className="text-xs text-orange-600">Service</div>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Card Text Side (Takes half width) */}
-              <div className="flex-1 lg:w-1/2">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-orange-100 to-red-50">
-                    <service.icon className="text-orange-600" size={24} />
-                  </div>
-                  <span className="text-sm font-bold text-orange-600 uppercase tracking-wider">
-                    {service.title.split("—")[0]}
-                  </span>
-                </div>
-
-                <h3 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">
-                  {service.title}
-                </h3>
-
-                <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                  {service.desc}
-                </p>
-
-                {/* Key Features as Modern Pills */}
-                <div className="mb-8">
-                  <h4 className="font-bold text-slate-900 mb-4 text-xl">
-                    Key Capabilities:
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {service.features.map((feature, i) => (
-                      <span
-                        key={i}
-                        className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border border-orange-100 shadow-sm"
-                      >
-                        {feature}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
+                  >
+                    <motion.div 
+                      whileHover={{ rotate: 360, scale: 1.2 }}
+                      transition={{ duration: 0.6 }}
+                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
+                    >
+                      <service.icon className="text-orange-600" size={23} />
+                    </motion.div>
+                    <div className="text-left">
+                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
+                        STEEL FABRICATION
                       </span>
-                    ))}
-                  </div>
-                </div>
+                      <span className="text-xs text-slate-500 font-medium">
+                        {service.subtitle}
+                      </span>
+                    </div>
+                  </motion.div>
 
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:shadow-lg transition shadow-md"
+                  <motion.h3
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-xl lg:text-2xl font-black text-slate-900 mb-3 leading-tight"
                   >
-                    View Service Details
-                    <ArrowRight size={18} />
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition"
+                    {service.title}
+                  </motion.h3>
+
+                  <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-lg text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0"
                   >
-                    Get Custom Quote
-                  </Link>
-                </div>
+                    {service.desc}
+                  </motion.p>
+
+                  {/* Enhanced Features */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="mb-8"
+                  >
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      What You'll Get:
+                    </h4>
+                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                      {service.features.map((feature, i) => (
+                        <motion.span
+                          key={i}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.7 + i * 0.1 }}
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                        >
+                          ✔ {feature}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                  >
+                    <Link
+                      to="/contact"
+                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
+                    >
+                      <span>View Details</span>
+                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      to="/get-quote"
+                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
+                    >
+                      <Phone size={20} />
+                      <span>Get Quote</span>
+                    </Link>
+                  </motion.div>
+                </motion.div>
+
+                {/* Image Side */}
+                <motion.div 
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="flex-1 lg:w-1/2 relative"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05, rotateY: 5 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 backdrop-blur-sm"
+                  >
+                    {/* Animated Border Glow */}
+                    <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
+                    
+                    <div className="relative bg-white rounded-3xl overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-80 lg:h-150 object-cover transition-transform duration-700 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+                      
+                      {/* Enhanced Badge */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.7, type: "spring" }}
+                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
+                      >
+                        <div className="text-sm font-black text-slate-900">
+                          {service.title.split(" ")[0]}
+                        </div>
+                        <div className="text-xs text-orange-600 font-semibold">Service</div>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.article>
           ))}

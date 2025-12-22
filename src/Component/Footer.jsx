@@ -51,9 +51,9 @@ export default function Footer() {
             <div className="flex justify-center items-center">
               <Link to="/" aria-label="Home">
                 <img
-                  src="/Logo1.png"
+                  src="/Screenshot_2025-12-22_121623-removebg-preview (1).png"
                   alt="Al Suwaidi Technical Centre Logo"
-                  className="w-30 h-30 object-contain"
+                  className="w-20 h-20 object-contain"
                   loading="lazy"
                 />
               </Link>
