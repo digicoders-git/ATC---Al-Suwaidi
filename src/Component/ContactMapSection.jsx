@@ -5,18 +5,19 @@ import { FaMapMarkedAlt, FaExternalLinkAlt } from "react-icons/fa";
 export default function ContactMapSimple() {
   const company = {
     name: "AL SUWAIDI TECHNICAL CENTER",
-    address: "P.O. Box No: 40600, East Industrial Area, Zone: 57, Street No: 18, Gate No: 35, Doha, Qatar",
+    address:
+      "P.O. Box No: 40600, East Industrial Area, Zone: 57, Street No: 18, Gate No: 35, Doha, Qatar",
+
+    // ✅ EXACT LOCATION (Doha Industrial Area – adjust if needed)
+    lat: 25.258204,
+    lng: 51.565618,
   };
 
-  // ✅ MOBILE-SAFE EMBED (address based)
-  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-    company.address
-  )}&output=embed`;
+  // ✅ EMBED WITH PIN (latitude + longitude)
+  const mapEmbedSrc = `https://www.google.com/maps?q=${company.lat},${company.lng}&z=16&output=embed`;
 
-  // ✅ ALWAYS WORKS (opens Google Maps app)
-  const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    company.address
-  )}`;
+  // ✅ OPEN GOOGLE MAPS WITH PIN
+  const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${company.lat},${company.lng}`;
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
@@ -46,9 +47,10 @@ export default function ContactMapSimple() {
               src={mapEmbedSrc}
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
 
-            {/* FULL CLICK OVERLAY (Mobile fix) */}
+            {/* FULL CLICK OVERLAY (Mobile Safe) */}
             <a
               href={openMapUrl}
               target="_blank"
@@ -76,7 +78,9 @@ export default function ContactMapSimple() {
               href={openMapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-600 to-red-500 text-white font-semibold shadow hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl 
+                         bg-gradient-to-r from-orange-600 to-red-500 
+                         text-white font-semibold shadow hover:opacity-90 transition"
             >
               Open in Google Maps
               <FaExternalLinkAlt size={14} />

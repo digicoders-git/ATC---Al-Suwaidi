@@ -11,6 +11,7 @@ import {
   Mail,
   MapPin,
   Clock,
+  Users,
   Award,
   Camera,
   Image as ImageIcon,
@@ -28,7 +29,8 @@ const galleryImages = [
 
     title: "Water Service Cabinet - 1 DIA",
     category: "Cabinets",
-    description: "KAHRAMAA-approved water service cabinet with professional finish",
+    description:
+      "KAHRAMAA-approved water service cabinet with professional finish",
   },
   {
     id: 2,
@@ -63,7 +65,8 @@ const galleryImages = [
     src: "/CabnateMAnifecting/1765970113122.jpg",
     title: "Water Meter Cabinet - 5 Nos",
     category: "Cabinets",
-    description: "Extra large capacity water cabinet for extensive installations",
+    description:
+      "Extra large capacity water cabinet for extensive installations",
   },
   {
     id: 7,
@@ -353,9 +356,10 @@ const categories = [
 ];
 
 const stats = [
-  { value: "1000+", label: "Projects Completed", icon: Award },
+  { value: "5000+", label: "Projects Completed", icon: Award },
   { value: "32+", label: "Years Experience", icon: Clock },
-  { value: "50+", label: "Team Members", icon: Phone },
+  { value: "80+", label: "Team Members", icon: Users },
+
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
@@ -411,7 +415,7 @@ export default function GalleryPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Camera size={18} className="text-orange-200" />
-              PROJECT GALLERY
+              GALLERY
             </motion.div>
 
             {/* Main Title */}
@@ -444,9 +448,9 @@ export default function GalleryPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Explore our comprehensive gallery showcasing 32+ years of
-              engineering excellence, precision fabrication, and quality
-              craftsmanship across various industrial projects and services.
+              Discover our journey of over 32 years, reflecting engineering
+              expertise, precision-driven execution, and consistent quality
+              standards that define our work across diverse operations.
             </motion.p>
 
             {/* Action Buttons */}
@@ -589,6 +593,9 @@ export default function GalleryPage() {
             ))}
           </div>
         </section>
+
+        {/* ===== COMMERCIAL VEHICLE BODIES SECTION ===== */}
+     
       </main>
 
       {/* Lightbox Modal */}
@@ -640,60 +647,10 @@ export default function GalleryPage() {
         </div>
       )}
 
-      <GetDemoSection />
+      
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto py-15">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-6">
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Phone className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Contact Us
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  +974 44601087
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Mail className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Email
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  info@alsuwaidi.com
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <MapPin className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Location
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  Industrial Area, Doha
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+   
     </div>
   );
 }

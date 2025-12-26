@@ -22,11 +22,14 @@ export default function Footer() {
   const services = [
     { label: "Steel Fabrication Basics", to: "/services/steel-fabrication" },
     { label: "Commercial Vehicle Bodies", to: "/services/vehicle-bodies" },
-    { label: "Vehicle Engine Repairing", to: "/services/engine-repair" },
-    { label: "Gears Making & Milling", to: "/services/gears-milling" },
-    { label: "Bearings Service", to: "/services/bearings" },
-    { label: "Vehicle Wheels Repair", to: "/services/wheels-repair" },
-    { label: "Cabinets Manufacturing", to: "/services/cabinets" },
+    { label: "Vehicle Engine Repair", to: "/services/engine-repair" },
+    { label: "Gear Manufacturing & Milling", to: "/services/gears-milling" },
+    { label: "Bearing Services", to: "/services/bearings" },
+    { label: "Vehicle Wheel Repair", to: "/services/wheels-repair" },
+    {
+      label: "Cabinet Manufacturing (KAHRAMAA Approved)",
+      to: "/services/cabinets",
+    },
   ];
 
   // use href for link targets; we'll render them with <Link to=...>
@@ -38,8 +41,6 @@ export default function Footer() {
     { label: "Contact", href: "/contact" },
     { label: "Get Quote", href: "/get-quote" },
   ];
-
-  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-gradient-to-r from-orange-600 to-red-500 text-white">
@@ -148,10 +149,10 @@ export default function Footer() {
                 <Mail size={18} className="text-orange-200 flex-shrink-0" />
                 <div className="flex flex-col">
                   <a
-                    href="mailto:pankajsuwaidigroup@gmail.com"
+                    href="mailto:info@alsuwaiditechnical.com"
                     className="hover:text-white"
                   >
-                    pankajsuwaidigroup@gmail.com
+                    info@alsuwaiditechnical.com
                   </a>
                   <a
                     href="mailto:suwaidigroup@yahoo.com"
@@ -214,10 +215,23 @@ export default function Footer() {
       {/* Copyright Section */}
       <div className="border-t border-orange-400/30 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <p className="text-white text-sm font-medium text-center">
-            © {new Date().getFullYear()} Al Suwaidi Technical Centre. All rights
-            reserved.{" "}
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-white text-sm font-medium text-center">
+              © {new Date().getFullYear()} Al Suwaidi Technical Center. All rights
+              reserved.
+            </p>
+            <p className="text-orange-200 text-xs text-center">
+              Designed by{" "}
+              <a
+                href="https://www.worknestconnect.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-orange-300 transition-colors duration-300 font-semibold underline"
+              >
+                Worknestconnect
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

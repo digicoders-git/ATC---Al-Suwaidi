@@ -134,23 +134,7 @@ const wheelServices = [
     ],
     icon: GitPullRequest,
   },
-  {
-    title: "🛞 Tire Mounting & Demounting",
-    desc: "This ensures proper tire seating and pressure monitoring. Tire mounting and demounting services include safe tire installation, removal, and TPMS servicing.",
-    image: "/VecalWhell/Tire Mounting & Demounting.png",
-    features: [
-      "Tire mounting & removal",
-      "TPMS sensor service",
-      "Tire pressure inspection",
-      "Valve replacement",
-    ],
-    specs: [
-      "Tire Sizes: All sizes",
-      "TPMS: Sensor programming supported",
-      "Equipment: Automated tire machines",
-    ],
-    icon: Package,
-  },
+
   {
     title: "🎨 Custom Wheel Modifications",
     desc: "Suitable for special vehicles and customized builds. Custom wheel modification enhances appearance and performance through specialized machining and finishing.",
@@ -172,9 +156,9 @@ const wheelServices = [
 
 const stats = [
   { value: "20,000+", label: "Wheels Repaired", icon: Circle },
-  { value: "25+", label: "Years Experience", icon: Clock },
-  { value: "97%", label: "Customer Satisfaction", icon: CheckCircle },
-  { value: "ISO Certified", label: "Quality Service", icon: Award },
+  { value: "32+", label: "Years Experience", icon: Clock },
+  { value: "98%", label: "Customer Satisfaction", icon: CheckCircle },
+  { value: "ISO 9001:2015", label: "Quality Service", icon: Award },
 ];
 
 export default function VehicleWheelsRepairPage() {
@@ -229,7 +213,12 @@ export default function VehicleWheelsRepairPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre provides professional wheel and brake component repairing services designed to restore balance, braking efficiency, and smooth vehicle operation. Our services focus on precision machining, alignment correction, and surface finishing, ensuring safety and performance for commercial and heavy-duty vehicles.
+              Al Suwaidi Technical Centre provides professional wheel and brake
+              component repairing services designed to restore balance, braking
+              efficiency, and smooth vehicle operation. Our services focus on
+              precision machining, alignment correction, and surface finishing,
+              ensuring safety and performance for commercial and heavy-duty
+              vehicles.
             </motion.p>
 
             {/* Action Buttons */}
@@ -305,38 +294,23 @@ export default function VehicleWheelsRepairPage() {
             >
               {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              
-              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
+
+              <div
+                className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
                 {/* Text Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
-                  >
-                    <motion.div 
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
-                    >
-                      <service.icon className="text-orange-600" size={23} />
-                    </motion.div>
-                    <div className="text-left">
-                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
-                        WHEEL REPAIR SERVICE
-                      </span>
-                    </div>
-                  </motion.div>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -346,7 +320,7 @@ export default function VehicleWheelsRepairPage() {
                     {service.title}
                   </motion.h3>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -393,39 +367,23 @@ export default function VehicleWheelsRepairPage() {
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
                       {service.specs.map((spec, i) => (
-                        <div key={i} className="flex items-center gap-2 text-slate-700">
-                          <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+                        <div
+                          key={i}
+                          className="flex items-center gap-2 text-slate-700"
+                        >
+                          <CheckCircle
+                            size={16}
+                            className="text-green-500 flex-shrink-0"
+                          />
                           <span className="text-sm">{spec}</span>
                         </div>
                       ))}
                     </div>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  >
-                    <Link
-                      to="/contact"
-                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
-                    >
-                      <span>View Details</span>
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/get-quote"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
-                    >
-                      <Phone size={20} />
-                      <span>Get Quote</span>
-                    </Link>
-                  </motion.div>
                 </motion.div>
 
                 {/* Image Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -438,7 +396,7 @@ export default function VehicleWheelsRepairPage() {
                   >
                     {/* Animated Border Glow */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
-                    
+
                     <div className="relative bg-white rounded-3xl overflow-hidden">
                       <img
                         src={service.image}
@@ -446,19 +404,8 @@ export default function VehicleWheelsRepairPage() {
                         className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                      
+
                       {/* Enhanced Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7, type: "spring" }}
-                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
-                      >
-                        <div className="text-sm font-black text-slate-900">
-                          {service.title.split(" ")[0]}
-                        </div>
-                        <div className="text-xs text-orange-600 font-semibold">Service</div>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -526,9 +473,7 @@ export default function VehicleWheelsRepairPage() {
                 <h4 className="font-bold text-gray-900 text-xl mb-3">
                   {output.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {output.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed">{output.desc}</p>
 
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-orange-400/10 to-red-400/10 pointer-events-none" />
@@ -537,7 +482,7 @@ export default function VehicleWheelsRepairPage() {
           </div>
         </section>
       </main>
-      
+
       <GetDemoSection />
 
       {/* ===== MODERN PROCESS FLOW ===== */}
@@ -618,56 +563,31 @@ export default function VehicleWheelsRepairPage() {
       </section>
 
       <div className="max-w-7xl mx-auto py-15">
-        {/* Contact Info */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-6">
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Phone className="text-orange-600" size={20} />
+        <div className="  text-center">
+          <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100">
+            <h4 className="text-2xl font-bold text-gray-900 mb-6"> Outputs</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex items-center gap-3 justify-center">
+                <CheckCircle className="text-orange-500" size={20} />
+                <span className="text-gray-700 font-medium">
+                  Balanced and aligned wheels
+                </span>
               </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Emergency Service
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  +974 44601087
-                </div>
+              <div className="flex items-center gap-3 justify-center">
+                <CheckCircle className="text-orange-500" size={20} />
+                <span className="text-gray-700 font-medium">
+                  Restored brake discs, drums & flywheels
+                </span>
               </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Mail className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Email
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  wheel.repair@alsuwaidi.com
-                </div>
+              <div className="flex items-center gap-3 justify-center">
+                <CheckCircle className="text-orange-500" size={20} />
+                <span className="text-gray-700 font-medium">
+                  Improved braking efficiency and ride quality
+                </span>
               </div>
             </div>
           </div>
-
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Clock className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Service Hours
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  7:00 AM - 10:00 PM
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </div>
   );

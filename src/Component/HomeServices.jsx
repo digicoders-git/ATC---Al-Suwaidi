@@ -6,9 +6,7 @@ import {
   FaTruck,
   FaBoxes,
   FaToolbox,
-  FaPaintRoller,
   FaCogs,
-  FaWarehouse,
   FaTrailer,
 } from "react-icons/fa";
 
@@ -16,62 +14,53 @@ const Services = () => {
   const services = [
     {
       icon: FaIndustry,
-      title: "Steel Fabrication",
-      desc: "Heavy & medium structural steel works, warehouse sheds",
+      title: "Steel Fabrication Basics",
+      desc: "Heavy & medium structural steel works, warehouse sheds, industrial platforms and custom fabrication solutions",
       link: "/services/steel-fabrication",
     },
     {
       icon: FaTruck,
-      title: "Road Tankers",
-      desc: "Fuel, petro-chemical, edible oils, sewage water, cement silos",
+      title: "Commercial Vehicle Bodies",
+      desc: "Custom vehicle body fabrication, tankers, trailers, flatbeds and specialized transport solutions",
       link: "/services/vehicle-bodies",
-    },
-    {
-      icon: FaTrailer,
-      title: "Trailers & Containers",
-      desc: "Flatbed trailers, container transportation trailers, dry cargo boxes",
-      link: "/services/vehicle-bodies",
-    },
-    {
-      icon: FaWrench,
-      title: "Machining Works",
-      desc: "Lathe, Milling, Shearing, Bending, Rolling, Punching",
-      link: "/services/gears-milling",
-    },
-    {
-      icon: FaBoxes,
-      title: "Storage Solutions",
-      desc: "Bulk & utility multi-product storage tankers with piping",
-      link: "/services/vehicle-bodies",
-    },
-    {
-      icon: FaToolbox,
-      title: "Cabinet Manufacturing",
-      desc: "S.S. cable trays, panel boards, cabinets, electrical boxes",
-      link: "/services/cabinets",
-    },
-    {
-      icon: FaPaintRoller,
-      title: "Surface Treatment",
-      desc: "Sandblasting & painting, epoxy coating, finishing works",
-      link: "/services/mro",
     },
     {
       icon: FaCogs,
-      title: "Engineering Works",
-      desc: "Welding, die making, engine re-boring, brazing works",
+      title: "Vehicle Engine Repair",
+      desc: "Complete engine overhaul, rebuilding, maintenance, block boring and performance optimization services",
       link: "/services/engine-repair",
     },
     {
-      icon: FaWarehouse,
-      title: "Structural Works",
-      desc: "Industrial sheds, structural steel fabrication, installation",
-      link: "/services/steel-fabrication",
+      icon: FaWrench,
+      title: "Gear Manufacturing & Milling",
+      desc: "Precision gear manufacturing, hobbing, milling operations and custom machining works for industrial applications",
+      link: "/services/gears-milling",
+    },
+    {
+      icon: FaToolbox,
+      title: "Bearing Services",
+      desc: "Bearing maintenance, replacement, alignment, fitting and precision installation services for all vehicle types",
+      link: "/services/bearings",
+    },
+    {
+      icon: FaTrailer,
+      title: "Vehicle Wheel Repair",
+      desc: "Wheel alignment, balancing, rim welding, straightening and tire mounting services for commercial vehicles",
+      link: "/services/wheels-repair",
+    },
+    {
+      icon: FaBoxes,
+      title: "Cabinet Manufacturing (KAHRAMAA Approved)",
+      desc: "KAHRAMAA-approved water & electric service cabinets, panel boards and electrical enclosure manufacturing",
+      link: "/services/cabinets",
     },
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+    <section
+      className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden "
+      id="services"
+    >
       {/* Decorative background shape */}
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-20">
         <svg
@@ -99,7 +88,7 @@ const Services = () => {
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mt-3 max-w-3xl mx-auto">
             Comprehensive industrial engineering solutions since 1992 —
-            precision, scale and on-time delivery.
+            precision fabrication, quality assurance and on-time delivery.
           </p>
         </div>
 

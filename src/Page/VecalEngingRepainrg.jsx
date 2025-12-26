@@ -35,47 +35,59 @@ import GetDemoSection from "../Component/GetDemoSection";
 
 const servicesList = [
   {
-    title: "🔍 Engine Inspection & Diagnosis",
-    desc: "Our engine repair process begins with a comprehensive inspection and diagnostic assessment to accurately identify mechanical wear, performance loss, and hidden faults. This ensures that only necessary repairs are carried out, saving time and cost. We evaluate critical engine parameters including compression, alignment, surface wear, and component condition to determine the most effective repair approach.",
-    icon: Search,
-    image: "/VecalWhell/Wheel Alignment Services.png",
-    features: [
-      "Detailed fault analysis and condition assessment",
-      "Clear repair scope with technical recommendations", 
-      "Reduced risk of repeat failures and unnecessary repairs"
-    ],
-  },
-  {
     title: "⚙️ Crankshaft Grinding",
     desc: "Crankshaft grinding is performed using precision machining techniques to restore correct journal size, alignment, and surface finish. This process is essential to maintain smooth rotation and protect bearings from premature wear. Each crankshaft is measured and ground within specified tolerances to ensure long-term reliability under continuous operation.",
     icon: RotateCcw,
-    image: "/VecalWhell/Wheel Straightening & Balancing.png",
+    image: "/Crankshaft Grinding.png",
     features: [
       "Restored crankshaft geometry and balance",
       "Reduced vibration and bearing stress",
-      "Smooth engine rotation and improved durability"
+      "Smooth engine rotation and improved durability",
     ],
   },
   {
     title: "🧱 Block Boring",
     desc: "We carry out high-accuracy block boring to correct cylinder wear, taper, and distortion caused by prolonged engine use. This restores proper piston clearance and ensures optimal compression levels. Block boring is executed with strict dimensional control to support reliable piston and ring operation.",
     icon: Settings,
-    image: "/VecalWhell/Disc Facing & Resurfacing.png",
+    image: "/Block Boring.png",
     features: [
       "Corrected cylinder dimensions",
       "Improved compression and combustion efficiency",
-      "Extended engine service life"
+      "Extended engine service life",
     ],
   },
   {
     title: "🧩 Cylinder Liner Fitting",
     desc: "Cylinder liner fitting is performed to rebuild worn or damaged cylinders, restoring internal sealing and reducing oil consumption. Liners are fitted with precision to ensure correct alignment and heat transfer. This service is particularly effective for engines operating under heavy load or high temperatures.",
     icon: Layers,
-    image: "/VecalWhell/Drum Facing & Resurfacing.png",
+    image: "/Cylinder Liner Fitting.png",
     features: [
       "Proper sealing and reduced blow-by",
       "Lower oil consumption",
-      "Reliable cylinder performance under load"
+      "Reliable cylinder performance under load",
+    ],
+  },
+
+  {
+    title: "🧪 Head Pressure Checking",
+    desc: "Cylinder heads undergo pressure testing to identify cracks, leaks, or structural weaknesses that can lead to coolant loss, overheating, or engine failure. This step is critical for ensuring head integrity before reassembly.",
+    icon: TestTube,
+    image: "/Head Pressure Checking.png",
+    features: [
+      "Leak-free cylinder heads",
+      "Reliable cooling system operation",
+      "Prevention of major engine damage",
+    ],
+  },
+  {
+    title: "⚙️ Head Tappet Setting",
+    desc: "Accurate tappet setting and valve clearance adjustment ensures correct valve timing and smooth engine operation. Proper tappet setting reduces noise, wear, and stress on valve train components. This service enhances overall engine efficiency and stability.",
+    icon: Settings,
+    image: "/Head Tappet Setting.png",
+    features: [
+      "Smooth and quiet valve operation",
+      "Improved engine timing accuracy",
+      "Stable and efficient engine performance",
     ],
   },
   {
@@ -86,29 +98,7 @@ const servicesList = [
     features: [
       "Improved compression and power delivery",
       "Reduced oil burning and emissions",
-      "Better fuel efficiency"
-    ],
-  },
-  {
-    title: "🧪 Head Pressure Checking",
-    desc: "Cylinder heads undergo pressure testing to identify cracks, leaks, or structural weaknesses that can lead to coolant loss, overheating, or engine failure. This step is critical for ensuring head integrity before reassembly.",
-    icon: TestTube,
-    image: "/VecalWhell/Rim Welding & Machining.png",
-    features: [
-      "Leak-free cylinder heads",
-      "Reliable cooling system operation",
-      "Prevention of major engine damage"
-    ],
-  },
-  {
-    title: "⚙️ Head Tappet Setting",
-    desc: "Accurate tappet setting and valve clearance adjustment ensures correct valve timing and smooth engine operation. Proper tappet setting reduces noise, wear, and stress on valve train components. This service enhances overall engine efficiency and stability.",
-    icon: Settings,
-    image: "/VecalWhell/Tire Mounting & Demounting.png",
-    features: [
-      "Smooth and quiet valve operation",
-      "Improved engine timing accuracy",
-      "Stable and efficient engine performance"
+      "Better fuel efficiency",
     ],
   },
   {
@@ -119,7 +109,7 @@ const servicesList = [
     features: [
       "Accurate component fitment",
       "Reduced mechanical stress",
-      "Reliable, long-lasting engine operation"
+      "Reliable, long-lasting engine operation",
     ],
   },
   {
@@ -130,16 +120,16 @@ const servicesList = [
     features: [
       "Verified performance and reliability",
       "Reduced risk of post-installation issues",
-      "Installation-ready engine"
+      "Installation-ready engine",
     ],
   },
 ];
 
 const stats = [
-  { value: "30+", label: "Years Experience", icon: Clock },
+  { value: "32+", label: "Years Experience", icon: Clock },
   { value: "2000+", label: "Engines Rebuilt", icon: CheckCircle },
   { value: "25+", label: "Expert Technicians", icon: Users },
-  { value: "ISO 9001", label: "Certified Quality", icon: Award },
+  { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
 export default function VehicleEngineRepairPage() {
@@ -161,7 +151,8 @@ export default function VehicleEngineRepairPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Sparkles size={18} className="text-orange-200" />
-              ADVANCED ENGINE RECONDITIONING & PRECISION MECHANICAL REPAIR SOLUTIONS
+              ADVANCED ENGINE RECONDITIONING & PRECISION MECHANICAL REPAIR
+              SOLUTIONS
             </motion.div>
 
             {/* Main Title */}
@@ -194,7 +185,15 @@ export default function VehicleEngineRepairPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre delivers complete engine reconditioning and mechanical repair services designed to restore engine efficiency, reliability, and performance for commercial vehicles and industrial applications. Our approach combines detailed diagnosis, precision machining, and controlled assembly to ensure engines operate smoothly and reliably over an extended service life. From inspection to final testing, every engine component is restored to meet operational standards, performance requirements, and durability expectations.
+              Al Suwaidi Technical Centre delivers complete engine
+              reconditioning and mechanical repair services designed to restore
+              engine efficiency, reliability, and performance for commercial
+              vehicles and industrial applications. Our approach combines
+              detailed diagnosis, precision machining, and controlled assembly
+              to ensure engines operate smoothly and reliably over an extended
+              service life. From inspection to final testing, every engine
+              component is restored to meet operational standards, performance
+              requirements, and durability expectations.
             </motion.p>
 
             {/* Action Buttons */}
@@ -209,14 +208,14 @@ export default function VehicleEngineRepairPage() {
                 className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
               >
                 <Phone size={20} className="group-hover:animate-pulse" />
-                <span>👉 To Know More, Contact Us</span>
+                <span> To Know More, Contact Us</span>
               </Link>
 
               <a
                 href="#services"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
-                <span>View Engine Services</span>
+                <span>VIEW SERVICES</span>
                 <ArrowRight size={20} />
               </a>
             </motion.div>
@@ -270,41 +269,23 @@ export default function VehicleEngineRepairPage() {
             >
               {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              
-              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
+
+              <div
+                className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
                 {/* Text Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
-                  >
-                    <motion.div 
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
-                    >
-                      <service.icon className="text-orange-600" size={23} />
-                    </motion.div>
-                    <div className="text-left">
-                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
-                        ENGINE REPAIR SERVICE
-                      </span>
-                      <span className="text-xs text-slate-500 font-medium">
-                        Advanced Reconditioning
-                      </span>
-                    </div>
-                  </motion.div>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -314,7 +295,7 @@ export default function VehicleEngineRepairPage() {
                     {service.title}
                   </motion.h3>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -348,32 +329,10 @@ export default function VehicleEngineRepairPage() {
                       ))}
                     </div>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  >
-                    <Link
-                      to="/contact"
-                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
-                    >
-                      <span>View Details</span>
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
-                    >
-                      <Phone size={20} />
-                      <span>Get Quote</span>
-                    </Link>
-                  </motion.div>
                 </motion.div>
 
                 {/* Image Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -386,30 +345,20 @@ export default function VehicleEngineRepairPage() {
                   >
                     {/* Animated Border Glow */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
-                    
+
                     <div className="relative bg-white rounded-3xl overflow-hidden">
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-80 lg:h-150 object-cover transition-transform duration-700 hover:scale-110"
+                        className="w-full  object-cover transition-transform duration-700 hover:scale-110"
                         onError={(e) => {
-                          e.currentTarget.src = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80";
+                          e.currentTarget.src =
+                            "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80";
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                      
+
                       {/* Enhanced Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7, type: "spring" }}
-                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
-                      >
-                        <div className="text-sm font-black text-slate-900">
-                          Engine
-                        </div>
-                        <div className="text-xs text-orange-600 font-semibold">Service</div>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -418,7 +367,7 @@ export default function VehicleEngineRepairPage() {
           ))}
         </section>
       </main>
-      
+
       <GetDemoSection />
 
       {/* ===== MODERN PROCESS FLOW ===== */}
@@ -439,7 +388,8 @@ export default function VehicleEngineRepairPage() {
             </h3>
 
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Our engine repair services follow a structured workflow to ensure precision, reliability, and consistency
+              Our engine repair services follow a structured workflow to ensure
+              precision, reliability, and consistency
             </p>
           </div>
 
@@ -490,19 +440,28 @@ export default function VehicleEngineRepairPage() {
           {/* Products/Outputs Section */}
           <div className="mt-20 text-center">
             <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100">
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">Products / Outputs</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">
+                {" "}
+                Outputs
+              </h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Fully reconditioned engines</span>
+                  <span className="text-gray-700 font-medium">
+                    Fully reconditioned engines
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Serviced and machined engine blocks</span>
+                  <span className="text-gray-700 font-medium">
+                    Serviced and machined engine blocks
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Performance-restored engine components</span>
+                  <span className="text-gray-700 font-medium">
+                    Performance-restored engine components
+                  </span>
                 </div>
               </div>
             </div>
@@ -516,7 +475,8 @@ export default function VehicleEngineRepairPage() {
                   👉 To Know More, Contact Us
                 </h3>
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  Get professional engine repair services with guaranteed quality and reliability
+                  Get professional engine repair services with guaranteed
+                  quality and reliability
                 </p>
                 <Link
                   to="/contact"

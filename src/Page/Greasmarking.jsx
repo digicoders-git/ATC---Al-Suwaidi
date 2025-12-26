@@ -46,7 +46,7 @@ const servicesList = [
     features: [
       "Accurate cylindrical machining",
       "Smooth and consistent surface finish",
-      "Tight dimensional control"
+      "Tight dimensional control",
     ],
   },
   {
@@ -57,7 +57,7 @@ const servicesList = [
     features: [
       "Flat and even surfaces",
       "Improved component alignment",
-      "Accurate end finishing"
+      "Accurate end finishing",
     ],
   },
   {
@@ -68,7 +68,7 @@ const servicesList = [
     features: [
       "Accurate hole positioning",
       "Clean and burr-free finish",
-      "Reliable assembly fit"
+      "Reliable assembly fit",
     ],
   },
   {
@@ -79,7 +79,7 @@ const servicesList = [
     features: [
       "Correct and consistent hole dimensions",
       "Improved roundness and surface finish",
-      "Reliable component fitment"
+      "Reliable component fitment",
     ],
   },
   {
@@ -90,7 +90,7 @@ const servicesList = [
     features: [
       "Accurate thread profiles",
       "Secure and reliable fastening",
-      "Consistent thread quality"
+      "Consistent thread quality",
     ],
   },
   {
@@ -101,7 +101,7 @@ const servicesList = [
     features: [
       "Enhanced grip surfaces",
       "Improved handling and control",
-      "Durable textured finish"
+      "Durable textured finish",
     ],
   },
   {
@@ -112,7 +112,7 @@ const servicesList = [
     features: [
       "Accurate gear tooth profiles",
       "Smooth gear engagement",
-      "Reliable power transmission"
+      "Reliable power transmission",
     ],
   },
   {
@@ -123,16 +123,16 @@ const servicesList = [
     features: [
       "Uniform and accurate gear teeth",
       "High production consistency",
-      "Durable and reliable gears"
+      "Durable and reliable gears",
     ],
   },
 ];
 
 const stats = [
-  { value: "30+", label: "Years Experience", icon: Clock },
+  { value: "32+", label: "Years Experience", icon: Clock },
   { value: "5000+", label: "Gears Manufactured", icon: CheckCircle },
   { value: "25+", label: "Expert Machinists", icon: Users },
-  { value: "ISO 9001", label: "Certified Quality", icon: Award },
+  { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
 export default function GearsMakingMillingPage() {
@@ -187,7 +187,15 @@ export default function GearsMakingMillingPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre provides precision gear making and milling services for industrial, automotive, and mechanical applications. Our machining operations focus on dimensional accuracy, surface finish, and durability, ensuring components perform reliably under operational loads. Using skilled machinists and precision machines, we manufacture and machine components that meet exact technical specifications and functional requirements. From single components to batch production, our machining services support maintenance, repair, and manufacturing needs.
+              Al Suwaidi Technical Centre provides precision gear making and
+              milling services for industrial, automotive, and mechanical
+              applications. Our machining operations focus on dimensional
+              accuracy, surface finish, and durability, ensuring components
+              perform reliably under operational loads. Using skilled machinists
+              and precision machines, we manufacture and machine components that
+              meet exact technical specifications and functional requirements.
+              From single components to batch production, our machining services
+              support maintenance, repair, and manufacturing needs.
             </motion.p>
 
             {/* Action Buttons */}
@@ -202,14 +210,14 @@ export default function GearsMakingMillingPage() {
                 className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
               >
                 <Phone size={20} className="group-hover:animate-pulse" />
-                <span>👉 To Know More, Contact Us</span>
+                <span> To Know More, Contact Us</span>
               </Link>
 
               <a
                 href="#services"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
-                <span>View Machining Services</span>
+                <span>VIEW SERVICES</span>
                 <ArrowRight size={20} />
               </a>
             </motion.div>
@@ -263,41 +271,23 @@ export default function GearsMakingMillingPage() {
             >
               {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              
-              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
+
+              <div
+                className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
                 {/* Text Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
-                  >
-                    <motion.div 
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
-                    >
-                      <service.icon className="text-orange-600" size={23} />
-                    </motion.div>
-                    <div className="text-left">
-                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
-                        MACHINING SERVICE
-                      </span>
-                      <span className="text-xs text-slate-500 font-medium">
-                        Precision Manufacturing
-                      </span>
-                    </div>
-                  </motion.div>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -307,7 +297,7 @@ export default function GearsMakingMillingPage() {
                     {service.title}
                   </motion.h3>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -341,32 +331,10 @@ export default function GearsMakingMillingPage() {
                       ))}
                     </div>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  >
-                    <Link
-                      to="/contact"
-                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
-                    >
-                      <span>View Details</span>
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
-                    >
-                      <Phone size={20} />
-                      <span>Get Quote</span>
-                    </Link>
-                  </motion.div>
                 </motion.div>
 
                 {/* Image Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -379,30 +347,20 @@ export default function GearsMakingMillingPage() {
                   >
                     {/* Animated Border Glow */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
-                    
+
                     <div className="relative bg-white rounded-3xl overflow-hidden">
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-80 lg:h-150 object-cover transition-transform duration-700 hover:scale-110"
+                        className="w-full  object-cover transition-transform duration-700 hover:scale-110"
                         onError={(e) => {
-                          e.currentTarget.src = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80";
+                          e.currentTarget.src =
+                            "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80";
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                      
+
                       {/* Enhanced Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7, type: "spring" }}
-                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
-                      >
-                        <div className="text-sm font-black text-slate-900">
-                          Precision
-                        </div>
-                        <div className="text-xs text-orange-600 font-semibold">Machining</div>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -411,7 +369,7 @@ export default function GearsMakingMillingPage() {
           ))}
         </section>
       </main>
-      
+
       <GetDemoSection />
 
       {/* ===== MODERN PROCESS FLOW ===== */}
@@ -432,7 +390,8 @@ export default function GearsMakingMillingPage() {
             </h3>
 
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Our machining services follow a structured workflow to ensure precision, quality, and consistency
+              Our machining services follow a structured workflow to ensure
+              precision, quality, and consistency
             </p>
           </div>
 
@@ -483,19 +442,25 @@ export default function GearsMakingMillingPage() {
           {/* Products Section */}
           <div className="mt-20 text-center">
             <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100">
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">Products</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">Output</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Precision-machined gears</span>
+                  <span className="text-gray-700 font-medium">
+                    Precision-machined gears
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Machined shafts</span>
+                  <span className="text-gray-700 font-medium">
+                    Machined shafts
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <CheckCircle className="text-orange-500" size={20} />
-                  <span className="text-gray-700 font-medium">Custom precision machined components</span>
+                  <span className="text-gray-700 font-medium">
+                    Custom precision machined components
+                  </span>
                 </div>
               </div>
             </div>
@@ -509,7 +474,8 @@ export default function GearsMakingMillingPage() {
                   👉 To Know More, Contact Us
                 </h3>
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  Get professional gear making and milling services with guaranteed precision and quality
+                  Get professional gear making and milling services with
+                  guaranteed precision and quality
                 </p>
                 <Link
                   to="/contact"

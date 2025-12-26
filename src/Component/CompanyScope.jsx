@@ -125,12 +125,7 @@ export default function CompanyScope() {
                 {/* Title */}
                 <h3
                   className="text-xl font-bold text-gray-800 mb-4 "
-                  style={{
-                    backgroundImage:
-                      index === 0
-                        ? "linear-gradient(to right, rgb(249, 115, 22), rgb(239, 68, 68))"
-                        : undefined,
-                  }}
+
                 >
                   {service.title}
                 </h3>

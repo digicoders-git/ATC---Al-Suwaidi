@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Truck,
@@ -6,124 +6,107 @@ import {
   Sparkles,
   Layers,
   Settings,
-  GitMerge,
   Phone,
   Factory,
   Hammer,
   Cog,
-  Shield,
   CheckCircle,
   ArrowRight,
   Users,
   Clock,
   Award,
 } from "lucide-react";
-import { motion } from "framer-motion"; // Fixed: Added motion import
+import { motion, AnimatePresence } from "framer-motion";
+
 import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
+import Stellbaseindristy from "../Component/Stellbaseindristy";
 
 const servicesList = [
-  {
-    title: "🏭 Manufacturing Industry",
-    desc: "We support manufacturing facilities with custom steel fabrication and engineered components that improve production efficiency and structural reliability. From machinery frames to industrial supports, our solutions are designed to withstand continuous operations and heavy-duty use.",
-    icon: Factory,
-    image: "/StellFebictaion/Manufacturing Industry.png",
-    features: [
-      "Structural frames for machinery & equipment",
-      "Custom steel components and assemblies", 
-      "Fabrication support for production facilities",
-      "Durable steel solutions for factory environments"
-    ],
-  },
-  {
-    title: "🚗 Automobile Industry",
-    desc: "Our steel fabrication services assist the automobile sector with accurate, high-strength components used in vehicle manufacturing, body building, and mechanical applications. We deliver fabrication that meets performance, safety, and durability requirements.",
-    icon: Truck,
-    image: "/StellFebictaion/Automobile Industry.png",
-    features: [
-      "Fabrication for vehicle bodies and frames",
-      "Structural components for automotive systems",
-      "Precision-cut and formed steel parts",
-      "Support structures for workshops and service facilities"
-    ],
-  },
-  {
-    title: "🏗️ Construction Industry",
-    desc: "We provide the construction industry with robust structural steel fabrication for commercial, industrial, and infrastructure developments. Our steel components are engineered for strength, stability, and long-term performance on-site.",
-    icon: Hammer,
-    image: "/StellFebictaion/Construction Industry.png",
-    features: [
-      "Structural steel for buildings and sheds",
-      "Platforms, supports, and load-bearing elements",
-      "Custom-fabricated steel for project-specific needs",
-      "Fabrication aligned with construction timelines"
-    ],
-  },
   {
     title: "🧩 Fabrication Process Planning & Engineering Design",
     desc: "We begin every project with detailed fabrication planning and engineering design to ensure accuracy, efficiency, and smooth execution before fabrication starts.",
     icon: Layers,
-    image: "/StellFebictaion/Fabrication Process Planning & Engineering Design.png",
+    image: "/Fabrication Processes, Plan & Design.png",
     features: [
       "Clear fabrication drawings & layouts",
       "Optimized material planning",
-      "Reduced fabrication errors"
+      "Reduced fabrication errors",
     ],
   },
   {
     title: "✂️ Sheet Metal Cutting",
     desc: "Our sheet metal cutting process delivers precise dimensions and clean edges, forming the foundation for high-quality fabrication and assembly.",
     icon: Settings,
-    image: "/StellFebictaion/Sheet Metal Cutting.png",
+    image: "/two-paddles-axe-and-leatherwork-9wNcZprwco8-unsplash.jpg",
     features: [
       "Accurate and clean cuts",
       "Consistent dimensional quality",
-      "Improved assembly fitment"
+      "Improved assembly fitment",
     ],
   },
   {
     title: "🔄 Pipe Cutting, Bending & Rolling",
     desc: "We perform pipe cutting, bending, and rolling to achieve required shapes and angles for structural and industrial applications.",
     icon: Cog,
-    image: "/StellFebictaion/Pipe Cutting, Bending & Rolling.png",
+    image: "/kemal-kozbaev-mun6ABiRJws-unsplash.jpg",
     features: [
       "Uniform pipe shaping",
       "Strong, precise bends & rolls",
-      "Reliable structural components"
+      "Reliable structural components",
     ],
   },
   {
     title: "🏗️ Structural Steel Fabrication",
     desc: "We manufacture heavy and medium structural steel components designed for durability and long-term performance in demanding environments.",
     icon: Hammer,
-    image: "/StellFebictaion/Structural Steel Fabrication.png",
+    image: "/Industrial Steel.jpg",
     features: [
       "High-strength steel structures",
       "Fabrication to project specifications",
-      "Reliable load-bearing components"
+      "Reliable load-bearing components",
     ],
   },
   {
     title: "🔧 Assembly, Welding & Finishing",
     desc: "Final assembly is completed with professional welding and finishing, ensuring alignment, strength, and installation readiness.",
     icon: Sparkles,
-    image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+    image: "/kemal-kozbaev-mun6ABiRJws-unsplash.jpg",
     features: [
       "Strong, defect-free welds",
       "Proper alignment and finish",
-      "Ready-to-install fabricated products"
+      "Ready-to-install fabricated products",
     ],
+  },
+];
+const projects = [
+  {
+    title: "Assembly, Welding & Finishing",
+    image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+  },
+  {
+    title: "Custom-fabricated steel parts",
+    image: "/StellFebictaion/Custom-fabricated steel parts.png",
+  },
+  {
+    title: "Industrial steel frames and structure",
+    image: "/StellFebictaion/Industrial steel frames and structures.png",
+  },
+  {
+    title: "Structural Steel Fabrication",
+    image: "/StellFebictaion/Structural Steel Fabrication.png",
   },
 ];
 
 const stats = [
-  { value: "30+", label: "Years Experience", icon: Clock },
+  { value: "32+", label: "Years Experience", icon: Clock },
   { value: "5000+", label: "Projects Completed", icon: CheckCircle },
   { value: "50+", label: "Expert Engineers", icon: Users },
-  { value: "ISO 9001", label: "Certified Quality", icon: Award },
+  { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
 export default function ServicesPage() {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
       {/* HERO SECTION */}
@@ -175,7 +158,11 @@ export default function ServicesPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre delivers comprehensive steel fabrication and engineering solutions tailored for the manufacturing, automobile, and construction industries. Our approach combines engineering planning, precision fabrication, and quality-controlled finishing.
+              Al Suwaidi Technical Centre delivers comprehensive steel
+              fabrication and engineering solutions tailored for the
+              manufacturing, automobile, and construction industries. Our
+              approach combines engineering planning, precision fabrication, and
+              quality-controlled finishing.
             </motion.p>
 
             {/* Action Buttons */}
@@ -194,7 +181,7 @@ export default function ServicesPage() {
               </Link>
 
               <a
-                href="#services"
+                href="#section"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
                 <span>View Steel Services</span>
@@ -236,13 +223,11 @@ export default function ServicesPage() {
         <ServiceSooller />
       </header>
 
+      <Stellbaseindristy />
+
       {/* ===== MAIN CONTENT ===== */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        {/* Section Header - Modern Card Layout */}
-
-
-        {/* ===== MODERN SIDE-BY-SIDE SERVICE CARDS ===== */}
-        <section className="mb-16 space-y-16">
+        <section id="section" className="mb-16 space-y-16 ">
           {servicesList.map((service, index) => (
             <motion.article
               key={service.title}
@@ -252,43 +237,23 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
-              {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              
-              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}>
-                {/* Text Side */}
-                <motion.div 
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
+
+              <div
+                className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
-                  >
-                    <motion.div 
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
-                    >
-                      <service.icon className="text-orange-600" size={23} />
-                    </motion.div>
-                    <div className="text-left">
-                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
-                        STEEL FABRICATION
-                      </span>
-                      <span className="text-xs text-slate-500 font-medium">
-                        {service.subtitle}
-                      </span>
-                    </div>
-                  </motion.div>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -298,7 +263,7 @@ export default function ServicesPage() {
                     {service.title}
                   </motion.h3>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -307,7 +272,6 @@ export default function ServicesPage() {
                     {service.desc}
                   </motion.p>
 
-                  {/* Enhanced Features */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -332,32 +296,9 @@ export default function ServicesPage() {
                       ))}
                     </div>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  >
-                    <Link
-                      to="/contact"
-                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
-                    >
-                      <span>View Details</span>
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/get-quote"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
-                    >
-                      <Phone size={20} />
-                      <span>Get Quote</span>
-                    </Link>
-                  </motion.div>
                 </motion.div>
 
-                {/* Image Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -368,29 +309,15 @@ export default function ServicesPage() {
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 backdrop-blur-sm"
                   >
-                    {/* Animated Border Glow */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
-                    
+
                     <div className="relative bg-white rounded-3xl overflow-hidden">
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-80 lg:h-150 object-cover transition-transform duration-700 hover:scale-110"
+                        className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                      
-                      {/* Enhanced Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7, type: "spring" }}
-                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
-                      >
-                        <div className="text-sm font-black text-slate-900">
-                          {service.title.split(" ")[0]}
-                        </div>
-                        <div className="text-xs text-orange-600 font-semibold">Service</div>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -399,12 +326,150 @@ export default function ServicesPage() {
           ))}
         </section>
       </main>
+
+      {/* product section start  */}
+
+      <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-slate-100">
+        {/* Soft Accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_60%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16 md:mb-20"
+          >
+            <span
+              className="inline-block mb-4 px-6 py-2 rounded-full 
+      bg-orange-100 text-orange-700 
+      text-[13px] font-semibold tracking-widest"
+            >
+              OUR PRODUCTS
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">
+              Steel{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                Products
+              </span>
+            </h2>
+
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+              A showcase of our completed steel fabrication and construction
+              Products, engineered with precision, strength, and reliability.
+            </p>
+          </motion.div>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: index * 0.15 }}
+                onClick={() => setSelectedImage(project)}
+                className="group cursor-pointer relative rounded-2xl overflow-hidden bg-white 
+          shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
+          hover:shadow-[0_30px_70px_rgba(0,0,0,0.15)] 
+          transition-all duration-500"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover 
+              transition-transform duration-700 
+              group-hover:scale-110"
+                  />
+
+                  {/* Overlay */}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t 
+            from-black/70 via-black/30 to-transparent 
+            opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+
+                  {/* Title */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 p-5 
+            translate-y-5 group-hover:translate-y-0 
+            opacity-0 group-hover:opacity-100 
+            transition-all duration-500"
+                  >
+                    <h3 className="text-white font-semibold text-base tracking-tight">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Hover Border */}
+                <div
+                  className="absolute inset-0 rounded-2xl ring-1 ring-transparent 
+          group-hover:ring-orange-500/40 transition-all duration-500"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= LIGHTBOX MODAL ================= */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4 pt-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-5xl"
+            >
+              {/* Close */}
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-orange-400 transition"
+              >
+                ×
+              </button>
+
+              {/* Image */}
+              <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
+                <img
+                  src={selectedImage.image}
+                  alt={selectedImage.title}
+                  className="w-full max-h-[75vh] object-contain mx-auto"
+                />
+              </div>
+
+              {/* Title */}
+              <p className="text-center text-white mt-4 text-base font-semibold tracking-wide">
+                {selectedImage.title}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* product section end  */}
+
       <GetDemoSection />
 
       {/* ===== MODERN PROCESS FLOW ===== */}
       <section className="py-24 bg-gradient-to-b from-white to-orange-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          {/* Heading */}
           <div className="text-center mb-16">
             <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
               OUR PROCESS
@@ -423,7 +488,6 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               {
@@ -451,10 +515,8 @@ export default function ServicesPage() {
                 key={idx}
                 className="relative group bg-white rounded-3xl p-8 text-center shadow-lg border border-orange-100 hover:shadow-2xl transition-all duration-300"
               >
-                {/* glow */}
                 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-orange-500 to-red-500 opacity-0 group-hover:opacity-20 blur transition duration-500" />
 
-                {/* content */}
                 <div className="relative z-10">
                   <div className="mx-auto mb-6 w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-600 to-red-500 flex items-center justify-center text-white font-black text-lg shadow-lg">
                     {process.step}
@@ -473,8 +535,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* ===== MODERN CTA SECTION ===== */}
     </div>
   );
 }

@@ -13,7 +13,7 @@ import Greasmarking from "./Greasmarking";
 import BAringServices from "./BAringServices";
 import CabinateManiFcreing from "./CabinateManiFcreing";
 import VecalEngingRepainrg from "./VecalEngingRepainrg";
-import MaintenanceService from "./MaintenanceService";
+
 import Gallery from "./Gallery";
 import OurStory from "./OurStory";
 import ServicesPage from "./StielsBase";
@@ -23,7 +23,7 @@ import GearsMakingMillingPage from "./Greasmarking";
 import BearingsRemovalFittingPage from "./BAringServices";
 import VehicleWheelsRepairPage from "./VecalRepining";
 import CabinetsManufacturingPage from "./CabinateManiFcreing";
-import MaintenanceServicePage from "./MaintenanceService";
+
 import GalleryPage from "./Gallery";
 import OurStoryPage from "./OurStory";
 import GetQuotePage from "./GetQouto";
@@ -33,7 +33,7 @@ import ScrollToTop from "../Component/ScrollToTop";
 function Router() {
   return (
     <>
-    <ScrollToTop />  
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -67,10 +67,7 @@ function Router() {
         />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/our-story" element={<OurStoryPage />} />
-        <Route
-          path="/services/maintenance"
-          element={<MaintenanceServicePage />}
-        />
+
         <Route
           path="/services/cabinets"
           element={<CabinetsManufacturingPage />}

@@ -33,10 +33,7 @@ import {
 import GetDemoSection from "../Component/GetDemoSection";
 
 const GetQuotePage = () => {
-  
-
   // Handle contact method clicks
-
 
   // Handle quick action clicks
   const handleQuickAction = (action) => {
@@ -49,7 +46,7 @@ const GetQuotePage = () => {
         break;
       case "tour":
         window.open(
-          "mailto:pankajsuwaidigroup@gmail.com?subject=Factory Tour Request",
+          "mailto:info@alsuwaiditechnical.com?subject=Factory Tour Request",
           "_self"
         );
         break;
@@ -96,11 +93,11 @@ const GetQuotePage = () => {
       description: "Send detailed project requirements",
       icon: Mail,
       color: "from-blue-500 to-cyan-500",
-      details: "pankajsuwaidigroup@gmail.com",
+      details: "info@alsuwaiditechnical.com",
       subtext: "Also: suwaidigroup@yahoo.com",
       action: "Send Email",
       actionIcon: Mail,
-      actionLink: "mailto:pankajsuwaidigroup@gmail.com",
+      actionLink: "mailto:info@alsuwaiditechnical.com",
       type: "email",
     },
     {
@@ -113,7 +110,8 @@ const GetQuotePage = () => {
       subtext: "P.O. Box 40600, Industrial Area, Doha",
       action: "Get Directions",
       actionIcon: MapPin,
-      actionLink: "https://www.google.com/maps/search/Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar",
+      actionLink:
+        "https://www.google.com/maps/search/Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar",
       type: "location",
     },
   ];
@@ -126,13 +124,7 @@ const GetQuotePage = () => {
       contact: "+974 44601087",
       specialization: "Industrial Engineering",
     },
-    {
-      name: "Pankaj Singh",
-      role: "Sales Director",
-      exp: "15+ years",
-      contact: "+974 44601087",
-      specialization: "Project Management",
-    },
+
     {
       name: "K.P. Karthik",
       role: "General Manager",
@@ -157,7 +149,7 @@ const GetQuotePage = () => {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-        
+
         {/* Animated background blobs */}
         <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-orange-400/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-red-400/20 rounded-full blur-3xl animate-pulse" />
@@ -195,7 +187,7 @@ const GetQuotePage = () => {
               transition={{ delay: 0.4 }}
               className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
             >
-              Connect Directly with Our Fabrication Experts
+              Connect Directly with Our Experts
             </motion.h2>
 
             {/* Description */}
@@ -205,7 +197,10 @@ const GetQuotePage = () => {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Skip the forms and waiting time. Get direct access to our engineering team for immediate project consultation, technical discussions, and competitive pricing for your industrial fabrication needs.
+              Skip the forms and waiting time. Get direct access to our
+              engineering team for immediate project consultation, technical
+              discussions, and competitive pricing for your industrial
+              fabrication needs.
             </motion.p>
 
             {/* Action Buttons */}
@@ -244,7 +239,11 @@ const GetQuotePage = () => {
               {[
                 { value: "32+", label: "Years Experience", icon: Award },
                 { value: "245+", label: "Expert Team", icon: Users },
-                { value: "ISO 9001", label: "Certified Quality", icon: ShieldCheck },
+                {
+                  value: "ISO 9001",
+                  label: "Certified Quality",
+                  icon: ShieldCheck,
+                },
                 { value: "24/7", label: "Support Available", icon: Clock },
               ].map((stat, idx) => (
                 <motion.div
@@ -290,21 +289,23 @@ const GetQuotePage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* CALL */}
-            <motion.div
+            <motion.a
+              href="tel:+97444601087"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -8, scale: 1.03 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl 
+               hover:-translate-y-3 transition-all duration-500 border border-orange-100"
             >
-              <div className="p-7 flex flex-col min-h-[200px]">
+              <div className="p-7 flex flex-col min-h-[200px] cursor-pointer">
                 <div
                   className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-orange-400 to-red-500 
-      flex items-center justify-center 
-      shadow-orange-500/40 shadow-lg 
-      group-hover:scale-110 transition"
+                      bg-gradient-to-br from-orange-400 to-red-500 
+                      flex items-center justify-center 
+                      shadow-orange-500/40 shadow-lg 
+                      group-hover:scale-110 transition"
                 >
                   <Phone className="text-2xl text-white" />
                 </div>
@@ -319,24 +320,28 @@ const GetQuotePage = () => {
                   Cell: +974 51711104
                 </p>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* WHATSAPP */}
-            <motion.div
+            <motion.a
+              href="https://wa.me/97451711104"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               whileHover={{ y: -8, scale: 1.03 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl 
+               hover:-translate-y-3 transition-all duration-500 border border-orange-100"
             >
-              <div className="p-7 flex flex-col min-h-[200px]">
+              <div className="p-7 flex flex-col min-h-[200px] cursor-pointer">
                 <div
                   className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-green-500 to-emerald-600 
-      flex items-center justify-center 
-      shadow-green-500/40 shadow-lg 
-      group-hover:scale-110 transition"
+                      bg-gradient-to-br from-green-500 to-emerald-600 
+                      flex items-center justify-center 
+                      shadow-green-500/40 shadow-lg 
+                      group-hover:scale-110 transition"
                 >
                   <MessageSquare className="text-2xl text-white" />
                 </div>
@@ -351,24 +356,26 @@ const GetQuotePage = () => {
                   Chat on WhatsApp
                 </p>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* EMAIL */}
-            <motion.div
+            <motion.a
+              href="mailto:info@alsuwaiditechnical.com"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               whileHover={{ y: -8, scale: 1.03 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl 
+               hover:-translate-y-3 transition-all duration-500 border border-orange-100"
             >
-              <div className="p-7 flex flex-col min-h-[200px]">
+              <div className="p-7 flex flex-col min-h-[200px] cursor-pointer">
                 <div
                   className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-blue-500 to-cyan-500 
-      flex items-center justify-center 
-      shadow-blue-500/40 shadow-lg 
-      group-hover:scale-110 transition"
+                      bg-gradient-to-br from-blue-500 to-cyan-500 
+                      flex items-center justify-center 
+                      shadow-blue-500/40 shadow-lg 
+                      group-hover:scale-110 transition"
                 >
                   <Mail className="text-2xl text-white" />
                 </div>
@@ -377,30 +384,34 @@ const GetQuotePage = () => {
                   Email Us
                 </h3>
                 <p className="text-slate-600 text-center text-sm break-all">
-                  pankajsuwaidigroup@gmail.com
+                  info@alsuwaiditechnical.com
                 </p>
                 <p className="text-blue-600 text-center text-sm break-all font-semibold">
                   suwaidigroup@yahoo.com
                 </p>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* VISIT */}
-            <motion.div
+            <motion.a
+              href="https://www.google.com/maps/search/?api=1&query=Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               whileHover={{ y: -8, scale: 1.03 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-orange-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl 
+               hover:-translate-y-3 transition-all duration-500 border border-orange-100"
             >
-              <div className="p-7 flex flex-col min-h-[200px]">
+              <div className="p-7 flex flex-col min-h-[200px] cursor-pointer">
                 <div
                   className="w-16 h-16 mx-auto mb-5 rounded-2xl 
-      bg-gradient-to-br from-purple-500 to-pink-500 
-      flex items-center justify-center 
-      shadow-purple-500/40 shadow-lg 
-      group-hover:scale-110 transition"
+                      bg-gradient-to-br from-purple-500 to-pink-500 
+                      flex items-center justify-center 
+                      shadow-purple-500/40 shadow-lg 
+                      group-hover:scale-110 transition"
                 >
                   <MapPin className="text-2xl text-white" />
                 </div>
@@ -415,7 +426,7 @@ const GetQuotePage = () => {
                   Industrial Area, Doha
                 </p>
               </div>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>
@@ -442,35 +453,65 @@ const GetQuotePage = () => {
             {contactMethods.map((method, idx) => (
               <motion.div
                 key={method.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{
+                  delay: idx * 0.12,
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
                 whileHover={{ y: -10 }}
-                className={`rounded-3xl p-8 border transition-all duration-500 flex flex-col bg-white shadow-lg hover:shadow-2xl border-orange-100 hover:border-orange-400`}
+                className="
+        group
+        rounded-3xl
+        p-8
+        border
+        bg-white
+        shadow-lg
+        hover:shadow-2xl
+        border-orange-100
+        hover:border-orange-400
+        transition-all
+        duration-500
+        flex
+        flex-col
+        text-center
+        min-h-[360px]
+      "
               >
-                {/* Icon */}
+                {/* ICON */}
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 shadow-lg">
+                  <div
+                    className="
+            w-16 h-16
+            flex items-center justify-center
+            rounded-2xl
+            bg-gradient-to-br from-orange-500 to-red-500
+            shadow-lg shadow-orange-500/30
+            group-hover:scale-110
+            transition
+          "
+                  >
                     <method.icon className="text-white" size={28} />
                   </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                {/* TITLE */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {method.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 mb-6 text-center text-lg leading-relaxed flex-grow">
+                {/* DESCRIPTION */}
+                <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
                   {method.description}
                 </p>
 
-                {/* Contact Detail */}
-                <div className="text-center mb-6">
+                {/* CONTACT DETAILS */}
+                <div className="mb-6">
                   {method.type === "phone" && (
                     <a
                       href={`tel:${method.details.replace(/\s+/g, "")}`}
-                      className="text-lg font-bold text-orange-600 hover:underline block"
+                      className="block text-lg font-semibold text-orange-600 hover:underline"
                     >
                       {method.details}
                     </a>
@@ -479,7 +520,7 @@ const GetQuotePage = () => {
                   {method.type === "email" && (
                     <a
                       href={`mailto:${method.details}`}
-                      className="text-lg font-bold text-orange-600 hover:underline block break-all"
+                      className="block text-lg font-semibold text-orange-600 hover:underline break-all"
                     >
                       {method.details}
                     </a>
@@ -490,25 +531,39 @@ const GetQuotePage = () => {
                       href={`https://wa.me/${method.details}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-bold text-orange-600 hover:underline block"
+                      className="block text-lg font-semibold text-orange-600 hover:underline"
                     >
                       +{method.details}
                     </a>
                   )}
 
-                  <div className="text-lg text-gray-500 mt-1 px-2">
+                  <div className="text-sm text-gray-500 mt-1 px-4">
                     {method.subtext}
                   </div>
                 </div>
 
-                {/* Action Button */}
+                {/* ACTION BUTTON */}
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href={method.actionLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 hover:shadow-xl transition mt-auto flex items-center justify-center gap-2"
+                  className="
+          mt-auto
+          inline-flex
+          items-center
+          justify-center
+          gap-2
+          w-full
+          py-3
+          rounded-xl
+          font-semibold
+          text-white
+          bg-gradient-to-r from-orange-500 to-red-500
+          hover:shadow-xl
+          transition
+        "
                 >
                   <method.actionIcon size={18} />
                   {method.action}
@@ -517,100 +572,118 @@ const GetQuotePage = () => {
             ))}
           </div>
         </motion.section>
-
-        <motion.section className="mb-24">
-          <div className="rounded-3xl bg-gradient-to-br from-orange-50 to-red-50 p-10 border border-orange-100">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-
-                <p className="text-gray-700 mb-8">
-                  Our experts are ready to assist with quotations, planning, and
-                  execution.
-                </p>
-
-                <div className="space-y-4">
-                  {[
-                    {
-                      icon: Clock,
-                      label: "Response Time",
-                      value: "Fast & Reliable",
-                    },
-                    {
-                      icon: Headphones,
-                      label: "Support Level",
-                      value: "Expert Engineers",
-                    },
-                    {
-                      icon: Briefcase,
-                      label: "Prepare",
-                      value: "Drawings & Requirements",
-                    },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4">
-                      <item.icon className="text-orange-600" size={22} />
-                      <span className="font-semibold">{item.label}:</span>
-                      <span className="text-gray-700">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl" />
-                <div className="relative bg-white rounded-2xl p-8 shadow-xl text-center">
-                  <Users className="mx-auto mb-4 text-orange-600" size={32} />
-                  <div className="text-4xl font-extrabold text-gray-900">
-                    24/7
-                  </div>
-                  <div className="text-gray-600 mt-2">
-                    Project Support Available
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        <motion.section className="mb-24">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-              Meet Our Expert Team
-            </h2>
-            <p className="text-lg text-gray-600">
-              Specialists in fabrication & engineering
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {expertTeam.map((expert, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -6 }}
-                className="bg-white rounded-2xl p-6 shadow-lg text-center"
-              >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold">
-                  {expert.name[0]}
-                </div>
-
-                <h3 className="text-xl font-bold">{expert.name}</h3>
-                <p className="text-orange-600 font-semibold">{expert.role}</p>
-                <p className="text-sm text-gray-600 mb-4">
-                  {expert.exp} experience
-                </p>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => handleTeamContact(expert.name)}
-                  className="w-full py-2 rounded-lg border border-orange-500 text-orange-600 hover:bg-orange-50 transition cursor-pointer"
-                >
-                  Schedule Call
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
       </main>
+
+<section className="mb-32 pt-16 px-6 bg-gradient-to-b from-orange-50/50 via-white to-white">
+  <div className="max-w-5xl mx-auto">
+
+    {/* Heading */}
+    <div className="text-center mb-20 max-w-3xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        Meet Our Expert Team
+      </h2>
+      <p className="text-lg text-gray-600 leading-relaxed">
+        Specialists in fabrication & engineering
+      </p>
+    </div>
+
+    {/* Team Grid */}
+    <div
+      className="
+        grid
+        gap-14
+        justify-center
+        [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]
+      "
+    >
+      {expertTeam.map((expert, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: idx * 0.12, duration: 0.7, ease: "easeOut" }}
+          whileHover={{ y: -14 }}
+          className="
+            relative
+            group
+            bg-white/80
+            backdrop-blur-xl
+            rounded-[28px]
+            p-10
+            shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)]
+            hover:shadow-[0_35px_80px_-20px_rgba(0,0,0,0.25)]
+            transition-all
+            duration-500
+            flex
+            flex-col
+            items-center
+            text-center
+            min-h-[300px]
+            max-w-[320px]
+            mx-auto
+            border
+            border-orange-100/60
+            ring-1 ring-orange-200/40
+          "
+        >
+          {/* Premium Glow Layer */}
+          <div className="absolute inset-0 rounded-[28px] bg-gradient-to-br from-orange-400/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+
+          {/* Avatar */}
+          <div className="relative w-20 h-20 mb-6 rounded-full 
+                          bg-gradient-to-br from-orange-500 to-red-600
+                          flex items-center justify-center
+                          text-white text-2xl font-bold
+                          shadow-xl shadow-orange-500/40
+                          ring-4 ring-white
+                          group-hover:scale-110 transition">
+            {expert.name[0]}
+          </div>
+
+          {/* Name */}
+          <h3 className="relative text-xl font-bold text-gray-900 mb-1 tracking-tight">
+            {expert.name}
+          </h3>
+
+          {/* Role */}
+          <p className="relative text-orange-600 font-semibold mb-3">
+            {expert.role}
+          </p>
+
+          {/* Experience */}
+          <p className="relative text-sm text-gray-600 mb-8">
+            {expert.exp} experience
+          </p>
+
+          {/* CTA */}
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleTeamContact(expert.name)}
+            className="
+              relative
+              mt-auto
+              w-full
+              py-3
+              rounded-xl
+              font-semibold
+              text-white
+              bg-gradient-to-r from-orange-500 to-red-500
+              shadow-lg shadow-orange-500/40
+              hover:shadow-xl
+              transition
+            "
+          >
+            Schedule Call
+          </motion.button>
+        </motion.div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
 
       <GetDemoSection />
 

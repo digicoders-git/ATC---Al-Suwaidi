@@ -73,28 +73,24 @@ export default function ModernNavbar() {
       icon: "🚛",
     },
     {
-      label: "Vehicle Engine Repairing",
+      label: "Vehicle Engine Repair",
       to: "/services/engine-repair",
       icon: "⚙️",
     },
     {
-      label: "Gears Making & Milling",
+      label: "Gear Manufacturing & Milling",
       to: "/services/gears-milling",
       icon: "⚡",
     },
-    { label: "Bearings Service", to: "/services/bearings", icon: "🔩" },
+    { label: "Bearing Services", to: "/services/bearings", icon: "🔩" },
     {
-      label: "Vehicle Wheels Repair",
+      label: "Vehicle Wheel Repair",
       to: "/services/wheels-repair",
       icon: "🛞",
     },
+
     {
-      label: "Maintenance, Repair & Overhaul (MRO)",
-      to: "/services/maintenance",
-      icon: "🛠️",
-    },
-    {
-      label: "Cabinets Manufacturing (ISO 9001:2008)",
+      label: "Cabinet Manufacturing (KAHRAMAA Approved)",
       to: "/services/cabinets",
       icon: "📦",
     },
@@ -102,7 +98,7 @@ export default function ModernNavbar() {
 
   const navLinks = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
+    { label: "About Us", to: "/about" },
     { label: "Services", to: "/services", hasDropdown: true },
     { label: "Projects", to: "/project" },
     { label: "Gallery", to: "/gallery" },
@@ -139,8 +135,11 @@ export default function ModernNavbar() {
         <nav className="max-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo Section */}
-            <div className="flex items-center gap-4 lg:ps-15">
+            <div className="flex items-center gap-3 lg:ps-15">
               <img src="/logo2.png" alt="logo" className="w-25 h-20" />
+              <span className="text-sm font-bold text-gray-500">
+                CR No. 14258
+              </span>
             </div>
 
             {/* Desktop Navigation */}

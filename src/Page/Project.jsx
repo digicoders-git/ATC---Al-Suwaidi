@@ -1,4 +1,3 @@
-// components/Projects.jsx
 import React, { useState, useEffect } from "react";
 import {
   FaChevronRight,
@@ -13,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import GetDemoSection from "../Component/GetDemoSection";
+import MainProductsComponent from "../Component/MainProductsComponent";
 
 const PROJECTS = [
   {
@@ -279,7 +279,7 @@ export default function Projects() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.2 }}OUR PROJECTS
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <FaRocket size={18} className="text-orange-200" />
@@ -293,8 +293,8 @@ export default function Projects() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              OUR COMPLETED
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
+              OUR 
+              <span className=" ms-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
                 PROJECTS
               </span>
             </motion.h1>
@@ -355,10 +355,10 @@ export default function Projects() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
             >
               {[
-                { value: "1000+", label: "Projects Completed", icon: FaAward },
+                { value: "5000+", label: "Projects Completed", icon: FaAward },
                 { value: "32+", label: "Years Experience", icon: FaCog },
-                { value: "50+", label: "Expert Team", icon: FaUsers },
-                { value: "100%", label: "Client Satisfaction", icon: FaAward },
+                { value: "80+", label: "Expert Team", icon: FaUsers },
+                { value: "98%", label: "Client Satisfaction", icon: FaAward },
               ].map((stat, idx) => (
                 <motion.div
                   key={stat.label}
@@ -384,6 +384,8 @@ export default function Projects() {
           </div>
         </div>
       </section>
+
+       <MainProductsComponent />
 
       {/* Projects Grid Section */}
       <section
@@ -616,6 +618,10 @@ export default function Projects() {
       </section>
 
       <GetDemoSection />
+      
+      {/* Main Products Component */}
+     
+      
       {/* Our Projects Section */}
       <div className="max-w-7xl mx-auto px-4 my-10">
         <section className="mb-24 flex flex-col items-center">

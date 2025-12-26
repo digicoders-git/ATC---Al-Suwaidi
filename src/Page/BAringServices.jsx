@@ -38,7 +38,7 @@ const bearingServices = [
     image: "/Baring/Axle Bearing Removing & Fixing.png",
     features: [
       "✔ Correct axle alignment",
-      "✔ Smooth wheel rotation", 
+      "✔ Smooth wheel rotation",
       "✔ Reduced bearing wear and noise",
       "Safe removal process",
     ],
@@ -52,7 +52,7 @@ const bearingServices = [
   {
     title: "⚙️ Hub Bearing Fitting",
     desc: "Accurate hub bearing installation using proper tools and techniques to maintain wheel stability and safety. Hub bearing fitting ensures proper mounting of bearings within the wheel hub for smooth and stable vehicle movement.",
-    image: "/Baring/Hub Bearing Fitting.png",
+    image: "/hub bearing.png",
     features: [
       "✔ Stable wheel movement",
       "✔ Reduced vibration",
@@ -71,10 +71,10 @@ const bearingServices = [
     desc: "Professional lower and upper arm bush fitting to restore suspension flexibility and comfort. Bush fitting involves replacing suspension bushes that absorb shocks and allow controlled movement of suspension arms.",
     image: "/Baring/Lower & Upper Arm Bush Fitting.png",
     features: [
-      "✔ Improved suspension response", 
-      "✔ Reduced vibration and noise", 
+      "✔ Improved suspension response",
+      "✔ Reduced vibration and noise",
       "✔ Enhanced vehicle control",
-      "Shock absorption"
+      "Shock absorption",
     ],
     specs: [
       "Materials: Rubber/Polyurethane",
@@ -103,7 +103,7 @@ const bearingServices = [
   {
     title: "🔩 King Pin Removing & Fitting",
     desc: "Careful king pin removal and fitting to maintain steering alignment and load handling. King pin fitting restores the pivot point of steering knuckles in heavy vehicles.",
-    image: "/Baring/King Pin Removing & Fitting.png",
+    image: "/kingpin.png",
     features: [
       "✔ Smooth steering movement",
       "✔ Proper load distribution",
@@ -120,7 +120,7 @@ const bearingServices = [
   {
     title: "🚪 Door Hinge Making & Fitting",
     desc: "Custom door hinge fabrication and installation for commercial vehicle bodies and cabins. Door hinge making and fitting involves fabricating and installing hinges for smooth door operation.",
-    image: "/Baring/Door Hinge Making & Fitting.png",
+    image: "/hinge.png",
     features: [
       "✔ Smooth door operation",
       "✔ Strong and durable hinges",
@@ -155,9 +155,9 @@ const bearingServices = [
 
 const stats = [
   { value: "10,000+", label: "Bearings Replaced", icon: Circle },
-  { value: "25+", label: "Years Experience", icon: Clock },
+  { value: "32+", label: "Years Experience", icon: Clock },
   { value: "98%", label: "Customer Satisfaction", icon: CheckCircle },
-  { value: "ISO Certified", label: "Quality Service", icon: Award },
+  { value: "ISO 9001:2015", label: "Quality Service", icon: Award },
 ];
 
 export default function BearingsRemovalFittingPage() {
@@ -202,7 +202,8 @@ export default function BearingsRemovalFittingPage() {
               transition={{ delay: 0.4 }}
               className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
             >
-              All Types of Bearing & Suspension Works - Safe Installation & Precision Alignment Solutions
+              All Types of Bearing & Suspension Works - Safe Installation &
+              Precision Alignment Solutions
             </motion.h2>
 
             {/* Description */}
@@ -212,7 +213,11 @@ export default function BearingsRemovalFittingPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre provides professional bearing removing and fixing services for commercial vehicles and heavy-duty applications. Our services focus on correct alignment, safe installation, and smooth mechanical operation, ensuring reduced wear and extended service life of components.
+              Al Suwaidi Technical Centre provides professional bearing removing
+              and fixing services for commercial vehicles and heavy-duty
+              applications. Our services focus on correct alignment, safe
+              installation, and smooth mechanical operation, ensuring reduced
+              wear and extended service life of components.
             </motion.p>
 
             {/* Action Buttons */}
@@ -288,38 +293,23 @@ export default function BearingsRemovalFittingPage() {
             >
               {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              
-              <div className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
+
+              <div
+                className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
                 {/* Text Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="flex-1 lg:w-1/2 text-center lg:text-left"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-4 justify-center lg:justify-start mb-6"
-                  >
-                    <motion.div 
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.6 }}
-                      className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-200 shadow-lg"
-                    >
-                      <service.icon className="text-orange-600" size={23} />
-                    </motion.div>
-                    <div className="text-left">
-                      <span className="text-sm font-bold text-orange-600 uppercase tracking-wider block">
-                        BEARING SERVICE
-                      </span>
-                    </div>
-                  </motion.div>
-
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -329,7 +319,7 @@ export default function BearingsRemovalFittingPage() {
                     {service.title}
                   </motion.h3>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -363,32 +353,10 @@ export default function BearingsRemovalFittingPage() {
                       ))}
                     </div>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                  >
-                    <Link
-                      to="/contact"
-                      className="group/btn inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:-translate-y-1"
-                    >
-                      <span>View Details</span>
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                    <Link
-                      to="/get-quote"
-                      className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-orange-300 text-orange-700 font-bold rounded-2xl hover:bg-orange-50 hover:border-orange-500 transition-all hover:scale-105"
-                    >
-                      <Phone size={20} />
-                      <span>Get Quote</span>
-                    </Link>
-                  </motion.div>
                 </motion.div>
 
                 {/* Image Side */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -401,7 +369,7 @@ export default function BearingsRemovalFittingPage() {
                   >
                     {/* Animated Border Glow */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
-                    
+
                     <div className="relative bg-white rounded-3xl overflow-hidden">
                       <img
                         src={service.image}
@@ -409,19 +377,8 @@ export default function BearingsRemovalFittingPage() {
                         className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-                      
+
                       {/* Enhanced Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.7, type: "spring" }}
-                        className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-orange-200 hover:scale-110 transition-transform duration-300"
-                      >
-                        <div className="text-sm font-black text-slate-900">
-                          {service.title.split(" ")[0]}
-                        </div>
-                        <div className="text-xs text-orange-600 font-semibold">Service</div>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </motion.div>
@@ -489,9 +446,7 @@ export default function BearingsRemovalFittingPage() {
                 <h4 className="font-bold text-gray-900 text-xl mb-3">
                   {output.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {output.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed">{output.desc}</p>
 
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-orange-400/10 to-red-400/10 pointer-events-none" />
@@ -500,7 +455,7 @@ export default function BearingsRemovalFittingPage() {
           </div>
         </section>
       </main>
-      
+
       <GetDemoSection />
 
       {/* ===== MODERN PROCESS FLOW ===== */}
@@ -521,7 +476,8 @@ export default function BearingsRemovalFittingPage() {
             </h3>
 
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Using proper tools, skilled technicians, and controlled fitting procedures
+              Using proper tools, skilled technicians, and controlled fitting
+              procedures
             </p>
           </div>
 
@@ -609,7 +565,7 @@ export default function BearingsRemovalFittingPage() {
                   Email
                 </div>
                 <div className="text-gray-600 text-sm sm:text-base">
-                  mechanical@alsuwaidi.com
+                  info@alsuwaiditechnical.com
                 </div>
               </div>
             </div>

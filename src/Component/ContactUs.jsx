@@ -110,7 +110,7 @@ const ContactUs = () => {
             >
               CONTACT AL SUWAIDI
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
-                TECHNICAL CENTRE
+                TECHNICAL CENTER
               </span>
             </motion.h1>
 
@@ -173,7 +173,7 @@ const ContactUs = () => {
                 { value: "32+", label: "Years Experience", icon: FaAward },
                 { value: "245+", label: "Expert Team", icon: FaUsers },
                 { value: "24/7", label: "Support Available", icon: FaClock },
-                { value: "100%", label: "Client Satisfaction", icon: FaShieldAlt },
+                { value: "98%", label: "Client Satisfaction", icon: FaShieldAlt },
               ].map((stat, idx) => (
                 <motion.div
                   key={stat.label}
@@ -305,7 +305,7 @@ const ContactUs = () => {
                     Email Us
                   </h3>
                   <p className="text-slate-600 text-center text-sm break-all">
-                    Karthick@alsuwaidipaper.com
+                    info@alsuwaiditechnical.com
                   </p>
                   <p className="text-orange-600 text-center text-sm break-all font-semibold">
                     suwaidigroup@yahoo.com
@@ -468,7 +468,7 @@ const ContactUs = () => {
                       Email Address
                     </h4>
                     <p className="text-gray-600 leading-relaxed">
-                      Karthick@alsuwaidipaper.com
+                      info@alsuwaiditechnical.com
                       <br />
                       suwaidigroup@yahoo.com
                     </p>

@@ -20,30 +20,27 @@ function Slider() {
   const heroSlides = [
     {
       id: 1,
-      title: "Premium Truck Loading Solutions",
-      subtitle: "Industrial Excellence",
+      title: "Industrial Steel Structure Solutions",
+      subtitle: "Built with Strength & Precision",
       description:
-        "Advanced hydraulic systems and automated loading equipment for maximum efficiency and safety in cargo handling.",
-      image: "/1.jpg",
-      cta: "Explore Products",
+        "High-quality steel structures designed for warehouses, factories, and industrial buildings. Engineered for durability, safety, and long-term performance.",
+      image: "/ConstructionIndustrycopy.png",
     },
     {
       id: 2,
-      title: "Smart Loading Automation",
-      subtitle: "Technology Driven",
+      title: "Advanced Steel Fabrication Work",
+      subtitle: "Precision in Every Detail",
       description:
-        "State-of-the-art automated loading systems that reduce operational costs by 40% and improve safety standards.",
-      image: "/2.jpg",
-      cta: "View Technology",
+        "Professional steel fabrication including cutting, welding, and assembly, ensuring strong and reliable industrial construction.",
+      image: "/21.png",
     },
     {
       id: 3,
-      title: "Custom Truck Solutions",
-      subtitle: "Tailored Design",
+      title: "Complete Steel Structure Installation",
+      subtitle: "From Design to Execution",
       description:
-        "Bespoke truck equipment solutions designed specifically for your business needs and operational challenges.",
-      image: "/3.jpg",
-      cta: "Get Custom Quote",
+        "Expert steel structure erection and installation for industrial projects, built to handle heavy loads and harsh working conditions.",
+      image: "/31.jpg",
     },
   ];
 
@@ -67,29 +64,32 @@ function Slider() {
   return (
     <>
       {/* ================= HERO SLIDER ================= */}
-      <section className="relative h-[86vh] mt-20 lg:mt-0.5 min-h-[600px] overflow-hidden">
+      <section className="relative h-[86vh] mt-20 lg:mt-0 min-h-[600px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 ${
               currentSlide === index
                 ? "opacity-100 z-10"
                 : "opacity-0 z-0 pointer-events-none"
             }`}
           >
-            {/* Background */}
+            {/* Background Image */}
             <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="absolute inset-0 bg-cover bg-[center_top]"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundPosition: "center top",
+              }}
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/60" />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/55 to-black/40" />
 
             {/* Content */}
             <div className="relative h-full flex items-center">
               <div className="max-w-7xl mx-auto px-4 w-full">
-                <div className="max-w-2xl text-white">
+                <div className="max-w-xl lg:max-w-2xl text-white">
                   <div
                     className={`transition-all duration-1000 ${
                       currentSlide === index
@@ -97,29 +97,29 @@ function Slider() {
                         : "translate-y-10 opacity-0"
                     }`}
                   >
+                    {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-sm font-semibold mb-6">
                       <Award size={16} />
-                      Industry Leader Since 1998
+                      Steel Structure Specialists Since 1991
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
                       {slide.title}
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-200 mb-8">
+                    <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
                       {slide.description}
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                      <Link
-                        to="/project"
+                      <a
+                        href="#services"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-500 rounded-xl font-bold hover:scale-105 transition"
                       >
-                        {slide.cta}
+                        VEIW SERVICES in all photos
                         <ArrowRight size={20} />
-                      </Link>
+                      </a>
 
-                      {/* CALL NOW */}
                       <a
                         href="tel:+97444601087"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/30 rounded-xl font-bold hover:bg-white/20 transition"
@@ -151,13 +151,13 @@ function Slider() {
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white"
+          className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white z-20"
         >
           <ChevronLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white"
+          className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white z-20"
         >
           <ChevronRight />
         </button>
@@ -165,7 +165,7 @@ function Slider() {
         {/* Play / Pause */}
         <button
           onClick={() => setPlaying(!playing)}
-          className="hidden md:block absolute top-4 right-4 p-3 bg-white/10 rounded-full text-white"
+          className="hidden md:block absolute top-4 right-4 p-3 bg-white/10 rounded-full text-white z-20"
         >
           {playing ? <Pause /> : <Play />}
         </button>
@@ -187,12 +187,12 @@ function Slider() {
                 icon: <ThumbsUp className="text-blue-400" />,
               },
               {
-                value: "250+",
+                value: "80+",
                 label: "Active Clients",
                 icon: <Users className="text-orange-400" />,
               },
               {
-                value: "25+",
+                value: "32+",
                 label: "Years Experience",
                 icon: <Award className="text-yellow-400" />,
               },

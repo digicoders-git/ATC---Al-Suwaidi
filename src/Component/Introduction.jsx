@@ -26,7 +26,10 @@ export default function Introduction() {
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 right-20 w-96 h-96 bg-gradient-to-br from-orange-200/30 to-red-200/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div
+          className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1.5s" }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -38,7 +41,7 @@ export default function Introduction() {
               Who We Are
             </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
               Introduction
@@ -53,7 +56,7 @@ export default function Introduction() {
             <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-orange-100 hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-red-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               {/* Icon */}
               <div className="relative mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
@@ -69,10 +72,10 @@ export default function Introduction() {
                     Al Suwaidi Technical Center
                   </span>{" "}
                   as one of the most diverse and reliable suppliers of steel
-                  engineering solutions in Qatar. With a long-standing history in
-                  lathe works, logistic vehicle body manufacturing, and Kahramaa
-                  box fabrications, we have established ourselves as leaders in
-                  the engineering sector.
+                  engineering solutions in Qatar. With a long-standing history
+                  in lathe works, logistic vehicle body manufacturing, and
+                  Kahramaa box fabrications, we have established ourselves as
+                  leaders in the engineering sector.
                 </p>
 
                 {/* Decorative Line */}
@@ -83,9 +86,9 @@ export default function Introduction() {
                 </div>
 
                 <p className="text-gray-600 text-base leading-relaxed">
-                  We are confident in our ability to deliver customized solutions
-                  that meet the highest standards of international quality and
-                  excellence.
+                  We are confident in our ability to deliver customized
+                  solutions that meet the highest standards of international
+                  quality and excellence.
                 </p>
               </div>
             </div>
@@ -94,10 +97,14 @@ export default function Introduction() {
             <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 shadow-2xl text-white relative overflow-hidden">
               {/* Animated Background Pattern */}
               <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{
-                  backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                  backgroundSize: '30px 30px'
-                }}></div>
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, white 1px, transparent 1px)",
+                    backgroundSize: "30px 30px",
+                  }}
+                ></div>
               </div>
 
               <div className="relative">
@@ -105,21 +112,34 @@ export default function Introduction() {
                   <TrendingUp size={32} className="animate-pulse" />
                   <h3 className="text-2xl font-bold">Our Commitment</h3>
                 </div>
-                
+
                 <p className="text-white/95 text-lg leading-relaxed mb-6">
-                  We look forward to the opportunity to demonstrate how Al Suwaidi
-                  Technical Center can help optimize your profits through capital
-                  engineering asset acquisition and equipment procurement in the
-                  near future.
+                  We look forward to the opportunity to demonstrate how Al
+                  Suwaidi Technical Center can help optimize your profits
+                  through capital engineering asset acquisition and equipment
+                  procurement in the near future.
                 </p>
 
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
-                >
-                  Get Started
-                  <ArrowRight size={20} />
-                </Link>
+                <div className="flex flex-wrap items-center gap-4">
+                  {/* Get Started */}
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+                  >
+                    Get Started
+                    <ArrowRight size={20} />
+                  </Link>
+
+                  {/* Download Company Profile */}
+                  <a
+                    href="/company-profile.pdf"
+                    download
+                    className="inline-flex items-center gap-2 border-2 border-white/80 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300"
+                  >
+                    Download Profile
+                    <ArrowRight size={20} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -154,20 +174,6 @@ export default function Introduction() {
                 </li>
               ))}
             </ul>
-
-            {/* Bottom Accent */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500 font-medium">
-                  9 Core Services
-                </span>
-                <div className="flex gap-1">
-                  <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                  <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
