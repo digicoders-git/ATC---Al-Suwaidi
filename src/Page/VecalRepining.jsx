@@ -155,7 +155,7 @@ const wheelServices = [
 ];
 
 const stats = [
-  { value: "20,000+", label: "Wheels Repaired", icon: Circle },
+  { value: "5000+", label: "Wheels Repaired", icon: Circle },
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "98%", label: "Customer Satisfaction", icon: CheckCircle },
   { value: "ISO 9001:2015", label: "Quality Service", icon: Award },

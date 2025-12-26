@@ -53,29 +53,7 @@ const storyData = [
     icon: Shield,
     content: "As operations expanded, Al Suwaidi Technical Center recognized the importance of formal systems and standardized procedures. In 2015, the company implemented structured quality management systems, safety protocols, and documented operating procedures to improve consistency, traceability, and compliance. These systems strengthened internal processes, improved service delivery, and enhanced client confidence. The company's commitment to quality was further reinforced in 2022 with the achievement of ISO 9001:2015 certification, confirming compliance with international quality management standards."
   },
-  {
-    title: "Industries We Serve",
-    icon: Factory,
-    content: "With over three decades of experience, Al Suwaidi Technical Center supports a wide range of industries, including:",
-    industries: [
-      {
-        name: "Manufacturing & Industrial Facilities",
-        desc: "Providing precision engineering, fabrication, machining, and maintenance services to support continuous industrial operations."
-      },
-      {
-        name: "Construction & Infrastructure Projects",
-        desc: "Delivering structural steel works, fabrication solutions, and technical support for complex construction environments."
-      },
-      {
-        name: "Logistics & Transportation Fleets",
-        desc: "Supporting commercial vehicles through body fabrication, mechanical repairs, and wheel services to reduce downtime and extend asset life."
-      },
-      {
-        name: "Municipal & Utility Services",
-        desc: "Supplying engineered solutions and utility cabinets that support public infrastructure and essential services."
-      }
-    ]
-  },
+
   {
     title: "Our People and Expertise",
     icon: Users,

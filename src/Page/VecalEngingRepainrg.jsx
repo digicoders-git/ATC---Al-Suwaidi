@@ -94,7 +94,7 @@ const servicesList = [
     title: "🔄 Piston Ring Fitting",
     desc: "We replace and fit piston rings to restore combustion efficiency and minimize power loss. Correct ring fitting ensures proper sealing between the piston and cylinder wall, improving engine output and fuel economy. Each ring set is installed with attention to clearance and alignment for optimal performance.",
     icon: Cog,
-    image: "/VecalWhell/Flywheel Facing & Resurfacing.png",
+    image: "/Piston Ring Fitting.png",
     features: [
       "Improved compression and power delivery",
       "Reduced oil burning and emissions",
@@ -105,7 +105,7 @@ const servicesList = [
     title: "🔧 Engine Assembly & Reassembly",
     desc: "After machining and component restoration, engines are carefully assembled using correct torque values, clearances, and alignment procedures. Each assembly step follows controlled engineering practices. This ensures long-term reliability and consistent performance.",
     icon: Wrench,
-    image: "/VecalWhell/Custom Wheel Modifications.png",
+    image: "/Engine Assembly & Reassembly.png",
     features: [
       "Accurate component fitment",
       "Reduced mechanical stress",
@@ -116,7 +116,7 @@ const servicesList = [
     title: "🧪 Final Testing & Performance Verification",
     desc: "Before delivery, engines undergo functional testing and performance verification to confirm smooth operation, correct alignment, and reliability under operating conditions. Testing ensures the engine is ready for installation and service.",
     icon: TestTube,
-    image: "/VecalWhell/Wheel Alignment Services.png",
+    image: "/Final Testing & Performance Verification.png",
     features: [
       "Verified performance and reliability",
       "Reduced risk of post-installation issues",
@@ -127,8 +127,8 @@ const servicesList = [
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
-  { value: "2000+", label: "Engines Rebuilt", icon: CheckCircle },
-  { value: "25+", label: "Expert Technicians", icon: Users },
+  { value: "5000+", label: "Engines Rebuilt", icon: CheckCircle },
+  { value: "80+", label: "Expert Technicians", icon: Users },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 

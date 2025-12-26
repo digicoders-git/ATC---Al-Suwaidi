@@ -58,10 +58,10 @@ const Services = () => {
 
   return (
     <section
-      className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden "
+      className="relative py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden"
       id="services"
     >
-      {/* Decorative background shape */}
+      {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-20">
         <svg
           className="w-full h-full"
@@ -82,6 +82,7 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
+        {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
             Our <span className="gradient-text">Services</span>
@@ -92,14 +93,21 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const isLast = index === services.length - 1;
+
             return (
               <Link
                 key={service.title}
                 to={service.link}
-                className="group relative bg-white/80 backdrop-blur-sm border border-gray-100 rounded-3xl p-6 md:p-8 shadow-md hover:shadow-2xl transform transition-all duration-400 hover:-translate-y-2 focus-within:scale-[1.01] focus-within:shadow-2xl block"
+                className={`group relative bg-white/80 backdrop-blur-sm border border-gray-100 
+                  rounded-3xl p-6 md:p-8 shadow-md hover:shadow-2xl 
+                  transform transition-all duration-400 hover:-translate-y-2 
+                  focus-within:scale-[1.01] focus-within:shadow-2xl block
+                  ${isLast ? "lg:col-start-2" : ""}`}
                 style={{
                   animation: `fadeUp 0.5s ease forwards`,
                   animationDelay: `${index * 0.06}s`,
@@ -109,7 +117,12 @@ const Services = () => {
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-500 text-white shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <div
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center 
+                                    bg-gradient-to-br from-orange-500 to-red-500 
+                                    text-white shadow-lg transition-transform duration-300 
+                                    group-hover:scale-105"
+                    >
                       <Icon className="w-6 h-6 md:w-7 md:h-7" />
                     </div>
                   </div>
@@ -121,6 +134,7 @@ const Services = () => {
                     >
                       {service.title}
                     </h3>
+
                     <p className="mt-2 text-sm md:text-base text-gray-600">
                       {service.desc}
                     </p>
@@ -144,16 +158,13 @@ const Services = () => {
         <div className="mt-12 text-center">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-br from-orange-600 to-red-500 text-white font-semibold shadow-xl hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-full 
+                       bg-gradient-to-br from-orange-600 to-red-500 
+                       text-white font-semibold shadow-xl 
+                       hover:scale-105 transition-transform duration-300"
           >
             Get a Custom Quote
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="ml-1"
-            >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path
                 d="M5 12h14M13 5l7 7-7 7"
                 stroke="currentColor"
@@ -166,7 +177,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Inline styles for animation + gradient-text helper */}
+      {/* Animations */}
       <style>{`
         @keyframes fadeUp {
           from { transform: translateY(12px); opacity: 0; }

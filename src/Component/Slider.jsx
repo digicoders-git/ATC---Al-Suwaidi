@@ -24,7 +24,7 @@ function Slider() {
       subtitle: "Built with Strength & Precision",
       description:
         "High-quality steel structures designed for warehouses, factories, and industrial buildings. Engineered for durability, safety, and long-term performance.",
-      image: "/ConstructionIndustrycopy.png",
+      image: "/Slider1.jpeg",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ function Slider() {
       subtitle: "Precision in Every Detail",
       description:
         "Professional steel fabrication including cutting, welding, and assembly, ensuring strong and reliable industrial construction.",
-      image: "/21.png",
+      image: "/Slider3.jpg",
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ function Slider() {
       subtitle: "From Design to Execution",
       description:
         "Expert steel structure erection and installation for industrial projects, built to handle heavy loads and harsh working conditions.",
-      image: "/31.jpg",
+      image: "/Slider31.jpg",
     },
   ];
 
@@ -116,7 +116,7 @@ function Slider() {
                         href="#services"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-500 rounded-xl font-bold hover:scale-105 transition"
                       >
-                        VEIW SERVICES in all photos
+                        VEIW SERVICES
                         <ArrowRight size={20} />
                       </a>
 

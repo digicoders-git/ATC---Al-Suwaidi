@@ -25,6 +25,7 @@ import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
 import Comercialindristy from "../Component/Comerclial";
 import Products from "../Component/ComercialVeraclProduct";
+import FabricationProcess from "../Component/FabricationProcess";
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
@@ -32,10 +33,38 @@ const stats = [
   { value: "98%", label: "Client Satisfaction", icon: CheckCircle },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
+const commercialProducts = [
+  {
+    title: "Cargo Transporter Truck (Drop Side)",
+    subtitle: "Efficient cargo handling solution",
+    description:
+      "Drop-side cargo transporter designed for easy loading and unloading, ideal for commercial logistics and material transport.",
+    image: "/Cargo Transporter Truck (Drop Side).png",
+  },
+  {
+    title: "Tipper Dump Trailer",
+    subtitle: "Heavy-duty dumping solution",
+    description:
+      "Strong and reliable tipper dump trailer built for construction, mining, and bulk material handling operations.",
+    image: "/Tipper Dump Trailer.png",
+  },
+  {
+    title: "Flatbed Trailer",
+    subtitle: "Versatile transport platform",
+    description:
+      "Flatbed trailer suitable for transporting oversized machinery, equipment, and construction materials with stability.",
+    image: "/Flatbed Trailer  product card.png",
+  },
+  {
+    title: "High Side Trailer",
+    subtitle: "Secure bulk material transport",
+    description:
+      "High side trailer engineered for safe and efficient bulk load transportation with enhanced side protection.",
+    image: "/High Side Trailer.png",
+  },
+];
 
 export default function CommercialVehicleBodiesPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
       {/* HERO SECTION */}
@@ -154,25 +183,23 @@ export default function CommercialVehicleBodiesPage() {
 
       <Comercialindristy />
       <Products />
+      <FabricationProcess />
 
       {/* ===== COMMERCIAL VEHICLE BODIES PRODUCT GALLERY ===== */}
-      <section className="relative py-20 md:py-24 ">
-        {/* Soft Accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_60%)]" />
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* Heading */}
+      <section className="relative py-20 md:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* ================= Heading ================= */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-16"
           >
             <span
               className="inline-block mb-4 px-6 py-2 rounded-full 
-      bg-orange-100 text-orange-700 
-      text-[13px] font-semibold tracking-widest"
+                           bg-orange-100 text-orange-700 
+                           text-[13px] font-semibold tracking-widest"
             >
               OUR PRODUCTS
             </span>
@@ -190,366 +217,203 @@ export default function CommercialVehicleBodiesPage() {
             </p>
           </motion.div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Cargo Transporter Truck (Drop Side)",
-                image: "/Cargo Transporter Truck (Drop Side).png",
-              },
-              {
-                title: "Tipper Dump Trailer",
-                image: "/Tipper Dump Trailer.png",
-              },
-              {
-                title: "Flatbed Trailer",
-                image: "/Flatbed Trailer  product card.png",
-              },
-              {
-                title: "High Side Trailer",
-                image: "/High Side Trailer.png",
-              },
-            ].map((project, index) => (
+          {/* ================= Cards ================= */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {commercialProducts.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.15 }}
-                onClick={() => setSelectedImage(project)}
-                className="group cursor-pointer relative rounded-2xl overflow-hidden bg-white 
-          shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
-          hover:shadow-[0_30px_70px_rgba(0,0,0,0.15)] 
-          transition-all duration-500"
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="bg-white rounded-[28px] overflow-hidden
+                         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
+                         hover:shadow-[0_35px_80px_rgba(0,0,0,0.18)]
+                         transition-all duration-500"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="h-56 overflow-hidden">
                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover 
-              transition-transform duration-700 
-              group-hover:scale-110"
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
                   />
-
-                  {/* Overlay */}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t 
-            from-black/70 via-black/30 to-transparent 
-            opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-
-                  {/* Title */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 p-5 
-            translate-y-5 group-hover:translate-y-0 
-            opacity-0 group-hover:opacity-100 
-            transition-all duration-500"
-                  >
-                    <h3 className="text-white font-semibold text-base tracking-tight">
-                      {project.title}
-                    </h3>
-                  </div>
                 </div>
 
-                {/* Hover Border */}
-                <div
-                  className="absolute inset-0 rounded-2xl ring-1 ring-transparent 
-          group-hover:ring-orange-500/40 transition-all duration-500"
-                />
+                {/* Content */}
+                <div className="p-7 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm font-semibold text-gray-600 mb-3">
+                    {item.subtitle}
+                  </p>
+
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
+                    {item.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            className="fixed inset-0  z-50 bg-black/80 flex items-center justify-center px-4 pt-30"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-5xl"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-orange-400 transition"
-              >
-                ×
-              </button>
-
-              {/* Image */}
-              <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
-                <img
-                  src={selectedImage.image}
-                  alt={selectedImage.title}
-                  className="w-full max-h-[75vh] object-contain mx-auto"
-                />
-              </div>
-
-              {/* Title */}
-              <p className="text-center text-white mt-4 text-base font-semibold tracking-wide">
-                {selectedImage.title}
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* ===== DETAILED SPECIFICATIONS ===== */}
 
-      <section className="mb-16  max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-            Detailed{" "}
+      {/* Products Grid */}
+
+      <section className="mb-20 px-6">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
+          <h3 className="text-3xl md:text-4xl font-black text-gray-900">
+            OUR{" "}
             <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-              Specifications
+              OTHER PRODUCTS
             </span>
           </h3>
-        </div>
+        </motion.div>
 
-        {[
-          {
-            icon: "🚛",
-            title: "Sewage Tanker",
-            subtitle: "Heavy-Duty Liquid Waste Transportation",
-            specs: [
-              "Length: 8060 mm",
-              "Diameter: 1950 mm",
-              "Shell Thickness: 6 mm",
-              "Baffle Plates: 4 Nos.",
-              "Manholes: 2 Nos. (Ø450 mm)",
-              'Suction Valves: 3" – 2 Nos.',
-              'Delivery Valves: 4" – 4 Nos.',
-              'Main Beam: 356 "I" Beam',
-              "Axle: 32-Ton Capacity Bogie",
-            ],
-          },
-          {
-            icon: "🚧",
-            title: "Low Bed Trailer",
-            subtitle: "Heavy Equipment & Machinery Transport",
-            specs: [
-              "Overall Length: 16000 mm",
-              "Width: 3200 mm",
-              "Height: 1150 mm (from ground)",
-              'Chassis: 533 × 210 × 92 kg/m "I" Beam',
-              "Side Beam: 350 × 175 × 49.6 kg/m",
-              "Floor: 5 mm checkered plate",
-              "Axle: 3 × 16-ton (underslung)",
-              'King Pin: 2"',
-              "Painting: Two-coat epoxy",
-            ],
-          },
-          {
-            icon: "🚚",
-            title: "Flat Bed Trailer",
-            subtitle: "General Cargo & Material Transport",
-            specs: [
-              "Length: 12500 mm",
-              "Width: 2500 mm",
-              'Chassis: 400 × 200 × 66 kg/m "I" Beam',
-              "Cross Members: 4 mm thick MS brackets",
-              "Floor: 3 mm checkered plate",
-              "Bogie Axle: 32-ton capacity",
-              'King Pin: 2"',
-              "Painting: Two-coat epoxy",
-              "Side Marker Lights: 6 Nos. each side",
-            ],
-          },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-white to-orange-50/30 
-                 rounded-3xl p-8 shadow-xl border border-orange-100 
-                 mb-12"
-          >
-            {/* Header */}
-            <div className="flex max-w-7xl mx-auto items-center gap-4 mb-6">
-              <div className="text-4xl">{item.icon}</div>
-              <div>
-                <h4 className="text-2xl font-bold text-gray-900">
+        {/* Cards Grid */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "High Side Trailer",
+              desc: "Flatbed trailer with side walls for secure transport of loose or stacked materials.",
+              image: "/CommercialImage/High Side Trailer.png",
+            },
+            {
+              title: "Low Bed Trailer",
+              desc: "Heavy-duty low-bed trailer for moving construction equipment and heavy machinery.",
+              image: "/CommercialImage/Low bed trailer (2).png",
+            },
+            {
+              title: "Double Deck Car Carrier",
+              desc: "Specialized trailer for transporting multiple vehicles efficiently in two levels.",
+              image: "/CommercialImage/Double deck car carrier.png",
+            },
+            {
+              title: "Refrigerated Reefer Trailer",
+              desc: "Temperature-controlled trailer for transporting perishable goods.",
+              image: "/CommercialImage/Refrigerated Reefer Trailer.png",
+            },
+            {
+              title: "Refrigerated Utility Trailer",
+              desc: "Compact refrigerated trailer for utility and distribution applications.",
+              image: "/CommercialImage/Refrigerated Utility Trailer.png",
+            },
+            {
+              title: "Tanker Truck",
+              desc: "Vehicle-mounted tanker for transporting liquids such as water, fuel, or sewage.",
+              image: "/CommercialImage/Tanker Truck.png",
+            },
+            {
+              title: "Tanker Trailer",
+              desc: "High-capacity trailer tanker for bulk liquid transportation.",
+              image: "/CommercialImage/Tank Trailer.png",
+            },
+            {
+              title: "Boom Truck / Block Crane",
+              desc: "Truck-mounted crane solution for lifting and material handling operations.",
+              image: "/CommercialImage/Boom Truck.png",
+            },
+            {
+              title: "Tipper Dump Truck",
+              desc: "Truck body designed for carrying and unloading bulk construction materials.",
+              image: "/CommercialImage/Tripper Dump Truck.png",
+            },
+            {
+              title: "Tipper Dump Trailer",
+              desc: "Trailer-based tipper solution for large-volume material transport.",
+              image: "/CommercialImage/Tipper Dump Trailer.png",
+            },
+            {
+              title: "Mobile Home Trailer (Caravan)",
+              desc: "Fabricated mobile units used as site offices or accommodation.",
+              image: "/CommercialImage/mobile home trailer.png",
+            },
+            {
+              title: "Car Recovery Truck",
+              desc: "Vehicle body designed for towing and recovering disabled vehicles.",
+              image: "/CommercialImage/Car Recovery Truck.png",
+            },
+            {
+              title: "Cargo Transporter Truck (Drop Side)",
+              desc: "Drop-side truck body for flexible loading and unloading of goods.",
+              image: "/CommercialImage/Cargo Transporter Truck (Drop Side).png",
+            },
+            {
+              title: "Dianna Truck (Fixed Side)",
+              desc: "Fixed-side cargo truck body for secure goods transportation.",
+              image: "/CommercialImage/Dianna Truck (Fixed Side).png",
+            },
+            {
+              title: "Mobile Workshop Truck",
+              desc: "Fully fabricated truck body equipped as a mobile maintenance workshop.",
+              image: "/CommercialImage/Mobile Workshop Truck.png",
+            },
+            {
+              title: "Refrigerated Box Pick-Up",
+              desc: "Pick-up truck with insulated refrigerated box for cold-chain delivery.",
+              image: "/CommercialImage/Refrigerated Box pick up.png",
+            },
+
+            {
+              title: "Shelters & Cold Stores",
+              desc: "Fabricated shelters and cold storage units for industrial and site use.",
+              image: "/CommercialImage/Shelters and cold stores.png",
+            },
+            {
+              title: "Tail Lifts (Dautel / Anteo / Dhollandia)",
+              desc: "Hydraulic tail lift systems integrated into vehicles for easy cargo handling.",
+              image: "/CommercialImage/Dautel Tail Lifts.png",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              whileHover={{ y: -6 }}
+              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden
+                   hover:shadow-xl transition-all duration-300 group"
+            >
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => (e.currentTarget.style.display = "none")}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">
                   {item.title}
                 </h4>
-                <p className="text-orange-600 font-semibold">{item.subtitle}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-            </div>
-
-            {/* Specs */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-700">
-              {item.specs.map((spec, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <CheckCircle
-                    size={16}
-                    className="text-green-500 mt-[2px] shrink-0"
-                  />
-                  <span>{spec}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="mt-6">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 
-                     bg-orange-600 text-white font-semibold rounded-lg 
-                     hover:bg-orange-700 transition"
-              >
-                👉 View Details / Enquire
-              </Link>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </section>
 
-<section className="mb-20 px-6">
-  {/* Heading */}
-  <div className="text-center mb-14">
-    <h3 className="text-3xl md:text-4xl font-black text-gray-900">
-      OUR{" "}
-      <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-        OTHER PRODUCTS
-      </span>
-    </h3>
-  </div>
-
-  {/* Products Grid */}
-  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {[
-      {
-        icon: "🚛",
-        title: "High Side Trailer",
-        desc: "Flatbed trailer with side walls for secure transport of loose or stacked materials.",
-      },
-      {
-        icon: "🚜",
-        title: "Low Bed Trailer",
-        desc: "Heavy-duty low-bed trailer for moving construction equipment and heavy machinery.",
-      },
-      {
-        icon: "🚗",
-        title: "Double Deck Car Carrier",
-        desc: "Specialized trailer for transporting multiple vehicles efficiently in two levels.",
-      },
-      {
-        icon: "❄️",
-        title: "Refrigerated Reefer Trailer",
-        desc: "Temperature-controlled trailer for transporting perishable goods.",
-      },
-      {
-        icon: "❄️",
-        title: "Refrigerated Utility Trailer",
-        desc: "Compact refrigerated trailer for utility and distribution applications.",
-      },
-      {
-        icon: "🛢️",
-        title: "Tanker Truck",
-        desc: "Vehicle-mounted tanker for transporting liquids such as water, fuel, or sewage.",
-      },
-      {
-        icon: "🛢️",
-        title: "Tanker Trailer",
-        desc: "High-capacity trailer tanker for bulk liquid transportation.",
-      },
-      {
-        icon: "🏗️",
-        title: "Boom Truck / Block Crane",
-        desc: "Truck-mounted crane solution for lifting and material handling operations.",
-      },
-      {
-        icon: "🚧",
-        title: "Tipper Dump Truck",
-        desc: "Truck body designed for carrying and unloading bulk construction materials.",
-      },
-      {
-        icon: "🚧",
-        title: "Tipper Dump Trailer",
-        desc: "Trailer-based tipper solution for large-volume material transport.",
-      },
-      {
-        icon: "🏠",
-        title: "Mobile Home Trailer (Caravan)",
-        desc: "Fabricated mobile units used as site offices or accommodation.",
-      },
-      {
-        icon: "🚑",
-        title: "Car Recovery Truck",
-        desc: "Vehicle body designed for towing and recovering disabled vehicles.",
-      },
-      {
-        icon: "📦",
-        title: "Cargo Transporter Truck (Drop Side)",
-        desc: "Drop-side truck body for flexible loading and unloading of goods.",
-      },
-      {
-        icon: "🚛",
-        title: "Dianna Truck (Fixed Side)",
-        desc: "Fixed-side cargo truck body for secure goods transportation.",
-      },
-      {
-        icon: "🛠️",
-        title: "Mobile Workshop Truck",
-        desc: "Fully fabricated truck body equipped as a mobile maintenance workshop.",
-      },
-      {
-        icon: "🚙",
-        title: "Refrigerated Box Pick-Up",
-        desc: "Pick-up truck with insulated refrigerated box for cold-chain delivery.",
-      },
-      {
-        icon: "📦",
-        title: "Dry Cargo Box Pick-Up",
-        desc: "Enclosed box body pick-up for secure transport of dry goods.",
-      },
-      {
-        icon: "🧊",
-        title: "Shelters & Cold Stores",
-        desc: "Fabricated shelters and cold storage units for industrial and site use.",
-      },
-      {
-        icon: "⬆️",
-        title: "Tail Lifts (Dautel / Anteo / Dhollandia)",
-        desc: "Hydraulic tail lift systems integrated into vehicles for easy cargo handling.",
-      },
-    ].map((item, index) => (
-      <div
-        key={index}
-        className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100
-                   hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-      >
-        <div className="flex items-start gap-4">
-          <div className="text-3xl">{item.icon}</div>
-          <div>
-            <h4 className="text-lg font-bold text-gray-900 mb-1">
-              {item.title}
-            </h4>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>        
-
-
       <GetDemoSection />
+
+      {/* Fabrication Process */}
 
       {/* ===== MODERN PROCESS FLOW ===== */}
       <section className="py-24 bg-gradient-to-b from-white to-orange-50">

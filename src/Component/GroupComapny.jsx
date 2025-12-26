@@ -41,33 +41,35 @@ export default function GroupCompanies() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden min-h-screen">
+    <section className="py-24 bg-white relative overflow-hidden min-h-screen">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-       
-
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
         
         {/* Floating particles */}
-        {[...Array(15)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-orange-500/40 rounded-full"
+            className="absolute w-2 h-2 bg-orange-500/40 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [-10, 10, -10],
-              opacity: [0.3, 0.8, 0.3],
+              y: [-20, 20, -20],
+              opacity: [0.2, 0.8, 0.2],
             }}
             transition={{
-              duration: 2 + Math.random() * 2,
+              duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
             }}
           />
         ))}
       </div>
+      
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Heading */}
         <motion.div 
@@ -82,13 +84,13 @@ export default function GroupCompanies() {
             whileHover={{ scale: 1.05, y: -2 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
               <Sparkles className="text-white text-sm" />
             </div>
             <span className="text-orange-800 font-semibold text-lg">Corporate Network</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
             <span className="text-gray-900">Our</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
               Group of Companies
@@ -111,10 +113,14 @@ export default function GroupCompanies() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative"
+              className={`group relative ${
+                index === companies.length - 1 && companies.length % 3 === 1
+                  ? "sm:col-span-2 lg:col-span-1 lg:col-start-2"
+                  : ""
+              }`}
             >
               {/* Background Glow */}
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-orange-500/30 to-red-500/30 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-orange-500/30 to-red-500/30 opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500" />
               <div className="absolute inset-0 rounded-3xl bg-orange-50/50 backdrop-blur-sm" />
               
               <div className="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 border border-orange-200 h-full">

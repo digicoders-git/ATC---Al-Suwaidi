@@ -319,20 +319,21 @@ export default function MainProductsComponent() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className={`relative h-80 lg:h-96 overflow-hidden ${
-                    index % 2 === 1 ? "lg:order-2" : ""
-                  }`}
+                  className={`relative p-6 ${index % 2 === 1 ? "lg:order-2" : ""}`}
                 >
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-                  {/* Icon Overlay */}
-                  
-
+                  <div className="bg-white rounded-2xl shadow-xl border border-orange-100 overflow-hidden hover:shadow-2xl transition-all duration-500 group/card">
+                    <div className="relative h-80 lg:h-96 overflow-hidden ">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                      
+                      {/* Card overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group/card-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                  </div>
                 </motion.div>
 
                 {/* Text Side */}

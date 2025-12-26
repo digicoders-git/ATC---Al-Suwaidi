@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   Truck,
@@ -27,7 +27,7 @@ const servicesList = [
     title: "🧩 Fabrication Process Planning & Engineering Design",
     desc: "We begin every project with detailed fabrication planning and engineering design to ensure accuracy, efficiency, and smooth execution before fabrication starts.",
     icon: Layers,
-    image: "/Fabrication Processes, Plan & Design.png",
+    image: "/Fabrication Process Planning & Engineering Design.png",
     features: [
       "Clear fabrication drawings & layouts",
       "Optimized material planning",
@@ -38,7 +38,7 @@ const servicesList = [
     title: "✂️ Sheet Metal Cutting",
     desc: "Our sheet metal cutting process delivers precise dimensions and clean edges, forming the foundation for high-quality fabrication and assembly.",
     icon: Settings,
-    image: "/two-paddles-axe-and-leatherwork-9wNcZprwco8-unsplash.jpg",
+    image: "/Sheet Metal Cutting.png",
     features: [
       "Accurate and clean cuts",
       "Consistent dimensional quality",
@@ -49,7 +49,7 @@ const servicesList = [
     title: "🔄 Pipe Cutting, Bending & Rolling",
     desc: "We perform pipe cutting, bending, and rolling to achieve required shapes and angles for structural and industrial applications.",
     icon: Cog,
-    image: "/kemal-kozbaev-mun6ABiRJws-unsplash.jpg",
+    image: "/Pipe Cutting, Bending & Rolling.png",
     features: [
       "Uniform pipe shaping",
       "Strong, precise bends & rolls",
@@ -60,7 +60,7 @@ const servicesList = [
     title: "🏗️ Structural Steel Fabrication",
     desc: "We manufacture heavy and medium structural steel components designed for durability and long-term performance in demanding environments.",
     icon: Hammer,
-    image: "/Industrial Steel.jpg",
+    image: "/Structural Steel Fabrication.png",
     features: [
       "High-strength steel structures",
       "Fabrication to project specifications",
@@ -71,7 +71,7 @@ const servicesList = [
     title: "🔧 Assembly, Welding & Finishing",
     desc: "Final assembly is completed with professional welding and finishing, ensuring alignment, strength, and installation readiness.",
     icon: Sparkles,
-    image: "/kemal-kozbaev-mun6ABiRJws-unsplash.jpg",
+    image: "/Assembly, Welding & Finishing.png",
     features: [
       "Strong, defect-free welds",
       "Proper alignment and finish",
@@ -79,34 +79,69 @@ const servicesList = [
     ],
   },
 ];
+// const projects = [
+//   {
+//     title: "Assembly, Welding & Finishing",
+//     image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+//   },
+//   {
+//     title: "Custom-Fabricated Steel Parts",
+//     image: "/StellFebictaion/Custom-fabricated steel parts.png",
+//   },
+//   {
+//     title: "Industrial Steel Frames & Structures",
+//     image: "/StellFebictaion/Industrial steel frames and structures.png",
+//   },
+//   {
+//     title: "Structural Steel Fabrication",
+//     image: "/StellFebictaion/Structural Steel Fabrication.png",
+//   },]
+
 const projects = [
   {
     title: "Assembly, Welding & Finishing",
+    subtitle: "Precision steel assembly solutions",
+    description:
+      "High-quality assembly, welding, and finishing services ensuring durability, strength, and flawless structural integrity.",
     image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+    category: "Steel Fabrication",
   },
   {
-    title: "Custom-fabricated steel parts",
+    title: "Custom-Fabricated Steel Parts",
+    subtitle: "Tailor-made steel components",
+    description:
+      "Custom-engineered steel parts manufactured to exact specifications for industrial and commercial applications.",
     image: "/StellFebictaion/Custom-fabricated steel parts.png",
+    category: "Custom Steel",
   },
   {
-    title: "Industrial steel frames and structure",
+    title: "Industrial Steel Frames & Structures",
+    subtitle: "Heavy-duty industrial structures",
+    description:
+      "Robust steel frames and structural systems designed for factories, warehouses, and large-scale industrial projects.",
     image: "/StellFebictaion/Industrial steel frames and structures.png",
+    category: "Industrial Steel",
   },
   {
     title: "Structural Steel Fabrication",
+    subtitle: "Engineered for strength & safety",
+    description:
+      "Complete structural steel fabrication solutions engineered for safety, performance, and long-term reliability.",
     image: "/StellFebictaion/Structural Steel Fabrication.png",
+    category: "Structural Steel",
   },
 ];
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "5000+", label: "Projects Completed", icon: CheckCircle },
-  { value: "50+", label: "Expert Engineers", icon: Users },
+  { value: "80+", label: "Expert Engineers", icon: Users },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
 export default function ServicesPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedImage, setSelectedImage] = useState(null);
+  // const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
       {/* HERO SECTION */}
@@ -327,143 +362,103 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      {/* product section start  */}
-
-      <section className="relative py-20 md:py-24 bg-gradient-to-b from-white to-slate-100">
+      <section className="relative py-20 md:py-28 bg-gradient-to-b from-white via-slate-50 to-slate-100">
         {/* Soft Accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.14),transparent_65%)]" />
 
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* Heading */}
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          {/* ================= Heading ================= */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-14 md:mb-20"
           >
             <span
-              className="inline-block mb-4 px-6 py-2 rounded-full 
-      bg-orange-100 text-orange-700 
-      text-[13px] font-semibold tracking-widest"
+              className="inline-flex items-center justify-center mb-5 px-6 py-2 rounded-full 
+                       bg-orange-100 text-orange-700 
+                       text-xs font-semibold tracking-widest"
             >
               OUR PRODUCTS
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">
               Steel{" "}
               <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                 Products
               </span>
             </h2>
 
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              A showcase of our completed steel fabrication and construction
-              Products, engineered with precision, strength, and reliability.
+            <p className="text-gray-600 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+              A showcase of our steel fabrication and construction capabilities,
+              engineered with precision, strength, and industrial-grade
+              excellence.
             </p>
           </motion.div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* ================= Cards ================= */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.15 }}
-                onClick={() => setSelectedImage(project)}
-                className="group cursor-pointer relative rounded-2xl overflow-hidden bg-white 
-          shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
-          hover:shadow-[0_30px_70px_rgba(0,0,0,0.15)] 
-          transition-all duration-500"
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                className="group relative bg-white rounded-3xl overflow-hidden
+                 shadow-[0_20px_50px_rgba(0,0,0,0.12)]
+                 hover:shadow-[0_35px_80px_rgba(0,0,0,0.18)]
+                 transition-all duration-500"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-52 sm:h-56 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover 
-              transition-transform duration-700 
-              group-hover:scale-110"
+                    className="w-full h-full object-cover
+                     transition-transform duration-700
+                     group-hover:scale-110"
                   />
 
-                  {/* Overlay */}
                   <div
                     className="absolute inset-0 bg-gradient-to-t 
-            from-black/70 via-black/30 to-transparent 
-            opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        from-black/40 via-black/10 to-transparent 
+                        opacity-0 group-hover:opacity-100 
+                        transition-opacity duration-500"
                   />
-
-                  {/* Title */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 p-5 
-            translate-y-5 group-hover:translate-y-0 
-            opacity-0 group-hover:opacity-100 
-            transition-all duration-500"
-                  >
-                    <h3 className="text-white font-semibold text-base tracking-tight">
-                      {project.title}
-                    </h3>
-                  </div>
                 </div>
 
-                {/* Hover Border */}
+                {/* Content */}
+                <div className="p-5 sm:p-6 flex flex-col">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-sm font-medium text-gray-600 mb-2">
+                    {project.subtitle}
+                  </p>
+
+                  {/* 👇 FIX: description height control */}
+                  <p className="text-gray-500 text-sm leading-relaxed mb-2 line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Footer */}
+          
+                </div>
+
+                {/* Hover Ring */}
                 <div
-                  className="absolute inset-0 rounded-2xl ring-1 ring-transparent 
-          group-hover:ring-orange-500/40 transition-all duration-500"
+                  className="absolute inset-0 rounded-3xl ring-1 ring-transparent 
+                      group-hover:ring-orange-500/30 
+                      transition-all duration-500"
                 />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* ================= LIGHTBOX MODAL ================= */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4 pt-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-5xl"
-            >
-              {/* Close */}
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-orange-400 transition"
-              >
-                ×
-              </button>
-
-              {/* Image */}
-              <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
-                <img
-                  src={selectedImage.image}
-                  alt={selectedImage.title}
-                  className="w-full max-h-[75vh] object-contain mx-auto"
-                />
-              </div>
-
-              {/* Title */}
-              <p className="text-center text-white mt-4 text-base font-semibold tracking-wide">
-                {selectedImage.title}
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* product section end  */}
 
       <GetDemoSection />
 

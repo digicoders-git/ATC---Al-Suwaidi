@@ -135,11 +135,16 @@ export default function ModernNavbar() {
         <nav className="max-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo Section */}
-            <div className="flex items-center gap-3 lg:ps-15">
-              <img src="/logo2.png" alt="logo" className="w-25 h-20" />
-              <span className="text-sm font-bold text-gray-500">
+            <div className="flex flex-col lg:ps-15 h-full">
+              <img
+                src="/ATC_Logos_English_Arabic-removebg-preview (1).png"
+                alt="logo"
+                className="w-35 h-20 self-center"
+              />
+
+              <div className="text-xs ps-5 font-semibold text-gray-500 leading-none -mt-6 text-center">
                 CR No. 14258
-              </span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

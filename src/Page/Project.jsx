@@ -468,7 +468,7 @@ export default function Projects() {
     fixed inset-0 z-[9999]
     flex items-start justify-center
     px-3 py-4
-    pt-20 sm:pt-6   /* 👈 MOBILE NAVBAR HEIGHT FIX */
+    pt-20 sm:pt-60   /* 👈 MOBILE NAVBAR HEIGHT FIX */
   "
             >
               {/* BACKDROP */}
@@ -618,9 +618,6 @@ export default function Projects() {
       </section>
 
       <GetDemoSection />
-      
-      {/* Main Products Component */}
-     
       
       {/* Our Projects Section */}
       <div className="max-w-7xl mx-auto px-4 my-10">

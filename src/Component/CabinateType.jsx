@@ -119,20 +119,21 @@ export default function ServiceCabinetCards() {
             >
               {/* Image Section */}
               <div
-                className={`relative overflow-hidden h-80 lg:h-auto ${
+                className={`relative p-4 bg-gray-50 ${
                   index % 2 === 1 ? "lg:col-start-2" : ""
                 }`}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.src =
-                      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%239ca3af'%3ECabinet Image%3C/text%3E%3C/svg%3E";
-                  }}
-                />
+                <div className="bg-white rounded-xl shadow-md p-3 h-full">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%239ca3af'%3ECabinet Image%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Content Section */}

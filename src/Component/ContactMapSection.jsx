@@ -1,4 +1,3 @@
-// components/ContactMapSimple.jsx
 import React from "react";
 import { FaMapMarkedAlt, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -6,18 +5,15 @@ export default function ContactMapSimple() {
   const company = {
     name: "AL SUWAIDI TECHNICAL CENTER",
     address:
-      "P.O. Box No: 40600, East Industrial Area, Zone: 57, Street No: 18, Gate No: 35, Doha, Qatar",
+      "AL SUWAIDI TECHNICAL CENTER, East Industrial Area, Zone 57, Street 18, Gate 35, Doha, Qatar",
 
-    // ✅ EXACT LOCATION (Doha Industrial Area – adjust if needed)
-    lat: 25.258204,
-    lng: 51.565618,
+    // Google Maps place link (for button)
+    mapLink: "https://maps.google.com/?q=Al+Suwaidi+Technical+Centre+Doha",
   };
 
-  // ✅ EMBED WITH PIN (latitude + longitude)
-  const mapEmbedSrc = `https://www.google.com/maps?q=${company.lat},${company.lng}&z=16&output=embed`;
-
-  // ✅ OPEN GOOGLE MAPS WITH PIN
-  const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${company.lat},${company.lng}`;
+  // ✅ EXACT GOOGLE MAP EMBED (BUSINESS NAME + RED PIN)
+  const mapEmbedSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19162.40284813996!2d51.42695177431094!3d25.205521734000833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45d0d081455db1%3A0xd4b89fbd728ae4a9!2sAl%20Suwaidi%20Technical%20Centre!5e0!3m2!1sen!2sin!4v1766758528896!5m2!1sen!2sin";
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
@@ -33,34 +29,18 @@ export default function ContactMapSimple() {
         {/* Map Card */}
         <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-xl bg-white">
           {/* MAP */}
-          <div
-            className="
-              relative w-full
-              h-[240px]
-              sm:h-[300px]
-              md:h-[380px]
-              lg:h-[460px]
-            "
-          >
+          <div className="relative w-full h-[240px] sm:h-[300px] md:h-[380px] lg:h-[460px]">
             <iframe
               title={`${company.name} Location`}
               src={mapEmbedSrc}
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            />
-
-            {/* FULL CLICK OVERLAY (Mobile Safe) */}
-            <a
-              href={openMapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0 z-10"
-              aria-label="Open location in Google Maps"
+              allowFullScreen
             />
           </div>
 
-          {/* Bottom Info Bar */}
+          {/* Bottom Info */}
           <div className="bg-white border-t border-gray-200 px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white shadow">
@@ -69,13 +49,13 @@ export default function ContactMapSimple() {
               <div>
                 <div className="font-bold text-gray-900">{company.name}</div>
                 <div className="text-sm text-gray-600">
-                  East Industrial Area, Zone: 57, Doha
+                  East Industrial Area, Zone 57, Doha
                 </div>
               </div>
             </div>
 
             <a
-              href={openMapUrl}
+              href={company.mapLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl 

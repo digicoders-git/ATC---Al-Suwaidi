@@ -171,7 +171,7 @@ const ContactUs = () => {
             >
               {[
                 { value: "32+", label: "Years Experience", icon: FaAward },
-                { value: "245+", label: "Expert Team", icon: FaUsers },
+                { value: "80+", label: "Expert Team", icon: FaUsers },
                 { value: "24/7", label: "Support Available", icon: FaClock },
                 { value: "98%", label: "Client Satisfaction", icon: FaShieldAlt },
               ].map((stat, idx) => (

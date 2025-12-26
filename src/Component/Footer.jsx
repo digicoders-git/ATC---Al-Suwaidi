@@ -38,6 +38,8 @@ export default function Footer() {
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/project" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Our Story", href: "/our-story" },
     { label: "Contact", href: "/contact" },
     { label: "Get Quote", href: "/get-quote" },
   ];

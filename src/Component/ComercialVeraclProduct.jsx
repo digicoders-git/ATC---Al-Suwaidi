@@ -93,15 +93,19 @@ export default function Products() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               whileHover={{ scale: 1.02 }}
-              className={`h-full overflow-hidden ${
-                index % 2 !== 0 ? "md:order-2" : ""
-              }`}
+              className={`p-6 ${index % 2 !== 0 ? "md:order-2" : ""}`}
             >
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-96 md:h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
+              <div className="bg-white rounded-2xl shadow-xl border border-orange-100 overflow-hidden hover:shadow-2xl transition-all duration-500 group/card">
+                <div className="relative h-96 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group/card-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
             </motion.div>
 
             {/* TEXT */}

@@ -66,6 +66,14 @@ export default function Testimonials() {
       comment:
         "Worked on projects demanding strict safety and quality adherence; services used included welding, sandblasting & painting. (source: company brochure)",
     },
+         { name: "vivek ",
+      company: "New Industrial Area — Doha, Qatar",
+      rating: 5,
+      img: "/client-eversendai.jpg",
+      comment:
+        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients. (source: company brochure)",
+    },
+    
   ];
 
   return (
