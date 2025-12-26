@@ -305,36 +305,78 @@ export default function CabinetsManufacturingPage() {
       {/* MAIN CONTENT */} 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Introduction */}
-        <section id="services" className="mb-12 sm:mb-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 text-orange-600 font-semibold mb-4"
-          >
-            <div className="h-px w-4 sm:w-8 bg-orange-600"></div>
-            QUALITY MANUFACTURING
-            <div className="h-px w-4 sm:w-8 bg-orange-600"></div>
-          </motion.div>
+<section
+  id="services"
+  className="relative py-16 sm:py-20 bg-gradient-to-b from-gray-50 to-white"
+>
+  <div className="max-w-7xl mx-auto px-4 text-center">
 
-          <motion.h2
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6"
-          >
-            KAHRAMAA Approval & Compliance
-          </motion.h2>
+    {/* Logo */}
+    <div className="flex justify-center mb-6">
+      <img
+        src="/kahramaa.png"
+        alt="Kahramaa"
+        className="h-20 sm:h-30 object-contain"
+      />
+    </div>
 
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            ✔ KAHRAMAA-Approved Designs
-            <br />
-            ✔ Manufactured strictly as per KAHRAMAA specifications
-            <br />
-            ✔ Accepted for official water meter and electrical service
-            installations
-            <br />✔ Suitable for government, municipal, and EPC projects
-          </p>
-        </section>
+    {/* Subtitle */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="inline-flex items-center gap-3 text-orange-600 font-semibold mb-5 tracking-wide"
+    >
+      <span className="h-px w-10 bg-orange-600"></span>
+      QUALITY MANUFACTURING
+      <span className="h-px w-10 bg-orange-600"></span>
+    </motion.div>
+
+    {/* Heading */}
+    <motion.h2
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+      viewport={{ once: true }}
+      className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+    >
+      KAHRAMAA Approval & Compliance
+    </motion.h2>
+
+    {/* Description Card */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.2 }}
+      viewport={{ once: true }}
+      className="max-w-4xl mx-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8 sm:p-10"
+    >
+      <ul className="space-y-4 text-gray-700 text-base sm:text-lg text-left sm:text-center">
+        <li className="flex items-start sm:items-center gap-3 justify-start sm:justify-center">
+          <span className="text-orange-500 text-xl">✔</span>
+          KAHRAMAA-Approved Designs
+        </li>
+
+        <li className="flex items-start sm:items-center gap-3 justify-start sm:justify-center">
+          <span className="text-orange-500 text-xl">✔</span>
+          Manufactured strictly as per KAHRAMAA specifications
+        </li>
+
+        <li className="flex items-start sm:items-center gap-3 justify-start sm:justify-center">
+          <span className="text-orange-500 text-xl">✔</span>
+          Accepted for official water meter and electrical service installations
+        </li>
+
+        <li className="flex items-start sm:items-center gap-3 justify-start sm:justify-center">
+          <span className="text-orange-500 text-xl">✔</span>
+          Suitable for government, municipal, and EPC projects
+        </li>
+      </ul>
+    </motion.div>
+
+  </div>
+</section>
+
         <ServiceCabinetCards/>
 
         {/* Cabinet Services - Modern Side-by-Side Cards */}
