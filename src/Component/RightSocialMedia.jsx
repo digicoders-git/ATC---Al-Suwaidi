@@ -24,12 +24,6 @@ export default function RightSocialMedia() {
       link: "https://wa.me/97451711104",
       label: "WhatsApp",
     },
-    {
-      icon: FaTwitter,
-      link: "https://twitter.com/alsuwaiditechnical",
-      label: "Twitter",
-    },
-
   ];
 
   return (
