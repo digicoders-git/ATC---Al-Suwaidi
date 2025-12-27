@@ -8,58 +8,74 @@ import {
 
 const services = [
   {
-    title: "Electrical Service Cabinet",
+    title: " Electrical Service Cabinet",
     type: "Utility-Approved Electrical Enclosure",
-    image: "/CabnateMAnifecting/Electrical Service Cabinet.png",
+    image: "/Electrical Service Cabinet.png",
     description:
-      "The Electrical Service Cabinet is designed to safely house electrical service connections and associated components. It provides protection against environmental exposure while allowing easy access for inspection, servicing, and meter reading.",
+      "The Electrical Service Cabinet is designed to safely house electrical service connections and associated components. It provides protection against environmental exposure while allowing easy access for inspection, servicing, and meter reading. The cabinet is suitable for outdoor installation and engineered for long-term reliability in utility and infrastructure environments.",
     features: [
       "Durable aluminium construction",
       "Secure lockable access door",
       "Proper ventilation for heat dissipation",
       "Suitable for outdoor electrical installations",
     ],
-    dimensions: "830 × 600 × 200 mm",
+    dimensions: "830 × 600 × 230 mm",
     applications:
       "Residential buildings, commercial facilities, utility and infrastructure projects",
     color: "from-orange-500 to-red-500",
   },
   {
-    title: "Water Service Cabinet – 1 inch Dia",
+    title: " Water Service Cabinet – 1\" Dia",
     type: "Single Water Meter Cabinet",
-    image: "/Water Service Cabinet 1 Dia.png",
+    image: "/Water Service Cabinet 1 Dia copy.png",
     description:
-      "The Water Service Cabinet – 1 inch Dia is designed to house a single domestic water meter and service pipe. It provides protection from damage while allowing clear visibility and easy access for inspection and maintenance.",
+      "The Water Service Cabinet – 1\" Dia is designed to house a single domestic water meter and service pipe. It provides protection from damage while allowing clear visibility and easy access for inspection and maintenance.",
     features: [
       "Designed for single water meter installation",
       "Safe and secure enclosure",
       "Easy inspection and access",
       "Weather-resistant finish",
     ],
-    dimensions: "830 × 300 × 230 mm (for 15–42mm Dia. Pipe)",
+    dimensions: "830 × 300 × 230 mm for 15-42mm Dia.Pipe",
     applications: "Individual residential water connections",
     color: "from-blue-500 to-cyan-500",
   },
   {
-    title: "Water service cabinet 2 Dia.png",
+    title: " Water Service Cabinet – 2\" Dia",
     type: "High-Capacity Water Meter Cabinet",
-    image: "/CabnateMAnifecting/WATERSERVICECABINET2” DIA.jpg",
+    image: "/Water service cabinet 2 Dia copy.png",
     description:
-      "The Water Service Cabinet – 2 inch Dia is suitable for larger water service connections requiring higher flow capacity. The cabinet provides sufficient internal space for larger service pipes while ensuring protection and accessibility.",
+      "The Water Service Cabinet – 2\" Dia is suitable for larger water service connections requiring higher flow capacity. The cabinet provides sufficient internal space for larger service pipes while ensuring protection and accessibility.",
     features: [
       "Suitable for larger diameter service pipes",
       "Strong and durable construction",
       "Utility-compliant design",
       "Designed for outdoor use",
     ],
-    dimensions: "750 × 650 × 300 mm (54mm Dia. Pipe)",
+    dimensions: "750 × 650 × 300 mm 54mm Dia.Pipe",
     applications: "Commercial buildings and high-capacity water connections",
     color: "from-green-500 to-emerald-500",
   },
   {
-    title: "Multi Water Meter Cabinet – 3 Nos",
+    title: " Multi Water Meter Cabinet – 2 Nos",
+    type: "Dual Water Meter Cabinet",
+    image: "/Multi water Meter cabinet 3 Nos.png",
+    description:
+      "The Water Meter Cabinet – 2 Nos is designed to accommodate two water meters in one enclosure. It ensures organized meter placement, safe operation, and easy access for utility management.",
+    features: [
+      "Houses two water meters securely",
+      "Organized internal layout",
+      "Clear meter visibility",
+      "Durable outdoor construction",
+    ],
+    dimensions: "662 × 850 × 230 mm",
+    applications: "Duplex residences and shared connections",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    title: " Multi Water Meter Cabinet – 3 Nos",
     type: "Triple Water Meter Cabinet",
-    image: "/Multi Water Meter Cabinet 2 Nos.png",
+    image: "/Multi water Meter cabinet 3 Nos.png",
     description:
       "The Water Meter Cabinet – 3 Nos offers a compact and organized solution for housing three water meters within a single cabinet. It is designed for safe operation and efficient meter management.",
     features: [
@@ -68,12 +84,12 @@ const services = [
       "Durable aluminium body",
       "Easy access for maintenance",
     ],
-    dimensions: "900 × 850 × 200 mm",
+    dimensions: "884 × 850 × 230 mm",
     applications: "Residential compounds and small multi-unit buildings",
-    color: "from-purple-500 to-pink-500",
+    color: "from-indigo-500 to-blue-500",
   },
   {
-    title: "Multi Water Meter Cabinet – 4 Nos",
+    title: " Multi Water Meter Cabinet – 4 Nos",
     type: "Multi-Unit Water Meter Cabinet",
     image: "/Multi Water Meter cabinet 4 Nos.png",
     description:
@@ -86,7 +102,7 @@ const services = [
     ],
     dimensions: "1100 × 850 × 200 mm",
     applications: "Apartment buildings and residential complexes",
-    color: "from-indigo-500 to-purple-500",
+    color: "from-red-500 to-pink-500",
   },
 ];
 
@@ -127,7 +143,7 @@ export default function ServiceCabinetCards() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain rounded-lg transition-transform duration-700 group-hover:scale-105 bg-white p-2"
                     onError={(e) => {
                       e.currentTarget.src =
                         "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%239ca3af'%3ECabinet Image%3C/text%3E%3C/svg%3E";
@@ -222,8 +238,6 @@ export default function ServiceCabinetCards() {
                     </div>
                   </div>
                 </motion.div>
-
-                {/* CTA Button */}
               </div>
             </div>
           </motion.div>

@@ -21,8 +21,10 @@ const SERVICES = [
     id: "steel-fabrication",
     title: "Steel Fabrication Basics",
     icon: FaIndustry,
-    short: "Heavy & medium structural steel works, warehouse sheds, industrial structures.",
-    details: "Complete structural steel fabrication including heavy and medium steel works, warehouse sheds, industrial buildings, and custom steel structures with professional installation services.",
+    short:
+      "Heavy & medium structural steel works, warehouse sheds, industrial structures.",
+    details:
+      "Complete structural steel fabrication including heavy and medium steel works, warehouse sheds, industrial buildings, and custom steel structures with professional installation services.",
     category: "Fabrication",
   },
   {
@@ -30,23 +32,28 @@ const SERVICES = [
     title: "Commercial Vehicle Bodies",
     icon: FaTruck,
     short: "Road tankers, trailers, flatbeds, dump trucks, .",
-    details: "Design and fabrication of commercial vehicle bodies including fuel tankers, water tankers, flatbed trailers, dump trucks, refrigerated bodies, and custom transportation solutions.",
+    details:
+      "Design and fabrication of commercial vehicle bodies including fuel tankers, water tankers, flatbed trailers, dump trucks, refrigerated bodies, and custom transportation solutions.",
     category: "Vehicle Bodies",
   },
   {
     id: "engine-repair",
     title: "Vehicle Engine Repairing",
     icon: FaCogs,
-    short: "Engine reconditioning, block boring, crankshaft grinding, and mechanical repairs.",
-    details: "Professional engine repair and reconditioning services including block boring, crankshaft grinding, cylinder liner fitting, piston ring fitting, and complete engine assembly.",
+    short:
+      "Engine reconditioning, block boring, crankshaft grinding, and mechanical repairs.",
+    details:
+      "Professional engine repair and reconditioning services including block boring, crankshaft grinding, cylinder liner fitting, piston ring fitting, and complete engine assembly.",
     category: "Engine Repair",
   },
   {
     id: "gears-milling",
     title: "Gears Making & Milling",
     icon: FaWrench,
-    short: "Precision gear manufacturing, milling operations, and machining services.",
-    details: "Advanced gear making and milling services including gear hobbing, turning operations, drilling, boring, and precision machining for industrial applications.",
+    short:
+      "Precision gear manufacturing, milling operations, and machining services.",
+    details:
+      "Advanced gear making and milling services including gear hobbing, turning operations, drilling, boring, and precision machining for industrial applications.",
     category: "Machining",
   },
   {
@@ -54,7 +61,8 @@ const SERVICES = [
     title: "Bearings Service",
     icon: FaTools,
     short: "Bearing removal, fitting, hub bearings, and axle bearing services.",
-    details: "Comprehensive bearing services including axle bearing removal and fitting, hub bearing installation, king pin services, and bearing maintenance for all vehicle types.",
+    details:
+      "Comprehensive bearing services including axle bearing removal and fitting, hub bearing installation, king pin services, and bearing maintenance for all vehicle types.",
     category: "Bearings",
   },
   {
@@ -62,7 +70,8 @@ const SERVICES = [
     title: "Vehicle Wheels Repair",
     icon: FaBoxes,
     short: "Wheel alignment, balancing, disc facing, and rim repair services.",
-    details: "Complete wheel repair services including wheel alignment, straightening and balancing, disc and drum facing, flywheel resurfacing, and custom wheel modifications.",
+    details:
+      "Complete wheel repair services including wheel alignment, straightening and balancing, disc and drum facing, flywheel resurfacing, and custom wheel modifications.",
     category: "Wheel Services",
   },
   {
@@ -70,16 +79,9 @@ const SERVICES = [
     title: "Cabinets Manufacturing",
     icon: FaHardHat,
     short: "KAHRAMAA-approved water and electric service cabinets.",
-    details: "Manufacturing of KAHRAMAA-approved utility cabinets including water service cabinets, electric service cabinets, and custom enclosures with ISO quality certification.",
+    details:
+      "Manufacturing of KAHRAMAA-approved utility cabinets including water service cabinets, electric service cabinets, and custom enclosures with ISO quality certification.",
     category: "Manufacturing",
-  },
-  {
-    id: "mro",
-    title: "MRO Services",
-    icon: FaPaintRoller,
-    short: "Maintenance, repair, and overhaul services for industrial equipment.",
-    details: "Comprehensive MRO services including body panel repair, chassis alignment, structural reinforcement, surface treatment, and preventive maintenance programs.",
-    category: "MRO",
   },
 ];
 
@@ -180,7 +182,7 @@ export default function Services() {
                   <p className="mt-3 text-sm text-slate-600">{s.short}</p>
 
                   <div className="mt-6 flex items-center justify-between">
-                    <Link 
+                    <Link
                       to={`/services/${s.id}`}
                       className="flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 transition"
                     >

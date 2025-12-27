@@ -8,7 +8,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-debaj.jpg",
       comment:
-        "Partnered with us for fabrication and heavy engineering works as listed in the company brochure — scope included structural steel and machining support. (source: company brochure)",
+        "Partnered with us for fabrication and heavy engineering works as listed in the company brochure — scope included structural steel and machining support. ",
     },
     {
       name: "Black Cat Engineering",
@@ -16,7 +16,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-blackcat.jpg",
       comment:
-        "Worked on engineering and fabrication tasks, leveraging our welding, die-making and machining capabilities. (source: company brochure)",
+        "Worked on engineering and fabrication tasks, leveraging our welding, die-making and machining capabilities. ",
     },
     {
       name: "Eversendai",
@@ -24,7 +24,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-eversendai.jpg",
       comment:
-        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients. (source: company brochure)",
+        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients.",
     },
     {
       name: "Gulf Lights",
@@ -32,7 +32,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-gulflights.jpg",
       comment:
-        "Provided fabrication and assembly support for lighting/infrastructure components as part of our fabrication services. (source: company brochure)",
+        "Provided fabrication and assembly support for lighting/infrastructure components as part of our fabrication services. ",
     },
     {
       name: "Sino Hydro",
@@ -40,7 +40,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-sinohydro.jpg",
       comment:
-        "Participated in large-scale industrial projects requiring strict QA and coordination — aligned with services listed (fabrication, machining). (source: company brochure)",
+        "Participated in large-scale industrial projects requiring strict QA and coordination — aligned with services listed (fabrication, machining). ",
     },
     {
       name: "Qalex",
@@ -48,7 +48,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-qalex.jpg",
       comment:
-        "Client engagement covered steel fabrication and related machining works as described in the brochure's services section. (source: company brochure)",
+        "Client engagement covered steel fabrication and related machining works as described in the brochure's services section.",
     },
     {
       name: "Wood Group",
@@ -56,7 +56,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-woodgroup.jpg",
       comment:
-        "Supplied fabricated components and machining services per technical drawings and specifications. (source: company brochure)",
+        "Supplied fabricated components and machining services per technical drawings and specifications. ",
     },
     {
       name: "Keppel Seghers",
@@ -64,14 +64,14 @@ export default function Testimonials() {
       rating: 5,
       img: "/client-keppel.jpg",
       comment:
-        "Worked on projects demanding strict safety and quality adherence; services used included welding, sandblasting & painting. (source: company brochure)",
+        "Worked on projects demanding strict safety and quality adherence; services used included welding, sandblasting & painting. ",
     },
          { name: "vivek ",
       company: "New Industrial Area — Doha, Qatar",
       rating: 5,
       img: "/client-eversendai.jpg",
       comment:
-        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients. (source: company brochure)",
+        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients. ",
     },
     
   ];

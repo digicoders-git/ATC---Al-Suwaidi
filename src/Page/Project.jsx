@@ -80,52 +80,53 @@ const PROJECTS = [
     ],
     category: "Trailers",
   },
+ {
+    id: "electric-service-cabinet",
+    title: "Electrical Service Cabinet",
+    subtitle: "Utility-approved electrical enclosure",
+    thumb: "/Electrical Service Cabinet copy.png",
+    short:
+      "The Electrical Service Cabinet is designed to safely house electrical service connections and associated components. It provides protection against environmental exposure while allowing easy access for inspection, servicing, and meter reading. Suitable for outdoor installation and long-term utility use.",
+    specs: [
+      ["Construction", "Durable aluminium body"],
+      ["Access", "Secure lockable service door"],
+      ["Ventilation", "Proper ventilation for heat dissipation"],
+      ["Installation", "Suitable for outdoor electrical installations"],
+      ["Dimensions", "830 × 600 × 230 mm"],
+    ],
+    category: "Cabinets",
+  },
+
   {
     id: "water-service-cabinet-1",
-    title: 'Water Service Cabinet (1" dia)',
-    subtitle: "Service cabinet for residential connections",
-    thumb: "/CabnateMAnifecting/WATER (3) METER CABINET.jpg",
+    title: 'Water Service Cabinet – 1" Dia',
+    subtitle: "Single water meter cabinet",
+    thumb: "/Water Service Cabinet 1 Dia copy 2.png",
     short:
-      "Aluminium water service cabinet with ventilation and lock provision for single meter.",
+      "The Water Service Cabinet – 1” Dia is designed to house a single domestic water meter and service pipe. It protects the meter from damage while allowing clear visibility and easy access for inspection and maintenance.",
     specs: [
-      ["Body", "3 mm thickness aluminium sheet"],
-      ["Door Panel", "6 mm wired glass + 2 x 8 mm triangular locks"],
-      ["Holes", "02 Nos. 42 mm dia (top & bottom)"],
-      ["Color", "White"],
-      ["Size", "830 x 300 x 230 mm (for 15-42 mm pipe)"],
+      ["Application", "Single water meter installation"],
+      ["Construction", "Weather-resistant aluminium enclosure"],
+      ["Access", "Easy inspection and maintenance access"],
+      ["Pipe Size", "For 15–42 mm dia pipe"],
+      ["Dimensions", "830 × 300 × 230 mm"],
     ],
     category: "Cabinets",
   },
+
   {
     id: "water-service-cabinet-2",
-    title: 'Water Service Cabinet (2" dia)',
-    subtitle: "Larger service cabinet for 54 mm pipe",
-    thumb: "/CabnateMAnifecting/WATER (4) METER CABINET.jpg",
+    title: 'Water Service Cabinet – 2" Dia',
+    subtitle: "High-capacity water meter cabinet",
+    thumb: "/Water service cabinet 2 Dia copy 2.png",
     short:
-      "Aluminium cabinet with louvered ventilation and space for Meters & branding.",
+      "The Water Service Cabinet – 2” Dia is suitable for larger water service connections requiring higher flow capacity. It offers sufficient internal space for larger pipes while ensuring protection, accessibility, and compliance with utility standards.",
     specs: [
-      ["Body", "3 mm thickness aluminium sheet"],
-      ["Door Panel", "6 mm wired glass + 2 x 8 mm triangular locks"],
-      ["Holes", "02 Nos. 56 mm dia (both sides)"],
-      ["Color", "White"],
-      ["Size", "750 x 650 x 300 mm (for 54 mm pipe)"],
-    ],
-    category: "Cabinets",
-  },
-  {
-    id: "electric-service-cabinet",
-    title: "Electric Service Cabinet",
-    subtitle: "Cabinet for electric service piping & meter",
-    thumb: "/CabnateMAnifecting/ELECTRIC SERVICECABINET.jpg",
-    short:
-      "Robust electric service cabinet with service door and ventilation for cable entries.",
-    specs: [
-      ["Body", "3 mm thickness aluminium sheet"],
-      ["Holes", "02 Nos 112 mm dia at bottom for electric pipe"],
-      ["Door", "1 No 100 x 100 mm service door with lock"],
-      ["Glass", "6 mm wired glass + 2 x 8 mm triangular locks"],
-      ["Color", "White"],
-      ["Size", "830 x 600 x 200 mm"],
+      ["Application", "High-capacity water service connections"],
+      ["Construction", "Strong and durable aluminium body"],
+      ["Design", "Utility-compliant outdoor design"],
+      ["Pipe Size", "For 54 mm dia pipe"],
+      ["Dimensions", "750 × 650 × 300 mm"],
     ],
     category: "Cabinets",
   },
@@ -279,7 +280,9 @@ export default function Projects() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}OUR PROJECTS
+              transition={{ delay: 0.2 }}
+              OUR
+              PROJECTS
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <FaRocket size={18} className="text-orange-200" />
@@ -293,7 +296,7 @@ export default function Projects() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              OUR 
+              OUR
               <span className=" ms-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
                 PROJECTS
               </span>
@@ -306,7 +309,8 @@ export default function Projects() {
               transition={{ delay: 0.4 }}
               className="text-sm sm:text-lg lg:text-xl font-semibold text-orange-100 mb-4 max-w-4xl mx-auto"
             >
-              Showcasing 32+ Years of Engineering Excellence & Quality Craftsmanship
+              Showcasing 32+ Years of Engineering Excellence & Quality
+              Craftsmanship
             </motion.h2>
 
             {/* Description */}
@@ -316,7 +320,11 @@ export default function Projects() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Explore our comprehensive portfolio of successfully completed industrial projects including heavy-duty trailers, precision fabrication works, KAHRAMAA-approved cabinets, and custom engineering solutions that define Qatar's infrastructure development.
+              Explore our comprehensive portfolio of successfully completed
+              industrial projects including heavy-duty trailers, precision
+              fabrication works, KAHRAMAA-approved cabinets, and custom
+              engineering solutions that define Qatar's infrastructure
+              development.
             </motion.p>
 
             {/* Action Buttons */}
@@ -385,7 +393,7 @@ export default function Projects() {
         </div>
       </section>
 
-       <MainProductsComponent />
+      <MainProductsComponent />
 
       {/* Projects Grid Section */}
       <section
@@ -618,7 +626,7 @@ export default function Projects() {
       </section>
 
       <GetDemoSection />
-      
+
       {/* Our Projects Section */}
       <div className="max-w-7xl mx-auto px-4 my-10">
         <section className="mb-24 flex flex-col items-center">

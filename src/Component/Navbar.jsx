@@ -137,14 +137,10 @@ export default function ModernNavbar() {
             {/* Logo Section */}
             <div className="flex flex-col lg:ps-15 h-full">
               <img
-                src="/ATC_Logos_English_Arabic-removebg-preview (1).png"
+                src="/jmjmj.png"
                 alt="logo"
-                className="w-35 h-20 self-center"
+                className="w-35 h-auto self-center"
               />
-
-              <div className="text-xs ps-5 font-semibold text-gray-500 leading-none -mt-6 text-center">
-                CR No. 14258
-              </div>
             </div>
 
             {/* Desktop Navigation */}

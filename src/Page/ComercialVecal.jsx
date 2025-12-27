@@ -182,87 +182,16 @@ export default function CommercialVehicleBodiesPage() {
       </header>
 
       <Comercialindristy />
-      <Products />
       <FabricationProcess />
 
       {/* ===== COMMERCIAL VEHICLE BODIES PRODUCT GALLERY ===== */}
       <section className="relative py-20 md:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           {/* ================= Heading ================= */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <span
-              className="inline-block mb-4 px-6 py-2 rounded-full 
-                           bg-orange-100 text-orange-700 
-                           text-[13px] font-semibold tracking-widest"
-            >
-              OUR PRODUCTS
-            </span>
-
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">
-              Commercial Vehicle{" "}
-              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Products
-              </span>
-            </h2>
-
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              A showcase of our completed commercial vehicle body fabrication
-              products, engineered with precision, strength, and reliability.
-            </p>
-          </motion.div>
 
           {/* ================= Cards ================= */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {commercialProducts.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="bg-white rounded-[28px] overflow-hidden
-                         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
-                         hover:shadow-[0_35px_80px_rgba(0,0,0,0.18)]
-                         transition-all duration-500"
-              >
-                {/* Image */}
-                <div className="h-56 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-7 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm font-semibold text-gray-600 mb-3">
-                    {item.subtitle}
-                  </p>
-
-                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
-
-      {/* ===== DETAILED SPECIFICATIONS ===== */}
-
-      {/* Products Grid */}
 
       <section className="mb-20 px-6">
         {/* Heading */}
@@ -408,7 +337,50 @@ export default function CommercialVehicleBodiesPage() {
               </div>
             </motion.div>
           ))}
+          
         </div>
+
+ <div className=" max-w-7xl  flex mx-auto">
+          <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {commercialProducts.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="bg-white rounded-[28px] overflow-hidden
+                         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
+                         hover:shadow-[0_35px_80px_rgba(0,0,0,0.18)]
+                         transition-all duration-500"
+            >
+              {/* Image */}
+              <div className="h-56 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-7 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm font-semibold text-gray-600 mb-3">
+                  {item.subtitle}
+                </p>
+
+                <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+ </div>
       </section>
 
       <GetDemoSection />

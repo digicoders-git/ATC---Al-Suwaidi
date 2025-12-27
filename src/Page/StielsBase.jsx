@@ -99,18 +99,18 @@ const servicesList = [
 
 const projects = [
   {
-    title: "Assembly, Welding & Finishing",
+    title: "Supports, Brackets, Platforms, and Assemblies",
     subtitle: "Precision steel assembly solutions",
     description:
-      "High-quality assembly, welding, and finishing services ensuring durability, strength, and flawless structural integrity.",
-    image: "/StellFebictaion/Assembly, Welding & Finishing.png",
+      "We manufacture strong and reliable steel supports, brackets, platforms, and assemblies with precise welding and finishing to ensure long-lasting performance and structural accuracy.",
+    image: "/Supports, brackets, platforms, and assemblies.png",
     category: "Steel Fabrication",
   },
   {
     title: "Custom-Fabricated Steel Parts",
     subtitle: "Tailor-made steel components",
     description:
-      "Custom-engineered steel parts manufactured to exact specifications for industrial and commercial applications.",
+      "Custom-designed steel parts fabricated according to exact drawings and specifications, delivering accuracy, strength, and consistency for industrial and commercial use.",
     image: "/StellFebictaion/Custom-fabricated steel parts.png",
     category: "Custom Steel",
   },
@@ -118,7 +118,7 @@ const projects = [
     title: "Industrial Steel Frames & Structures",
     subtitle: "Heavy-duty industrial structures",
     description:
-      "Robust steel frames and structural systems designed for factories, warehouses, and large-scale industrial projects.",
+      "Heavy-duty steel frames and industrial structures engineered to handle high loads, ideal for factories, warehouses, and large-scale industrial facilities.",
     image: "/StellFebictaion/Industrial steel frames and structures.png",
     category: "Industrial Steel",
   },
@@ -126,11 +126,12 @@ const projects = [
     title: "Structural Steel Fabrication",
     subtitle: "Engineered for strength & safety",
     description:
-      "Complete structural steel fabrication solutions engineered for safety, performance, and long-term reliability.",
-    image: "/StellFebictaion/Structural Steel Fabrication.png",
+      "Complete structural steel fabrication services focused on strength, safety, and durability for buildings, infrastructure, and engineering projects.",
+    image: "/Structural steel components.png",
     category: "Structural Steel",
   },
 ];
+
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
@@ -445,7 +446,6 @@ export default function ServicesPage() {
                   </p>
 
                   {/* Footer */}
-          
                 </div>
 
                 {/* Hover Ring */}

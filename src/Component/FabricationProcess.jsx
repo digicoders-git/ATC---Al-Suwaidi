@@ -39,7 +39,7 @@ const fabricationSteps = [
 
 export default function FabricationProcess() {
   return (
-    <section className=" pt-10 pb-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden">
+    <section className=" pt-10 pb-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden" id="services">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -48,6 +48,29 @@ export default function FabricationProcess() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-gradient-to-r from-orange-100 to-red-100 rounded-full border border-orange-200">
+            <span className="text-2xl">🏭</span>
+            <span className="text-orange-700 font-bold tracking-wide">FABRICATION EXCELLENCE</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+            <span className="text-gray-900">Our  </span>
+            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              Services
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive industrial solutions designed to meet your specific requirements with unmatched quality and precision
+          </p>
+        </motion.div>
 
 
         {/* Process Steps */}
@@ -81,9 +104,7 @@ export default function FabricationProcess() {
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                      <div className="absolute top-4 left-4 text-4xl bg-white/90 rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                        {step.icon}
-                      </div>
+   
                     </div>
                   </div>
                 </motion.div>
