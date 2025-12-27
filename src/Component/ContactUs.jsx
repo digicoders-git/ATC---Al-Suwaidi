@@ -495,10 +495,7 @@ const ContactUs = () => {
                         icon: FaWhatsapp,
                         href: "https://wa.me/97451711104",
                       },
-                      {
-                        icon: FaTwitter,
-                        href: "https://twitter.com/alsuwaiditechnical",
-                      },
+
                     ].map((social, index) => (
                       <a
                         key={index}

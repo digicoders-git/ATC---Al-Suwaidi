@@ -96,15 +96,7 @@ export default function Footer() {
               >
                 <FaWhatsapp size={20} />
               </a>
-              <a
-                href="https://twitter.com/alsuwaiditechnical"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg"
-                aria-label="Twitter"
-              >
-                <FaTwitter size={20} />
-              </a>
+
             </div>
           </div>
 
