@@ -25,11 +25,11 @@ const services = [
     color: "from-orange-500 to-red-500",
   },
   {
-    title: " Water Service Cabinet – 1\" Dia",
+    title: ' Water Service Cabinet – 1" Dia',
     type: "Single Water Meter Cabinet",
     image: "/Water Service Cabinet 1 Dia copy.png",
     description:
-      "The Water Service Cabinet – 1\" Dia is designed to house a single domestic water meter and service pipe. It provides protection from damage while allowing clear visibility and easy access for inspection and maintenance.",
+      'The Water Service Cabinet – 1" Dia is designed to house a single domestic water meter and service pipe. It provides protection from damage while allowing clear visibility and easy access for inspection and maintenance.',
     features: [
       "Designed for single water meter installation",
       "Safe and secure enclosure",
@@ -41,11 +41,11 @@ const services = [
     color: "from-blue-500 to-cyan-500",
   },
   {
-    title: " Water Service Cabinet – 2\" Dia",
+    title: ' Water Service Cabinet – 2" Dia',
     type: "High-Capacity Water Meter Cabinet",
     image: "/Water service cabinet 2 Dia copy.png",
     description:
-      "The Water Service Cabinet – 2\" Dia is suitable for larger water service connections requiring higher flow capacity. The cabinet provides sufficient internal space for larger service pipes while ensuring protection and accessibility.",
+      'The Water Service Cabinet – 2" Dia is suitable for larger water service connections requiring higher flow capacity. The cabinet provides sufficient internal space for larger service pipes while ensuring protection and accessibility.',
     features: [
       "Suitable for larger diameter service pipes",
       "Strong and durable construction",
@@ -58,8 +58,8 @@ const services = [
   },
   {
     title: " Multi Water Meter Cabinet – 2 Nos",
-    type: "Dual Water Meter Cabinet",
-    image: "/Multi water Meter cabinet 3 Nos.png",
+    type: "Multi Water Meter Cabinet 2 Nos copy.png",
+    image: "/Multi Water Meter Cabinet 2 Nos copy 2.png",
     description:
       "The Water Meter Cabinet – 2 Nos is designed to accommodate two water meters in one enclosure. It ensures organized meter placement, safe operation, and easy access for utility management.",
     features: [
