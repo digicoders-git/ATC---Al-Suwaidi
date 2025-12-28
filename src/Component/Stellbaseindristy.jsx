@@ -5,7 +5,7 @@ const industries = [
   {
     title: "🏭 Manufacturing Industry",
     desc: "We support manufacturing facilities with custom steel fabrication and engineered components that improve production efficiency and structural reliability. From machinery frames to industrial supports, our solutions are designed to withstand continuous operations and heavy-duty use.",
-    image: "/ManufacturingIndustry.png",
+    image: "/Manufacturing industry.png",
     features: [
       "Structural frames for machinery & equipment",
       "Custom steel components and assemblies",
@@ -16,7 +16,7 @@ const industries = [
   {
     title: "🚗 Automobile Industry",
     desc: "Our steel fabrication services assist the automobile sector with accurate, high-strength components used in vehicle manufacturing, body building, and mechanical applications. We deliver fabrication that meets performance, safety, and durability requirements.",
-    image: "/Automobile Industry.png",
+    image: "/automobile industry copy.png",
     features: [
       "Fabrication for vehicle bodies and frames",
       "Structural components for automotive systems",
@@ -27,7 +27,7 @@ const industries = [
   {
     title: "🏗️ Construction Industry",
     desc: "We provide the construction industry with robust structural steel fabrication for commercial, industrial, and infrastructure developments. Our steel components are engineered for strength, stability, and long-term performance on-site.",
-    image: "/Construction Industry copy.png",
+    image: "/construction industry (2) copy.png",
     features: [
       "Structural steel for buildings and sheds",
       "Platforms, supports, and load-bearing elements",
@@ -39,7 +39,7 @@ const industries = [
 
 function Stellbaseindristy() {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-slate-50 via-white to-slate-100 font-inter" >
+    <section className="relative py-28 bg-gradient-to-b from-slate-50 via-white to-slate-100 font-inter">
       {/* Soft Premium Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_60%)]" />
 
@@ -98,15 +98,15 @@ function Stellbaseindristy() {
               transition-all duration-500"
             >
               {/* Image */}
-              <div className="relative h-60 overflow-hidden">
+              <div className="relative h-60 overflow-hidden rounded-full mx-auto mt-6 w-60">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover 
                   transition-transform duration-700 
-                  group-hover:scale-110"
+                  group-hover:scale-125 rounded-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent rounded-full" />
               </div>
 
               {/* Content */}
@@ -158,9 +158,7 @@ function Stellbaseindristy() {
                 text-[13px] tracking-wide 
                 opacity-0 group-hover:opacity-100 
                 transition-all duration-500"
-                >
-  
-                </div>
+                ></div>
               </div>
 
               {/* Premium Hover Outline */}

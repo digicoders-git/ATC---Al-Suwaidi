@@ -414,55 +414,81 @@ export default function CabinetsManufacturingPage() {
         </section>
 
         {/* Contact Info */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Phone className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Manufacturing Enquiry
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  +974 44601087
-                </div>
-              </div>
-            </div>
-          </div>
+  <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Mail className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Email
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  info@alsuwaiditechnical.com
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Manufacturing Enquiry */}
+  <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+    <div className="flex items-center gap-4">
+      <div className="w-9 h-9 rounded-md bg-orange-100 flex items-center justify-center">
+        <Phone className="text-orange-600" size={16} />
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-gray-900">
+          Manufacturing Enquiry
+        </h4>
+        <p className="text-xs text-gray-600 mt-1">
+          +974 4460 1087
+        </p>
+      </div>
+    </div>
+  </div>
 
-          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-2 sm:p-3 rounded-lg bg-orange-100 flex-shrink-0">
-                <Clock className="text-orange-600" size={20} />
-              </div>
-              <div>
-                <div className="font-semibold text-gray-900 text-sm sm:text-base">
-                  Working Hours
-                </div>
-                <div className="text-gray-600 text-sm sm:text-base">
-                  7:00 AM - 10:00 PM
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  {/* Email */}
+  <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+    <div className="flex items-center gap-4">
+      <div className="w-9 h-9 rounded-md bg-orange-100 flex items-center justify-center">
+        <Mail className="text-orange-600" size={16} />
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-gray-900">
+          Email
+        </h4>
+        <p className="text-xs text-gray-600 mt-1 break-all">
+          info@alsuwaiditechnical.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Working Hours */}
+  <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+    <div className="flex items-start gap-4">
+      <div className="w-9 h-9 rounded-md bg-orange-100 flex items-center justify-center mt-0.5">
+        <Clock className="text-orange-600" size={16} />
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-gray-900">
+          Working Hours
+        </h4>
+        <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+          Sun – Thu<br />
+          7:00 am – 12:00 pm<br />
+          2:30 pm – 6:00 pm
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Ramadan Timing */}
+  <div className="bg-white p-5 rounded-xl border border-orange-200 shadow-sm hover:shadow-md transition">
+    <div className="flex items-start gap-4">
+      <div className="w-9 h-9 rounded-md bg-orange-100 flex items-center justify-center mt-0.5">
+        <Clock className="text-orange-600" size={16} />
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-orange-600">
+          Ramadan Timing
+        </h4>
+        <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+          7:00 am – 12:00 pm<br />
+          8:00 pm – 10:00 pm
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
       </div>
     </div>
   );

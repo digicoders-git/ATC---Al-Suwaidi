@@ -26,52 +26,50 @@ import StoryComponent from "../Component/StoryComponent";
 import TeamChart from "../Component/TeamChart";
 
 export default function OurStoryPage() {
-const milestones = [
-  {
-    year: "1991",
-    subtitle: "Foundation",
-    title: "Established in Industrial Area, Doha, Qatar",
-    desc: "Al Suwaidi Technical Center was established in 1991 as a technical engineering workshop focused on fabrication, repair works, and practical engineering solutions for industrial needs.",
-    icon: Calendar,
-  },
-  {
-    year: "2000",
-    subtitle: "Expansion",
-    title: "Growth into Steel Fabrication & Industrial Works",
-    desc: "Expanded operations to include structural steel fabrication, industrial engineering works, and vehicle-related services supporting growing infrastructure and construction projects.",
-    icon: Factory,
-  },
-  {
-    year: "2010",
-    subtitle: "Growth Phase",
-    title: "Major Industrial & Construction Projects",
-    desc: "Achieved significant growth by supporting large-scale industrial, construction, logistics, and fleet operations, strengthening technical capacity and workforce.",
-    icon: TrendingUp,
-  },
-  {
-    year: "2015",
-    subtitle: "System Implementation",
-    title: "Quality & Safety Systems Introduced",
-    desc: "Implemented structured quality management procedures, safety protocols, and standardized operational processes to improve consistency, reliability, and compliance.",
-    icon: Shield,
-  },
-  {
-    year: "2022",
-    subtitle: "ISO Certification",
-    title: "Quality Management Excellence",
-    desc: "Achieved ISO 9001:2015 certification, reinforcing commitment to quality control, process improvement, and customer satisfaction.",
-    icon: Star,
-  },
-  {
-    year: "2024",
-    subtitle: "Present Day",
-    title: "Established Industry Leader",
-    desc: "Operating as a comprehensive industrial engineering and technical services provider, supported by an experienced leadership team, skilled professionals, and a well-equipped facility serving multiple industries.",
-    icon: Award,
-  },
-];
-
-
+  const milestones = [
+    {
+      year: "1991",
+      subtitle: "Foundation",
+      title: "Established in Industrial Area, Doha, Qatar",
+      desc: "Al Suwaidi Technical Center was established in 1991 as a technical engineering workshop focused on fabrication, repair works, and practical engineering solutions for industrial needs.",
+      icon: Calendar,
+    },
+    {
+      year: "2000",
+      subtitle: "Expansion",
+      title: "Growth into Steel Fabrication & Industrial Works",
+      desc: "Expanded operations to include structural steel fabrication, industrial engineering works, and vehicle-related services supporting growing infrastructure and construction projects.",
+      icon: Factory,
+    },
+    {
+      year: "2010",
+      subtitle: "Growth Phase",
+      title: "Major Industrial & Construction Projects",
+      desc: "Achieved significant growth by supporting large-scale industrial, construction, logistics, and fleet operations, strengthening technical capacity and workforce.",
+      icon: TrendingUp,
+    },
+    {
+      year: "2015",
+      subtitle: "System Implementation",
+      title: "Quality & Safety Systems Introduced",
+      desc: "Implemented structured quality management procedures, safety protocols, and standardized operational processes to improve consistency, reliability, and compliance.",
+      icon: Shield,
+    },
+    {
+      year: "2022",
+      subtitle: "ISO Certification",
+      title: "Quality Management Excellence",
+      desc: "Achieved ISO 9001:2015 certification, reinforcing commitment to quality control, process improvement, and customer satisfaction.",
+      icon: Star,
+    },
+    {
+      year: "2024",
+      subtitle: "Present Day",
+      title: "Established Industry Leader",
+      desc: "Operating as a comprehensive industrial engineering and technical services provider, supported by an experienced leadership team, skilled professionals, and a well-equipped facility serving multiple industries.",
+      icon: Award,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">

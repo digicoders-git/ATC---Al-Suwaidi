@@ -7,7 +7,7 @@ const Industry = [
     title: "🚚 Logistics Industry",
     desc: "We support logistics companies with robust vehicle bodies designed for continuous operation, heavy loads, and long-distance transportation. Our fabrication process combines engineering design, structural fabrication, secure chassis mounting, and quality finishing.",
     icon: Truck,
-    image: "/Cormercila/Logistics Industry.png",
+    image: "/logistic industry.png",
     features: [
       "Flatbed and trailer bodies for goods transport",
       "Load-optimized vehicle body structures",
@@ -19,7 +19,7 @@ const Industry = [
     title: "🏗️ Construction Industry",
     desc: "Our vehicle bodies are designed to handle tough construction environments, heavy materials, and repetitive loading operations. From design to delivery, every vehicle body is fabricated to ensure performance, stability, and operational efficiency.",
     icon: HardHat,
-    image: "/Cormercila/Construction Industry.png",
+    image: "/construction industry (2) copy 2.png",
     features: [
       "Dump and tipper truck bodies",
       "Reinforced structures for heavy materials",
@@ -31,7 +31,7 @@ const Industry = [
     title: "🏛️ Municipal Services",
     desc: "We fabricate vehicle bodies that support essential municipal operations, ensuring reliability and compliance with operational requirements. Purpose-built solutions for public utilities and services.",
     icon: Factory,
-    image: "/Cormercila/Municipal Services.png",
+    image: "/municipal industry.png",
     features: [
       "Sewage tanker bodies",
       "Tow truck bodies",
@@ -56,15 +56,19 @@ function Comercialindristy() {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <span className="inline-block mb-5 px-7 py-2 rounded-full 
+          <span
+            className="inline-block mb-5 px-7 py-2 rounded-full 
           bg-orange-100 text-orange-700 
-          text-[13px] font-semibold tracking-[0.12em] shadow-sm">
+          text-[13px] font-semibold tracking-[0.12em] shadow-sm"
+          >
             INDUSTRIES WE SERVE
           </span>
 
-          <h2 className="text-4xl md:text-5xl 
+          <h2
+            className="text-4xl md:text-5xl 
           font-extrabold text-gray-900 
-          leading-[1.15] tracking-tight mb-6">
+          leading-[1.15] tracking-tight mb-6"
+          >
             Commercial Vehicle{" "}
             <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent font-black">
               Body Solutions
@@ -95,22 +99,24 @@ function Comercialindristy() {
               transition-all duration-500"
             >
               {/* Image */}
-              <div className="relative h-60 overflow-hidden">
+              <div className="relative h-60 overflow-hidden rounded-full mx-auto mt-6 w-60">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover 
                   transition-transform duration-700 
-                  group-hover:scale-110"
+                  group-hover:scale-125 rounded-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent rounded-full" />
               </div>
 
               {/* Content */}
               <div className="relative p-8">
-                <h3 className="text-[20px] font-bold 
+                <h3
+                  className="text-[20px] font-bold 
                 text-gray-900 mb-4 tracking-tight 
-                group-hover:text-orange-600 transition-colors">
+                group-hover:text-orange-600 transition-colors"
+                >
                   {item.title}
                 </h3>
 
@@ -136,10 +142,12 @@ function Comercialindristy() {
               </div>
 
               {/* Premium Hover Outline */}
-              <div className="absolute inset-0 rounded-3xl 
+              <div
+                className="absolute inset-0 rounded-3xl 
               ring-1 ring-transparent 
               group-hover:ring-orange-500/30 
-              transition-all duration-500" />
+              transition-all duration-500"
+              />
             </motion.div>
           ))}
         </div>

@@ -64,7 +64,7 @@ function Slider() {
   return (
     <>
       {/* ================= HERO SLIDER ================= */}
-      <section className="relative h-[86vh] mt-20 lg:mt-0 min-h-[600px] overflow-hidden">
+      <section className="relative h-[78vh] mt-20 lg:mt-20 min-h-[600px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}

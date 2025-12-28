@@ -49,7 +49,7 @@ const servicesList = [
     title: "🔄 Pipe Cutting, Bending & Rolling",
     desc: "We perform pipe cutting, bending, and rolling to achieve required shapes and angles for structural and industrial applications.",
     icon: Cog,
-    image: "/Pipe Cutting, Bending & Rolling.png",
+    image: "/pipe cutting copy.png",
     features: [
       "Uniform pipe shaping",
       "Strong, precise bends & rolls",
@@ -119,7 +119,7 @@ const projects = [
     subtitle: "Heavy-duty industrial structures",
     description:
       "Heavy-duty steel frames and industrial structures engineered to handle high loads, ideal for factories, warehouses, and large-scale industrial facilities.",
-    image: "/StellFebictaion/Industrial steel frames and structures.png",
+    image: "/image copy.png",
     category: "Industrial Steel",
   },
   {
@@ -131,7 +131,6 @@ const projects = [
     category: "Structural Steel",
   },
 ];
-
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },

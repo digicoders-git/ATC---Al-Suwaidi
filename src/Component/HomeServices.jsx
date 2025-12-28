@@ -88,7 +88,7 @@ const Services = () => {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mt-3 max-w-3xl mx-auto">
-            Comprehensive industrial engineering solutions since 1992 —
+            Comprehensive industrial engineering solutions since 1991 —
             precision fabrication, quality assurance and on-time delivery.
           </p>
         </div>

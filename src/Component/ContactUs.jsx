@@ -337,10 +337,22 @@ const ContactUs = () => {
                     Working Hours
                   </h3>
                   <p className="text-slate-600 text-center text-sm">
-                    Sunday – Thursday
+                    Sunday - Thursday
                   </p>
-                  <p className="text-orange-600 text-center text-sm font-semibold">
-                    7:00 AM – 10:00 PM
+                  <p className="text-slate-600 text-center text-sm">
+                    7 am to 12:00 pm
+                  </p>
+                  <p className="text-slate-600 text-center text-sm">
+                    2:30pm to 6:00pm
+                  </p>
+                  <p className="text-orange-600 text-center text-sm font-semibold mt-2">
+                    Ramadan timing
+                  </p>
+                  <p className="text-slate-600 text-center text-sm">
+                    7:00 am to 12:00 pm
+                  </p>
+                  <p className="text-slate-600 text-center text-sm">
+                    8:00 pm to 10:00 pm
                   </p>
                 </div>
             </motion.div>

@@ -4,7 +4,7 @@ export default function Testimonials() {
   const reviews = [
     {
       name: "DEBAJ",
-      company: "New Industrial Area — Doha, Qatar",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-debaj.jpg",
       comment:
@@ -20,7 +20,7 @@ export default function Testimonials() {
     },
     {
       name: "Eversendai",
-      company: "New Industrial Area — Doha, Qatar",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-eversendai.jpg",
       comment:
@@ -36,7 +36,7 @@ export default function Testimonials() {
     },
     {
       name: "Sino Hydro",
-      company: "Ras Al Laffan / Ras Al Khafji region",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-sinohydro.jpg",
       comment:
@@ -44,7 +44,7 @@ export default function Testimonials() {
     },
     {
       name: "Qalex",
-      company: "Industrial Area — Doha, Qatar",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-qalex.jpg",
       comment:
@@ -52,7 +52,7 @@ export default function Testimonials() {
     },
     {
       name: "Wood Group",
-      company: "New Industrial Area — Doha, Qatar",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-woodgroup.jpg",
       comment:
@@ -60,18 +60,18 @@ export default function Testimonials() {
     },
     {
       name: "Keppel Seghers",
-      company: "North Doha, Qatar",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-keppel.jpg",
       comment:
         "Worked on projects demanding strict safety and quality adherence; services used included welding, sandblasting & painting. ",
     },
-         { name: "vivek ",
-      company: "New Industrial Area — Doha, Qatar",
+         { name: "AUTO XPERT",
+      company: "Doha, Qatar",
       rating: 5,
       img: "/client-eversendai.jpg",
       comment:
-        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients. ",
+        "Engaged on industrial fabrication projects — the brochure highlights heavy fabrication and structural works performed for similar clients",
     },
     
   ];
