@@ -14,7 +14,7 @@ export default function LeadershipMessages() {
     },
     {
       name: "K. C. Prashannah", 
-      title: "Sales Representative",
+      title: "Admin / Sales Representative",
       icon: FaUser,
       message: "Client relationships are built on trust, communication, and consistent delivery. My focus is on understanding client needs clearly and ensuring that our solutions align with their operational goals. We aim to create long-term partnerships by being responsive, transparent, and dependable at every stage of engagement.",
       color: "from-green-500 to-emerald-500",
