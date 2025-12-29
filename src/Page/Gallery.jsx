@@ -184,7 +184,7 @@ const galleryImages = [
   },
   {
     id: 23,
-    src: "/VicalEnging/Piston Ring Fitting.png",
+    src: "/Piston Ring Fitting.png",
     title: "Piston Ring Fitting",
     category: "Engine Repair",
     description: "Piston ring fitting and replacement services",

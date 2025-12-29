@@ -60,7 +60,7 @@ const commercialProducts = [
     subtitle: "Secure bulk material transport",
     description:
       "High side trailer engineered for safe and efficient bulk load transportation with enhanced side protection.",
-    image: "/High Side Trailer.png",
+    image: "/CommercialImage/High Side Trailer.png",
   },
 ];
 
@@ -337,50 +337,49 @@ export default function CommercialVehicleBodiesPage() {
               </div>
             </motion.div>
           ))}
-          
         </div>
 
- <div className=" max-w-7xl  flex mx-auto">
+        <div className=" max-w-7xl  flex mx-auto">
           <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {commercialProducts.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-white rounded-[28px] overflow-hidden
+            {commercialProducts.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="bg-white rounded-[28px] overflow-hidden
                          shadow-[0_20px_60px_rgba(0,0,0,0.12)]
                          hover:shadow-[0_35px_80px_rgba(0,0,0,0.18)]
                          transition-all duration-500"
-            >
-              {/* Image */}
-              <div className="h-56 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              >
+                {/* Image */}
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-              {/* Content */}
-              <div className="p-7 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {item.title}
-                </h3>
+                {/* Content */}
+                <div className="p-7 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
 
-                <p className="text-sm font-semibold text-gray-600 mb-3">
-                  {item.subtitle}
-                </p>
+                  <p className="text-sm font-semibold text-gray-600 mb-3">
+                    {item.subtitle}
+                  </p>
 
-                <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
-                  {item.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
- </div>
       </section>
 
       <GetDemoSection />
