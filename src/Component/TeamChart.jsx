@@ -1,6 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUser, FaUsers, FaCrown, FaBriefcase, FaCalculator, FaCogs, FaHardHat } from "react-icons/fa";
+import {
+  FaUser,
+  FaUsers,
+  FaCrown,
+  FaBriefcase,
+  FaCalculator,
+  FaCogs,
+  FaHardHat,
+} from "react-icons/fa";
 
 export default function TeamChart() {
   const leadership = [
@@ -9,22 +17,22 @@ export default function TeamChart() {
       title: "Managing Director",
       icon: FaCrown,
       color: "from-orange-500 to-red-500",
-      level: 1
+      level: 1,
     },
     {
       name: "K.P. Karthik",
-      title: "Manager", 
+      title: "Manager",
       icon: FaBriefcase,
       color: "from-orange-500 to-red-500",
-      level: 2
+      level: 2,
     },
     {
       name: "K.C. Prashannah",
       title: "Admin / Sales Representative",
       icon: FaUser,
-      color: "from-orange-500 to-red-500", 
-      level: 3
-    }
+      color: "from-orange-500 to-red-500",
+      level: 3,
+    },
   ];
 
   const departments = [
@@ -35,34 +43,30 @@ export default function TeamChart() {
       bgColor: "from-blue-50 to-cyan-50",
       members: [
         "Shanker Kasinadhan",
-        "Ahmad Elhaj", 
+        "Ahmad Elhaj",
         "Nanikaji Kshetri",
-        "Cherry D"
-      ]
+        "Cherry D",
+      ],
     },
     {
       title: "Engineers",
       icon: FaCogs,
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-50 to-emerald-50",
-      members: [
-        "S. Dharmalingam",
-        "M. Anbazhagan",
-        "N. Deva Srinivasan"
-      ]
+      members: ["S. Dharmalingam", "M. Anbazhagan", "N. Deva Srinivasan"],
     },
     {
       title: "Foremen",
       icon: FaHardHat,
-      color: "from-purple-500 to-pink-500", 
+      color: "from-purple-500 to-pink-500",
       bgColor: "from-purple-50 to-pink-50",
       members: [
         "M. Yousuf",
         "Manu Mehu",
         "K. Balasupprmaniyan",
-        "M. Siva Kumar"
-      ]
-    }
+        "M. Siva Kumar",
+      ],
+    },
   ];
 
   return (
@@ -89,16 +93,17 @@ export default function TeamChart() {
             <FaUsers className="text-orange-600" />
             <span className="text-orange-800 font-semibold">Our Team</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gray-900">Meet Our</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
               Leadership Team
             </span>
           </h2>
-          
+
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Experienced professionals leading our organization with expertise and dedication
+            Experienced professionals leading our organization with expertise
+            and dedication
           </p>
         </motion.div>
 
@@ -111,25 +116,35 @@ export default function TeamChart() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.2, type: "spring", stiffness: 100 }}
+                  transition={{
+                    delay: index * 0.2,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
                   whileHover={{ y: -5, scale: 1.05 }}
                   className="group relative"
                 >
                   {/* Glow Effect */}
-                  <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${leader.color} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500`} />
-                  
-                  <div className={`relative bg-gradient-to-br ${leader.color} text-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 min-w-[320px] text-center`}>
+                  <div
+                    className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${leader.color} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500`}
+                  />
+
+                  <div
+                    className={`relative bg-gradient-to-br ${leader.color} text-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 min-w-[320px] text-center`}
+                  >
                     <div className="flex items-center justify-center mb-4">
                       <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
                         <leader.icon className="text-2xl text-white" />
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold mb-2">{leader.name}</h3>
-                    <p className="text-orange-100 font-semibold">{leader.title}</p>
+                    <p className="text-orange-100 font-semibold">
+                      {leader.title}
+                    </p>
                   </div>
                 </motion.div>
-                
+
                 {/* Connector Line */}
                 {index < leadership.length - 1 && (
                   <motion.div
@@ -154,7 +169,10 @@ export default function TeamChart() {
             className="text-center mb-12"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">Departments</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                Departments
+              </span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Specialized teams working together to deliver excellence
@@ -173,19 +191,27 @@ export default function TeamChart() {
                 className="group relative"
               >
                 {/* Background Glow */}
-                <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${dept.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${dept.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+
                 <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full">
                   {/* Department Header */}
                   <div className="text-center mb-8">
-                    <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${dept.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${dept.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <dept.icon className="text-white text-2xl" />
                     </div>
-                    
-                    <h4 className="text-2xl font-bold text-gray-900 mb-2">{dept.title}</h4>
-                    <div className={`h-1 w-16 mx-auto bg-gradient-to-r ${dept.color} rounded-full`} />
+
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                      {dept.title}
+                    </h4>
+                    <div
+                      className={`h-1 w-16 mx-auto bg-gradient-to-r ${dept.color} rounded-full`}
+                    />
                   </div>
-                  
+
                   {/* Team Members */}
                   <div className="space-y-3">
                     {dept.members.map((member, memberIndex) => (
@@ -194,11 +220,13 @@ export default function TeamChart() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: (index * 0.2) + (memberIndex * 0.1) }}
+                        transition={{ delay: index * 0.2 + memberIndex * 0.1 }}
                         className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors duration-200 group-hover:bg-white"
                       >
                         <div className="flex items-center gap-3">
-                          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${dept.color} flex items-center justify-center flex-shrink-0`}>
+                          <div
+                            className={`w-10 h-10 rounded-xl bg-gradient-to-br ${dept.color} flex items-center justify-center flex-shrink-0`}
+                          >
                             <FaUser className="text-white text-sm" />
                           </div>
                           <p className="text-gray-800 font-medium">{member}</p>
@@ -213,7 +241,6 @@ export default function TeamChart() {
         </div>
 
         {/* Team Stats */}
-
       </div>
     </section>
   );
