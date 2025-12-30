@@ -1,8 +1,52 @@
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function GetDemoSection() {
   const [open, setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/demo/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success('Demo request submitted successfully! We will contact you soon.');
+        setFormData({ name: "", email: "", mobile: "", message: "" });
+        setOpen(false);
+      } else {
+        toast.error('Failed to submit demo request. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting demo request:', error);
+      toast.error('Error submitting request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Disable body scroll when modal open
   useEffect(() => {
@@ -68,15 +112,15 @@ export default function GetDemoSection() {
 
               <form
                 className="space-y-5"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setOpen(false);
-                }}
+                onSubmit={handleSubmit}
               >
                 <div>
                   <label className="label">Full Name</label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
                     className="input"
                     placeholder="Enter your name"
@@ -87,6 +131,9 @@ export default function GetDemoSection() {
                   <label className="label">Email Address</label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                     className="input"
                     placeholder="Enter your email"
@@ -97,6 +144,9 @@ export default function GetDemoSection() {
                   <label className="label">Mobile Number</label>
                   <input
                     type="tel"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
                     required
                     className="input"
                     placeholder="Enter your phone number"
@@ -106,6 +156,9 @@ export default function GetDemoSection() {
                 <div>
                   <label className="label">Message</label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     rows="4"
                     className="input"
                     placeholder="Write your message..."
@@ -114,15 +167,33 @@ export default function GetDemoSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-orange-600 to-red-500 text-white font-extrabold rounded-xl shadow-lg"
+                  disabled={isSubmitting}
+                  className={`w-full py-3 font-extrabold rounded-xl shadow-lg transition-all ${
+                    isSubmitting 
+                      ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-orange-600 to-red-500 text-white hover:from-orange-700 hover:to-red-600'
+                  }`}
                 >
-                  Submit Request
+                  {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
               </form>
             </div>
           </div>
         </div>
       )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       {/* ---- STYLES ---- */}
       <style>{`

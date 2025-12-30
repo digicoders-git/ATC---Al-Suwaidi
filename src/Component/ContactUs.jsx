@@ -21,12 +21,14 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    mobile: "",
     message: "",
   });
 
@@ -39,12 +41,31 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    
+    try {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/contact/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        // console.log("Form submitted successfully:", formData);
+        toast.success('Message sent successfully! We will get back to you soon.');
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", mobile: "", message: "" });
+        setTimeout(() => setIsSubmitted(false), 6000);
+      } else {
+        // console.error('Failed to submit form');
+        toast.error('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      // console.error('Error submitting form:', error);
+      toast.error('Error sending message. Please try again.');
+    }
   };
 
   const whyChooseUs = [
@@ -595,8 +616,8 @@ const ContactUs = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
-                    value={formData.phone}
+                    name="mobile"
+                    value={formData.mobile}
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-4 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-gray-900"
@@ -660,6 +681,19 @@ const ContactUs = () => {
       {/* Location Map Section */}
 
       {/* loction map end  */}
+      
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
