@@ -129,8 +129,6 @@ export default function CareersPage() {
     fullName: "",
     email: "",
     phoneNumber: "",
-    position: "",
-    experience: "",
     coverLetter: "",
     resume: null
   });
@@ -157,7 +155,7 @@ export default function CareersPage() {
       formDataToSend.append('fullName', formData.fullName);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('phoneNumber', formData.phoneNumber);
-      formDataToSend.append('coverLetter', `Position: ${formData.position}\nExperience: ${formData.experience}\n\n${formData.coverLetter}`);
+      formDataToSend.append('coverLetter', formData.coverLetter);
       
       if (formData.resume) {
         formDataToSend.append('resume', formData.resume);
@@ -179,8 +177,6 @@ export default function CareersPage() {
           fullName: "",
           email: "",
           phoneNumber: "",
-          position: "",
-          experience: "",
           coverLetter: "",
           resume: null
         });
@@ -423,7 +419,10 @@ export default function CareersPage() {
                 </div>
 
                 <button
-                  onClick={() => setSelectedJob(job)}
+                  onClick={() => {
+                    setSelectedJob(job);
+                    document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
                   Apply for this Position
@@ -455,12 +454,12 @@ export default function CareersPage() {
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto   lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative bg-gradient-to-br from-white via-orange-50/30 to-red-50/30 rounded-3xl p-10 shadow-2xl border border-orange-200/50 backdrop-blur-sm"
+              className="relative bg-gradient-to-br from-white via-orange-50/30 to-red-50/30 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl border border-orange-200/50 backdrop-blur-sm"
             >
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-200/20 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
@@ -535,75 +534,26 @@ export default function CareersPage() {
 
                     <div className="space-y-2">
                       <label className="block text-gray-800 font-bold text-lg mb-3">
-                        Position Applied For *
+                        Upload CV/Resume *
                       </label>
                       <div className="relative group">
-                        <Briefcase className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
-                        <select
-                          name="position"
-                          value={formData.position}
+                        <Upload className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                        <input
+                          type="file"
+                          name="resume"
                           onChange={handleInputChange}
                           required
-                          className="w-full pl-12 pr-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-lg bg-white/80 backdrop-blur-sm appearance-none cursor-pointer"
-                        >
-                          <option value="">Select a position</option>
-                          {jobOpenings.map((job) => (
-                            <option key={job.id} value={job.title}>
-                              {job.title}
-                            </option>
-                          ))}
-                          <option value="other">Other Position</option>
-                        </select>
-                        <ArrowRight className="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 text-gray-400" size={16} />
+                          accept=".pdf,.doc,.docx"
+                          className="w-full pl-12 pr-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-lg bg-white/80 backdrop-blur-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
+                        />
+                        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
+                          PDF, DOC, DOCX
+                        </div>
                       </div>
+                      <p className="text-sm text-gray-500 mt-2">
+                        Please upload your CV in PDF, DOC, or DOCX format (Max 5MB)
+                      </p>
                     </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="block text-gray-800 font-bold text-lg mb-3">
-                      Years of Experience *
-                    </label>
-                    <div className="relative group">
-                      <GraduationCap className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
-                      <select
-                        name="experience"
-                        value={formData.experience}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full pl-12 pr-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-lg bg-white/80 backdrop-blur-sm appearance-none cursor-pointer"
-                      >
-                        <option value="">Select experience level</option>
-                        <option value="0-1">0-1 years (Entry Level)</option>
-                        <option value="2-3">2-3 years (Junior Level)</option>
-                        <option value="4-5">4-5 years (Mid Level)</option>
-                        <option value="6-10">6-10 years (Senior Level)</option>
-                        <option value="10+">10+ years (Expert Level)</option>
-                      </select>
-                      <ArrowRight className="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 text-gray-400" size={16} />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="block text-gray-800 font-bold text-lg mb-3">
-                      Upload CV/Resume *
-                    </label>
-                    <div className="relative group">
-                      <Upload className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
-                      <input
-                        type="file"
-                        name="resume"
-                        onChange={handleInputChange}
-                        required
-                        accept=".pdf,.doc,.docx"
-                        className="w-full pl-12 pr-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all text-lg bg-white/80 backdrop-blur-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
-                      />
-                      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
-                        PDF, DOC, DOCX
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Please upload your CV in PDF, DOC, or DOCX format (Max 5MB)
-                    </p>
                   </div>
 
                   <div className="space-y-2">
@@ -626,12 +576,14 @@ export default function CareersPage() {
                   <div className="text-center pt-6">
                     <button
                       type="submit"
-                      className="group inline-flex items-center gap-4 px-12 py-5 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 text-white font-bold text-xl rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+                      className="group inline-flex items-center gap-2 sm:gap-4 px-6 sm:px-12 py-3 sm:py-5 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 text-white font-bold text-lg sm:text-xl rounded-xl sm:rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Send size={24} className="group-hover:animate-bounce relative z-10" />
+                      <Send size={20} className="sm:hidden group-hover:animate-bounce relative z-10" />
+                      <Send size={24} className="hidden sm:block group-hover:animate-bounce relative z-10" />
                       <span className="relative z-10">Submit Application</span>
-                      <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform relative z-10" />
+                      <ArrowRight size={20} className="sm:hidden group-hover:translate-x-1 transition-transform relative z-10" />
+                      <ArrowRight size={24} className="hidden sm:block group-hover:translate-x-1 transition-transform relative z-10" />
                     </button>
                     <p className="text-gray-500 mt-4 text-sm">
                       By submitting this form, you agree to our privacy policy and terms of service.

@@ -340,7 +340,7 @@ export default function ModernNavbar() {
 
                       <div
                         className={`overflow-hidden transition-all duration-300 ${
-                          servicesOpen ? "max-h-[500px] mb-4" : "max-h-0"
+                          servicesOpen ? "max-h-[800px] mb-4" : "max-h-0"
                         }`}
                       >
                         <div className="pl-4 space-y-2">
@@ -348,14 +348,27 @@ export default function ModernNavbar() {
                             <button
                               key={service.to}
                               onClick={() => handleServiceClick(service.to)}
-                              className="w-full text-left flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-orange-50 transition-all duration-300 text-base font-bold"
+                              className="w-full text-left flex items-start gap-3 py-3 px-4 rounded-lg hover:bg-orange-50 transition-all duration-300 text-sm font-medium"
                             >
-                              <span className="text-xl">{service.icon}</span>
-                              <span className="text-gray-700">
+                              <span className="text-lg mt-0.5 flex-shrink-0">{service.icon}</span>
+                              <span className="text-gray-700 leading-tight">
                                 {service.label}
                               </span>
                             </button>
                           ))}
+                          <div className="mt-4 pt-3 border-t border-gray-200">
+                            <Link
+                              to="/services"
+                              onClick={() => {
+                                setServicesOpen(false);
+                                setMobileOpen(false);
+                              }}
+                              className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                            >
+                              View All Services
+                              <ArrowRight size={16} />
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </>
@@ -375,6 +388,18 @@ export default function ModernNavbar() {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Get Quote Button */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <Link
+                to="/get-quote"
+                onClick={() => setMobileOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Get Quote
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </aside>
