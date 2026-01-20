@@ -132,7 +132,7 @@ export default function Introduction() {
 
                   {/* Download Company Profile */}
                   <a
-                    href="/company-profile.pdf"
+                    href="/ATC_Profile.pdf"
                     download
                     className="inline-flex items-center gap-2 border-2 border-white/80 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300"
                   >

@@ -53,7 +53,6 @@ export default function GetDemoSection() {
     }
   };
 
-  // Disable body scroll when modal open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -61,7 +60,6 @@ export default function GetDemoSection() {
     };
   }, [open]);
 
-  // Close on ESC
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") setOpen(false);
@@ -72,7 +70,6 @@ export default function GetDemoSection() {
 
   return (
     <>
-      {/* ---- GET DEMO SECTION ---- */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-500 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
@@ -92,7 +89,6 @@ export default function GetDemoSection() {
         </div>
       </section>
 
-      {/* ---- MODAL ---- */}
       {open && (
         <div
           className="modal-wrapper fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
@@ -100,7 +96,6 @@ export default function GetDemoSection() {
         >
           <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
             <div className="modal-box bg-white relative">
-              {/* Close */}
               <button
                 onClick={() => setOpen(false)}
                 className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 z-10"
@@ -184,89 +179,17 @@ export default function GetDemoSection() {
         </div>
       )}
 
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ToastContainer position="top-right" autoClose={5000} theme="light" />
 
-      {/* ---- STYLES ---- */}
       <style>{`
         .modal-wrapper {
           display: flex;
           align-items: center;
           justify-content: center;
           padding-top: 8%;
-          padding-100px
         }
-
-        .modal-inner {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-        }
-
-        .modal-box {
-          width: 100%;
-          max-width: 480px;
-          padding: 20px;
-          border-radius: 16px;
-          animation: fadeIn 0.25s ease;
-        }
-
-        .label {
-          display: block;
-          margin-bottom: 6px;
-          font-size: 0.9rem;
-          font-weight: 700; /* BOLD LABEL */
-          color: #374151;
-        }
-
-        .input {
-          width: 100%;
-          padding: 14px 16px;
-          border-radius: 12px;
-          border: 2px solid #d1d5db; /* BOLD BORDER */
-          font-weight: 600; /* BOLD TEXT */
-          font-size: 0.95rem;
-          outline: none;
-        }
-
-        .input::placeholder {
-          font-weight: 500;
-          color: #9ca3af;
-        }
-
-        .input:focus {
-          border-color: #f97316;
-          box-shadow: 0 0 0 2px rgba(249,115,22,.25);
-        }
-
-        @keyframes fadeIn {
-          from { opacity: 0; transform: scale(.97); }
-          to { opacity: 1; transform: scale(1); }
-        }
-
-        /* ===== MOBILE SAFE ===== */
-        @media (max-width: 640px) {
-          .modal-wrapper {
-            align-items: flex-start;
-            padding-top: 96px;
-          }
-
-          .modal-box {
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
-            border-radius: 14px;
-          }
-        }
+        .modal-inner { width: 100%; display: flex; justify-content: center; }
+        .modal-box { width: 100%; max-width: 480px; padding: 20px; border-radius: 16px; }
       `}</style>
     </>
   );
