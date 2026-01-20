@@ -70,7 +70,7 @@ export default function GetDemoSection() {
 
   return (
     <>
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-500 text-white text-center">
+      <section className="py-20  bg-gradient-to-r from-orange-600 to-red-500 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             Experience Our Solution Live
@@ -91,73 +91,85 @@ export default function GetDemoSection() {
 
       {open && (
         <div
-          className="modal-wrapper fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 min-h-screen"
           onClick={() => setOpen(false)}
         >
-          <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-box bg-white relative">
+          <div
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-lg transform transition-all duration-300 scale-100 animate-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="relative bg-gradient-to-r from-orange-600 to-red-500 text-white p-6 rounded-t-2xl">
               <button
                 onClick={() => setOpen(false)}
-                className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 z-10"
+                className="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
               >
-                <X size={24} />
+                <X size={18} />
               </button>
-
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">
-                Request a Demo
-              </h3>
-              <p className="text-gray-600 mb-4 font-medium">
+              <h3 className="text-2xl font-bold mb-2">Request a Demo</h3>
+              <p className="text-orange-100 text-sm">
                 Fill the details below and our team will contact you shortly.
               </p>
+            </div>
 
-              <form className="space-y-5" onSubmit={handleSubmit}>
+            {/* Form */}
+            <div className="p-6">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="label">Full Name</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Full Name *
+                  </label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="input"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none"
                     placeholder="Enter your name"
                   />
                 </div>
 
                 <div>
-                  <label className="label">Email Address</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address *
+                  </label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="input"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none"
                     placeholder="Enter your email"
                   />
                 </div>
 
                 <div>
-                  <label className="label">Mobile Number</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Mobile Number *
+                  </label>
                   <input
                     type="tel"
                     name="mobile"
                     value={formData.mobile}
                     onChange={handleInputChange}
                     required
-                    className="input"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none"
                     placeholder="Enter your phone number"
                   />
                 </div>
 
                 <div>
-                  <label className="label">Message</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows="4"
-                    className="input"
+                    rows="3"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none resize-none"
                     placeholder="Write your message..."
                   ></textarea>
                 </div>
@@ -165,13 +177,20 @@ export default function GetDemoSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-3 font-extrabold rounded-xl shadow-lg transition-all ${
+                  className={`w-full py-3 font-bold rounded-xl shadow-lg transition-all transform ${
                     isSubmitting
                       ? "bg-gray-400 text-gray-200 cursor-not-allowed"
-                      : "bg-gradient-to-r from-orange-600 to-red-500 text-white hover:from-orange-700 hover:to-red-600"
+                      : "bg-gradient-to-r from-orange-600 to-red-500 text-white hover:from-orange-700 hover:to-red-600 hover:scale-105 hover:shadow-xl"
                   }`}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Submitting...
+                    </div>
+                  ) : (
+                    "Submit Request"
+                  )}
                 </button>
               </form>
             </div>
@@ -182,14 +201,19 @@ export default function GetDemoSection() {
       <ToastContainer position="top-right" autoClose={5000} theme="light" />
 
       <style>{`
-        .modal-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-top: 8%;
+        @keyframes animate-in {
+          from {
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
         }
-        .modal-inner { width: 100%; display: flex; justify-content: center; }
-        .modal-box { width: 100%; max-width: 480px; padding: 20px; border-radius: 16px; }
+        .animate-in {
+          animation: animate-in 0.2s ease-out;
+        }
       `}</style>
     </>
   );
