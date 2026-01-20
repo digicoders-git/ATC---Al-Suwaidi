@@ -154,6 +154,74 @@ const wheelServices = [
   },
 ];
 
+const rotatingComponentServices = [
+  {
+    title: "⚙️ Industrial Rotating Component Services",
+    desc: "Industrial rotating components require precise machining and balance correction to maintain operational efficiency and mechanical integrity.",
+    image:
+      "/WHEEL & ROTATING COMPONENT REPAIR SERVICES/file_zip/Industrial Rotating Component Services.png",
+    features: [
+      "✓ Smooth and stable rotation",
+      "✓ Reduced vibration and mechanical stress",
+      "✓ Improved operational reliability",
+    ],
+    specs: ["Machining and correction of industrial rotating components"],
+    icon: Factory,
+  },
+  {
+    title: "🚢 Propeller Repair, Re-Profiling & Balancing Services",
+    desc: "Marine propellers directly affect propulsion efficiency and fuel consumption. Repair, re-profiling, and balancing services restore blade geometry and dynamic balance.",
+    image:
+      "/WHEEL & ROTATING COMPONENT REPAIR SERVICES/file_zip/Propeller Repair, Re-Profiling & Balancing Services.png",
+    features: [
+      "✓ Improved propulsion efficiency",
+      "✓ Reduced vibration and noise",
+      "✓ Extended propeller and bearing life",
+    ],
+    specs: ["Propeller repair, blade re-profiling, and dynamic balancing"],
+    icon: RotateCw,
+  },
+  {
+    title: "⚡ Turbine Shaft Services",
+    desc: "Turbine shafts operate at high speeds and require precise alignment and surface accuracy. Machining services correct wear, runout, and dimensional deviations.",
+    image:
+      "/WHEEL & ROTATING COMPONENT REPAIR SERVICES/file_zip/Turbine Shaft Services.png",
+    features: [
+      "✓ Accurate shaft alignment",
+      "✓ Stable high-speed operation",
+      "✓ Reduced wear on associated components",
+    ],
+    specs: ["Precision machining and straightening of turbine shafts"],
+    icon: Zap,
+  },
+  {
+    title: "🔗 Coupling & Flange Services",
+    desc: "Couplings and flanges are critical for torque transmission between rotating systems. Precision machining restores fitment accuracy and alignment.",
+    image:
+      "/WHEEL & ROTATING COMPONENT REPAIR SERVICES/file_zip/Coupling & Flange Services.png",
+    features: [
+      "✓ Smooth power transmission",
+      "✓ Reduced misalignment-related failures",
+      "✓ Improved system reliability",
+    ],
+    specs: ["Machining and refurbishment of couplings and flanges"],
+    icon: Cog,
+  },
+  {
+    title: "⚖️ Dynamic & Static Balancing Services",
+    desc: "Unbalanced rotating parts can cause excessive vibration and component damage. Dynamic and static balancing services correct mass distribution for stable operation.",
+    image:
+      "/WHEEL & ROTATING COMPONENT REPAIR SERVICES/file_zip/Dynamic & Static Balancing Services.png",
+    features: [
+      "✓ Reduced vibration and noise",
+      "✓ Extended bearing and component life",
+      "✓ Improved operational safety",
+    ],
+    specs: ["Dynamic and static balancing of rotating components"],
+    icon: Gauge,
+  },
+];
+
 const stats = [
   { value: "5000+", label: "Wheels Repaired", icon: Circle },
   { value: "32+", label: "Years Experience", icon: Clock },
@@ -180,7 +248,7 @@ export default function VehicleWheelsRepairPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Circle size={18} className="text-orange-200" />
-              WHEEL & BRAKE COMPONENT REPAIRS
+              WHEEL & ROTATING COMPONENT REPAIR SERVICES
             </motion.div>
 
             {/* Main Title */}
@@ -190,9 +258,9 @@ export default function VehicleWheelsRepairPage() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              VEHICLE WHEELS
+              WHEEL & ROTATING COMPONENT
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
-                REPAIRING WORKS
+                REPAIR SERVICES
               </span>
             </motion.h1>
 
@@ -213,12 +281,13 @@ export default function VehicleWheelsRepairPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre provides professional wheel and brake
-              component repairing services designed to restore balance, braking
-              efficiency, and smooth vehicle operation. Our services focus on
-              precision machining, alignment correction, and surface finishing,
-              ensuring safety and performance for commercial and heavy-duty
-              vehicles.
+              Al Suwaidi Technical Centre provides specialized wheel and
+              rotating component repair services designed to restore balance,
+              dimensional accuracy, and smooth operational performance. The
+              services focus on precision machining, surface restoration,
+              straightening, and dynamic balancing to ensure reliable braking,
+              vibration-free rotation, and long-term durability across
+              automotive, marine, and industrial applications.
             </motion.p>
 
             {/* Action Buttons */}
@@ -412,6 +481,167 @@ export default function VehicleWheelsRepairPage() {
               </div>
             </motion.article>
           ))}
+        </section>
+
+        {/* ===== ROTATING & HIGH-PRECISION COMPONENTS SECTION ===== */}
+        <section className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
+              ROTATING & HIGH-PRECISION COMPONENTS
+            </span>
+            <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Industrial{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                Rotating Component
+              </span>{" "}
+              Services
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Precision machining and balancing for industrial applications
+            </p>
+          </motion.div>
+
+          <div className="space-y-16">
+            {rotatingComponentServices.map((service, index) => (
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
+              >
+                {/* Animated Background Elements */}
+                <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+                <div
+                  className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                  style={{ animationDelay: "1.5s" }}
+                ></div>
+
+                <div
+                  className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Text Side */}
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="flex-1 lg:w-1/2 text-center lg:text-left"
+                  >
+                    <motion.h3
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      className="text-xl lg:text-2xl font-black text-slate-900 mb-3 leading-tight"
+                    >
+                      {service.title}
+                    </motion.h3>
+
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.5 }}
+                      className="text-lg text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0"
+                    >
+                      {service.desc}
+                    </motion.p>
+
+                    {/* Enhanced Features */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      className="mb-8"
+                    >
+                      <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                        What You'll Get:
+                      </h4>
+                      <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                        {service.features.map((feature, i) => (
+                          <motion.span
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.7 + i * 0.1 }}
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                          >
+                            {feature}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </motion.div>
+
+                    {/* Technical Details */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.7 }}
+                      className="mb-8"
+                    >
+                      <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                        Capabilities:
+                      </h4>
+                      <div className="grid grid-cols-1 gap-2">
+                        {service.specs.map((spec, i) => (
+                          <div
+                            key={i}
+                            className="flex items-center gap-2 text-slate-700"
+                          >
+                            <CheckCircle
+                              size={16}
+                              className="text-green-500 flex-shrink-0"
+                            />
+                            <span className="text-sm">{spec}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Image Side */}
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="flex-1 lg:w-1/2 relative"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05, rotateY: 5 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                      className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 backdrop-blur-sm"
+                    >
+                      {/* Animated Border Glow */}
+                      <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
+
+                      <div className="relative bg-white rounded-3xl overflow-hidden">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+
+                        {/* Enhanced Badge */}
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </section>
 
         {/* OUTPUTS Section */}

@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import GetDemoSection from "../Component/GetDemoSection";
 import MainProductsComponent from "../Component/MainProductsComponent";
+import ServiceSooller from "../Component/ServiceSooller";
 
 const PROJECTS = [
   {
@@ -80,7 +81,7 @@ const PROJECTS = [
     ],
     category: "Trailers",
   },
- {
+  {
     id: "electric-service-cabinet",
     title: "Electrical Service Cabinet",
     subtitle: "Utility-approved electrical enclosure",
@@ -267,9 +268,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="min-h-screen mt-[80px] lg:mt-[2px] bg-white">
+    <div className="min-h-screen mt-[80px] lg:mt-[40px] bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600">
+      <section className="relative overflow-hidden mt-20 sm:mt-5 bg-gradient-to-br from-orange-600 via-orange-700 to-red-600 pt-5 pt-lg-10">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
@@ -391,6 +392,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </div>
+         <ServiceSooller />
       </section>
 
       <MainProductsComponent />

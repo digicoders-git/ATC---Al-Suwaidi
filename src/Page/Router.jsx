@@ -12,7 +12,9 @@ import VecalRepining from "./VecalRepining";
 import Greasmarking from "./Greasmarking";
 import BAringServices from "./BAringServices";
 import CabinateManiFcreing from "./CabinateManiFcreing";
-import VecalEngingRepainrg from "./VecalEngingRepainrg";
+import MarineServices from "./MarineServices";
+import HydraulicServices from "./HydraulicServices";
+import Careers from "./Careers";
 
 import Gallery from "./Gallery";
 import OurStory from "./OurStory";
@@ -67,10 +69,19 @@ function Router() {
         />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/our-story" element={<OurStoryPage />} />
+        <Route path="/careers" element={<Careers />} />
 
         <Route
           path="/services/cabinets"
           element={<CabinetsManufacturingPage />}
+        />
+        <Route
+          path="/services/marine-services"
+          element={<MarineServices />}
+        />
+        <Route
+          path="/services/hydraulic-services"
+          element={<HydraulicServices />}
         />
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>

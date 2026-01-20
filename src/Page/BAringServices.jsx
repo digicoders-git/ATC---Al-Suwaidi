@@ -153,6 +153,60 @@ const bearingServices = [
   },
 ];
 
+const extendedScopeServices = [
+  {
+    title: "🔧 Precision Bearing Housing Services",
+    desc: "Precision bearing housings play a critical role in maintaining correct bearing alignment, load distribution, and rotational accuracy. Machining and correction services restore dimensional integrity and seating accuracy for reliable bearing performance.",
+    image: "/Precision Bearing Housing Services.png",
+    features: [
+      "✔ Accurate bearing fitment",
+      "✔ Reduced vibration and premature bearing failure",
+      "✔ Extended bearing and housing service life",
+      "Machining and correction",
+    ],
+    specs: [
+      "Capabilities: Machining and correction",
+      "Services: Bearing seat restoration",
+      "Quality: Tolerance correction",
+    ],
+    icon: Settings,
+  },
+  {
+    title: "🚢 Stern Tube Bearing Services",
+    desc: "Stern tube bearings support propeller shafts and are essential for smooth marine propulsion. Precision machining and fitment services restore alignment and bearing performance under continuous marine loading.",
+    image: "/Stern Tube Bearing Services.png",
+    features: [
+      "✔ Smooth shaft rotation",
+      "✔ Reduced seal and bearing wear",
+      "✔ Improved reliability of stern tube assemblies",
+      "Marine propulsion support",
+    ],
+    specs: [
+      "Services: Stern tube bearing machining",
+      "Quality: Bearing housing correction",
+      "Support: Alignment support",
+    ],
+    icon: Factory,
+  },
+  {
+    title: "⚙️ Shaft Alignment Services",
+    desc: "Correct shaft alignment is essential for minimizing vibration, wear, and power loss in rotating systems. Alignment services ensure shafts operate within specified tolerances for safe and efficient operation.",
+    image: "/Shaft Alignment Services.png",
+    features: [
+      "✔ Reduced vibration and mechanical stress",
+      "✔ Improved power transmission efficiency",
+      "✔ Longer service life of shafts, bearings, and couplings",
+      "Precision alignment",
+    ],
+    specs: [
+      "Services: Shaft alignment correction",
+      "Measurement: Runout measurement",
+      "Verification: Alignment verification",
+    ],
+    icon: Gauge,
+  },
+];
+
 const stats = [
   { value: "5,000+", label: "Bearings Replaced", icon: Circle },
   { value: "32+", label: "Years Experience", icon: Clock },
@@ -179,7 +233,7 @@ export default function BearingsRemovalFittingPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Circle size={18} className="text-orange-200" />
-              BEARINGS & SUSPENSION SPECIALISTS
+              BEARING, SHAFT & PRECISION FITMENT SERVICES
             </motion.div>
 
             {/* Main Title */}
@@ -189,9 +243,9 @@ export default function BearingsRemovalFittingPage() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              BEARINGS REMOVING &
+              BEARING, SHAFT &
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
-                FIXING SERVICES
+                PRECISION FITMENT SERVICES
               </span>
             </motion.h1>
 
@@ -213,11 +267,7 @@ export default function BearingsRemovalFittingPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre provides professional bearing removing
-              and fixing services for commercial vehicles and heavy-duty
-              applications. Our services focus on correct alignment, safe
-              installation, and smooth mechanical operation, ensuring reduced
-              wear and extended service life of components.
+              Al Suwaidi Technical Centre provides specialized bearing, shaft, and precision fitment services focused on accurate installation, alignment, and restoration of critical rotating and load-bearing components. These services ensure correct load distribution, smooth rotation, and long-term mechanical reliability across automotive, marine, and heavy equipment applications.
             </motion.p>
 
             {/* Action Buttons */}
@@ -377,14 +427,139 @@ export default function BearingsRemovalFittingPage() {
                         className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
-
-                      {/* Enhanced Badge */}
                     </div>
                   </motion.div>
                 </motion.div>
               </div>
             </motion.article>
           ))}
+        </section>
+
+        {/* ================= EXTENDED SCOPE SECTION ================= */}
+        <section className="mb-16">
+          {/* Extended Scope Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
+              EXTENDED SCOPE
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Precision{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                Engineering Services
+              </span>
+            </h2>
+          </motion.div>
+
+          {/* Extended Scope Services */}
+          <div className="space-y-16">
+            {extendedScopeServices.map((service, index) => (
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
+              >
+                {/* Animated Background Elements */}
+                <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+                <div
+                  className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                  style={{ animationDelay: "1.5s" }}
+                ></div>
+
+                <div
+                  className={`relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 ${
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Text Side */}
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="flex-1 lg:w-1/2 text-center lg:text-left"
+                  >
+                    <motion.h3
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      className="text-xl lg:text-2xl font-black text-slate-900 mb-3 leading-tight"
+                    >
+                      {service.title}
+                    </motion.h3>
+
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.5 }}
+                      className="text-lg text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0"
+                    >
+                      {service.desc}
+                    </motion.p>
+
+                    {/* Enhanced Features */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      className="mb-8"
+                    >
+                      <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                        What You'll Get:
+                      </h4>
+                      <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                        {service.features.map((feature, i) => (
+                          <motion.span
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.7 + i * 0.1 }}
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                          >
+                            {feature}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Image Side */}
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="flex-1 lg:w-1/2 relative"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05, rotateY: 5 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 backdrop-blur-sm"
+                    >
+                      {/* Animated Border Glow */}
+                      <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-3xl opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-500"></div>
+
+                      <div className="relative bg-white rounded-3xl overflow-hidden">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </section>
 
         {/* OUTPUTS Section */}

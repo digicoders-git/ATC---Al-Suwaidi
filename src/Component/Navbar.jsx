@@ -63,28 +63,28 @@ export default function ModernNavbar() {
 
   const services = [
     {
-      label: "Steel Fabrication Basics",
+      label: "Fabrication & Structural Engineering Solutions",
       to: "/services/steel-fabrication",
       icon: "🔧",
     },
     {
-      label: "Commercial Vehicle Bodies",
+      label: "Commercial Vehicle Body Building & Special Purpose Vehicles",
       to: "/services/vehicle-bodies",
       icon: "🚛",
     },
     {
-      label: "Vehicle Engine Repair",
+      label: "Engine Reconditioning & Drivetrain Services",
       to: "/services/engine-repair",
       icon: "⚙️",
     },
     {
-      label: "Gear Manufacturing & Milling",
+      label: "Precision Machining, Gear Manufacturing & Power Transmission Services",
       to: "/services/gears-milling",
       icon: "⚡",
     },
-    { label: "Bearing Services", to: "/services/bearings", icon: "🔩" },
+    { label: "Bearing, Shaft & Precision Fitment Services", to: "/services/bearings", icon: "🔩" },
     {
-      label: "Vehicle Wheel Repair",
+      label: "Wheel & Rotating Component Repair Services",
       to: "/services/wheels-repair",
       icon: "🛞",
     },
@@ -93,6 +93,16 @@ export default function ModernNavbar() {
       label: "Cabinet Manufacturing (KAHRAMAA Approved)",
       to: "/services/cabinets",
       icon: "📦",
+    },
+    {
+      label: "Marine, Shipyard & Heavy Equipment Engineering Services",
+      to: "/services/marine-services",
+      icon: "🚢",
+    },
+    {
+      label: "Hydraulic & Pump Systems",
+      to: "/services/hydraulic-services",
+      icon: "🔧",
     },
   ];
 
@@ -104,6 +114,7 @@ export default function ModernNavbar() {
     { label: "Gallery", to: "/gallery" },
     { label: "Our Story", to: "/our-story" },
     { label: "Contact", to: "/contact" },
+    { label: "Careers", to: "/careers" },
   ];
 
   // When a service is clicked:
@@ -182,9 +193,9 @@ export default function ModernNavbar() {
 
                       {/* Services Dropdown */}
                       {servicesOpen && (
-                        <div className="absolute left-1/2 p-2 -translate-x-1/2 mt-2 w-[300px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm">
+                        <div className="absolute left-1/2 p-2 -translate-x-1/2 mt-2 w-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden backdrop-blur-sm">
                           <div className="">
-                            <div className=" gap-4">
+                            <div className="grid grid-cols-2 gap-2">
                               {services.map((service) => (
                                 <button
                                   key={service.to}
@@ -192,7 +203,7 @@ export default function ModernNavbar() {
                                   className="w-full text-left flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-orange-200"
                                 >
                                   <div className="flex-1">
-                                    <div className="font-bold text-gray-800 group-hover:text-orange-600 text-base leading-tight">
+                                    <div className="font-bold text-gray-800 group-hover:text-orange-600 text-sm leading-tight">
                                       {service.label}
                                     </div>
                                   </div>

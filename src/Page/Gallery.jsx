@@ -22,344 +22,306 @@ import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
 
 const galleryImages = [
-  // Cabinet Manufacturing Images
   {
     id: 1,
-    src: "/CabnateMAnifecting/WATERSERVICECABINET1” DIA.jpg",
-
-    title: "Water Service Cabinet - 1 DIA",
-    category: "Cabinets",
-    description:
-      "KAHRAMAA-approved water service cabinet with professional finish",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.51.jpeg",
+    title: "Industrial Workshop Operations",
+    category: "Workshop",
+    description: "Professional industrial workshop operations and machinery",
   },
   {
     id: 2,
-    src: "/CabnateMAnifecting/WATERSERVICECABINET1” DIA.jpg",
-    title: "Water Service Cabinet - 2 DIA",
-    category: "Cabinets",
-    description: "Durable aluminum construction water service cabinet",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52 (1).jpeg",
+    title: "Heavy Machinery Services",
+    category: "Machinery",
+    description: "Heavy machinery maintenance and repair services",
   },
   {
     id: 3,
-    src: "/CabnateMAnifecting/WATER (3) METER CABINET.jpg",
-    title: "Water Meter Cabinet - 2 Nos",
-    category: "Cabinets",
-    description: "Dual meter water cabinet for multi-unit installations",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52 (2).jpeg",
+    title: "Precision Engineering Work",
+    category: "Engineering",
+    description: "Precision engineering and fabrication work",
   },
   {
     id: 4,
-    src: "/CabnateMAnifecting/WATER (4) METER CABINET.jpg",
-    title: "Water Meter Cabinet - 3 Nos",
-    category: "Cabinets",
-    description: "Three meter water cabinet for apartment complexes",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52.jpeg",
+    title: "Steel Fabrication Process",
+    category: "Steel Fabrication",
+    description: "Steel fabrication and welding operations",
   },
   {
     id: 5,
-    src: "/CabnateMAnifecting/1765969455965.jpg",
-    title: "Water Meter Cabinet - 4 Nos",
-    category: "Cabinets",
-    description: "Large capacity water cabinet for commercial projects",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.53 (1).jpeg",
+    title: "Vehicle Body Manufacturing",
+    category: "Commercial Vehicles",
+    description: "Commercial vehicle body manufacturing process",
   },
   {
     id: 6,
-    src: "/CabnateMAnifecting/1765970113122.jpg",
-    title: "Water Meter Cabinet - 5 Nos",
-    category: "Cabinets",
-    description:
-      "Extra large capacity water cabinet for extensive installations",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.53 (2).jpeg",
+    title: "Engine Reconditioning",
+    category: "Engine Repair",
+    description: "Engine reconditioning and repair services",
   },
   {
     id: 7,
-    src: "/CabnateMAnifecting/ELECTRIC SERVICECABINET.jpg",
-    title: "Electric Service Cabinet",
-    category: "Cabinets",
-    description: "KAHRAMAA-approved electrical service cabinet",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.53.jpeg",
+    title: "Gear Manufacturing",
+    category: "Gear Making",
+    description: "Precision gear manufacturing and machining",
   },
-  // Vehicle Wheel Services Images
   {
     id: 8,
-    src: "/VecalWhell/Wheel Alignment Services.png",
-    title: "Wheel Alignment Services",
-    category: "Wheel Services",
-    description: "Professional wheel alignment and balancing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.54 (1).jpeg",
+    title: "Bearing Services",
+    category: "Bearing Services",
+    description: "Professional bearing installation and maintenance",
   },
   {
     id: 9,
-    src: "/VecalWhell/Wheel Straightening & Balancing.png",
-    title: "Wheel Straightening & Balancing",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.54.jpeg",
+    title: "Wheel Repair Services",
     category: "Wheel Services",
-    description: "Precision wheel straightening and balancing equipment",
+    description: "Wheel alignment and repair services",
   },
   {
     id: 10,
-    src: "/VecalWhell/Disc Facing & Resurfacing.png",
-    title: "Disc Facing & Resurfacing",
-    category: "Wheel Services",
-    description: "Brake disc facing and resurfacing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.55 (1).jpeg",
+    title: "Cabinet Manufacturing",
+    category: "Cabinets",
+    description: "KAHRAMAA approved cabinet manufacturing",
   },
   {
     id: 11,
-    src: "/VecalWhell/Drum Facing & Resurfacing.png",
-    title: "Drum Facing & Resurfacing",
-    category: "Wheel Services",
-    description: "Brake drum facing and resurfacing operations",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.55.jpeg",
+    title: "Marine Engineering",
+    category: "Marine Services",
+    description: "Marine and shipyard engineering services",
   },
   {
     id: 12,
-    src: "/VecalWhell/Flywheel Facing & Resurfacing.png",
-    title: "Flywheel Facing & Resurfacing",
-    category: "Wheel Services",
-    description: "Flywheel facing and resurfacing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.56.jpeg",
+    title: "Hydraulic Systems",
+    category: "Hydraulic Services",
+    description: "Hydraulic pump and system services",
   },
   {
     id: 13,
-    src: "/VecalWhell/Rim Welding & Machining.png",
-    title: "Rim Welding & Machining",
-    category: "Wheel Services",
-    description: "Professional rim welding and machining services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57 (1).jpeg",
+    title: "Quality Control",
+    category: "Quality Assurance",
+    description: "Quality control and testing procedures",
   },
   {
     id: 14,
-    src: "/VecalWhell/Tire Mounting & Demounting.png",
-    title: "Tire Mounting & Demounting",
-    category: "Wheel Services",
-    description: "Tire mounting and demounting equipment",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57 (2).jpeg",
+    title: "Assembly Operations",
+    category: "Assembly",
+    description: "Professional assembly and finishing operations",
   },
   {
     id: 15,
-    src: "/VecalWhell/Custom Wheel Modifications.png",
-    title: "Custom Wheel Modifications",
-    category: "Wheel Services",
-    description: "Custom wheel modification and enhancement services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57.jpeg",
+    title: "Welding Services",
+    category: "Welding",
+    description: "Professional welding and fabrication services",
   },
-  // Engine Repair Images
   {
     id: 16,
-    src: "/VicalEnging/Block Boring.png",
-    title: "Block Boring Services",
-    category: "Engine Repair",
-    description: "Precision engine block boring and machining",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.58.jpeg",
+    title: "Machining Operations",
+    category: "Machining",
+    description: "Precision machining and turning operations",
   },
   {
     id: 17,
-    src: "/VicalEnging/Crankshaft Grinding.png",
-    title: "Crankshaft Grinding",
-    category: "Engine Repair",
-    description: "Professional crankshaft grinding and reconditioning",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.59 (1).jpeg",
+    title: "Equipment Maintenance",
+    category: "Maintenance",
+    description: "Equipment maintenance and repair services",
   },
   {
     id: 18,
-    src: "/VicalEnging/Cylinder Liner Fitting.png",
-    title: "Cylinder Liner Fitting",
-    category: "Engine Repair",
-    description: "Cylinder liner fitting and replacement services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.59.jpeg",
+    title: "Industrial Projects",
+    category: "Projects",
+    description: "Large scale industrial project execution",
   },
   {
     id: 19,
-    src: "/VicalEnging/Engine Assembly & Reassembly.png",
-    title: "Engine Assembly & Reassembly",
-    category: "Engine Repair",
-    description: "Complete engine assembly and reassembly services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.00 (1).jpeg",
+    title: "Technical Solutions",
+    category: "Technical Services",
+    description: "Comprehensive technical solutions and services",
   },
   {
     id: 20,
-    src: "/VicalEnging/Final Testing & Performance Verification.png",
-    title: "Final Testing & Performance Verification",
-    category: "Engine Repair",
-    description: "Engine testing and performance verification",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.00.jpeg",
+    title: "Workshop Facilities",
+    category: "Facilities",
+    description: "State-of-the-art workshop facilities",
   },
   {
     id: 21,
-    src: "/VicalEnging/Head Pressure Checking.png",
-    title: "Head Pressure Checking",
-    category: "Engine Repair",
-    description: "Cylinder head pressure testing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01 (1).jpeg",
+    title: "Custom Fabrication",
+    category: "Custom Work",
+    description: "Custom fabrication and engineering solutions",
   },
   {
     id: 22,
-    src: "/VicalEnging/Head Tappet Setting.png",
-    title: "Head Tappet Setting",
-    category: "Engine Repair",
-    description: "Precision head tappet setting and adjustment",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01 (2).jpeg",
+    title: "Testing & Verification",
+    category: "Testing",
+    description: "Testing and performance verification services",
   },
   {
     id: 23,
-    src: "/Piston Ring Fitting.png",
-    title: "Piston Ring Fitting",
-    category: "Engine Repair",
-    description: "Piston ring fitting and replacement services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01.jpeg",
+    title: "Installation Services",
+    category: "Installation",
+    description: "Professional installation and commissioning",
   },
-  // Commercial Vehicle Bodies Images
   {
     id: 24,
-    src: "/Cormercila/Anteo Tail Lifts.png",
-    title: "Anteo Tail Lifts",
-    category: "Commercial Vehicles",
-    description: "Anteo tail lift installation and maintenance",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.02 (1).jpeg",
+    title: "Repair Operations",
+    category: "Repair Services",
+    description: "Comprehensive repair and restoration services",
   },
   {
     id: 25,
-    src: "/Cormercila/Boom Truck.png",
-    title: "Boom Truck",
-    category: "Commercial Vehicles",
-    description: "Boom truck fabrication and assembly",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.02.jpeg",
+    title: "Engineering Excellence",
+    category: "Engineering",
+    description: "Engineering excellence and innovation",
   },
   {
     id: 26,
-    src: "/Cormercila/Car Recovery Truck.png",
-    title: "Car Recovery Truck",
-    category: "Commercial Vehicles",
-    description: "Car recovery truck body fabrication",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.03 (1).jpeg",
+    title: "Manufacturing Process",
+    category: "Manufacturing",
+    description: "Advanced manufacturing processes and techniques",
   },
   {
     id: 27,
-    src: "/Cormercila/Cargo Transporter Truck (Drop Side).png",
-    title: "Cargo Transporter Truck",
-    category: "Commercial Vehicles",
-    description: "Drop side cargo transporter truck body",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.03 (2).jpeg",
+    title: "Quality Standards",
+    category: "Quality",
+    description: "Maintaining highest quality standards",
   },
   {
     id: 28,
-    src: "/Cormercila/Flatbed Trailer  product card.png",
-    title: "Flatbed Trailer",
-    category: "Commercial Vehicles",
-    description: "Custom flatbed trailer fabrication",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.03.jpeg",
+    title: "Project Completion",
+    category: "Projects",
+    description: "Successful project completion and delivery",
   },
   {
     id: 29,
-    src: "/Cormercila/Tank Trailer.png",
-    title: "Tank Trailer",
-    category: "Commercial Vehicles",
-    description: "Tank trailer construction and fabrication",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.04 (1).jpeg",
+    title: "Technical Expertise",
+    category: "Expertise",
+    description: "Technical expertise and skilled craftsmanship",
   },
   {
     id: 30,
-    src: "/Cormercila/Tipper Dump Trailer.png",
-    title: "Tipper Dump Trailer",
-    category: "Commercial Vehicles",
-    description: "Tipper dump trailer fabrication",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.04.jpeg",
+    title: "Service Excellence",
+    category: "Services",
+    description: "Excellence in service delivery and customer satisfaction",
   },
-  // Steel Fabrication Images
   {
     id: 31,
-    src: "/StellFebictaion/Assembly, Welding & Finishing.png",
-    title: "Assembly, Welding & Finishing",
-    category: "Steel Fabrication",
-    description: "Professional assembly, welding and finishing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.05 (1).jpeg",
+    title: "Industrial Solutions",
+    category: "Solutions",
+    description: "Comprehensive industrial solutions and support",
   },
   {
     id: 32,
-    src: "/StellFebictaion/Custom-fabricated steel parts.png",
-    title: "Custom Fabricated Steel Parts",
-    category: "Steel Fabrication",
-    description: "Custom steel parts fabrication and manufacturing",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.05.jpeg",
+    title: "Professional Work",
+    category: "Professional Services",
+    description: "Professional work standards and execution",
   },
   {
     id: 33,
-    src: "/StellFebictaion/Industrial steel frames and structures.png",
-    title: "Industrial Steel Frames",
-    category: "Steel Fabrication",
-    description: "Industrial steel frames and structures",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.06.jpeg",
+    title: "Advanced Technology",
+    category: "Technology",
+    description: "Advanced technology and modern equipment",
   },
   {
     id: 34,
-    src: "/StellFebictaion/Structural Steel Fabrication.png",
-    title: "Structural Steel Fabrication",
-    category: "Steel Fabrication",
-    description: "Structural steel fabrication services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.07 (1).jpeg",
+    title: "Skilled Workforce",
+    category: "Workforce",
+    description: "Skilled and experienced workforce",
   },
-  // Gear Making Images
   {
     id: 35,
-    src: "/GressMaking/Boring Services.png",
-    title: "Boring Services",
-    category: "Gear Making",
-    description: "Precision boring services and operations",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.07.jpeg",
+    title: "Precision Work",
+    category: "Precision",
+    description: "Precision work and attention to detail",
   },
   {
     id: 36,
-    src: "/GressMaking/Drilling Services.png",
-    title: "Drilling Services",
-    category: "Gear Making",
-    description: "Professional drilling services and machining",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.08 (1).jpeg",
+    title: "Safety Standards",
+    category: "Safety",
+    description: "Maintaining highest safety standards",
   },
   {
     id: 37,
-    src: "/GressMaking/Gear Hobbing Services.png",
-    title: "Gear Hobbing Services",
-    category: "Gear Making",
-    description: "Gear hobbing and manufacturing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.08.jpeg",
+    title: "Innovation",
+    category: "Innovation",
+    description: "Innovation in engineering and manufacturing",
   },
   {
     id: 38,
-    src: "/GressMaking/Turning Services.png",
-    title: "Turning Services",
-    category: "Gear Making",
-    description: "Precision turning and machining services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09 (1).jpeg",
+    title: "Customer Satisfaction",
+    category: "Customer Service",
+    description: "Commitment to customer satisfaction",
   },
-  // Bearing Services Images
   {
     id: 39,
-    src: "/Baring/Axle Bearing Removing & Fixing.png",
-    title: "Axle Bearing Services",
-    category: "Bearing Services",
-    description: "Axle bearing removing and fixing services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09 (2).jpeg",
+    title: "Reliable Services",
+    category: "Reliability",
+    description: "Reliable and dependable services",
   },
   {
     id: 40,
-    src: "/Baring/Hub Bearing Fitting.png",
-    title: "Hub Bearing Fitting",
-    category: "Bearing Services",
-    description: "Hub bearing fitting and installation",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09.jpeg",
+    title: "Excellence Achievement",
+    category: "Excellence",
+    description: "Achievement of excellence in all operations",
   },
   {
     id: 41,
-    src: "/Baring/King Pin Removing & Fitting.png",
-    title: "King Pin Services",
-    category: "Bearing Services",
-    description: "King pin removing and fitting services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.10.jpeg",
+    title: "Future Ready",
+    category: "Future",
+    description: "Future-ready solutions and technologies",
   },
-  // MRO Services Images
   {
     id: 42,
-    src: "/MRO/Body Panel Repair & Replacement (2).png",
-    title: "Body Panel Repair",
-    category: "MRO Services",
-    description: "Body panel repair and replacement services",
+    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.11.jpeg",
+    title: "Success Stories",
+    category: "Success",
+    description: "Success stories and achievements over 32+ years",
   },
-  {
-    id: 43,
-    src: "/MRO/Chassis & Frame Alignment.png",
-    title: "Chassis & Frame Alignment",
-    category: "MRO Services",
-    description: "Chassis and frame alignment services",
-  },
-  {
-    id: 44,
-    src: "/MRO/Structural Reinforcement & Strengthening.png",
-    title: "Structural Reinforcement",
-    category: "MRO Services",
-    description: "Structural reinforcement and strengthening",
-  },
-];
-
-const categories = [
-  "All",
-  "Cabinets",
-  "Wheel Services",
-  "Engine Repair",
-  "Commercial Vehicles",
-  "Steel Fabrication",
-  "Gear Making",
-  "Bearing Services",
-  "MRO Services",
 ];
 
 const stats = [
   { value: "5000+", label: "Projects Completed", icon: Award },
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "80+", label: "Team Members", icon: Users },
-
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];
 
@@ -383,18 +345,18 @@ export default function GalleryPage() {
   };
 
   const nextImage = () => {
-    const nextIndex = (currentImageIndex + 1) % filteredImages.length;
+    const nextIndex = (currentImageIndex + 1) % galleryImages.length;
     setCurrentImageIndex(nextIndex);
-    setSelectedImage(filteredImages[nextIndex]);
+    setSelectedImage(galleryImages[nextIndex]);
   };
 
   const prevImage = () => {
     const prevIndex =
       currentImageIndex === 0
-        ? filteredImages.length - 1
+        ? galleryImages.length - 1
         : currentImageIndex - 1;
     setCurrentImageIndex(prevIndex);
-    setSelectedImage(filteredImages[prevIndex]);
+    setSelectedImage(galleryImages[prevIndex]);
   };
 
   return (
@@ -511,6 +473,25 @@ export default function GalleryPage() {
         <ServiceSooller />
       </header>
 
+      {/* Video Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <video
+              className="w-full h-[400px] md:h-[600px] object-cover"
+              controls
+              muted
+              preload="metadata"
+            >
+              <source src="/VID-20260116-WA0000.mp4" type="video/mp4" />
+              <p className="flex items-center justify-center h-full text-gray-500">
+                Your browser does not support the video tag.
+              </p>
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* ===== MAIN CONTENT ===== */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         {/* Category Filter */}
@@ -533,26 +514,9 @@ export default function GalleryPage() {
             </p>
           </motion.div>
 
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg"
-                    : "bg-white text-gray-700 border border-gray-200 hover:border-orange-300 hover:text-orange-600"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredImages.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <motion.div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -593,9 +557,6 @@ export default function GalleryPage() {
             ))}
           </div>
         </section>
-
-        {/* ===== COMMERCIAL VEHICLE BODIES SECTION ===== */}
-     
       </main>
 
       {/* Lightbox Modal */}
@@ -646,11 +607,6 @@ export default function GalleryPage() {
           </div>
         </div>
       )}
-
-      
-
-      {/* Contact Section */}
-   
     </div>
   );
 }

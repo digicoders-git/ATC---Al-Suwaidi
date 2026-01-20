@@ -83,7 +83,7 @@ export default function CommercialVehicleBodiesPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Truck size={18} className="text-orange-200" />
-              COMMERCIAL VEHICLE BODIES FABRICATION
+              COMMERCIAL VEHICLE BODY BUILDING & SPECIAL PURPOSE VEHICLES
             </motion.div>
 
             {/* Main Title */}
@@ -93,9 +93,9 @@ export default function CommercialVehicleBodiesPage() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              ALL TYPES OF
+            
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
-                COMMERCIAL VEHICLE BODIES
+                COMMERCIAL VEHICLE BODY BUILDING & SPECIAL PURPOSE VEHICLES
               </span>
             </motion.h1>
 
@@ -229,16 +229,6 @@ export default function CommercialVehicleBodiesPage() {
               image: "/CommercialImage/Double deck car carrier.png",
             },
             {
-              title: "Refrigerated Reefer Trailer",
-              desc: "Temperature-controlled trailer for transporting perishable goods.",
-              image: "/CommercialImage/Refrigerated Reefer Trailer.png",
-            },
-            {
-              title: "Refrigerated Utility Trailer",
-              desc: "Compact refrigerated trailer for utility and distribution applications.",
-              image: "/CommercialImage/Refrigerated Utility Trailer.png",
-            },
-            {
               title: "Tanker Truck",
               desc: "Vehicle-mounted tanker for transporting liquids such as water, fuel, or sewage.",
               image: "/CommercialImage/Tanker Truck.png",
@@ -288,12 +278,6 @@ export default function CommercialVehicleBodiesPage() {
               desc: "Fully fabricated truck body equipped as a mobile maintenance workshop.",
               image: "/CommercialImage/Mobile Workshop Truck.png",
             },
-            {
-              title: "Refrigerated Box Pick-Up",
-              desc: "Pick-up truck with insulated refrigerated box for cold-chain delivery.",
-              image: "/CommercialImage/Refrigerated Box pick up.png",
-            },
-
             {
               title: "Shelters & Cold Stores",
               desc: "Fabricated shelters and cold storage units for industrial and site use.",

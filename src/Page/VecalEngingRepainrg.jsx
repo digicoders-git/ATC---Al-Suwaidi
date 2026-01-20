@@ -67,7 +67,6 @@ const servicesList = [
       "Reliable cylinder performance under load",
     ],
   },
-
   {
     title: "🧪 Head Pressure Checking",
     desc: "Cylinder heads undergo pressure testing to identify cracks, leaks, or structural weaknesses that can lead to coolant loss, overheating, or engine failure. This step is critical for ensuring head integrity before reassembly.",
@@ -123,6 +122,54 @@ const servicesList = [
       "Installation-ready engine",
     ],
   },
+  {
+    title: "🔧 Cylinder Head Facing Services",
+    desc: "Cylinder head facing restores flatness and sealing surfaces required for proper compression and efficient engine operation.",
+    icon: Settings,
+    image: "/ENGINE RECONDITIONING & DRIVETRAIN SERVICES/file_zip/Cylinder Head Facing Services.png",
+    capabilities: "Precision head facing, surface finish correction, dimensional accuracy restoration.",
+    features: [
+      "Proper head-to-block sealing",
+      "Improved compression efficiency",
+      "Reduced risk of gasket failure",
+    ],
+  },
+  {
+    title: "🎯 Cylinder Head Valve Grinding Services",
+    desc: "Valve grinding ensures accurate seating of intake and exhaust valves for optimal airflow and combustion efficiency.",
+    icon: Cog,
+    image: "/ENGINE RECONDITIONING & DRIVETRAIN SERVICES/file_zip/Cylinder Head Valve Grinding Services.png",
+    capabilities: "Valve grinding, valve seat correction, sealing surface restoration.",
+    features: [
+      "Improved engine breathing",
+      "Reduced compression loss",
+      "Enhanced engine performance",
+    ],
+  },
+  {
+    title: "🔄 Transmission Repair & Reconditioning Services",
+    desc: "Transmissions transfer engine power to the drivetrain and require precise alignment and component integrity. Repair and reconditioning services restore smooth gear shifting and reliable power delivery.",
+    icon: Wrench,
+    image: "/ENGINE RECONDITIONING & DRIVETRAIN SERVICES/file_zip/Transmission Repair & Reconditioning Services.png",
+    capabilities: "Transmission inspection, component machining, bearing fitment support, alignment correction.",
+    features: [
+      "Smooth and reliable gear shifting",
+      "Reduced drivetrain vibration",
+      "Extended transmission service life",
+    ],
+  },
+  {
+    title: "🔧 Differential Housing & Axle Services",
+    desc: "Differential housings and axles distribute torque and support load-bearing functions. Precision machining and refurbishment restore alignment and structural integrity.",
+    icon: Settings,
+    image: "/ENGINE RECONDITIONING & DRIVETRAIN SERVICES/file_zip/Differential Housing & Axle Services.png",
+    capabilities: "Machining of differential housings, axle refurbishment, bearing seat correction.",
+    features: [
+      "Balanced torque distribution",
+      "Reduced mechanical stress",
+      "Extended drivetrain service life",
+    ],
+  },
 ];
 
 const stats = [
@@ -151,8 +198,7 @@ export default function VehicleEngineRepairPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Sparkles size={18} className="text-orange-200" />
-              ADVANCED ENGINE RECONDITIONING & PRECISION MECHANICAL REPAIR
-              SOLUTIONS
+              ADVANCED ENGINE RECONDITIONING & DRIVETRAIN SERVICES
             </motion.div>
 
             {/* Main Title */}
@@ -162,9 +208,9 @@ export default function VehicleEngineRepairPage() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              VEHICLE ENGINE &
+              ENGINE RECONDITIONING &
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
-                MECHANICAL REPAIRING
+                DRIVETRAIN SERVICES
               </span>
             </motion.h1>
 
@@ -185,15 +231,7 @@ export default function VehicleEngineRepairPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Al Suwaidi Technical Centre delivers complete engine
-              reconditioning and mechanical repair services designed to restore
-              engine efficiency, reliability, and performance for commercial
-              vehicles and industrial applications. Our approach combines
-              detailed diagnosis, precision machining, and controlled assembly
-              to ensure engines operate smoothly and reliably over an extended
-              service life. From inspection to final testing, every engine
-              component is restored to meet operational standards, performance
-              requirements, and durability expectations.
+              Al Suwaidi Technical Centre delivers comprehensive engine reconditioning and drivetrain services designed to restore engine efficiency, reliability, and performance for commercial vehicles and industrial applications. Our approach combines detailed diagnosis, precision machining, and controlled assembly to ensure engines operate smoothly and reliably over an extended service life. From inspection to final testing, every engine component is restored to meet operational standards, performance requirements, and durability expectations.
             </motion.p>
 
             {/* Action Buttons */}
