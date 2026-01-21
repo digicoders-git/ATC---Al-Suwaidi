@@ -31,14 +31,15 @@ const jobOpenings = [
     type: "Full-time",
     experience: "5+ years",
     salary: "QAR 8,000 - 12,000",
-    description: "Lead mechanical design and engineering projects for industrial fabrication and marine applications.",
+    description:
+      "Lead mechanical design and engineering projects for industrial fabrication and marine applications.",
     requirements: [
       "Bachelor's degree in Mechanical Engineering",
       "5+ years experience in industrial engineering",
       "Proficiency in CAD software (AutoCAD, SolidWorks)",
       "Knowledge of welding and fabrication processes",
-      "Strong project management skills"
-    ]
+      "Strong project management skills",
+    ],
   },
   {
     id: 2,
@@ -48,14 +49,15 @@ const jobOpenings = [
     type: "Full-time",
     experience: "3+ years",
     salary: "QAR 4,000 - 6,000",
-    description: "Perform high-quality welding operations for steel fabrication and structural engineering projects.",
+    description:
+      "Perform high-quality welding operations for steel fabrication and structural engineering projects.",
     requirements: [
       "Certified welder with TIG/MIG qualifications",
       "3+ years welding experience",
       "Ability to read technical drawings",
       "Knowledge of safety protocols",
-      "Physical fitness for manual work"
-    ]
+      "Physical fitness for manual work",
+    ],
   },
   {
     id: 3,
@@ -65,14 +67,15 @@ const jobOpenings = [
     type: "Full-time",
     experience: "2+ years",
     salary: "QAR 3,500 - 5,500",
-    description: "Operate CNC machines for precision machining and gear manufacturing operations.",
+    description:
+      "Operate CNC machines for precision machining and gear manufacturing operations.",
     requirements: [
       "Technical diploma or equivalent",
       "2+ years CNC operation experience",
       "Knowledge of G-code programming",
       "Precision measurement skills",
-      "Attention to detail"
-    ]
+      "Attention to detail",
+    ],
   },
   {
     id: 4,
@@ -82,38 +85,41 @@ const jobOpenings = [
     type: "Full-time",
     experience: "3+ years",
     salary: "QAR 5,000 - 7,000",
-    description: "Ensure quality standards and compliance with ISO 9001:2015 requirements across all operations.",
+    description:
+      "Ensure quality standards and compliance with ISO 9001:2015 requirements across all operations.",
     requirements: [
       "Bachelor's degree in Engineering or related field",
       "3+ years quality control experience",
       "Knowledge of ISO standards",
       "Inspection and testing experience",
-      "Strong analytical skills"
-    ]
-  }
+      "Strong analytical skills",
+    ],
+  },
 ];
 
 const benefits = [
   {
     icon: DollarSign,
     title: "Competitive Salary",
-    description: "Market-competitive compensation packages with performance bonuses"
+    description:
+      "Market-competitive compensation packages with performance bonuses",
   },
   {
     icon: Award,
     title: "Professional Development",
-    description: "Training programs and certification opportunities for career growth"
+    description:
+      "Training programs and certification opportunities for career growth",
   },
   {
     icon: Users,
     title: "Team Environment",
-    description: "Collaborative work culture with experienced professionals"
+    description: "Collaborative work culture with experienced professionals",
   },
   {
     icon: Clock,
     title: "Work-Life Balance",
-    description: "Flexible working hours and annual leave benefits"
-  }
+    description: "Flexible working hours and annual leave benefits",
+  },
 ];
 
 const stats = [
@@ -130,65 +136,67 @@ export default function CareersPage() {
     email: "",
     phoneNumber: "",
     coverLetter: "",
-    resume: null
+    resume: null,
   });
 
   const handleInputChange = (e) => {
-    if (e.target.type === 'file') {
+    if (e.target.type === "file") {
       setFormData({
         ...formData,
-        [e.target.name]: e.target.files[0]
+        [e.target.name]: e.target.files[0],
       });
     } else {
       setFormData({
         ...formData,
-        [e.target.name]: e.target.value
+        [e.target.name]: e.target.value,
       });
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('fullName', formData.fullName);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('phoneNumber', formData.phoneNumber);
-      formDataToSend.append('coverLetter', formData.coverLetter);
-      
+      formDataToSend.append("fullName", formData.fullName);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("phoneNumber", formData.phoneNumber);
+      formDataToSend.append("coverLetter", formData.coverLetter);
+
       if (formData.resume) {
-        formDataToSend.append('resume', formData.resume);
+        formDataToSend.append("resume", formData.resume);
       }
 
-      console.log('Submitting to API...');
-      const response = await fetch('http://localhost:3300/job-application/create', {
-        method: 'POST',
+      console.log("Submitting to API...");
+      const response = await fetch("/job-application/create", {
+        method: "POST",
         body: formDataToSend,
       });
 
-      console.log('Response status:', response.status);
+      console.log("Response status:", response.status);
       const result = await response.json();
-      console.log('API Response:', result);
+      console.log("API Response:", result);
 
       if (result.success) {
-        alert('Application submitted successfully! We will contact you soon.');
+        alert("Application submitted successfully! We will contact you soon.");
         setFormData({
           fullName: "",
           email: "",
           phoneNumber: "",
           coverLetter: "",
-          resume: null
+          resume: null,
         });
         // Reset file input
         const fileInput = document.querySelector('input[type="file"]');
-        if (fileInput) fileInput.value = '';
+        if (fileInput) fileInput.value = "";
       } else {
-        alert(`Error: ${result.message || 'Unknown error occurred'}`);
+        alert(`Error: ${result.message || "Unknown error occurred"}`);
       }
     } catch (error) {
-      console.error('Error submitting application:', error);
-      alert(`Network Error: ${error.message}. Please check if the API server is running on localhost:3300`);
+      console.error("Error submitting application:", error);
+      alert(
+        `Network Error: ${error.message}. Please check if the API server is running on localhost:3300`,
+      );
     }
   };
 
@@ -238,9 +246,10 @@ export default function CareersPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Be part of a dynamic team that has been delivering engineering excellence for over 32 years. 
-              We offer exciting career opportunities in a collaborative environment with competitive benefits 
-              and professional growth opportunities.
+              Be part of a dynamic team that has been delivering engineering
+              excellence for over 32 years. We offer exciting career
+              opportunities in a collaborative environment with competitive
+              benefits and professional growth opportunities.
             </motion.p>
 
             <motion.div
@@ -319,7 +328,8 @@ export default function CareersPage() {
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              We value our employees and provide comprehensive benefits for professional and personal growth
+              We value our employees and provide comprehensive benefits for
+              professional and personal growth
             </p>
           </motion.div>
 
@@ -336,8 +346,12 @@ export default function CareersPage() {
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200 w-fit mb-6">
                   <benefit.icon className="text-orange-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -361,7 +375,8 @@ export default function CareersPage() {
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Explore exciting career opportunities in engineering, manufacturing, and technical services
+              Explore exciting career opportunities in engineering,
+              manufacturing, and technical services
             </p>
           </motion.div>
 
@@ -377,7 +392,9 @@ export default function CareersPage() {
               >
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {job.title}
+                    </h3>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
                         {job.department}
@@ -404,14 +421,24 @@ export default function CareersPage() {
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">{job.description}</p>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {job.description}
+                </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3">Requirements:</h4>
+                  <h4 className="font-bold text-gray-900 mb-3">
+                    Requirements:
+                  </h4>
                   <ul className="space-y-2">
                     {job.requirements.slice(0, 3).map((req, i) => (
-                      <li key={i} className="flex items-start gap-2 text-gray-600">
-                        <CheckCircle size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-gray-600"
+                      >
+                        <CheckCircle
+                          size={16}
+                          className="text-green-500 flex-shrink-0 mt-0.5"
+                        />
                         <span className="text-sm">{req}</span>
                       </li>
                     ))}
@@ -421,7 +448,9 @@ export default function CareersPage() {
                 <button
                   onClick={() => {
                     setSelectedJob(job);
-                    document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("apply")
+                      .scrollIntoView({ behavior: "smooth" });
                   }}
                   className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
@@ -450,7 +479,8 @@ export default function CareersPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Ready to start your career with us? Fill out the form below and we'll get back to you within 24 hours
+              Ready to start your career with us? Fill out the form below and
+              we'll get back to you within 24 hours
             </p>
           </motion.div>
 
@@ -464,7 +494,7 @@ export default function CareersPage() {
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-orange-200/20 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-red-200/20 to-transparent rounded-full translate-x-20 translate-y-20"></div>
-              
+
               <div className="relative z-10">
                 <div className="text-center mb-10">
                   <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold text-lg shadow-lg mb-4">
@@ -483,7 +513,10 @@ export default function CareersPage() {
                         Full Name *
                       </label>
                       <div className="relative group">
-                        <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                        <User
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10"
+                          size={20}
+                        />
                         <input
                           type="text"
                           name="fullName"
@@ -501,7 +534,10 @@ export default function CareersPage() {
                         Email Address *
                       </label>
                       <div className="relative group">
-                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                        <Mail
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10"
+                          size={20}
+                        />
                         <input
                           type="email"
                           name="email"
@@ -519,7 +555,10 @@ export default function CareersPage() {
                         Phone Number *
                       </label>
                       <div className="relative group">
-                        <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                        <Phone
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10"
+                          size={20}
+                        />
                         <input
                           type="tel"
                           name="phoneNumber"
@@ -537,7 +576,10 @@ export default function CareersPage() {
                         Upload CV/Resume *
                       </label>
                       <div className="relative group">
-                        <Upload className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                        <Upload
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10"
+                          size={20}
+                        />
                         <input
                           type="file"
                           name="resume"
@@ -551,7 +593,8 @@ export default function CareersPage() {
                         </div>
                       </div>
                       <p className="text-sm text-gray-500 mt-2">
-                        Please upload your CV in PDF, DOC, or DOCX format (Max 5MB)
+                        Please upload your CV in PDF, DOC, or DOCX format (Max
+                        5MB)
                       </p>
                     </div>
                   </div>
@@ -561,7 +604,10 @@ export default function CareersPage() {
                       Cover Letter / Additional Information
                     </label>
                     <div className="relative group">
-                      <FileText className="absolute left-4 top-4 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10" size={20} />
+                      <FileText
+                        className="absolute left-4 top-4 text-gray-400 group-focus-within:text-orange-500 transition-colors z-10"
+                        size={20}
+                      />
                       <textarea
                         name="coverLetter"
                         value={formData.coverLetter}
@@ -579,14 +625,27 @@ export default function CareersPage() {
                       className="group inline-flex items-center gap-2 sm:gap-4 px-6 sm:px-12 py-3 sm:py-5 bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 text-white font-bold text-lg sm:text-xl rounded-xl sm:rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Send size={20} className="sm:hidden group-hover:animate-bounce relative z-10" />
-                      <Send size={24} className="hidden sm:block group-hover:animate-bounce relative z-10" />
+                      <Send
+                        size={20}
+                        className="sm:hidden group-hover:animate-bounce relative z-10"
+                      />
+                      <Send
+                        size={24}
+                        className="hidden sm:block group-hover:animate-bounce relative z-10"
+                      />
                       <span className="relative z-10">Submit Application</span>
-                      <ArrowRight size={20} className="sm:hidden group-hover:translate-x-1 transition-transform relative z-10" />
-                      <ArrowRight size={24} className="hidden sm:block group-hover:translate-x-1 transition-transform relative z-10" />
+                      <ArrowRight
+                        size={20}
+                        className="sm:hidden group-hover:translate-x-1 transition-transform relative z-10"
+                      />
+                      <ArrowRight
+                        size={24}
+                        className="hidden sm:block group-hover:translate-x-1 transition-transform relative z-10"
+                      />
                     </button>
                     <p className="text-gray-500 mt-4 text-sm">
-                      By submitting this form, you agree to our privacy policy and terms of service.
+                      By submitting this form, you agree to our privacy policy
+                      and terms of service.
                     </p>
                   </div>
                 </form>
@@ -613,7 +672,8 @@ export default function CareersPage() {
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Have questions about career opportunities? Our HR team is here to help you find the right position
+              Have questions about career opportunities? Our HR team is here to
+              help you find the right position
             </p>
           </motion.div>
 
@@ -630,12 +690,20 @@ export default function CareersPage() {
                 <Phone className="text-orange-600" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Call Us</h3>
-              <p className="text-gray-600 mb-4">Speak directly with our HR team</p>
+              <p className="text-gray-600 mb-4">
+                Speak directly with our HR team
+              </p>
               <div className="space-y-2">
-                <a href="tel:+97444601087" className="block text-orange-600 font-bold hover:text-orange-700 transition-colors">
+                <a
+                  href="tel:+97444601087"
+                  className="block text-orange-600 font-bold hover:text-orange-700 transition-colors"
+                >
                   +974 4460 1087
                 </a>
-                <a href="tel:+97451711104" className="block text-orange-600 font-bold hover:text-orange-700 transition-colors">
+                <a
+                  href="tel:+97451711104"
+                  className="block text-orange-600 font-bold hover:text-orange-700 transition-colors"
+                >
                   +974 5171 1104
                 </a>
               </div>
@@ -652,12 +720,20 @@ export default function CareersPage() {
                 <Mail className="text-orange-600" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send your resume and inquiries</p>
+              <p className="text-gray-600 mb-4">
+                Send your resume and inquiries
+              </p>
               <div className="space-y-2">
-                <a href="mailto:careers@alsuwaiditechnical.com" className="block text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm break-all">
+                <a
+                  href="mailto:careers@alsuwaiditechnical.com"
+                  className="block text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm break-all"
+                >
                   careers@alsuwaiditechnical.com
                 </a>
-                <a href="mailto:info@alsuwaiditechnical.com" className="block text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm break-all">
+                <a
+                  href="mailto:info@alsuwaiditechnical.com"
+                  className="block text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm break-all"
+                >
                   info@alsuwaiditechnical.com
                 </a>
               </div>
@@ -674,7 +750,9 @@ export default function CareersPage() {
                 <MapPin className="text-orange-600" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Visit Us</h3>
-              <p className="text-gray-600 mb-4">Come for an in-person interview</p>
+              <p className="text-gray-600 mb-4">
+                Come for an in-person interview
+              </p>
               <div className="text-gray-700 font-medium">
                 <p>Street No. 18, Gate No. 35</p>
                 <p>P.O. Box – 40600</p>
@@ -692,12 +770,16 @@ export default function CareersPage() {
               <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200 w-fit mx-auto mb-6">
                 <Clock className="text-orange-600" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Office Hours</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Office Hours
+              </h3>
               <p className="text-gray-600 mb-4">Available for interviews</p>
               <div className="text-gray-700 font-medium">
                 <p>Sunday - Thursday</p>
                 <p>7:00 AM - 5:00 PM</p>
-                <p className="text-sm text-gray-500 mt-2">Friday - Saturday: Closed</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Friday - Saturday: Closed
+                </p>
               </div>
             </motion.div>
           </div>
