@@ -19,6 +19,8 @@ import {
   Upload,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
 
@@ -168,17 +170,20 @@ export default function CareersPage() {
       }
 
       console.log("Submitting to API...");
-      const response = await fetch("/job-application/create", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BASE_URL}/job-application/create`,
+        {
+          method: "POST",
+          body: formDataToSend,
+        },
+      );
 
       console.log("Response status:", response.status);
       const result = await response.json();
       console.log("API Response:", result);
 
       if (result.success) {
-        alert("Application submitted successfully! We will contact you soon.");
+        toast.success("Application submitted successfully! We will contact you soon.");
         setFormData({
           fullName: "",
           email: "",
@@ -190,12 +195,12 @@ export default function CareersPage() {
         const fileInput = document.querySelector('input[type="file"]');
         if (fileInput) fileInput.value = "";
       } else {
-        alert(`Error: ${result.message || "Unknown error occurred"}`);
+        toast.error(`Error: ${result.message || "Unknown error occurred"}`);
       }
     } catch (error) {
       console.error("Error submitting application:", error);
-      alert(
-        `Network Error: ${error.message}. Please check if the API server is running on localhost:3300`,
+      toast.error(
+        `Network Error: ${error.message}. Please check if the API server is running on localhost:3300`
       );
     }
   };
@@ -789,6 +794,7 @@ export default function CareersPage() {
       </main>
 
       {/* <GetDemoSection /> */}
+      <ToastContainer position="top-right" autoClose={5000} theme="light" />
     </div>
   );
 }
