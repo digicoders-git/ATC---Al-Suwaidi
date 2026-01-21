@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   X,
@@ -21,6 +21,72 @@ import { motion } from "framer-motion";
 import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
 
+const workshopImages = [
+  {
+    id: 1,
+    src: "/our workshop/file_zip/A40I4416 (1).jpg",
+    caption: "Advanced machining and fabrication facilities"
+  },
+  {
+    id: 2,
+    src: "/our workshop/file_zip/A40I4418 (1).jpg",
+    caption: "Heavy-duty workshop equipped for industrial projects"
+  },
+  {
+    id: 3,
+    src: "/our workshop/file_zip/A40I4420.jpg",
+    caption: "Precision tools and controlled working environments"
+  },
+  {
+    id: 4,
+    src: "/our workshop/file_zip/atc_groupicture_A40I5304.jpg",
+    caption: "Advanced machining and fabrication facilities"
+  },
+  {
+    id: 5,
+    src: "/our workshop/file_zip/atc_groupicture_A40I5317.jpg",
+    caption: "Heavy-duty workshop equipped for industrial projects"
+  },
+  {
+    id: 6,
+    src: "/our workshop/file_zip/main 2.jpg",
+    caption: "Precision tools and controlled working environments"
+  },
+  {
+    id: 7,
+    src: "/our workshop/file_zip/main.jpg",
+    caption: "Advanced machining and fabrication facilities"
+  }
+];
+
+const teamImages = [
+  {
+    id: 1,
+    src: "/our team/file_zip/atc_groupicture_A40I5327.jpg",
+    caption: "Our skilled technical team at ATC headquarters"
+  },
+  {
+    id: 2,
+    src: "/our team/file_zip/atc_groupicture_A40I5341.jpg",
+    caption: "Dedicated professionals delivering engineering excellence"
+  },
+  {
+    id: 3,
+    src: "/our team/file_zip/atc_groupicture_A40I5345.jpg",
+    caption: "Teamwork that powers precision since 1991"
+  },
+  {
+    id: 4,
+    src: "/our team/file_zip/atc_groupicture_A40I5370.jpg",
+    caption: "United workforce committed to quality and safety"
+  },
+  {
+    id: 5,
+    src: "/our team/file_zip/atc_groupicture_A40I5397 (1).jpg",
+    caption: "Professional team driving innovation and excellence"
+  }
+];
+
 const galleryImages = [
   {
     id: 1,
@@ -28,6 +94,7 @@ const galleryImages = [
     title: "Industrial Workshop Operations",
     category: "Workshop",
     description: "Professional industrial workshop operations and machinery",
+    caption: "Custom commercial vehicle body fabrication"
   },
   {
     id: 2,
@@ -35,6 +102,7 @@ const galleryImages = [
     title: "Heavy Machinery Services",
     category: "Machinery",
     description: "Heavy machinery maintenance and repair services",
+    caption: "Precision gear manufacturing and assembly"
   },
   {
     id: 3,
@@ -42,6 +110,7 @@ const galleryImages = [
     title: "Precision Engineering Work",
     category: "Engineering",
     description: "Precision engineering and fabrication work",
+    caption: "Marine and heavy equipment engineering solutions"
   },
   {
     id: 4,
@@ -49,6 +118,7 @@ const galleryImages = [
     title: "Steel Fabrication Process",
     category: "Steel Fabrication",
     description: "Steel fabrication and welding operations",
+    caption: "Custom commercial vehicle body fabrication"
   },
   {
     id: 5,
@@ -56,6 +126,7 @@ const galleryImages = [
     title: "Vehicle Body Manufacturing",
     category: "Commercial Vehicles",
     description: "Commercial vehicle body manufacturing process",
+    caption: "Precision gear manufacturing and assembly"
   },
   {
     id: 6,
@@ -63,6 +134,7 @@ const galleryImages = [
     title: "Engine Reconditioning",
     category: "Engine Repair",
     description: "Engine reconditioning and repair services",
+    caption: "Marine and heavy equipment engineering solutions"
   },
   {
     id: 7,
@@ -70,6 +142,7 @@ const galleryImages = [
     title: "Gear Manufacturing",
     category: "Gear Making",
     description: "Precision gear manufacturing and machining",
+    caption: "Custom commercial vehicle body fabrication"
   },
   {
     id: 8,
@@ -77,6 +150,7 @@ const galleryImages = [
     title: "Bearing Services",
     category: "Bearing Services",
     description: "Professional bearing installation and maintenance",
+    caption: "Precision gear manufacturing and assembly"
   },
   {
     id: 9,
@@ -84,6 +158,7 @@ const galleryImages = [
     title: "Wheel Repair Services",
     category: "Wheel Services",
     description: "Wheel alignment and repair services",
+    caption: "Marine and heavy equipment engineering solutions"
   },
   {
     id: 10,
@@ -329,34 +404,68 @@ export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTeamImage, setIsTeamImage] = useState(false);
+  const [isWorkshopImage, setIsWorkshopImage] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && videoRef.current) {
+            videoRef.current.play();
+          } else if (videoRef.current) {
+            videoRef.current.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
 
   const filteredImages =
     selectedCategory === "All"
       ? galleryImages
       : galleryImages.filter((img) => img.category === selectedCategory);
 
-  const openLightbox = (image, index) => {
+  const openLightbox = (image, index, isTeam = false, isWorkshop = false) => {
     setSelectedImage(image);
     setCurrentImageIndex(index);
+    setIsTeamImage(isTeam);
+    setIsWorkshopImage(isWorkshop);
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
+    setIsTeamImage(false);
+    setIsWorkshopImage(false);
   };
 
   const nextImage = () => {
-    const nextIndex = (currentImageIndex + 1) % galleryImages.length;
+    const imageArray = isTeamImage ? teamImages : isWorkshopImage ? workshopImages : galleryImages;
+    const nextIndex = (currentImageIndex + 1) % imageArray.length;
     setCurrentImageIndex(nextIndex);
-    setSelectedImage(galleryImages[nextIndex]);
+    setSelectedImage(imageArray[nextIndex]);
   };
 
   const prevImage = () => {
+    const imageArray = isTeamImage ? teamImages : isWorkshopImage ? workshopImages : galleryImages;
     const prevIndex =
       currentImageIndex === 0
-        ? galleryImages.length - 1
+        ? imageArray.length - 1
         : currentImageIndex - 1;
     setCurrentImageIndex(prevIndex);
-    setSelectedImage(galleryImages[prevIndex]);
+    setSelectedImage(imageArray[prevIndex]);
   };
 
   return (
@@ -478,6 +587,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <video
+              ref={videoRef}
               className="w-full h-[400px] md:h-[600px] object-cover"
               controls
               muted
@@ -494,6 +604,148 @@ export default function GalleryPage() {
 
       {/* ===== MAIN CONTENT ===== */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        {/* OUR TEAM Section */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+              OUR{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                TEAM
+              </span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+              Our strength lies in our people. Meet the skilled engineers, technicians, and professionals who drive quality, safety, and precision in every project.
+            </p>
+          </motion.div>
+
+          {/* Team Images Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {teamImages.map((team, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                onClick={() => openLightbox(team, index, true)}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={team.src}
+                    alt={team.caption}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239ca3af'%3ETeam Image%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                </div>
+                
+                {/* Hover Caption */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-4 right-4">
+                    <ZoomIn className="text-white" size={24} />
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="text-sm font-medium">{team.caption}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Team Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+              Unified Technical Workforce at Al Suwaidi Technical Centre
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
+              A proud gathering of our skilled professionals across all departments standing at the heart of our facility. These images represents the strength, discipline, and teamwork behind Al Suwaidi Technical Centre's operations—driving precision engineering, fabrication, and mechanical services with commitment to quality and safety.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* OUR WORKSHOP Section */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+              OUR{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                WORKSHOP
+              </span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+              Our fully equipped workshop is designed to handle complex engineering, machining, fabrication, and repair works under one roof.
+            </p>
+          </motion.div>
+
+          {/* Workshop Images Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {workshopImages.map((workshop, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                onClick={() => openLightbox(workshop, index, false, true)}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={workshop.src}
+                    alt={workshop.caption}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239ca3af'%3EWorkshop Image%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                </div>
+                
+                {/* Hover Caption */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-4 right-4">
+                    <ZoomIn className="text-white" size={24} />
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="text-sm font-medium">{workshop.caption}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Workshop Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 border border-orange-100"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+              Our Workshop at Al Suwaidi Technical Centre
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
+              A comprehensive view of our fully equipped workshop where engineering expertise meets advanced machinery. This facility houses dedicated sections for fabrication, precision machining, engine reconditioning, gear manufacturing, hydraulic systems, vehicle body building, and heavy equipment servicing. The workshop reflects our commitment to operational efficiency, safety standards, and quality workmanship—serving as the backbone of reliable, high-performance industrial and mechanical solutions delivered to our clients.
+            </p>
+          </motion.div>
+        </section>
+
         {/* Category Filter */}
         <section id="gallery" className="mb-12">
           <motion.div
@@ -503,14 +755,13 @@ export default function GalleryPage() {
             className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-              Project{" "}
+              OUR{" "}
               <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Gallery
+                PROJECTS
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Browse through our extensive portfolio of completed projects and
-              services
+              Our fully equipped workshop is designed to handle complex engineering, machining, fabrication, and repair works under one roof.
             </p>
           </motion.div>
 
@@ -540,18 +791,14 @@ export default function GalleryPage() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                    <p className="text-sm text-gray-200 mb-2">
-                      {image.description}
-                    </p>
-                    <span className="inline-block px-3 py-1 bg-orange-500 text-white text-xs rounded-full">
-                      {image.category}
-                    </span>
-                  </div>
                   <div className="absolute top-4 right-4">
                     <ZoomIn className="text-white" size={24} />
                   </div>
+                  {image.caption && (
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <p className="text-sm font-medium">{image.caption}</p>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -592,17 +839,6 @@ export default function GalleryPage() {
                 alt={selectedImage.title}
                 className="w-full h-130 sm:h-150 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {selectedImage.title}
-                </h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  {selectedImage.description}
-                </p>
-                <span className="inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full font-semibold text-sm">
-                  {selectedImage.category}
-                </span>
-              </div>
             </div>
           </div>
         </div>

@@ -20,6 +20,7 @@ function Slider() {
   const heroSlides = [
     {
       id: 1,
+      heading: "Steel Structure Specialists Since 1991",
       title: "Industrial Steel Structure Solutions",
       subtitle: "Built with Strength & Precision",
       description:
@@ -28,6 +29,7 @@ function Slider() {
     },
     {
       id: 2,
+      heading: "Steel Structure Specialists Since 1991",
       title: "Advanced Steel Fabrication Work",
       subtitle: "Precision in Every Detail",
       description:
@@ -36,11 +38,30 @@ function Slider() {
     },
     {
       id: 3,
-      title: "Complete Steel Structure Installation",
+      heading: "Precision Gear Manufacturing Specialists",
+      title: "Gear Manufacturing & Power Transmission Solutions",
       subtitle: "From Design to Execution",
       description:
-        "Expert steel structure erection and installation for industrial projects, built to handle heavy loads and harsh working conditions.",
+        "High-precision gear milling and hobbing services engineered for smooth power transfer, accurate load distribution, and long-term mechanical reliability in industrial and heavy-duty applications.",
       image: "/Slider31.jpg",
+    },
+    {
+      id: 4,
+      heading: "Marine & Shipyard Engineering Specialists",
+      title: "Marine, Shipyard & Heavy Equipment Engineering Services",
+      subtitle: "From Design to Execution",
+      description:
+        "Specialized machining, repair, and engineering support for marine vessels and shipyard equipment, delivering durability, precision, and reliable performance in demanding marine environments",
+      image: "/image.png",
+    },
+    {
+      id: 5,
+      heading: "Special Purpose Vehicle Fabrication Experts",
+      title: "Commercial Vehicle Body Building Solutions",
+      subtitle: "From Design to Execution",
+      description:
+        "Custom-built tanker trucks and special purpose vehicle bodies engineered for durability, safety, and reliable performance in harsh desert and industrial operating conditions",
+      image: "/dcxbcdbxchsxb.jpeg",
     },
   ];
 
@@ -58,7 +79,7 @@ function Slider() {
 
   const prevSlide = () =>
     setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
     );
 
   return (
@@ -100,7 +121,8 @@ function Slider() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-sm font-semibold mb-6">
                       <Award size={16} />
-                      Steel Structure Specialists Since 1991
+                      {/* Steel Structure Specialists Since 1991 */}
+                      {slide.heading}
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6">

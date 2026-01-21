@@ -19,14 +19,39 @@ import {
 
 export default function Footer() {
   const services = [
-    { label: "Fabrication & Structural Engineering Solutions", to: "/services/steel-fabrication" },
-    { label: "Commercial Vehicle Body Building & Special Purpose Vehicles", to: "/services/vehicle-bodies" },
-    { label: "Engine Reconditioning & Drivetrain Services", to: "/services/engine-repair" },
-    { label: "Precision Machining, Gear Manufacturing & Power Transmission Services", to: "/services/gears-milling" },
-    { label: "Bearing, Shaft & Precision Fitment Services", to: "/services/bearings" },
-    { label: "Wheel & Rotating Component Repair Services", to: "/services/wheels-repair" },
-    { label: "Cabinet Manufacturing (KAHRAMAA Approved)", to: "/services/cabinets" },
-    { label: "Marine, Shipyard & Heavy Equipment Engineering Services", to: "/services/marine-services" },
+    {
+      label: "Fabrication & Structural Engineering Solutions",
+      to: "/services/steel-fabrication",
+    },
+    {
+      label: "Commercial Vehicle Body Building & Special Purpose Vehicles",
+      to: "/services/vehicle-bodies",
+    },
+    {
+      label: "Engine Reconditioning & Drivetrain Services",
+      to: "/services/engine-repair",
+    },
+    {
+      label:
+        "Precision Machining, Gear Manufacturing & Power Transmission Services",
+      to: "/services/gears-milling",
+    },
+    {
+      label: "Bearing, Shaft & Precision Fitment Services",
+      to: "/services/bearings",
+    },
+    {
+      label: "Wheel & Rotating Component Repair Services",
+      to: "/services/wheels-repair",
+    },
+    {
+      label: "Cabinet Manufacturing (KAHRAMAA Approved)",
+      to: "/services/cabinets",
+    },
+    {
+      label: "Marine, Shipyard & Heavy Equipment Engineering Services",
+      to: "/services/marine-services",
+    },
     { label: "Hydraulic & Pump Systems", to: "/services/hydraulic-services" },
   ];
 
@@ -52,7 +77,6 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -66,12 +90,16 @@ export default function Footer() {
               </Link>
               <div className="ml-3">
                 <h3 className="text-xl font-bold text-white">Al Suwaidi</h3>
-                <p className="text-orange-100 text-sm font-medium">Technical Center</p>
+                <p className="text-orange-100 text-sm font-medium">
+                  Technical Center
+                </p>
               </div>
             </div>
 
             <p className="text-orange-100 mb-6 text-sm leading-relaxed">
-              Leading provider of industrial engineering and technical works solutions in Qatar with 32+ years of excellence in fabrication, manufacturing, and precision engineering.
+              Leading provider of industrial engineering and technical works
+              solutions in Qatar with 32+ years of excellence in fabrication,
+              manufacturing, and precision engineering.
             </p>
 
             <div className="flex items-center gap-3">
@@ -129,8 +157,24 @@ export default function Footer() {
                   <Phone size={14} className="text-white" />
                 </div>
                 <div className="text-orange-100">
-                  <p>Tel: <a href="tel:+97444601087" className="hover:text-white transition-colors">+974 44601087</a></p>
-                  <p>Cell: <a href="tel:+97451711104" className="hover:text-white transition-colors">+974 51711104</a></p>
+                  <p>
+                    Tel:{" "}
+                    <a
+                      href="tel:+97444601087"
+                      className="hover:text-white transition-colors"
+                    >
+                      +974 44601087
+                    </a>
+                  </p>
+                  <p>
+                    Cell:{" "}
+                    <a
+                      href="tel:+97451711104"
+                      className="hover:text-white transition-colors"
+                    >
+                      +974 51711104
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -139,8 +183,22 @@ export default function Footer() {
                   <Mail size={14} className="text-white" />
                 </div>
                 <div className="text-orange-100">
-                  <p><a href="mailto:info@alsuwaiditechnical.com" className="hover:text-white transition-colors">info@alsuwaiditechnical.com</a></p>
-                  <p><a href="mailto:suwaidigroup@yahoo.com" className="hover:text-white transition-colors">suwaidigroup@yahoo.com</a></p>
+                  <p>
+                    <a
+                      href="mailto:info@alsuwaiditechnical.com"
+                      className="hover:text-white transition-colors"
+                    >
+                      info@alsuwaiditechnical.com
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="mailto:suwaidigroup@yahoo.com"
+                      className="hover:text-white transition-colors"
+                    >
+                      suwaidigroup@yahoo.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -159,7 +217,10 @@ export default function Footer() {
                   to={service.to}
                   className="flex items-center gap-2 text-orange-100 hover:text-white transition-colors duration-300 text-sm group underline hover:no-underline"
                 >
-                  <ArrowRight className="text-white flex-shrink-0 group-hover:translate-x-1 transition-transform" size={12} />
+                  <ArrowRight
+                    className="text-white flex-shrink-0 group-hover:translate-x-1 transition-transform"
+                    size={12}
+                  />
                   <span className="leading-tight">{service.label}</span>
                 </Link>
               ))}
@@ -179,7 +240,10 @@ export default function Footer() {
                   to={link.href}
                   className="flex items-center gap-2 text-orange-100 hover:text-white transition-colors duration-300 text-sm group underline hover:no-underline"
                 >
-                  <ArrowRight className="text-white flex-shrink-0 group-hover:translate-x-1 transition-transform" size={12} />
+                  <ArrowRight
+                    className="text-white flex-shrink-0 group-hover:translate-x-1 transition-transform"
+                    size={12}
+                  />
                   <span>{link.label}</span>
                 </Link>
               ))}
@@ -194,7 +258,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <p className="text-orange-100 text-sm">
-                © {new Date().getFullYear()} Al Suwaidi Technical Center. All rights reserved.
+                © {new Date().getFullYear()} Al Suwaidi Technical Center. All
+                rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -209,10 +274,9 @@ export default function Footer() {
                   Worknestconnect
                 </a>
               </p>
-              <div className="flex items-center gap-2 text-xs text-orange-200">
+              {/* <div className="flex items-center gap-2 text-xs text-orange-200">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                <span>ISO 9001:2015 Certified</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

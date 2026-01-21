@@ -19,69 +19,94 @@ import { Link } from "react-router-dom";
 const SERVICES = [
   {
     id: "steel-fabrication",
-    title: "Steel Fabrication Basics",
+    title: "Fabrication & Structural Engineering Solutions",
     icon: FaIndustry,
     short:
-      "Heavy & medium structural steel works, warehouse sheds, industrial structures.",
+      "Heavy and medium structural steel fabrication, industrial structures, base frames, skids, pipe spools, and custom fabrication works.",
     details:
-      "Complete structural steel fabrication including heavy and medium steel works, warehouse sheds, industrial buildings, and custom steel structures with professional installation services.",
+      "Complete structural steel fabrication including heavy and medium steel works, industrial structures, base frames, skids, pipe spools, flanges, and engineered fabrication solutions with professional installation services.",
     category: "Fabrication",
   },
   {
     id: "vehicle-bodies",
-    title: "Commercial Vehicle Bodies",
+    title: "Commercial Vehicle Body Building & Special Purpose Vehicles",
     icon: FaTruck,
-    short: "Road tankers, trailers, flatbeds, dump trucks, .",
+    short:
+      "Custom vehicle bodies including tankers, trailers, flatbeds, refrigerated bodies, and special-purpose transport solutions.",
     details:
-      "Design and fabrication of commercial vehicle bodies including fuel tankers, water tankers, flatbed trailers, dump trucks, refrigerated bodies, and custom transportation solutions.",
+      "Design and fabrication of commercial vehicle bodies including tankers, trailers, refrigerated bodies, mobile workshops, tail lift installations, and specialized transport solutions.",
     category: "Vehicle Bodies",
   },
   {
     id: "engine-repair",
-    title: "Vehicle Engine Repairing",
+    title: "Engine Reconditioning & Drivetrain Services",
     icon: FaCogs,
     short:
-      "Engine reconditioning, block boring, crankshaft grinding, and mechanical repairs.",
+      "Engine reconditioning, cylinder head services, crankshaft grinding, transmission repair, and drivetrain refurbishment.",
     details:
-      "Professional engine repair and reconditioning services including block boring, crankshaft grinding, cylinder liner fitting, piston ring fitting, and complete engine assembly.",
+      "Complete engine reconditioning, cylinder head services, transmission repair, differential and axle refurbishment for heavy-duty vehicles with professional assembly services.",
     category: "Engine Repair",
   },
   {
     id: "gears-milling",
-    title: "Gears Making & Milling",
+    title:
+      "Precision Machining, Gear Manufacturing & Power Transmission Services",
     icon: FaWrench,
     short:
-      "Precision gear manufacturing, milling operations, and machining services.",
+      "Precision machining, gear milling & hobbing, gearboxes, reduction gears, and power transmission components.",
     details:
-      "Advanced gear making and milling services including gear hobbing, turning operations, drilling, boring, and precision machining for industrial applications.",
+      "High-precision machining, gear milling & hobbing, gearboxes, reduction gears, and industrial power transmission components with quality assurance.",
     category: "Machining",
   },
   {
     id: "bearings",
-    title: "Bearings Service",
+    title: "Bearing, Shaft & Precision Fitment Services",
     icon: FaTools,
-    short: "Bearing removal, fitting, hub bearings, and axle bearing services.",
+    short:
+      "Bearing removal and fitting, bush installation, shaft alignment, stern tube bearings, and precision fitment services.",
     details:
-      "Comprehensive bearing services including axle bearing removal and fitting, hub bearing installation, king pin services, and bearing maintenance for all vehicle types.",
+      "Bearing installation, bush fitting, shaft alignment, stern tube bearings, and precision fitment for rotating assemblies with expert craftsmanship.",
     category: "Bearings",
   },
   {
     id: "wheels-repair",
-    title: "Vehicle Wheels Repair",
+    title: "Wheel & Rotating Component Repair Services",
     icon: FaBoxes,
-    short: "Wheel alignment, balancing, disc facing, and rim repair services.",
+    short:
+      "Wheel alignment, balancing, disc and drum facing, flywheel resurfacing, and rotating component repair services.",
     details:
-      "Complete wheel repair services including wheel alignment, straightening and balancing, disc and drum facing, flywheel resurfacing, and custom wheel modifications.",
+      "Wheel alignment, balancing, resurfacing, straightening, and rotating component repair for commercial and industrial vehicles with precision equipment.",
     category: "Wheel Services",
   },
   {
     id: "cabinets",
-    title: "Cabinets Manufacturing",
+    title: "Cabinet Manufacturing (KAHRAMAA Approved)",
     icon: FaHardHat,
-    short: "KAHRAMAA-approved water and electric service cabinets.",
+    short:
+      "KAHRAMAA-approved electrical and water service cabinets, panel boards, and enclosure manufacturing.",
     details:
-      "Manufacturing of KAHRAMAA-approved utility cabinets including water service cabinets, electric service cabinets, and custom enclosures with ISO quality certification.",
+      "KAHRAMAA-approved electrical and water service cabinets, panels, and enclosure manufacturing with ISO quality certification and compliance.",
     category: "Manufacturing",
+  },
+  {
+    id: "hydraulic-services",
+    title: "Hydraulic, Pump & Fluid System Engineering Services",
+    icon: FaPaintRoller,
+    short:
+      "Hydraulic cylinders, pumps, valves, actuators, cargo and ballast pump systems with precision repair and restoration.",
+    details:
+      "Hydraulic cylinders, pumps, valves, actuators, cargo and ballast pump systems with precision machining and restoration services for industrial applications.",
+    category: "Hydraulics",
+  },
+  {
+    id: "marine-services",
+    title: "Marine, Shipyard & Heavy Equipment Engineering Services",
+    icon: FaIndustry,
+    short:
+      "Engineering and machining support for marine vessels, shipyard equipment, cranes, and heavy construction machinery.",
+    details:
+      "Engineering and machining support for marine vessels, shipyard equipment, cranes, and heavy construction machinery with specialized expertise and equipment.",
+    category: "Marine Engineering",
   },
 ];
 
@@ -153,7 +178,7 @@ export default function Services() {
           </div>
 
           {/* grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((s, idx) => {
               const Icon = s.icon;
               return (

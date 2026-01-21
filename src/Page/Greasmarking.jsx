@@ -132,7 +132,8 @@ const gearManufacturingServices = [
   {
     title: "⚙️ Gearboxes & Reduction Gear Services",
     desc: "Gearboxes and reduction gears are critical for controlling speed and torque in power transmission systems. Precision machining and refurbishment services restore gear accuracy, alignment, and load-handling capability.",
-    image: "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Gearboxes & Reduction Gear Services.png",
+    image:
+      "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Gearboxes & Reduction Gear Services.png",
     features: [
       "✓ Smooth and reliable power transmission",
       "✓ Reduced noise, vibration, and wear",
@@ -146,7 +147,8 @@ const gearManufacturingServices = [
   {
     title: "⚙️ Differential Gear Services",
     desc: "Differential gears enable balanced torque distribution between rotating components. Precision machining ensures correct meshing, alignment, and load distribution under varying operating conditions.",
-    image: "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Differential Gear Services.png",
+    image:
+      "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Differential Gear Services.png",
     features: [
       "✓ Improved torque balance",
       "✓ Reduced drivetrain stress",
@@ -160,7 +162,8 @@ const gearManufacturingServices = [
   {
     title: "⚙️ Industrial Power Transmission Component Services",
     desc: "Industrial power transmission components require precise machining to maintain efficiency and alignment across rotating systems. Services support a wide range of industrial applications.",
-    image: "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Industrial Power Transmission Component Services.png",
+    image:
+      "/GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES/file_zip/Industrial Power Transmission Component Services.png",
     features: [
       "✓ Efficient and stable power transfer",
       "✓ Reduced mechanical losses",
@@ -177,7 +180,8 @@ const precisionMachiningServices = [
   {
     title: "🔄 Turning (Lathe Work) Services",
     desc: "Turning operations are used to machine cylindrical components to precise diameters and surface finishes.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Turning (Lathe Work) Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Turning (Lathe Work) Services.png",
     features: [
       "✓ Accurate component dimensions",
       "✓ Smooth surface finish",
@@ -191,21 +195,21 @@ const precisionMachiningServices = [
   {
     title: "🔧 Milling & Slotting Services",
     desc: "Milling and slotting are used to create flat surfaces, slots, and profiles required for accurate assembly.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Milling & Slotting Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Milling & Slotting Services.png",
     features: [
       "✓ Precise component geometry",
       "✓ Accurate assembly interfaces",
       "✓ Reduced alignment issues",
     ],
-    specs: [
-      "Milling of flat surfaces, slots, key slots, and complex profiles",
-    ],
+    specs: ["Milling of flat surfaces, slots, key slots, and complex profiles"],
     icon: Square,
   },
   {
     title: "🕳️ Boring & Line Boring Services",
     desc: "Boring and line boring restore internal diameters and alignment in housings and assemblies.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Boring & Line Boring Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Boring & Line Boring Services.png",
     features: [
       "✓ Correct bore alignment",
       "✓ Improved bearing performance",
@@ -219,35 +223,34 @@ const precisionMachiningServices = [
   {
     title: "⚡ Grinding Services (Shaft, Crankshaft & Surface)",
     desc: "Grinding restores critical dimensions and surface finish for high-precision components.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Grinding Services (Shaft, Crankshaft & Surface).png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Grinding Services (Shaft, Crankshaft & Surface).png",
     features: [
       "✓ High surface accuracy",
       "✓ Reduced friction and wear",
       "✓ Extended component life",
     ],
-    specs: [
-      "Shaft grinding, crankshaft grinding, surface grinding",
-    ],
+    specs: ["Shaft grinding, crankshaft grinding, surface grinding"],
     icon: Zap,
   },
   {
     title: "🔩 Cylinder Honing Services",
     desc: "Honing improves internal surface finish and geometry for optimal sealing and smooth movement.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Cylinder Honing Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Cylinder Honing Services.png",
     features: [
       "✓ Improved sealing performance",
       "✓ Smooth piston movement",
       "✓ Enhanced operational efficiency",
     ],
-    specs: [
-      "Cylinder honing for engines and hydraulic cylinders",
-    ],
+    specs: ["Cylinder honing for engines and hydraulic cylinders"],
     icon: Drill,
   },
   {
     title: "🔩 Thread Cutting Services (Metric & Imperial)",
     desc: "Thread cutting services create or restore threaded features required for secure assembly.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Thread Cutting Services (Metric & Imperial).png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Thread Cutting Services (Metric & Imperial).png",
     features: [
       "✓ Accurate thread profiles",
       "✓ Secure and reliable fastening",
@@ -261,35 +264,34 @@ const precisionMachiningServices = [
   {
     title: "🔑 Keyway Cutting Services",
     desc: "Keyways enable torque transmission between shafts and mounted components.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Keyway Cutting Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Keyway Cutting Services.png",
     features: [
       "✓ Reliable torque transfer",
       "✓ Accurate component locking",
       "✓ Reduced slippage",
     ],
-    specs: [
-      "Precision keyway cutting for shafts, hubs, and couplings",
-    ],
+    specs: ["Precision keyway cutting for shafts, hubs, and couplings"],
     icon: Layers,
   },
   {
     title: "🔥 Welding & Build-Up Machining Services",
     desc: "Welding and build-up machining restore worn or damaged components to original dimensions.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Welding & Build-Up Machining Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Welding & Build-Up Machining Services.png",
     features: [
       "✓ Restored component geometry",
       "✓ Extended service life",
       "✓ Cost-effective repairs",
     ],
-    specs: [
-      "Wear surface build-up welding followed by precision machining",
-    ],
+    specs: ["Wear surface build-up welding followed by precision machining"],
     icon: Wrench,
   },
   {
     title: "📐 Alignment & Tolerance Correction Services",
     desc: "Alignment and tolerance correction ensure components operate within specified limits.",
-    image: "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Alignment & Tolerance Correction Services.png",
+    image:
+      "/PRECISION MACHINING & MACHINE SHOP SERVICES/file_zip/Alignment & Tolerance Correction Services.png",
     features: [
       "✓ Smooth and stable operation",
       "✓ Reduced vibration and stress",
@@ -328,7 +330,8 @@ export default function GearsMakingMillingPage() {
               className="inline-flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md text-white px-6 py-3 text-sm font-semibold mb-8 border border-white/20 shadow-lg"
             >
               <Sparkles size={18} className="text-orange-200" />
-              PRECISION MACHINING, GEAR MANUFACTURING & POWER TRANSMISSION SERVICES
+              PRECISION MACHINING, GEAR MANUFACTURING & POWER TRANSMISSION
+              SERVICES
             </motion.div>
 
             {/* Main Title */}
@@ -361,7 +364,13 @@ export default function GearsMakingMillingPage() {
               transition={{ delay: 0.5 }}
               className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-5 leading-relaxed font-medium"
             >
-              Precision machining and power transmission services support the repair, reconditioning, and manufacture of critical mechanical components requiring tight tolerances, accurate alignment, and reliable torque transfer. Advanced machine shop and gear manufacturing capabilities ensure dimensional accuracy, surface integrity, and long-term mechanical reliability across automotive, marine, industrial, and heavy equipment applications.
+              Precision machining and power transmission services support the
+              repair, reconditioning, and manufacture of critical mechanical
+              components requiring tight tolerances, accurate alignment, and
+              reliable torque transfer. Advanced machine shop and gear
+              manufacturing capabilities ensure dimensional accuracy, surface
+              integrity, and long-term mechanical reliability across automotive,
+              marine, industrial, and heavy equipment applications.
             </motion.p>
 
             {/* Action Buttons */}
@@ -421,6 +430,121 @@ export default function GearsMakingMillingPage() {
         </div>
         <ServiceSooller />
       </header>
+      {/* ===== SERVICES OVERVIEW SECTION ===== */}
+      <section className="  max-w-7xl mx-auto  mt-20 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* GEAR MANUFACTURING CARD */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm p-8 hover:shadow-3xl transition-all duration-300 group"
+          >
+            {/* Background Elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-2xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200">
+                  <Cog className="text-orange-600" size={32} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES
+                  </h3>
+                  <p className="text-gray-600 font-medium">
+                    Precision gear production and machining for smooth, reliable
+                    power transfer
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  "Gear Milling & Gear Hobbing",
+                  "Turning, Facing, Boring & Threading",
+                  "Knurling",
+                  "Gearboxes & Reduction Gears",
+                  "Differential Gears",
+                  "Deck Machinery Gears",
+                  "Industrial Power Transmission Components",
+                ].map((service, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50/50 transition-colors"
+                  >
+                    <CheckCircle
+                      className="text-orange-500 flex-shrink-0"
+                      size={18}
+                    />
+                    <span className="text-gray-700 font-medium">{service}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* PRECISION MACHINING CARD */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm p-8 hover:shadow-3xl transition-all duration-300 group"
+          >
+            {/* Background Elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-red-200/15 to-transparent rounded-full blur-2xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200">
+                  <Factory className="text-orange-600" size={32} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    PRECISION MACHINING & MACHINE SHOP SERVICES
+                  </h3>
+                  <p className="text-gray-600 font-medium">
+                    Restoring accuracy, alignment, and surface integrity of
+                    critical components
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  "Turning & Lathe Machining",
+                  "Milling & Slotting",
+                  "Boring & Line Boring",
+                  "Shaft, Crankshaft & Surface Grinding",
+                  "Cylinder Honing",
+                  "Thread & Keyway Cutting",
+                  "Welding & Build-Up Machining",
+                  "Alignment & Tolerance Correction",
+                ].map((service, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50/50 transition-colors"
+                  >
+                    <CheckCircle
+                      className="text-orange-500 flex-shrink-0"
+                      size={18}
+                    />
+                    <span className="text-gray-700 font-medium">{service}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* ===== MAIN CONTENT ===== */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -535,114 +659,6 @@ export default function GearsMakingMillingPage() {
           ))}
         </section>
 
-        {/* ===== SERVICES OVERVIEW SECTION ===== */}
-        <section className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* GEAR MANUFACTURING CARD */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm p-8 hover:shadow-3xl transition-all duration-300 group"
-            >
-              {/* Background Elements */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200">
-                    <Cog className="text-orange-600" size={32} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
-                      GEAR MANUFACTURING, MILLING & POWER TRANSMISSION SERVICES
-                    </h3>
-                    <p className="text-gray-600 font-medium">
-                      Precision gear production and machining for smooth, reliable power transfer
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {[
-                    "Gear Milling & Gear Hobbing",
-                    "Turning, Facing, Boring & Threading",
-                    "Knurling",
-                    "Gearboxes & Reduction Gears",
-                    "Differential Gears",
-                    "Deck Machinery Gears",
-                    "Industrial Power Transmission Components"
-                  ].map((service, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.1 }}
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50/50 transition-colors"
-                    >
-                      <CheckCircle className="text-orange-500 flex-shrink-0" size={18} />
-                      <span className="text-gray-700 font-medium">{service}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* PRECISION MACHINING CARD */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm p-8 hover:shadow-3xl transition-all duration-300 group"
-            >
-              {/* Background Elements */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-red-200/15 to-transparent rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-100 to-orange-200">
-                    <Factory className="text-orange-600" size={32} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
-                      PRECISION MACHINING & MACHINE SHOP SERVICES
-                    </h3>
-                    <p className="text-gray-600 font-medium">
-                      Restoring accuracy, alignment, and surface integrity of critical components
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {[
-                    "Turning & Lathe Machining",
-                    "Milling & Slotting",
-                    "Boring & Line Boring",
-                    "Shaft, Crankshaft & Surface Grinding",
-                    "Cylinder Honing",
-                    "Thread & Keyway Cutting",
-                    "Welding & Build-Up Machining",
-                    "Alignment & Tolerance Correction"
-                  ].map((service, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.1 }}
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50/50 transition-colors"
-                    >
-                      <CheckCircle className="text-orange-500 flex-shrink-0" size={18} />
-                      <span className="text-gray-700 font-medium">{service}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* ===== GEAR MANUFACTURING DETAILED SERVICES ===== */}
         <section className="mb-16 space-y-16">
           {gearManufacturingServices.map((service, index) => (
@@ -695,7 +711,9 @@ export default function GearsMakingMillingPage() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="mb-8"
                   >
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">What You'll Get:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      What You'll Get:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                       {service.features.map((feature, i) => (
                         <motion.span
@@ -718,11 +736,19 @@ export default function GearsMakingMillingPage() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     className="mb-8"
                   >
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Capabilities:
+                    </h4>
                     <div className="grid grid-cols-1 gap-2">
                       {service.specs.map((spec, i) => (
-                        <div key={i} className="flex items-center gap-2 text-slate-700">
-                          <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+                        <div
+                          key={i}
+                          className="flex items-center gap-2 text-slate-700"
+                        >
+                          <CheckCircle
+                            size={16}
+                            className="text-green-500 flex-shrink-0"
+                          />
                           <span className="text-sm">{spec}</span>
                         </div>
                       ))}
@@ -748,7 +774,7 @@ export default function GearsMakingMillingPage() {
                         alt={service.title}
                         className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                         onError={(e) => {
-                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.style.display = "none";
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
@@ -812,7 +838,9 @@ export default function GearsMakingMillingPage() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="mb-8"
                   >
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">What You'll Get:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      What You'll Get:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                       {service.features.map((feature, i) => (
                         <motion.span
@@ -835,11 +863,19 @@ export default function GearsMakingMillingPage() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     className="mb-8"
                   >
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Capabilities:
+                    </h4>
                     <div className="grid grid-cols-1 gap-2">
                       {service.specs.map((spec, i) => (
-                        <div key={i} className="flex items-center gap-2 text-slate-700">
-                          <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
+                        <div
+                          key={i}
+                          className="flex items-center gap-2 text-slate-700"
+                        >
+                          <CheckCircle
+                            size={16}
+                            className="text-green-500 flex-shrink-0"
+                          />
                           <span className="text-sm">{spec}</span>
                         </div>
                       ))}
@@ -865,7 +901,7 @@ export default function GearsMakingMillingPage() {
                         alt={service.title}
                         className="w-full h-80 lg:h-96 object-cover transition-transform duration-700 hover:scale-110"
                         onError={(e) => {
-                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.style.display = "none";
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>

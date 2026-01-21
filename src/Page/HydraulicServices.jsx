@@ -154,7 +154,7 @@ export default function HydraulicServices() {
     },
   ];
 
-  const allServices = [...hydraulicServices, ...pumpServices];
+  // const allServices = [...hydraulicServices, ...pumpServices];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 mt-0 lg:mt-10">
@@ -181,7 +181,7 @@ export default function HydraulicServices() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-              HYDRAULIC & PUMP
+              HYDRAULIC , PUMP & FLUID
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
                 SYSTEM ENGINEERING
               </span>
@@ -269,7 +269,7 @@ export default function HydraulicServices() {
       {/* Main Services Section */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         {/* Hydraulic System Services Section */}
-        <section className="mb-20">
+        <section id="services" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

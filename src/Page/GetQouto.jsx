@@ -111,7 +111,7 @@ const GetQuotePage = () => {
       action: "Get Directions",
       actionIcon: MapPin,
       actionLink:
-        "https://www.google.com/maps/search/Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar",
+        "https://maps.google.com/?q=AL+SUWAIDI+TECHNICAL+CENTER+East+Industrial+Area+Zone+57+Street+18+Gate+35+Doha+Qatar",
       type: "location",
     },
   ];
@@ -394,7 +394,7 @@ const GetQuotePage = () => {
 
             {/* VISIT */}
             <motion.a
-              href="https://www.google.com/maps/search/?api=1&query=Street+No+18+Gate+No+35+Industrial+Area+Doha+Qatar"
+              href="https://maps.google.com/?q=AL+SUWAIDI+TECHNICAL+CENTER+East+Industrial+Area+Zone+57+Street+18+Gate+35+Doha+Qatar"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
@@ -520,7 +520,7 @@ const GetQuotePage = () => {
                   {method.type === "email" && (
                     <a
                       href={`mailto:${method.details}`}
-                      className="block text-lg font-semibold text-orange-600 hover:underline break-all"
+                      className="block text-sm font-bold text-orange-600 hover:underline break-all"
                     >
                       {method.details}
                     </a>

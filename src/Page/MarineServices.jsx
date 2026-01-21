@@ -366,7 +366,7 @@ export default function MarineServices() {
               components that operate under extreme loads, corrosive
               environments, and continuous duty cycles — where precision,
               durability, and reliability are non-negotiable.
-              <p> 
+              <p>
                 <p>
                   Our services are designed to restore performance, extend
                   equipment life, and reduce operational downtime, supporting
@@ -390,7 +390,7 @@ export default function MarineServices() {
               </Link>
 
               <a
-                href="#services"
+                href="#marine-services"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
                 <span>View Marine Services</span>
@@ -447,25 +447,32 @@ export default function MarineServices() {
               </span>
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Comprehensive engineering solutions across four specialized domains
+              Comprehensive engineering solutions across four specialized
+              domains
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Marine & Vessel Equipment */}
-            <motion.div
+            <motion.a
+              href="#marine-services"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100"
+              className="block bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100 group"
             >
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
                   <FaShip className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">MARINE & VESSEL EQUIPMENT</h3>
-                <p className="text-sm text-gray-600 mb-4">Critical systems for propulsion, maneuvering, and onboard operations</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  MARINE & VESSEL EQUIPMENT
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Critical systems for propulsion, maneuvering, and onboard
+                  operations
+                </p>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -501,22 +508,28 @@ export default function MarineServices() {
                   Thruster (Bow & Stern) Services
                 </li>
               </ul>
-            </motion.div>
+            </motion.a>
 
             {/* Shipyard & Dock Equipment */}
-            <motion.div
+            <motion.a
+              href="#shipyard-services"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-green-100"
+              className="block bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-green-100 group"
             >
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
                   <FaIndustry className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">SHIPYARD & DOCK EQUIPMENT</h3>
-                <p className="text-sm text-gray-600 mb-4">Heavy-duty equipment supporting vessel handling and port operations</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  SHIPYARD & DOCK EQUIPMENT
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Heavy-duty equipment supporting vessel handling and port
+                  operations
+                </p>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -540,22 +553,27 @@ export default function MarineServices() {
                   Mooring dolphins & bollards
                 </li>
               </ul>
-            </motion.div>
+            </motion.a>
 
             {/* Heavy Equipment Engineering */}
-            <motion.div
+            <motion.a
+              href="#heavy-equipment-services"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100"
+              className="block bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 group"
             >
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
                   <FaCog className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">HEAVY EQUIPMENT ENGINEERING</h3>
-                <p className="text-sm text-gray-600 mb-4">High-wear components for construction and industrial machinery</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                  HEAVY EQUIPMENT ENGINEERING
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  High-wear components for construction and industrial machinery
+                </p>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -567,22 +585,28 @@ export default function MarineServices() {
                   Crane Component Services
                 </li>
               </ul>
-            </motion.div>
+            </motion.a>
 
             {/* Specialized Marine Components */}
-            <motion.div
+            <motion.a
+              href="#specialized-services"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100"
+              className="block bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100 group"
             >
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
                   <FaAnchor className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">SPECIALIZED MARINE COMPONENTS</h3>
-                <p className="text-sm text-gray-600 mb-4">Marine-specific parts exposed to extreme loads and environments</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  SPECIALIZED MARINE COMPONENTS
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Marine-specific parts exposed to extreme loads and
+                  environments
+                </p>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -606,18 +630,17 @@ export default function MarineServices() {
                   Hatch Cover Roller & Track Services
                 </li>
               </ul>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>
 
       {/* Company Description Section */}
 
-
       {/* Main Services Section */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         {/* Marine & Vessel Equipment Services Section */}
-        <section className="mb-20">
+        <section id="marine-services" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -755,7 +778,7 @@ export default function MarineServices() {
         </section>
 
         {/* Shipyard & Dock Equipment Services Section */}
-        <section className="mb-20">
+        <section id="shipyard-services" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -901,7 +924,7 @@ export default function MarineServices() {
         </section>
 
         {/* Heavy Equipment Engineering Services Section */}
-        <section className="mb-20">
+        <section id="heavy-equipment-services" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1062,7 +1085,7 @@ export default function MarineServices() {
         </section>
 
         {/* Specialized Marine Component Services Section */}
-        <section className="mb-20">
+        <section id="specialized-services" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

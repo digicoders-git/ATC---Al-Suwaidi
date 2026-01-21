@@ -448,12 +448,7 @@ export default function BearingsRemovalFittingPage() {
             <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
               EXTENDED SCOPE
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Precision{" "}
-              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Engineering Services
-              </span>
-            </h2>
+  
           </motion.div>
 
           {/* Extended Scope Services */}

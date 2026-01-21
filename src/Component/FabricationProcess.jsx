@@ -55,10 +55,7 @@ const fabricationSteps = [
 
 export default function FabricationProcess() {
   return (
-    <section
-      className=" pt-10 pb-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden"
-      id="services"
-    >
+    <section className=" pt-10 pb-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-full blur-3xl animate-pulse"></div>

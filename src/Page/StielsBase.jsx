@@ -60,7 +60,7 @@ const servicesList = [
     title: "🏗️ Structural Steel Fabrication",
     desc: "We manufacture heavy and medium structural steel components designed for durability and long-term performance in demanding environments.",
     icon: Hammer,
-    image: "/Structural Steel Fabrication.png",
+    image: "/Structural Steel Fabrication copy.png",
     features: [
       "High-strength steel structures",
       "Fabrication to project specifications",
@@ -374,9 +374,8 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
-             OUR  PRODUCTS
+              OUR PRODUCTS
             </span>
-   
           </motion.div>
 
           {/* Products List */}
@@ -390,7 +389,10 @@ export default function ServicesPage() {
               className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
 
               <div className="relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16">
                 <motion.div
@@ -403,21 +405,37 @@ export default function ServicesPage() {
                     🔧 Pipe Spools & Flanges
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Custom-fabricated pipe spools and flanges manufactured to precise dimensional and alignment requirements for industrial and marine piping systems.
+                    Custom-fabricated pipe spools and flanges manufactured to
+                    precise dimensional and alignment requirements for
+                    industrial and marine piping systems.
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Key Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Key Capabilities:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                      {["Cutting, rolling, bending & welding", "Flange alignment and fit-up", "Dimensional accuracy and pressure-ready fabrication"].map((feature, i) => (
-                        <span key={i} className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300">
+                      {[
+                        "Cutting, rolling, bending & welding",
+                        "Flange alignment and fit-up",
+                        "Dimensional accuracy and pressure-ready fabrication",
+                      ].map((feature, i) => (
+                        <span
+                          key={i}
+                          className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                        >
                           ✔ {feature}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-2 text-lg">Applications:</h4>
-                    <p className="text-slate-600">Process piping, utility lines, marine and industrial systems</p>
+                    <h4 className="font-bold text-slate-900 mb-2 text-lg">
+                      Applications:
+                    </h4>
+                    <p className="text-slate-600">
+                      Process piping, utility lines, marine and industrial
+                      systems
+                    </p>
                   </div>
                 </motion.div>
 
@@ -451,7 +469,10 @@ export default function ServicesPage() {
               className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
 
               <div className="relative flex flex-col lg:flex-row-reverse items-center gap-12 p-8 lg:p-16">
                 <motion.div
@@ -464,21 +485,36 @@ export default function ServicesPage() {
                     🏗️ Custom Brackets & Foundations
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Engineered steel brackets and foundations designed to support equipment loads, absorb vibration, and ensure structural stability.
+                    Engineered steel brackets and foundations designed to
+                    support equipment loads, absorb vibration, and ensure
+                    structural stability.
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Key Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Key Capabilities:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                      {["Custom design & fabrication", "Load-bearing structural fabrication", "Alignment and installation-ready construction"].map((feature, i) => (
-                        <span key={i} className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300">
+                      {[
+                        "Custom design & fabrication",
+                        "Load-bearing structural fabrication",
+                        "Alignment and installation-ready construction",
+                      ].map((feature, i) => (
+                        <span
+                          key={i}
+                          className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                        >
                           ✔ {feature}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-2 text-lg">Applications:</h4>
-                    <p className="text-slate-600">Machinery mounting, engines, pumps, structural supports</p>
+                    <h4 className="font-bold text-slate-900 mb-2 text-lg">
+                      Applications:
+                    </h4>
+                    <p className="text-slate-600">
+                      Machinery mounting, engines, pumps, structural supports
+                    </p>
                   </div>
                 </motion.div>
 
@@ -512,7 +548,10 @@ export default function ServicesPage() {
               className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
 
               <div className="relative flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16">
                 <motion.div
@@ -525,21 +564,36 @@ export default function ServicesPage() {
                     ⚙️ Heavy Base Frames & Skids
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Robust base frames and skids fabricated for heavy machinery and modular equipment assemblies requiring high structural strength and stability.
+                    Robust base frames and skids fabricated for heavy machinery
+                    and modular equipment assemblies requiring high structural
+                    strength and stability.
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Key Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Key Capabilities:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                      {["Heavy structural steel fabrication", "Precision leveling and alignment", "Welding, finishing, and load reinforcement"].map((feature, i) => (
-                        <span key={i} className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300">
+                      {[
+                        "Heavy structural steel fabrication",
+                        "Precision leveling and alignment",
+                        "Welding, finishing, and load reinforcement",
+                      ].map((feature, i) => (
+                        <span
+                          key={i}
+                          className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                        >
                           ✔ {feature}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-2 text-lg">Applications:</h4>
-                    <p className="text-slate-600">Engines, compressors, pumps, packaged equipment</p>
+                    <h4 className="font-bold text-slate-900 mb-2 text-lg">
+                      Applications:
+                    </h4>
+                    <p className="text-slate-600">
+                      Engines, compressors, pumps, packaged equipment
+                    </p>
                   </div>
                 </motion.div>
 
@@ -573,7 +627,10 @@ export default function ServicesPage() {
               className="relative overflow-hidden bg-gradient-to-br from-white via-orange-50/20 to-red-50/10 rounded-3xl shadow-2xl border border-orange-100/50 backdrop-blur-sm group"
             >
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-200/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+              <div
+                className="absolute bottom-0 left-0 w-60 h-60 bg-gradient-to-tr from-red-200/15 to-transparent rounded-full blur-2xl animate-pulse"
+                style={{ animationDelay: "1.5s" }}
+              ></div>
 
               <div className="relative flex flex-col lg:flex-row-reverse items-center gap-12 p-8 lg:p-16">
                 <motion.div
@@ -586,21 +643,37 @@ export default function ServicesPage() {
                     🔩 Jigs, Fixtures & Lifting Lugs
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Custom jigs, fixtures, and lifting lugs designed to support accurate manufacturing, safe handling, and efficient assembly operations.
+                    Custom jigs, fixtures, and lifting lugs designed to support
+                    accurate manufacturing, safe handling, and efficient
+                    assembly operations.
                   </p>
                   <div className="mb-6">
-                    <h4 className="font-bold text-slate-900 mb-4 text-lg">Key Capabilities:</h4>
+                    <h4 className="font-bold text-slate-900 mb-4 text-lg">
+                      Key Capabilities:
+                    </h4>
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                      {["Precision fabrication", "Load-rated lifting lug design", "Custom fixtures for machining and assembly"].map((feature, i) => (
-                        <span key={i} className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300">
+                      {[
+                        "Precision fabrication",
+                        "Load-rated lifting lug design",
+                        "Custom fixtures for machining and assembly",
+                      ].map((feature, i) => (
+                        <span
+                          key={i}
+                          className="px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-slate-800 font-medium rounded-full border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300"
+                        >
                           ✔ {feature}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-2 text-lg">Applications:</h4>
-                    <p className="text-slate-600">Manufacturing setups, material handling, maintenance operations</p>
+                    <h4 className="font-bold text-slate-900 mb-2 text-lg">
+                      Applications:
+                    </h4>
+                    <p className="text-slate-600">
+                      Manufacturing setups, material handling, maintenance
+                      operations
+                    </p>
                   </div>
                 </motion.div>
 

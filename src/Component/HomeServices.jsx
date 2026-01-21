@@ -14,45 +14,58 @@ const Services = () => {
   const services = [
     {
       icon: FaIndustry,
-      title: "Steel Fabrication Basics",
-      desc: "Heavy & medium structural steel works, warehouse sheds, industrial platforms and custom fabrication solutions",
+      title: "Fabrication & Structural Engineering Solutions",
+      desc: "Heavy and medium structural steel fabrication, custom brackets, base frames, skids, pipe spools, flanges, and engineered fabrication solutions.",
       link: "/services/steel-fabrication",
     },
     {
       icon: FaTruck,
-      title: "Commercial Vehicle Bodies",
-      desc: "Custom vehicle body fabrication, tankers, trailers, flatbeds and specialized transport solutions",
+      title: "Commercial Vehicle Body Building & Special Purpose Vehicles",
+      desc: "Custom vehicle body fabrication including tankers, trailers, refrigerated bodies, mobile workshops, and tail lift installations.",
       link: "/services/vehicle-bodies",
     },
     {
       icon: FaCogs,
-      title: "Vehicle Engine Repair",
-      desc: "Complete engine overhaul, rebuilding, maintenance, block boring and performance optimization services",
+      title: "Engine Reconditioning & Drivetrain Services",
+      desc: "Complete engine reconditioning, cylinder head services, transmission repair, and differential and axle refurbishment for heavy-duty vehicles.",
       link: "/services/engine-repair",
     },
     {
       icon: FaWrench,
-      title: "Gear Manufacturing & Milling",
-      desc: "Precision gear manufacturing, hobbing, milling operations and custom machining works for industrial applications",
+      title:
+        "Precision Machining, Gear Manufacturing & Power Transmission Services",
+      desc: "High-precision machining, gear milling & hobbing, gearboxes, reduction gears, and industrial power transmission components.",
       link: "/services/gears-milling",
     },
     {
       icon: FaToolbox,
-      title: "Bearing Services",
-      desc: "Bearing maintenance, replacement, alignment, fitting and precision installation services for all vehicle types",
+      title: "Bearing, Shaft & Precision Fitment Services",
+      desc: "Bearing installation, bush fitting, shaft alignment, stern tube bearings, and precision fitment for rotating assemblies.",
       link: "/services/bearings",
     },
     {
       icon: FaTrailer,
-      title: "Vehicle Wheel Repair",
-      desc: "Wheel alignment, balancing, rim welding, straightening and tire mounting services for commercial vehicles",
+      title: "Wheel & Rotating Component Repair Services",
+      desc: "Wheel alignment, balancing, resurfacing, straightening, and rotating component repair for commercial and industrial vehicles.",
       link: "/services/wheels-repair",
     },
     {
       icon: FaBoxes,
       title: "Cabinet Manufacturing (KAHRAMAA Approved)",
-      desc: "KAHRAMAA-approved water & electric service cabinets, panel boards and electrical enclosure manufacturing",
+      desc: "KAHRAMAA-approved electrical and water service cabinets, panels, and enclosure manufacturing.",
       link: "/services/cabinets",
+    },
+    {
+      icon: FaIndustry,
+      title: "Marine, Shipyard & Heavy Equipment Engineering Services",
+      desc: "Engineering and machining support for marine vessels, shipyard equipment, cranes, and heavy construction machinery.",
+      link: "/services/marine-services",
+    },
+    {
+      icon: FaCogs,
+      title: "Hydraulic, Pump & Fluid System Engineering Services",
+      desc: "Hydraulic cylinders, pumps, valves, actuators, cargo and ballast pump systems with precision machining and restoration services.",
+      link: "/services/hydraulic-services",
     },
   ];
 
@@ -94,20 +107,18 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isLast = index === services.length - 1;
 
             return (
               <Link
                 key={service.title}
                 to={service.link}
-                className={`group relative bg-white/80 backdrop-blur-sm border border-gray-100 
-                  rounded-3xl p-6 md:p-8 shadow-md hover:shadow-2xl 
+                className="group relative bg-white/80 backdrop-blur-sm border border-gray-100 
+                  rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-md hover:shadow-2xl 
                   transform transition-all duration-400 hover:-translate-y-2 
-                  focus-within:scale-[1.01] focus-within:shadow-2xl block
-                  ${isLast ? "lg:col-start-2" : ""}`}
+                  focus-within:scale-[1.01] focus-within:shadow-2xl block"
                 style={{
                   animation: `fadeUp 0.5s ease forwards`,
                   animationDelay: `${index * 0.06}s`,
@@ -115,31 +126,31 @@ const Services = () => {
                 }}
                 aria-labelledby={`service-${index}`}
               >
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col sm:flex-row items-start gap-3 md:gap-4">
                   <div className="flex-shrink-0">
                     <div
-                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center 
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center 
                                     bg-gradient-to-br from-orange-500 to-red-500 
                                     text-white shadow-lg transition-transform duration-300 
                                     group-hover:scale-105"
                     >
-                      <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                     </div>
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <h3
                       id={`service-${index}`}
-                      className="text-lg md:text-xl font-semibold text-gray-900"
+                      className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight"
                     >
                       {service.title}
                     </h3>
 
-                    <p className="mt-2 text-sm md:text-base text-gray-600">
+                    <p className="mt-2 text-sm md:text-base text-gray-600 leading-relaxed">
                       {service.desc}
                     </p>
 
-                    <div className="mt-4 flex items-center gap-3">
+                    <div className="mt-3 md:mt-4 flex flex-wrap items-center gap-2 md:gap-3">
                       <span className="inline-block text-xs font-medium text-orange-600 bg-orange-50 px-2 py-1 rounded-full">
                         Trusted
                       </span>
@@ -155,16 +166,23 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 md:mt-12 text-center">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full 
+            className="inline-flex items-center gap-2 md:gap-3 px-5 md:px-6 py-2.5 md:py-3 rounded-full 
                        bg-gradient-to-br from-orange-600 to-red-500 
                        text-white font-semibold shadow-xl 
-                       hover:scale-105 transition-transform duration-300"
+                       hover:scale-105 transition-transform duration-300
+                       text-sm md:text-base"
           >
             Get a Custom Quote
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <svg
+              width="16"
+              height="16"
+              className="md:w-[18px] md:h-[18px]"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
               <path
                 d="M5 12h14M13 5l7 7-7 7"
                 stroke="currentColor"

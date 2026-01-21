@@ -27,8 +27,10 @@ const certificates = [
     id: 3,
     title: "ATC Computer Card",
     subtitle: "Digital Certification",
-    image: "/Cetifiacte/ATC COMPUTER CARD_page-0001.jpg",
+    image: "/COMPUTER CARD_page-0001.jpg",
+
   },
+  
   {
     id: 4,
     title: "Trade License",
@@ -40,6 +42,12 @@ const certificates = [
     title: "KAHRAMAA Approval",
     subtitle: "Utility Services Authorization",
     image: "/Cetifiacte/KAHRAMAA APPROVAL_page-0001.jpg",
+  },
+    {
+    id: 6,
+    title: "KAHRAMAA Approval",
+    subtitle: "Utility Services Authorization",
+    image: "/ISO DIN EN 9001-2015_page-0001.jpg",
   },
 ];
 

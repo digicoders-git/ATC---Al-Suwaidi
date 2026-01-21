@@ -28,7 +28,7 @@ export default function TeamChart() {
     },
     {
       name: "K.C. Prashannah",
-      title: "Admin / Sales Representative",
+      title: "BUISNESS DEVELOPMENT EXECUTIVE",
       icon: FaUser,
       color: "from-orange-500 to-red-500",
       level: 3,

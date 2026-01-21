@@ -93,7 +93,6 @@ export default function CommercialVehicleBodiesPage() {
               transition={{ delay: 0.3 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
             >
-            
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-yellow-200 to-white mt-2">
                 COMMERCIAL VEHICLE BODY BUILDING & SPECIAL PURPOSE VEHICLES
               </span>
@@ -184,16 +183,8 @@ export default function CommercialVehicleBodiesPage() {
       <Comercialindristy />
       <FabricationProcess />
 
-      {/* ===== COMMERCIAL VEHICLE BODIES PRODUCT GALLERY ===== */}
-      <section className="relative py-20 md:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* ================= Heading ================= */}
-
-          {/* ================= Cards ================= */}
-        </div>
-      </section>
-
-      <section className="mb-20 px-6">
+      <section className="mb-20 pt-10
+       px-6" id="services">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

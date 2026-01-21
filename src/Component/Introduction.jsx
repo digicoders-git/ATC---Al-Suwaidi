@@ -10,15 +10,13 @@ import { Link } from "react-router-dom";
 
 export default function Introduction() {
   const coreOperations = [
-    "Manufacturing of Kahramaa cabinets",
-    "Logistic vehicle bodybuilding",
-    "Steel fabrication works",
-    "Design and engineering services",
-    "Maintenance and repair services",
-    "Lathe manufacturing works",
-    "Vehicle engine repairing and re-boring",
-    "Wheel, rim, bearing, and bush pressing",
-    "Shearing, bending, rolling, and punching",
+    "Gear manufacturing, milling & power transmission works",
+    "Bearing, shaft & precision fitment services",
+    "Wheel, rim, bearing & bush pressing services",
+    "Hydraulic, pump & fluid system repair and machining",
+    "Marine, shipyard & heavy equipment engineering support",
+    "Shearing, bending, rolling & punching operations",
+    "Maintenance, repair & refurbishment services for industrial equipment",
   ];
 
   return (
@@ -132,7 +130,7 @@ export default function Introduction() {
 
                   {/* Download Company Profile */}
                   <a
-                    href="/ATC_Profile.pdf"
+                    href="/ATC Company Profile.pdf"
                     download
                     className="inline-flex items-center gap-2 border-2 border-white/80 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300"
                   >
