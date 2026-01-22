@@ -33,8 +33,6 @@ import {
 import GetDemoSection from "../Component/GetDemoSection";
 
 const GetQuotePage = () => {
-  // Handle contact method clicks
-
   // Handle quick action clicks
   const handleQuickAction = (action) => {
     switch (action) {

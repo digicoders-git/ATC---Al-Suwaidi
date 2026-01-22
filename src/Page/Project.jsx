@@ -135,7 +135,7 @@ const PROJECTS = [
     id: "fabrication-works",
     title: "Fabrication & Structural Works",
     subtitle: "Heavy & medium structural steel fabrication",
-    thumb: "/StellFebictaion/Structural Steel Fabrication.png",
+    thumb: "/Structural Steel Fabrication copy 2.png",
     short:
       "Custom fabrication including sheds, warehouses, cable trays, panels and structural assemblies.",
     specs: [
@@ -392,7 +392,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </div>
-         <ServiceSooller />
+        <ServiceSooller />
       </section>
 
       <MainProductsComponent />

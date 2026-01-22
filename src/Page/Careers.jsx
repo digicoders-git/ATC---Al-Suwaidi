@@ -17,6 +17,9 @@ import {
   User,
   FileText,
   Upload,
+  X,
+  ZoomIn,
+  ArrowLeft,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast, ToastContainer } from "react-toastify";
@@ -24,78 +27,16 @@ import "react-toastify/dist/ReactToastify.css";
 import ServiceSooller from "../Component/ServiceSooller";
 import GetDemoSection from "../Component/GetDemoSection";
 
-const jobOpenings = [
+const companyImages = [
   {
     id: 1,
-    title: "Senior Mechanical Engineer",
-    department: "Engineering",
-    location: "Doha, Qatar",
-    type: "Full-time",
-    experience: "5+ years",
-    salary: "QAR 8,000 - 12,000",
-    description:
-      "Lead mechanical design and engineering projects for industrial fabrication and marine applications.",
-    requirements: [
-      "Bachelor's degree in Mechanical Engineering",
-      "5+ years experience in industrial engineering",
-      "Proficiency in CAD software (AutoCAD, SolidWorks)",
-      "Knowledge of welding and fabrication processes",
-      "Strong project management skills",
-    ],
+    src: "/atc_groupicture_A40I5327.jpg",
+    alt: "Al Suwaidi Technical Center Main Facility",
   },
   {
     id: 2,
-    title: "Certified Welder (TIG/MIG)",
-    department: "Production",
-    location: "Doha, Qatar",
-    type: "Full-time",
-    experience: "3+ years",
-    salary: "QAR 4,000 - 6,000",
-    description:
-      "Perform high-quality welding operations for steel fabrication and structural engineering projects.",
-    requirements: [
-      "Certified welder with TIG/MIG qualifications",
-      "3+ years welding experience",
-      "Ability to read technical drawings",
-      "Knowledge of safety protocols",
-      "Physical fitness for manual work",
-    ],
-  },
-  {
-    id: 3,
-    title: "CNC Machine Operator",
-    department: "Manufacturing",
-    location: "Doha, Qatar",
-    type: "Full-time",
-    experience: "2+ years",
-    salary: "QAR 3,500 - 5,500",
-    description:
-      "Operate CNC machines for precision machining and gear manufacturing operations.",
-    requirements: [
-      "Technical diploma or equivalent",
-      "2+ years CNC operation experience",
-      "Knowledge of G-code programming",
-      "Precision measurement skills",
-      "Attention to detail",
-    ],
-  },
-  {
-    id: 4,
-    title: "Quality Control Inspector",
-    department: "Quality Assurance",
-    location: "Doha, Qatar",
-    type: "Full-time",
-    experience: "3+ years",
-    salary: "QAR 5,000 - 7,000",
-    description:
-      "Ensure quality standards and compliance with ISO 9001:2015 requirements across all operations.",
-    requirements: [
-      "Bachelor's degree in Engineering or related field",
-      "3+ years quality control experience",
-      "Knowledge of ISO standards",
-      "Inspection and testing experience",
-      "Strong analytical skills",
-    ],
+    src: "/atc_groupicture_A40I5370 copy.jpg",
+    alt: "Professional Engineering Workshop",
   },
 ];
 
@@ -132,7 +73,8 @@ const stats = [
 ];
 
 export default function CareersPage() {
-  const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -153,6 +95,30 @@ export default function CareersPage() {
         [e.target.name]: e.target.value,
       });
     }
+  };
+
+  const openLightbox = (image, index) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const nextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % companyImages.length;
+    setCurrentImageIndex(nextIndex);
+    setSelectedImage(companyImages[nextIndex]);
+  };
+
+  const prevImage = () => {
+    const prevIndex =
+      currentImageIndex === 0
+        ? companyImages.length - 1
+        : currentImageIndex - 1;
+    setCurrentImageIndex(prevIndex);
+    setSelectedImage(companyImages[prevIndex]);
   };
 
   const handleSubmit = async (e) => {
@@ -183,7 +149,9 @@ export default function CareersPage() {
       console.log("API Response:", result);
 
       if (result.success) {
-        toast.success("Application submitted successfully! We will contact you soon.");
+        toast.success(
+          "Application submitted successfully! We will contact you soon.",
+        );
         setFormData({
           fullName: "",
           email: "",
@@ -200,7 +168,7 @@ export default function CareersPage() {
     } catch (error) {
       console.error("Error submitting application:", error);
       toast.error(
-        `Network Error: ${error.message}. Please check if the API server is running on localhost:3300`
+        `Network Error: ${error.message}. Please check if the API server is running on localhost:3300`,
       );
     }
   };
@@ -264,16 +232,8 @@ export default function CareersPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
             >
               <a
-                href="#jobs"
-                className="group inline-flex items-center justify-center gap-3 px-4 py-4 rounded-xl bg-white text-orange-600 font-bold text-lg shadow-2xl hover:shadow-3xl transform transition-all hover:scale-105 hover:-translate-y-1"
-              >
-                <Briefcase size={20} className="group-hover:animate-pulse" />
-                <span>View Open Positions</span>
-              </a>
-
-              <a
                 href="#apply"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
+                className=" w-80 bg-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all hover:border-white/50"
               >
                 <span>Apply Now</span>
                 <ArrowRight size={20} />
@@ -315,6 +275,57 @@ export default function CareersPage() {
 
       {/* MAIN CONTENT */}
       <main className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        {/* COMPANY PICTURES SECTION */}
+        <section className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
+              OUR WORKPLACE
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Company{" "}
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                Pictures
+              </span>
+            </h2>
+          </motion.div>
+
+          {/* Company Images Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {companyImages.map((image, index) => (
+              <motion.div
+                key={image.id}
+                initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + index * 0.2 }}
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                onClick={() => openLightbox(image, index)}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' alignment-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='%239ca3af'%3ECompany Image%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-4 right-4">
+                    <ZoomIn className="text-white" size={24} />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
         {/* BENEFITS SECTION */}
         <section className="mb-16">
           <motion.div
@@ -357,110 +368,6 @@ export default function CareersPage() {
                 <p className="text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* JOB OPENINGS SECTION */}
-        <section id="jobs" className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
-              CURRENT OPENINGS
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Available{" "}
-              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Positions
-              </span>
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Explore exciting career opportunities in engineering,
-              manufacturing, and technical services
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {jobOpenings.map((job, index) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100"
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {job.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
-                        {job.department}
-                      </span>
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                        {job.type}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin size={16} />
-                    <span>{job.location}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <GraduationCap size={16} />
-                    <span>{job.experience}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <DollarSign size={16} />
-                    <span>{job.salary}</span>
-                  </div>
-                </div>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {job.description}
-                </p>
-
-                <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3">
-                    Requirements:
-                  </h4>
-                  <ul className="space-y-2">
-                    {job.requirements.slice(0, 3).map((req, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-gray-600"
-                      >
-                        <CheckCircle
-                          size={16}
-                          className="text-green-500 flex-shrink-0 mt-0.5"
-                        />
-                        <span className="text-sm">{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button
-                  onClick={() => {
-                    setSelectedJob(job);
-                    document
-                      .getElementById("apply")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all duration-300"
-                >
-                  Apply for this Position
-                </button>
               </motion.div>
             ))}
           </div>
@@ -795,6 +702,44 @@ export default function CareersPage() {
 
       {/* <GetDemoSection /> */}
       <ToastContainer position="top-right" autoClose={5000} theme="light" />
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4 pt-24">
+          <div className="relative max-w-4xl w-full">
+            {/* Close Button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/20 backdrop-blur-sm rounded-full text-black hover:bg-black/30 transition-all"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-all"
+            >
+              <ArrowLeft size={24} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-all"
+            >
+              <ArrowRight size={24} />
+            </button>
+
+            {/* Image */}
+            <div className="bg-white rounded-2xl overflow-hidden">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-130 sm:h-150 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

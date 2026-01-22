@@ -25,13 +25,15 @@ const storyData = [
     icon: TrendingUp,
     content: "As Qatar's industrial, construction, and transportation sectors expanded, the complexity and scale of projects increased. Al Suwaidi Technical Center responded by progressively enhancing its technical capabilities, expanding workshop facilities, and investing in skilled manpower and modern equipment. This period of growth was guided by a clear strategy — to develop in line with industry needs rather than rapid expansion. Over time, the company established a diversified and integrated service portfolio, enabling it to support a wide range of technical and engineering requirements under one roof.",
     services: [
-      "Steel Fabrication Basics",
-      "Commercial Vehicle Bodies",
-      "Vehicle Engine Repair",
-      "Gear Manufacturing & Milling",
-      "Bearing Services",
-      "Vehicle Wheel Repair",
-      "Cabinet Manufacturing (KAHRAMAA Approved)"
+      "Fabrication & Structural Engineering Solutions",
+      "Commercial Vehicle Body Building & Special Purpose Vehicles",
+      "Engine Reconditioning & Drivetrain Services",
+      "Precision Machining, Gear Manufacturing & Power Transmission Services",
+      "Bearing, Shaft & Precision Fitment Services",
+      "Wheel & Rotating Component Repair Services",
+      "Cabinet Manufacturing (KAHRAMAA Approved)",
+      "Marine, Shipyard & Heavy Equipment Engineering Services",
+      "Hydraulic & Pump Systems"
     ],
     note: "This integrated capability allows clients to reduce coordination efforts, minimize downtime, and maintain consistent quality across multiple services."
   },

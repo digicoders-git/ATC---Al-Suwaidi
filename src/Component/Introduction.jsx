@@ -10,13 +10,20 @@ import { Link } from "react-router-dom";
 
 export default function Introduction() {
   const coreOperations = [
+    "Manufacturing of Kahramaa Cabinets",
+    "Vehicle Body Building & Modification",
+    "Steel Fabrication Works",
+    "Design & Engineering Services",
+    "Maintenance & Repair Services",
+    "Lathe & Machining Works",
+    "Engine Repairing & Re-boring",
+    "Wheel, Bearing & Bush Pressing",
+    "Sheet Metal Works (Shearing, Bending, Rolling & Punching)",
     "Gear manufacturing, milling & power transmission works",
     "Bearing, shaft & precision fitment services",
     "Wheel, rim, bearing & bush pressing services",
-    "Hydraulic, pump & fluid system repair and machining",
-    "Marine, shipyard & heavy equipment engineering support",
-    "Shearing, bending, rolling & punching operations",
-    "Maintenance, repair & refurbishment services for industrial equipment",
+
+
   ];
 
   return (

@@ -88,38 +88,7 @@ const teamImages = [
 ];
 
 const galleryImages = [
-  {
-    id: 1,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.51.jpeg",
-    title: "Industrial Workshop Operations",
-    category: "Workshop",
-    description: "Professional industrial workshop operations and machinery",
-    caption: "Custom commercial vehicle body fabrication"
-  },
-  {
-    id: 2,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52 (1).jpeg",
-    title: "Heavy Machinery Services",
-    category: "Machinery",
-    description: "Heavy machinery maintenance and repair services",
-    caption: "Precision gear manufacturing and assembly"
-  },
-  {
-    id: 3,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52 (2).jpeg",
-    title: "Precision Engineering Work",
-    category: "Engineering",
-    description: "Precision engineering and fabrication work",
-    caption: "Marine and heavy equipment engineering solutions"
-  },
-  {
-    id: 4,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.52.jpeg",
-    title: "Steel Fabrication Process",
-    category: "Steel Fabrication",
-    description: "Steel fabrication and welding operations",
-    caption: "Custom commercial vehicle body fabrication"
-  },
+
   {
     id: 5,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.53 (1).jpeg",
@@ -136,22 +105,8 @@ const galleryImages = [
     description: "Engine reconditioning and repair services",
     caption: "Marine and heavy equipment engineering solutions"
   },
-  {
-    id: 7,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.53.jpeg",
-    title: "Gear Manufacturing",
-    category: "Gear Making",
-    description: "Precision gear manufacturing and machining",
-    caption: "Custom commercial vehicle body fabrication"
-  },
-  {
-    id: 8,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.54 (1).jpeg",
-    title: "Bearing Services",
-    category: "Bearing Services",
-    description: "Professional bearing installation and maintenance",
-    caption: "Precision gear manufacturing and assembly"
-  },
+
+
   {
     id: 9,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.54.jpeg",
@@ -160,13 +115,7 @@ const galleryImages = [
     description: "Wheel alignment and repair services",
     caption: "Marine and heavy equipment engineering solutions"
   },
-  {
-    id: 10,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.55 (1).jpeg",
-    title: "Cabinet Manufacturing",
-    category: "Cabinets",
-    description: "KAHRAMAA approved cabinet manufacturing",
-  },
+
   {
     id: 11,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.55.jpeg",
@@ -181,41 +130,7 @@ const galleryImages = [
     category: "Hydraulic Services",
     description: "Hydraulic pump and system services",
   },
-  {
-    id: 13,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57 (1).jpeg",
-    title: "Quality Control",
-    category: "Quality Assurance",
-    description: "Quality control and testing procedures",
-  },
-  {
-    id: 14,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57 (2).jpeg",
-    title: "Assembly Operations",
-    category: "Assembly",
-    description: "Professional assembly and finishing operations",
-  },
-  {
-    id: 15,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.57.jpeg",
-    title: "Welding Services",
-    category: "Welding",
-    description: "Professional welding and fabrication services",
-  },
-  {
-    id: 16,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.58.jpeg",
-    title: "Machining Operations",
-    category: "Machining",
-    description: "Precision machining and turning operations",
-  },
-  {
-    id: 17,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.59 (1).jpeg",
-    title: "Equipment Maintenance",
-    category: "Maintenance",
-    description: "Equipment maintenance and repair services",
-  },
+
   {
     id: 18,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.32.59.jpeg",
@@ -223,20 +138,8 @@ const galleryImages = [
     category: "Projects",
     description: "Large scale industrial project execution",
   },
-  {
-    id: 19,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.00 (1).jpeg",
-    title: "Technical Solutions",
-    category: "Technical Services",
-    description: "Comprehensive technical solutions and services",
-  },
-  {
-    id: 20,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.00.jpeg",
-    title: "Workshop Facilities",
-    category: "Facilities",
-    description: "State-of-the-art workshop facilities",
-  },
+
+
   {
     id: 21,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01 (1).jpeg",
@@ -244,13 +147,7 @@ const galleryImages = [
     category: "Custom Work",
     description: "Custom fabrication and engineering solutions",
   },
-  {
-    id: 22,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01 (2).jpeg",
-    title: "Testing & Verification",
-    category: "Testing",
-    description: "Testing and performance verification services",
-  },
+
   {
     id: 23,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.01.jpeg",
@@ -265,13 +162,7 @@ const galleryImages = [
     category: "Repair Services",
     description: "Comprehensive repair and restoration services",
   },
-  {
-    id: 25,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.02.jpeg",
-    title: "Engineering Excellence",
-    category: "Engineering",
-    description: "Engineering excellence and innovation",
-  },
+
   {
     id: 26,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.03 (1).jpeg",
@@ -286,13 +177,7 @@ const galleryImages = [
     category: "Quality",
     description: "Maintaining highest quality standards",
   },
-  {
-    id: 28,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.03.jpeg",
-    title: "Project Completion",
-    category: "Projects",
-    description: "Successful project completion and delivery",
-  },
+
   {
     id: 29,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.04 (1).jpeg",
@@ -300,27 +185,8 @@ const galleryImages = [
     category: "Expertise",
     description: "Technical expertise and skilled craftsmanship",
   },
-  {
-    id: 30,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.04.jpeg",
-    title: "Service Excellence",
-    category: "Services",
-    description: "Excellence in service delivery and customer satisfaction",
-  },
-  {
-    id: 31,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.05 (1).jpeg",
-    title: "Industrial Solutions",
-    category: "Solutions",
-    description: "Comprehensive industrial solutions and support",
-  },
-  {
-    id: 32,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.05.jpeg",
-    title: "Professional Work",
-    category: "Professional Services",
-    description: "Professional work standards and execution",
-  },
+
+
   {
     id: 33,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.06.jpeg",
@@ -328,13 +194,7 @@ const galleryImages = [
     category: "Technology",
     description: "Advanced technology and modern equipment",
   },
-  {
-    id: 34,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.07 (1).jpeg",
-    title: "Skilled Workforce",
-    category: "Workforce",
-    description: "Skilled and experienced workforce",
-  },
+
   {
     id: 35,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.07.jpeg",
@@ -342,13 +202,7 @@ const galleryImages = [
     category: "Precision",
     description: "Precision work and attention to detail",
   },
-  {
-    id: 36,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.08 (1).jpeg",
-    title: "Safety Standards",
-    category: "Safety",
-    description: "Maintaining highest safety standards",
-  },
+
   {
     id: 37,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.08.jpeg",
@@ -356,27 +210,8 @@ const galleryImages = [
     category: "Innovation",
     description: "Innovation in engineering and manufacturing",
   },
-  {
-    id: 38,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09 (1).jpeg",
-    title: "Customer Satisfaction",
-    category: "Customer Service",
-    description: "Commitment to customer satisfaction",
-  },
-  {
-    id: 39,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09 (2).jpeg",
-    title: "Reliable Services",
-    category: "Reliability",
-    description: "Reliable and dependable services",
-  },
-  {
-    id: 40,
-    src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.09.jpeg",
-    title: "Excellence Achievement",
-    category: "Excellence",
-    description: "Achievement of excellence in all operations",
-  },
+
+
   {
     id: 41,
     src: "/gallery Image/WhatsApp Image 2026-01-20 at 17.33.10.jpeg",
