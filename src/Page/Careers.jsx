@@ -284,12 +284,12 @@ export default function CareersPage() {
             className="text-center mb-12"
           >
             <span className="inline-block mb-4 px-6 py-2 rounded-full bg-orange-100 text-orange-700 font-bold tracking-wide">
-              OUR WORKPLACE
+              UNITED WORKFORCE
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Company{" "}
+            OUR{" "}
               <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Pictures
+                TEAM
               </span>
             </h2>
           </motion.div>

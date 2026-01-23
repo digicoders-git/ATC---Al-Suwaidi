@@ -229,7 +229,7 @@ const galleryImages = [
 ];
 
 const stats = [
-  { value: "5000+", label: "Projects Completed", icon: Award },
+  { value: "3500+", label: "Projects Completed", icon: Award },
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "80+", label: "Team Members", icon: Users },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
@@ -486,9 +486,6 @@ export default function GalleryPage() {
                   <div className="absolute top-4 right-4">
                     <ZoomIn className="text-white" size={24} />
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-medium">{team.caption}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -556,9 +553,6 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute top-4 right-4">
                     <ZoomIn className="text-white" size={24} />
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-sm font-medium">{workshop.caption}</p>
                   </div>
                 </div>
               </motion.div>
@@ -629,11 +623,6 @@ export default function GalleryPage() {
                   <div className="absolute top-4 right-4">
                     <ZoomIn className="text-white" size={24} />
                   </div>
-                  {image.caption && (
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <p className="text-sm font-medium">{image.caption}</p>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}

@@ -364,7 +364,7 @@ export default function Projects() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
             >
               {[
-                { value: "5000+", label: "Projects Completed", icon: FaAward },
+                { value: "3500+", label: "Projects Completed", icon: FaAward },
                 { value: "32+", label: "Years Experience", icon: FaCog },
                 { value: "80+", label: "Expert Team", icon: FaUsers },
                 { value: "98%", label: "Client Satisfaction", icon: FaAward },

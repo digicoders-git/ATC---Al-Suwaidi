@@ -31,7 +31,7 @@ import ServiceCabinetCards from "../Component/CabinateType";
 
 const stats = [
   { value: "ISO 9001:2015", label: "Quality Certified", icon: Award },
-  { value: "5,000+", label: "Cabinets Installed", icon: Factory },
+  { value: "100%", label: "Quality-Driven", icon: CheckCircle },
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "98%", label: "Client Satisfaction", icon: CheckCircle },
 ];

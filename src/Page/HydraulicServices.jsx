@@ -16,7 +16,7 @@ import GetDemoSection from "../Component/GetDemoSection";
 export default function HydraulicServices() {
   const stats = [
     { value: "32+", label: "Years Experience", icon: Clock },
-    { value: "1500+", label: "Hydraulic Projects", icon: FaCog },
+    { value: "100%", label: "Quality-Driven", icon: CheckCircle },
     { value: "98%", label: "Client Satisfaction", icon: CheckCircle },
     { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
   ];

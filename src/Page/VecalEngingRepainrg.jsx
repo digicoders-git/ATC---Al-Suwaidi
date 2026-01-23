@@ -174,7 +174,7 @@ const servicesList = [
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
-  { value: "5000+", label: "Engines Rebuilt", icon: CheckCircle },
+  { value: "100%", label: "Quality-Driven", icon: CheckCircle },
   { value: "80+", label: "Expert Technicians", icon: Users },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];

@@ -29,7 +29,7 @@ import FabricationProcess from "../Component/FabricationProcess";
 
 const stats = [
   { value: "32+", label: "Years Experience", icon: Clock },
-  { value: "5000+", label: "Vehicle Bodies Built", icon: Truck },
+  { value: "100%", label: "Quality-Driven", icon: CheckCircle },
   { value: "98%", label: "Client Satisfaction", icon: CheckCircle },
   { value: "ISO 9001:2015", label: "Certified Quality", icon: Award },
 ];

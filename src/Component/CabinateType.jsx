@@ -58,7 +58,7 @@ const services = [
   },
   {
     title: " Multi Water Meter Cabinet – 2 Nos",
-    type: "Multi Water Meter Cabinet 2 Nos copy.png",
+    type: "Multi Water Meter ",
     image: "/Multi Water Meter Cabinet 2 Nos copy 2.png",
     description:
       "The Water Meter Cabinet – 2 Nos is designed to accommodate two water meters in one enclosure. It ensures organized meter placement, safe operation, and easy access for utility management.",

@@ -236,7 +236,7 @@ const GetQuotePage = () => {
             >
               {[
                 { value: "32+", label: "Years Experience", icon: Award },
-                { value: "245+", label: "Expert Team", icon: Users },
+                { value: "80+", label: "Expert Team", icon: Users },
                 {
                   value: "ISO 9001",
                   label: "Certified Quality",

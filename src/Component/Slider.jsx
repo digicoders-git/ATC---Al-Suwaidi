@@ -199,7 +199,7 @@ function Slider() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               {
-                value: "5000+",
+                value: "3500+",
                 label: "Projects Completed",
                 icon: <CheckCircle className="text-green-400" />,
               },
@@ -210,7 +210,7 @@ function Slider() {
               },
               {
                 value: "80+",
-                label: "Active Clients",
+                label: "Team members",
                 icon: <Users className="text-orange-400" />,
               },
               {

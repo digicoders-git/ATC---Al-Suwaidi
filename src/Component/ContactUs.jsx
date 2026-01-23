@@ -78,7 +78,7 @@ const ContactUs = () => {
     },
     {
       icon: FaUsers,
-      title: "245+ Skilled Professionals",
+      title: "80+ Skilled Professionals",
       description:
         "Expert team of engineers, technicians, and project managers",
       color: "from-red-500 to-orange-600",

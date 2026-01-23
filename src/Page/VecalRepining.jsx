@@ -223,7 +223,7 @@ const rotatingComponentServices = [
 ];
 
 const stats = [
-  { value: "5000+", label: "Wheels Repaired", icon: Circle },
+  { value: "100%", label: "Quality-Driven", icon: CheckCircle },
   { value: "32+", label: "Years Experience", icon: Clock },
   { value: "98%", label: "Customer Satisfaction", icon: CheckCircle },
   { value: "ISO 9001:2015", label: "Quality Service", icon: Award },
