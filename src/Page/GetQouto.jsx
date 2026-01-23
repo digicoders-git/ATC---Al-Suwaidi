@@ -109,7 +109,7 @@ const GetQuotePage = () => {
       action: "Get Directions",
       actionIcon: MapPin,
       actionLink:
-        "https://maps.google.com/?q=AL+SUWAIDI+TECHNICAL+CENTER+East+Industrial+Area+Zone+57+Street+18+Gate+35+Doha+Qatar",
+        "https://maps.app.goo.gl/14Age5hyyfUxqd4W8?g_st=aw",
       type: "location",
     },
   ];
@@ -392,7 +392,7 @@ const GetQuotePage = () => {
 
             {/* VISIT */}
             <motion.a
-              href="https://maps.google.com/?q=AL+SUWAIDI+TECHNICAL+CENTER+East+Industrial+Area+Zone+57+Street+18+Gate+35+Doha+Qatar"
+              href="https://maps.app.goo.gl/14Age5hyyfUxqd4W8?g_st=aw"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
