@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /search/
+
+Sitemap: https://www.alsuwaiditechnical.com/sitemap.xml
