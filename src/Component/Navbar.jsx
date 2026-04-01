@@ -113,6 +113,7 @@ export default function ModernNavbar() {
     { label: "Projects", to: "/project" },
     { label: "Gallery", to: "/gallery" },
     { label: "Our Story", to: "/our-story" },
+    { label: "Blog", to: "/blog" },
     { label: "Contact", to: "/contact" },
     { label: "Careers", to: "/careers" },
   ];

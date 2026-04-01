@@ -62,6 +62,7 @@ export default function Footer() {
     { label: "Projects", href: "/project" },
     { label: "Gallery", href: "/gallery" },
     { label: "Our Story", href: "/our-story" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
     { label: "Careers", href: "/careers" },
     { label: "Get Quote", href: "/get-quote" },

@@ -31,6 +31,8 @@ import OurStoryPage from "./OurStory";
 import GetQuotePage from "./GetQouto";
 import ServiceDetail from "./ServiceDetail";
 import ScrollToTop from "../Component/ScrollToTop";
+import Blog from "./Blog";
+import BlogDetail from "./BlogDetail";
 
 function Router() {
   return (
@@ -70,6 +72,8 @@ function Router() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/our-story" element={<OurStoryPage />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
 
         <Route
           path="/services/cabinets"
