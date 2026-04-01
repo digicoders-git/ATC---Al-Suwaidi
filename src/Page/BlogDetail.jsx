@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Loader2, AlertCircle, ArrowRight, BookOpen, Clock } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_BASE_URL || "http://localhost:3300";
 
 export default function BlogDetail() {
   const { id } = useParams();
